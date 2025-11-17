@@ -1,1 +1,1 @@
-print("Hello ASDT world")
+print("Hello ASDT world with stashing")
