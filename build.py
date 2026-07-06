@@ -12,12 +12,14 @@ Usage:  python3 build.py
 import json
 import math
 import os
+import re
 import datetime
 
 import model
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 VENDOR_CHARTJS = os.path.join(ROOT, "vendor", "chart.umd.min.js")
+CITY_COLORS = {"Da Nang": "#38bdf8", "Ho Chi Minh City": "#22c55e", "Da Lat": "#f59e0b"}
 
 
 # --------------------------------------------------------------------------
@@ -207,6 +209,254 @@ def write_report(payload):
 
 
 # --------------------------------------------------------------------------
+# Static (server-side) HTML rendering — so the dashboard shows ALL details with
+# ZERO JavaScript. JS (charts, interactive planner, sorting) only enhances it.
+# --------------------------------------------------------------------------
+def _u(n):
+    if n is None:
+        return "n/a"
+    n = round(n)
+    return ("-$" if n < 0 else "$") + f"{abs(n):,.0f}"
+
+
+def _v(n, fx):
+    if n is None:
+        return ""
+    return "₫" + f"{round(abs(n) * fx):,}"
+
+
+def _pc(x):
+    return "n/a" if x is None else f"{x * 100:.0f}%"
+
+
+def _pay(e):
+    pb = e.get("payback_months")
+    return f"{pb:.0f} mo" if (pb and math.isfinite(pb)) else "—"
+
+
+def _pick_card(u, fx):
+    e = u["econ"]
+    pos = e["net_month"] >= 0
+    link = (f'<div class="row" style="margin-top:6px"><a href="{u["source_url"]}" '
+            f'target="_blank" rel="noopener">🔗 View real rental listing →</a></div>'
+            if u.get("source_url") else "")
+    return f"""<div class="card pick">
+  <div class="rank">#{u['rank']} · score {u['score']:.2f}</div>
+  <div class="name">{u['building']} · {u['bedrooms']}BR</div>
+  <div class="area">{u['city']} — {u['area']}
+    <span class="chip {u['property_type']}">{u['property_type']}</span>
+    <span class="chip {u['legal_status']}">{u['legal_status']}</span></div>
+  <div class="net {'pos' if pos else 'neg'}">{_u(e['net_month'])}<span class="small"> /mo · {_v(e['net_month'], fx)}</span></div>
+  <div class="row"><span>Margin</span><b class="{'pos' if pos else 'neg'}">{_pc(e['margin_pct'])}</b></div>
+  <div class="row"><span>Gross / Opex</span><b>{_u(e['gross_month'])} / {_u(e['opex_month'])}</b></div>
+  <div class="row"><span>Rent (long lease)</span><b>{_u(u['monthly_rent_usd'])}</b></div>
+  <div class="row"><span>Payback / Upfront</span><b>{_pay(e)} / {_u(e['upfront'])}</b></div>
+  <div class="row"><span>&nbsp;↳ deposit terms</span><b>1mo rent + 1mo caution = {_u(e['advance_rent'] + e['caution_deposit'])}</b></div>
+  <div class="row"><span>Break-even occ</span><b>{_pc(u['breakeven_occupancy'])}</b></div>
+  <div class="why">{u['rationale']}</div>
+  {link}
+</div>"""
+
+
+def _md_to_html(md):
+    """Minimal server-side markdown -> HTML (headings, bold, code, lists, tables)."""
+    if not md:
+        return '<p class="small">Not available.</p>'
+    import html as _h
+    out, in_tbl, in_list = [], False, False
+
+    def inline(s):
+        s = _h.escape(s)
+        s = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
+        s = re.sub(r"`(.+?)`", r"<code>\1</code>", s)
+        return s
+
+    for ln in md.split("\n"):
+        if re.match(r"^\s*\|.*\|", ln):
+            if re.match(r"^[\s|:\-]+$", ln):
+                continue
+            cells = [c.strip() for c in ln.strip().strip("|").split("|")]
+            if not in_tbl:
+                if in_list:
+                    out.append("</ul>"); in_list = False
+                out.append("<table><tr>" + "".join(f"<th>{inline(c)}</th>" for c in cells) + "</tr>")
+                in_tbl = True
+            else:
+                out.append("<tr>" + "".join(f'<td style="text-align:left">{inline(c)}</td>' for c in cells) + "</tr>")
+            continue
+        elif in_tbl:
+            out.append("</table>"); in_tbl = False
+        if ln.startswith("### "):
+            out.append(f"<h3>{inline(ln[4:])}</h3>")
+        elif ln.startswith("## "):
+            out.append(f'<h2 style="font-size:16px">{inline(ln[3:])}</h2>')
+        elif ln.startswith("# "):
+            out.append(f"<h2>{inline(ln[2:])}</h2>")
+        elif re.match(r"^\s*[-*]\s", ln):
+            if not in_list:
+                out.append("<ul>"); in_list = True
+            item = re.sub(r"^\s*[-*]\s", "", ln)
+            out.append(f"<li>{inline(item)}</li>")
+        elif ln.strip() == "":
+            if in_list:
+                out.append("</ul>"); in_list = False
+        else:
+            if in_list:
+                out.append("</ul>"); in_list = False
+            out.append(f"<p>{inline(ln)}</p>")
+    if in_tbl:
+        out.append("</table>")
+    if in_list:
+        out.append("</ul>")
+    return "\n".join(out)
+
+
+def static_sections(payload):
+    fx = payload["fx_vnd_per_usd"]
+    units = payload["units"]
+    markets = list(payload["markets"].values())
+    by_id = {u["building_id"]: u for u in units}
+    S = {}
+
+    # Hero
+    eligible = [u for u in units if u["legal_status"] != "BLOCKED"]
+    profit = [u for u in eligible if u["econ"]["net_month"] > 0]
+    top = payload["shortlist"][0] if payload["shortlist"] else None
+    best_margin = max((u["econ"]["margin_pct"] for u in eligible), default=0)
+    kpis = [
+        ("Top pick net/mo", _u(top["econ"]["net_month"]) if top else "—",
+         f"{top['building']} {top['bedrooms']}BR" if top else ""),
+        ("Profitable & legal", f"{len(profit)} / {len(units)}", "units at 20 nights/mo"),
+        ("Best margin", _pc(best_margin), "among eligible"),
+        ("Markets", "3", "Da Nang · Da Lat · HCMC"),
+    ]
+    S["kpis"] = "".join(
+        f'<div class="card kpi"><div class="n">{v}</div><div class="l">{l}</div>'
+        f'<div class="l">{s}</div></div>' for l, v, s in kpis)
+
+    # Best picks
+    S["villa"] = ("".join(_pick_card(u, fx) for u in payload["best_villas"])
+                  or '<p class="small">No eligible villas.</p>')
+    S["apt"] = ("".join(_pick_card(u, fx) for u in payload["best_apartments"])
+                or '<p class="small">No eligible apartments.</p>')
+
+    # Capital scenarios (static table of $20k/$50k/$100k at asking rents)
+    rows = []
+    for b in ("20000", "50000", "100000"):
+        c = payload["capital_scenarios"][b]
+        picks = ", ".join(f"{p['building']} {p['bedrooms']}BR" for p in c["picks"]) or "—"
+        rows.append(f"<tr><td>{_u(float(b))}</td><td>{c['units']}</td><td>{_u(c['deployed'])}</td>"
+                    f"<td class='pos'>{_u(c['net_month'])}/mo</td><td>{c['cash_on_cash_pct']:.0f}%</td>"
+                    f"<td class='small'>{picks}</td></tr>")
+    S["cap"] = ("<thead><tr><th>Budget</th><th>Units</th><th>Deployed</th><th>Profit/mo</th>"
+                "<th>Cash-on-cash</th><th>Which units</th></tr></thead><tbody>"
+                + "".join(rows) + "</tbody>")
+
+    # City table
+    def legalchip(r):
+        return "BLOCKED" if r["legal_regime"] == "GATED" else "CONDITIONAL"
+    S["city"] = ("<thead><tr><th>City</th><th>Listings</th><th>Occ p90</th><th>Occ avg</th>"
+                 "<th>ADR avg</th><th>ADR median</th><th>ADR p90</th><th>Annual rev</th>"
+                 "<th>Peak</th><th>Legal</th></tr></thead><tbody>"
+                 + "".join(
+                     f"<tr><td>{c['city']}</td><td>{c['active_listings']:,}</td><td>{_pc(c['occ_base'])}</td>"
+                     f"<td>{_pc(c['occ_airroi'])}</td><td>{_u(c['adr_avg'])}</td><td>{_u(c['adr_median'])}</td>"
+                     f"<td>{_u(c['adr_top10'])}</td><td>{_u(c['annual_rev_median'])}</td>"
+                     f"<td class='small'>{c['peak_label']}</td>"
+                     f"<td><span class='chip {legalchip(c)}'>{c['legal_regime']}</span></td></tr>"
+                     for c in markets) + "</tbody>")
+
+    # Leaderboard (all units, rank order)
+    lead_head = ("#","Building","City","BR","Type","Legal","Rent","ADR","Occ","Gross",
+                 "Opex","Net/mo","Margin","BE occ","Max rent","Annual net","Score")
+    lrows = []
+    for u in units:
+        e = u["econ"]
+        bl = " class=\"blocked\"" if u["legal_status"] == "BLOCKED" else ""
+        name = (f'<a href="{u["source_url"]}" target="_blank" rel="noopener">{u["building"]}</a>'
+                if u.get("source_url") else u["building"])
+        lrows.append(
+            f"<tr{bl}><td>{u['rank']}</td><td>{name}</td><td>{u['city']}</td><td>{u['bedrooms']}</td>"
+            f"<td><span class='chip {u['property_type']}'>{u['property_type']}</span></td>"
+            f"<td><span class='chip {u['legal_status']}'>{u['legal_status']}</span></td>"
+            f"<td>{_u(u['monthly_rent_usd'])}</td><td>{_u(u['adr_usd'])}</td><td>{_pc(u['base_occupancy'])}</td>"
+            f"<td>{_u(e['gross_month'])}</td><td>{_u(e['opex_month'])}</td>"
+            f"<td class='{'pos' if e['net_month']>=0 else 'neg'}'>{_u(e['net_month'])}</td>"
+            f"<td class='{'pos' if e['margin_pct']>=0 else 'neg'}'>{_pc(e['margin_pct'])}</td>"
+            f"<td>{_pc(u['breakeven_occupancy'])}</td><td>{_u(u['max_supportable_rent'])}</td>"
+            f"<td>{_u(u['seasonality_annual'])}</td><td>{u['score']:.2f}</td></tr>")
+    S["lead"] = ("<thead><tr>" + "".join(f'<th data-k="">{h}</th>' for h in lead_head)
+                 + "</tr></thead><tbody>" + "".join(lrows) + "</tbody>")
+
+    # Seasonality table
+    MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+    def sidx(c):
+        mean = sum(c["monthly_mult"]) / 12
+        return [round(c["occ_base"] * m / mean * 100) for m in c["monthly_mult"]]
+    S["season"] = ("<thead><tr><th>City</th>" + "".join(f"<th>{m}</th>" for m in MONTHS)
+                   + "</tr></thead><tbody>"
+                   + "".join("<tr><td>{}</td>{}</tr>".format(
+                       c["city"], "".join(f"<td>{v}</td>" for v in sidx(c))) for c in markets)
+                   + "</tbody>")
+    S["seasonlabels"] = "".join(
+        f'<div class="card"><b style="color:{CITY_COLORS.get(c["city"],"#38bdf8")}">{c["city"]}</b>'
+        f'<div class="row" style="display:flex;justify-content:space-between"><span class="small">Peak</span><span>{c["peak_label"]}</span></div>'
+        f'<div class="row" style="display:flex;justify-content:space-between"><span class="small">Low</span><span>{c["low_label"]}</span></div></div>'
+        for c in markets)
+
+    # Live market
+    summ = payload.get("str_comps_summary")
+    if summ:
+        S["bench"] = ("<thead><tr><th>Market</th><th>Type</th><th>n</th><th>Occ median</th>"
+                      "<th>ADR median</th><th>Best occ</th><th>Best nightly</th><th>Best $/yr</th></tr></thead><tbody>"
+                      + "".join(
+                          f"<tr><td>{s['city']}</td><td><span class='chip {s['property_type']}'>{s['property_type']}</span></td>"
+                          f"<td>{s['n']}</td><td>{_pc(s['occ_median'])}</td><td>{_u(s['adr_median'])}</td>"
+                          f"<td><b>{_pc(s['best_occ'])}</b></td><td><b>{_u(s['best_adr'])}</b></td>"
+                          f"<td class='pos'>{_u(s['best_rev'])}</td></tr>" for s in summ["segments"]) + "</tbody>")
+        S["top"] = ("<thead><tr><th>Listing</th><th>City</th><th>District</th><th>Type</th><th>BR</th>"
+                    "<th>ADR</th><th>Occ</th><th>TTM revenue</th><th>Rating</th></tr></thead><tbody>"
+                    + "".join(
+                        f"<tr><td>{p.get('listing_name') or '—'}</td><td>{p['city']}</td>"
+                        f"<td class='small'>{p.get('district') or ''}</td>"
+                        f"<td><span class='chip {p['property_type']}'>{p['property_type']}</span></td>"
+                        f"<td>{p.get('bedrooms') if p.get('bedrooms') is not None else ''}</td>"
+                        f"<td>{_u(p['adr_usd'])}</td><td>{_pc(p['occupancy'])}</td>"
+                        f"<td class='pos'>{_u(p['ttm_revenue'])}</td>"
+                        f"<td>{str(p['rating'])+'★' if p.get('rating') else ''}</td></tr>"
+                        for p in summ["top_performers"][:20]) + "</tbody>")
+        S["marketsub"] = (f"{payload['str_comps_total']} real Airbnb listings sourced from the "
+                          "AirROI licensed API (no scraping). Segment medians below.")
+    else:
+        S["bench"] = S["top"] = ""
+        S["marketsub"] = ""
+
+    S["analytics"] = _md_to_html(payload.get("analytics_md", ""))
+    p = payload["params"]
+    S["assume"] = _md_to_html(
+        "### Assumptions (all tunable in model.py)\n"
+        "- **Occupancy** = 20 booked nights/month (~67%) operating basis [operator-stated].\n"
+        "- **ADR** per unit from AirROI sourced segment medians, premium-adjusted [sourced/estimated].\n"
+        "- **Long-term rents** from FazWaz/DotProperty/Hoozing [sourced]; Da Lat [estimated].\n"
+        f"- **amort_months = {p['amort_months']}** (spec default; 36mo roughly doubles net for marginal units).\n"
+        f"- **platform_fee = {p['platform_fee_pct']*100:.0f}%**, **deposit = 1mo advance rent + 1mo caution "
+        f"({p['deposit_months']}mo)**, **cleaning = ${p['cleaning_per_stay']}/stay** (scales with booked nights), "
+        f"**setup = ${p['setup_other_usd']}**, mgmt 15%, furnishing/utilities per-bedroom — [estimated].\n"
+        f"- **FX** {fx:,.0f} VND/USD.\n"
+        "- **No Airbnb scraping** (ToS): availability from sourced market occupancy + the licensed AirROI API. "
+        "Facebook Marketplace excluded (auth-gated + ToS).")
+
+    S["herosub"] = (f"Which buildings/units to lease long-term &amp; sublet short-term — Da Nang · Da Lat · "
+                    f"Ho Chi Minh City.<br>Generated {payload['generated_at']} · FX {fx:,.0f} VND/USD · "
+                    "USD basis (VND alongside) · 20 nights/month operating basis.")
+    S["prov"] = (f'<span class="badge src">[sourced] AirROI API · rental portals</span>'
+                 f'<span class="badge est">[estimated] operating costs</span>'
+                 f'<span class="badge">{payload["str_comps_total"]} real listings analyzed</span>'
+                 f'<span class="badge">{len(units)} lease candidates</span>')
+    return S
+
+
+# --------------------------------------------------------------------------
 # dashboard.html
 # --------------------------------------------------------------------------
 def write_dashboard(payload):
@@ -219,10 +469,14 @@ def write_dashboard(payload):
         chart_tag = ('<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/'
                      'dist/chart.umd.min.js"></script>')
 
+    S = static_sections(payload)
     html = (DASHBOARD_TEMPLATE
             .replace("/*__CHARTJS__*/", "")
-            .replace("<!--__CHARTJS__-->", chart_tag)
-            .replace("__DATA__", data_json))
+            .replace("<!--__CHARTJS__-->", chart_tag))
+    for key, val in S.items():
+        html = html.replace(f"__S_{key.upper()}__", val)
+    # Data blob last (may itself contain no tokens).
+    html = html.replace("__DATA__", data_json)
     with open(os.path.join(ROOT, "dashboard.html"), "w", encoding="utf-8") as f:
         f.write(html)
 
@@ -357,9 +611,9 @@ tr.blocked{opacity:.5}
 <body>
 <header class="hero"><div class="wrap">
   <h1>🇻🇳 Vietnam Airbnb Rental-Arbitrage</h1>
-  <div class="sub" id="heroSub"></div>
-  <div class="prov" id="prov"></div>
-  <div class="grid kpis" id="kpis"></div>
+  <div class="sub" id="heroSub">__S_HEROSUB__</div>
+  <div class="prov" id="prov">__S_PROV__</div>
+  <div class="grid kpis" id="kpis">__S_KPIS__</div>
 </div></header>
 
 <nav class="sticky"><div class="wrap">
@@ -380,9 +634,9 @@ tr.blocked{opacity:.5}
     <p class="sub">Ranked by blended score (net, margin, payback, legal, demand stability).
        BLOCKED units excluded. Net shown in USD with VND alongside.</p>
     <h3>Villas &amp; Houses</h3>
-    <div class="grid cards" id="villaCards"></div>
+    <div class="grid cards" id="villaCards">__S_VILLA__</div>
     <h3 style="margin-top:22px">Apartments</h3>
-    <div class="grid cards" id="aptCards"></div>
+    <div class="grid cards" id="aptCards">__S_APT__</div>
     <div class="note" id="picksNote"></div>
   </section>
 
@@ -390,6 +644,8 @@ tr.blocked{opacity:.5}
     <h2>💰 Capital Planner — how much will your budget earn?</h2>
     <p class="sub">Deploys a budget into the best <b>profitable &amp; legal</b> units in score order
        (each consumes deposit + furnishing + setup as upfront). Answers "if I put in $X, what's my monthly profit?"</p>
+    <div class="tablescroll"><table id="capStatic">__S_CAP__</table></div>
+    <p class="small" style="margin:10px 0 2px">↓ Interactive planner (open in Safari/Chrome to drag the levers):</p>
     <div class="filters">
       <label>Upfront capital (USD)<input id="capBudget" type="number" value="20000" step="1000" style="width:130px"></label>
       <label>Rent negotiated down<select id="capRent">
@@ -420,7 +676,7 @@ tr.blocked{opacity:.5}
       <div class="chartbox"><h3>ADR by city (avg &amp; percentiles) <span class="small">[sourced]</span></h3><div class="can-wrap"><canvas id="cAdr"></canvas></div></div>
       <div class="chartbox"><h3>Annual STR revenue, median <span class="small">[sourced]</span></h3><div class="can-wrap"><canvas id="cRev"></canvas></div></div>
     </div>
-    <div class="tablescroll" style="margin-top:14px"><table id="cityTable"></table></div>
+    <div class="tablescroll" style="margin-top:14px"><table id="cityTable">__S_CITY__</table></div>
   </section>
 
   <section id="leaderboard">
@@ -437,7 +693,7 @@ tr.blocked{opacity:.5}
       <div class="chartbox"><h3>Net margin by unit ($/mo)</h3><div class="can-wrap"><canvas id="cNet"></canvas></div></div>
       <div class="chartbox"><h3>Gross vs Opex (shortlist)</h3><div class="can-wrap"><canvas id="cGO"></canvas></div></div>
     </div>
-    <div class="tablescroll" style="margin-top:14px"><table id="leadTable"></table></div>
+    <div class="tablescroll" style="margin-top:14px"><table id="leadTable">__S_LEAD__</table></div>
     <p class="small" id="leadCount"></p>
   </section>
 
@@ -446,27 +702,27 @@ tr.blocked{opacity:.5}
     <p class="sub">Monthly occupancy index (sourced p90 occupancy × event-aware multipliers).
        Peaks/lows labeled per city.</p>
     <div class="chartbox"><div class="can-wrap" style="height:320px"><canvas id="cSeason"></canvas></div></div>
-    <div class="tablescroll" style="margin-top:12px"><table id="seasonTable"></table></div>
-    <div id="seasonLabels" class="grid cards" style="margin-top:12px"></div>
+    <div class="tablescroll" style="margin-top:12px"><table id="seasonTable">__S_SEASON__</table></div>
+    <div id="seasonLabels" class="grid cards" style="margin-top:12px">__S_SEASONLABELS__</div>
   </section>
 
   <section id="market">
     <h2>🛰️ Live Market — real listings</h2>
-    <p class="sub" id="marketSub"></p>
+    <p class="sub" id="marketSub">__S_MARKETSUB__</p>
     <div class="grid charts">
       <div class="chartbox"><h3>Median revenue: villa vs apartment</h3><div class="can-wrap"><canvas id="cSeg"></canvas></div></div>
       <div class="chartbox"><h3>Segment ADR (median)</h3><div class="can-wrap"><canvas id="cSegAdr"></canvas></div></div>
     </div>
     <h3>Occupancy &amp; best nightly price by segment <span class="small">[sourced from real listings]</span></h3>
     <p class="small">"Best" = the revenue-maximizing operating point of the top-20% earners. Note they run ~50–60% occupancy at a <b>high nightly price</b>, not full calendars.</p>
-    <div class="tablescroll"><table id="benchTable"></table></div>
+    <div class="tablescroll"><table id="benchTable">__S_BENCH__</table></div>
     <h3 style="margin-top:18px">Top real performers (by trailing-12-month revenue) <span class="small">[sourced]</span></h3>
-    <div class="tablescroll"><table id="topTable"></table></div>
+    <div class="tablescroll"><table id="topTable">__S_TOP__</table></div>
   </section>
 
   <section id="analytics">
     <h2>🔬 Market Analytics</h2>
-    <div class="card md" id="analyticsMd"></div>
+    <div class="card md" id="analyticsMd">__S_ANALYTICS__</div>
   </section>
 
   <section id="legal">
@@ -477,7 +733,7 @@ tr.blocked{opacity:.5}
       with management before signing.</div>
     <div class="note"><b>Da Nang / Da Lat — CONDITIONAL:</b> allowed with business registration,
       fire-safety compliance, and 8% VAT + PIT on STR revenue. Low enforcement, but register.</div>
-    <div class="card md" id="assumeMd"></div>
+    <div class="card md" id="assumeMd">__S_ASSUME__</div>
   </section>
 
   <div class="foot" id="foot"></div>
