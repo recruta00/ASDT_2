@@ -362,6 +362,12 @@ tr.blocked{opacity:.5}
       <label>Furnishing amortized over<select id="capAmort">
         <option value="18">18 months</option><option value="24">24 months</option>
         <option value="36" selected>36 months</option><option value="48">48 months</option></select></label>
+      <label>Nightly price<select id="capAdr">
+        <option value="1">as modeled</option><option value="1.1">+10%</option>
+        <option value="1.2">+20%</option><option value="0.85">-15% (safer)</option></select></label>
+      <label>Occupancy<select id="capOcc">
+        <option value="0">as modeled (p90)</option><option value="0.55">55% (top-earner real)</option>
+        <option value="0.60">60%</option><option value="0.65">65%</option></select></label>
       <label class="toggle"><input id="capIdeal" type="checkbox" checked> "Ideal" levers</label>
     </div>
     <div class="grid kpis" id="capKpis"></div>
@@ -412,7 +418,10 @@ tr.blocked{opacity:.5}
       <div class="chartbox"><h3>Median revenue: villa vs apartment</h3><div class="can-wrap"><canvas id="cSeg"></canvas></div></div>
       <div class="chartbox"><h3>Segment ADR (median)</h3><div class="can-wrap"><canvas id="cSegAdr"></canvas></div></div>
     </div>
-    <h3>Top real performers (by trailing-12-month revenue) <span class="small">[sourced]</span></h3>
+    <h3>Occupancy &amp; best nightly price by segment <span class="small">[sourced from real listings]</span></h3>
+    <p class="small">"Best" = the revenue-maximizing operating point of the top-20% earners. Note they run ~50–60% occupancy at a <b>high nightly price</b>, not full calendars.</p>
+    <div class="tablescroll"><table id="benchTable"></table></div>
+    <h3 style="margin-top:18px">Top real performers (by trailing-12-month revenue) <span class="small">[sourced]</span></h3>
     <div class="tablescroll"><table id="topTable"></table></div>
   </section>
 
@@ -499,11 +508,13 @@ document.getElementById('picksNote').innerHTML =
 
 /* ---------- capital planner (recomputes economics under user levers) ---------- */
 const P=DATA.params;
-function reEcon(u, rentDisc, amortM){
+function reEcon(u, rentDisc, amortM, adrMult, occOvr){
   const rent=u.monthly_rent_usd*(1-rentDisc);
   const util=P.utilities_month[u.bedrooms] ?? 90;
   const furn=P.furnishing_capex[u.bedrooms] ?? 6000;
-  const gross=u.adr_usd*30*u.base_occupancy;
+  const adr=u.adr_usd*(adrMult||1);
+  const occ=occOvr>0?occOvr:u.base_occupancy;
+  const gross=adr*30*occ;
   const mgmt=gross*u.mgmt_fee_pct;
   const clean=(30/u.avg_stay_nights)*P.cleaning_per_stay;
   const plat=gross*P.platform_fee_pct;
@@ -513,9 +524,9 @@ function reEcon(u, rentDisc, amortM){
   const upfront=P.deposit_months*rent+furn+P.setup_other_usd;
   return {net, upfront, gross};
 }
-function deploy(budget, rentDisc, amortM){
+function deploy(budget, rentDisc, amortM, adrMult, occOvr){
   const cands=DATA.units.filter(u=>u.legal_status!=='BLOCKED')
-    .map(u=>({u, e:reEcon(u,rentDisc,amortM)}))
+    .map(u=>({u, e:reEcon(u,rentDisc,amortM,adrMult,occOvr)}))
     .filter(x=>x.e.net>0)
     .sort((a,b)=>b.e.net-a.e.net);
   let spent=0,net=0; const picks=[]; let nv=0,na=0;
@@ -531,8 +542,10 @@ function renderCap(){
   const amortM=ideal?parseInt(document.getElementById('capAmort').value):P.amort_months;
   document.getElementById('capRent').disabled=!ideal;
   document.getElementById('capAmort').disabled=!ideal;
+  const adrMult=parseFloat(document.getElementById('capAdr').value)||1;
+  const occOvr=parseFloat(document.getElementById('capOcc').value)||0;
   const b=Math.max(0,parseFloat(document.getElementById('capBudget').value)||0);
-  const d=deploy(b,rentDisc,amortM);
+  const d=deploy(b,rentDisc,amortM,adrMult,occOvr);
   const k=[
     ['Monthly profit', usd(d.net), d.net>0?vnd(d.net)+' /mo':'no unit fits'],
     ['Portfolio', `${d.nv}🏡 + ${d.na}🏢`, `${d.picks.length} of ${d.nProfitable} profitable`],
@@ -552,7 +565,7 @@ function renderCap(){
     ? `<b>Ideal mode:</b> assumes you negotiate each lease <b>${(rentDisc*100).toFixed(0)}% below asking</b> and amortize furnishing over <b>${amortM} months</b>. That flips <b>${d.nProfitable} of ${DATA.units.length}</b> units profitable (vs ${baseN} at asking rents). Budget still caps the unit count — a 1-villa + 5-apartment book needs ~$45–50k upfront. Every net figure assumes p90 (excellent-operator) occupancy; see the leaderboard sensitivity for downside.`
     : `<b>Asking-rent mode:</b> only <b>${baseN} of ${DATA.units.length}</b> units are profitable &amp; legal, so the constraint is <b>deal-sourcing, not capital</b>. Toggle "Ideal levers" to see what negotiation + longer amortization unlock.`;
 }
-['capBudget','capRent','capAmort','capIdeal'].forEach(id=>{
+['capBudget','capRent','capAmort','capAdr','capOcc','capIdeal'].forEach(id=>{
   document.getElementById(id).oninput=renderCap;
   document.getElementById(id).onchange=renderCap;
 });
@@ -684,6 +697,12 @@ if(S){
   bar('cSegAdr',cnames,[
     {label:'Villa',data:cnames.map(c=>byCity[c].villa?byCity[c].villa.adr_median:0),backgroundColor:'#38bdf8'},
     {label:'Apartment',data:cnames.map(c=>byCity[c].apartment?byCity[c].apartment.adr_median:0),backgroundColor:'#94a6b8'}]);
+  const bt=document.getElementById('benchTable');
+  bt.innerHTML=`<thead><tr><th>Market</th><th>Type</th><th>n</th><th>Occ median</th>
+    <th>ADR median</th><th>Best occ</th><th>Best nightly</th><th>Best $/yr</th></tr></thead><tbody>`+
+    seg.map(s=>`<tr><td>${s.city}</td><td><span class="chip ${s.property_type}">${s.property_type}</span></td>
+     <td>${s.n}</td><td>${pct(s.occ_median)}</td><td>${usd(s.adr_median)}</td>
+     <td><b>${pct(s.best_occ)}</b></td><td><b>${usd(s.best_adr)}</b></td><td class="pos">${usd(s.best_rev)}</td></tr>`).join('')+`</tbody>`;
   const tt=document.getElementById('topTable');
   tt.innerHTML=`<thead><tr><th>Listing</th><th>City</th><th>District</th><th>Type</th><th>BR</th>
     <th>ADR</th><th>Occ</th><th>TTM revenue</th><th>Rating</th></tr></thead><tbody>`+

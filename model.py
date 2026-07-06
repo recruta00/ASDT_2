@@ -189,14 +189,21 @@ def summarize_str_comps(comps):
         buckets.setdefault(key, []).append(c)
     segments = []
     for (city, ptype), rows in sorted(buckets.items()):
+        rev_rows = [r for r in rows if r["ttm_revenue"] is not None]
+        # Top-20% earners = the revenue-maximizing "best nightly price & occ" combo.
+        top = sorted(rev_rows, key=lambda r: r["ttm_revenue"], reverse=True)
+        top = top[:max(3, len(top) // 5)] if rev_rows else []
         segments.append({
             "city": city,
             "property_type": ptype,
             "n": len(rows),
             "adr_median": round(median(r["adr_usd"] for r in rows), 1),
             "occ_median": round(median(r["occupancy"] for r in rows), 3),
-            "rev_median": round(median(r["ttm_revenue"] for r in rows
-                                       if r["ttm_revenue"] is not None), 0),
+            "rev_median": round(median(r["ttm_revenue"] for r in rev_rows), 0) if rev_rows else None,
+            # Sourced "best" operating point (median of top-20% earners):
+            "best_adr": round(median(r["adr_usd"] for r in top), 0) if top else None,
+            "best_occ": round(median(r["occupancy"] for r in top), 3) if top else None,
+            "best_rev": round(median(r["ttm_revenue"] for r in top), 0) if top else None,
         })
     top = sorted([c for c in comps if c["ttm_revenue"] is not None],
                  key=lambda c: c["ttm_revenue"], reverse=True)[:30]
