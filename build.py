@@ -554,7 +554,10 @@ nav a:active,nav a:hover{background:var(--chip);color:var(--ink)}
 .chip.villa{background:rgba(56,189,248,.18);color:var(--accent2);font-weight:600}
 .chip.apartment{background:rgba(148,163,184,.18);color:var(--muted);font-weight:600}
 .charts{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-.chartbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+/* Chart boxes are hidden by default and only revealed by JS once charts can
+   render — so no-JS / sandboxed viewers see the data tables instead of empty boxes. */
+.chartbox{display:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.charts-live .chartbox{display:block}
 .chartbox h3{margin:0 0 10px}
 .can-wrap{position:relative;height:260px}
 table{width:100%;border-collapse:collapse;font-size:13px}
@@ -1061,13 +1064,8 @@ document.getElementById('foot').innerHTML =
 /* ---------- deferred, fault-tolerant chart rendering ---------- */
 const chartInstances=[];
 function runCharts(){
-  if(!hasCharts){
-    // Chart.js totally unavailable: swap each canvas for a pointer to the tables.
-    document.querySelectorAll('.chartbox .can-wrap').forEach(w=>{
-      w.innerHTML='<div class="small" style="padding:14px 6px">📊 Open in Safari or Chrome to view this chart — every figure is also in the tables on this page.</div>';
-    });
-    return;
-  }
+  if(!hasCharts) return;         // leave chart boxes hidden; the tables carry the data
+  document.body.classList.add('charts-live');   // reveal chart boxes now that we can draw
   // Two rAFs => wait for layout + a paint frame before Chart.js measures the
   // container (fixes iOS WKWebView creating a 0-height canvas), then resize.
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
