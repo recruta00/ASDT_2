@@ -354,7 +354,15 @@ tr.blocked{opacity:.5}
     <p class="sub">Deploys a budget into the best <b>profitable &amp; legal</b> units in score order
        (each consumes deposit + furnishing + setup as upfront). Answers "if I put in $X, what's my monthly profit?"</p>
     <div class="filters">
-      <label>Upfront capital (USD)<input id="capBudget" type="number" value="20000" step="1000" style="width:140px"></label>
+      <label>Upfront capital (USD)<input id="capBudget" type="number" value="20000" step="1000" style="width:130px"></label>
+      <label>Rent negotiated down<select id="capRent">
+        <option value="0">0% (asking)</option><option value="0.10">10% below</option>
+        <option value="0.12" selected>12% below</option><option value="0.15">15% below</option>
+        <option value="0.20">20% below</option></select></label>
+      <label>Furnishing amortized over<select id="capAmort">
+        <option value="18">18 months</option><option value="24">24 months</option>
+        <option value="36" selected>36 months</option><option value="48">48 months</option></select></label>
+      <label class="toggle"><input id="capIdeal" type="checkbox" checked> "Ideal" levers</label>
     </div>
     <div class="grid kpis" id="capKpis"></div>
     <div class="tablescroll" style="margin-top:12px"><table id="capTable"></table></div>
@@ -488,40 +496,65 @@ document.getElementById('picksNote').innerHTML =
   `marginal units positive: negotiate a lower/bare lease, amortize furnishing over 36 months (not 18), `+
   `or lift ADR via revenue management. See each card's break-even occupancy and the sensitivity in the leaderboard.`;
 
-/* ---------- capital planner ---------- */
-function deploy(budget){
-  const cands = DATA.units.filter(u=>u.legal_status!=='BLOCKED' && u.econ.net_month>0);
-  // already score-sorted; greedily fill by upfront
-  let spent=0,net=0; const picks=[];
-  for(const u of cands){ if(spent+u.econ.upfront<=budget){ picks.push(u); spent+=u.econ.upfront; net+=u.econ.net_month; } }
-  const coc = spent>0 ? net*12/spent*100 : 0;
-  return {budget,spent,net,picks,coc,leftover:budget-spent,
-          payback: net>0? spent/net : null};
+/* ---------- capital planner (recomputes economics under user levers) ---------- */
+const P=DATA.params;
+function reEcon(u, rentDisc, amortM){
+  const rent=u.monthly_rent_usd*(1-rentDisc);
+  const util=P.utilities_month[u.bedrooms] ?? 90;
+  const furn=P.furnishing_capex[u.bedrooms] ?? 6000;
+  const gross=u.adr_usd*30*u.base_occupancy;
+  const mgmt=gross*u.mgmt_fee_pct;
+  const clean=(30/u.avg_stay_nights)*P.cleaning_per_stay;
+  const plat=gross*P.platform_fee_pct;
+  const amort=(furn+P.setup_other_usd)/amortM;
+  const opex=rent+util+mgmt+clean+plat+amort;
+  const net=gross-opex;
+  const upfront=P.deposit_months*rent+furn+P.setup_other_usd;
+  return {net, upfront, gross};
+}
+function deploy(budget, rentDisc, amortM){
+  const cands=DATA.units.filter(u=>u.legal_status!=='BLOCKED')
+    .map(u=>({u, e:reEcon(u,rentDisc,amortM)}))
+    .filter(x=>x.e.net>0)
+    .sort((a,b)=>b.e.net-a.e.net);
+  let spent=0,net=0; const picks=[]; let nv=0,na=0;
+  for(const x of cands){ if(spent+x.e.upfront<=budget){ picks.push(x); spent+=x.e.upfront; net+=x.e.net;
+    if(x.u.property_type==='villa')nv++; else na++; } }
+  return {budget,spent,net,picks,nv,na,nProfitable:cands.length,
+          coc: spent>0?net*12/spent*100:0, leftover:budget-spent,
+          payback: net>0?spent/net:null};
 }
 function renderCap(){
+  const ideal=document.getElementById('capIdeal').checked;
+  const rentDisc=ideal?parseFloat(document.getElementById('capRent').value):0;
+  const amortM=ideal?parseInt(document.getElementById('capAmort').value):P.amort_months;
+  document.getElementById('capRent').disabled=!ideal;
+  document.getElementById('capAmort').disabled=!ideal;
   const b=Math.max(0,parseFloat(document.getElementById('capBudget').value)||0);
-  const d=deploy(b);
+  const d=deploy(b,rentDisc,amortM);
   const k=[
-    ['Monthly profit', usd(d.net), d.net>0?vnd(d.net)+' /mo':'no profitable unit fits'],
-    ['Units funded', d.picks.length+'', 'profitable & legal'],
+    ['Monthly profit', usd(d.net), d.net>0?vnd(d.net)+' /mo':'no unit fits'],
+    ['Portfolio', `${d.nv}🏡 + ${d.na}🏢`, `${d.picks.length} of ${d.nProfitable} profitable`],
     ['Capital deployed', usd(d.spent), usd(d.leftover)+' idle'],
     ['Cash-on-cash / yr', d.coc.toFixed(0)+'%', d.payback?`${d.payback.toFixed(0)}mo payback`:'—'],
   ];
   document.getElementById('capKpis').innerHTML=k.map(x=>
     `<div class="card kpi"><div class="n">${x[1]}</div><div class="l">${x[0]}</div><div class="l">${x[2]}</div></div>`).join('');
   const t=document.getElementById('capTable');
-  if(!d.picks.length){ t.innerHTML=''; }
-  else t.innerHTML=`<thead><tr><th>Unit</th><th>City</th><th>Type</th><th>Upfront</th><th>Net/mo</th><th>Link</th></tr></thead><tbody>`+
-    d.picks.map(u=>`<tr><td>${u.building} ${u.bedrooms}BR</td><td>${u.city}</td>
-      <td><span class="chip ${u.property_type}">${u.property_type}</span></td>
-      <td>${usd(u.econ.upfront)}</td><td class="pos">${usd(u.econ.net_month)}</td>
-      <td>${u.source_url?`<a href="${u.source_url}" target="_blank" rel="noopener">listing →</a>`:'—'}</td></tr>`).join('')+`</tbody>`;
-  const nProfit = DATA.units.filter(u=>u.legal_status!=='BLOCKED'&&u.econ.net_month>0).length;
-  document.getElementById('capNote').innerHTML =
-    `<b>Reality check:</b> only <b>${nProfit} of ${DATA.units.length}</b> candidate units are profitable &amp; legal at current asking rents, so the binding constraint is <b>deal-sourcing, not capital</b>. `+
-    `Extra budget sits idle until you find more units that clear. To unlock the rest, negotiate each lease down to its <b>Max rent</b> (leaderboard column) — many marginal units flip positive with a 10–15% rent cut, longer (36-mo) furnishing amortization, or premium ADR via revenue management.`;
+  t.innerHTML = d.picks.length ? `<thead><tr><th>Unit</th><th>City</th><th>Type</th><th>Upfront</th><th>Net/mo</th><th>Link</th></tr></thead><tbody>`+
+    d.picks.map(x=>`<tr><td>${x.u.building} ${x.u.bedrooms}BR</td><td>${x.u.city}</td>
+      <td><span class="chip ${x.u.property_type}">${x.u.property_type}</span></td>
+      <td>${usd(x.e.upfront)}</td><td class="pos">${usd(x.e.net)}</td>
+      <td>${x.u.source_url?`<a href="${x.u.source_url}" target="_blank" rel="noopener">listing →</a>`:'—'}</td></tr>`).join('')+`</tbody>` : '';
+  const baseN=DATA.units.filter(u=>u.legal_status!=='BLOCKED'&&u.econ.net_month>0).length;
+  document.getElementById('capNote').innerHTML = ideal
+    ? `<b>Ideal mode:</b> assumes you negotiate each lease <b>${(rentDisc*100).toFixed(0)}% below asking</b> and amortize furnishing over <b>${amortM} months</b>. That flips <b>${d.nProfitable} of ${DATA.units.length}</b> units profitable (vs ${baseN} at asking rents). Budget still caps the unit count — a 1-villa + 5-apartment book needs ~$45–50k upfront. Every net figure assumes p90 (excellent-operator) occupancy; see the leaderboard sensitivity for downside.`
+    : `<b>Asking-rent mode:</b> only <b>${baseN} of ${DATA.units.length}</b> units are profitable &amp; legal, so the constraint is <b>deal-sourcing, not capital</b>. Toggle "Ideal levers" to see what negotiation + longer amortization unlock.`;
 }
-document.getElementById('capBudget').oninput=renderCap;
+['capBudget','capRent','capAmort','capIdeal'].forEach(id=>{
+  document.getElementById(id).oninput=renderCap;
+  document.getElementById(id).onchange=renderCap;
+});
 renderCap();
 
 /* ---------- city comparison ---------- */

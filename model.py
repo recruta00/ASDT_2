@@ -498,6 +498,9 @@ def analyze():
             "vnd_per_usd": get_fx(),
             "cleaning_per_stay": CLEANING_PER_STAY,
             "setup_other_usd": SETUP_OTHER_USD,
+            # exposed so the dashboard can recompute economics under user levers
+            "furnishing_capex": FURNISHING_CAPEX,
+            "utilities_month": UTILITIES_MONTH,
         },
     }
 
