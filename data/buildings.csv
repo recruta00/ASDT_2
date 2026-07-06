@@ -1,0 +1,22 @@
+building_id,city,building,area,bedrooms,property_type,building_use,vibe,notes,source_url
+dn-monarchy-1br,Da Nang,Monarchy,Hai Chau riverfront,1,apartment,mixed-use,Digital-nomad hub with big pool,Strongest nomad demand in Da Nang,
+dn-monarchy-2br,Da Nang,Monarchy,Hai Chau riverfront,2,apartment,mixed-use,Digital-nomad hub with big pool,Strongest nomad demand in Da Nang,
+dn-muongthanh-3br,Da Nang,Muong Thanh,Son Tra / My Khe beachfront,3,apartment,tourism-condotel,Beach and ocean views,3BR nightly comp ~74 USD,
+dn-azura-2br,Da Nang,Azura,Han River,2,apartment,mixed-use,Luxury iconic river views,Next to Vincom Plaza,
+dn-altara-1br,Da Nang,Altara Suites,My Khe beachfront,1,apartment,tourism-condotel,Hotel-style direct beach view,~19M VND/month rent,
+dn-hiyori-2br,Da Nang,Hiyori Garden Tower,Hai Chau,2,apartment,mixed-use,Quiet Japanese design,Portal rents 600-950,
+dn-fhome-1br,Da Nang,F.Home,Central Hai Chau,1,apartment,mixed-use,Central location,Portal rents 304-450,
+dn-general-1br,Da Nang,General stock,An Thuong / My Khe,1,apartment,residential,Modern near beach base tier,Base-tier arbitrage stock,
+dn-myan-villa-3br,Da Nang,My An Luxury Villa,My An / An Thuong walk to My Khe,3,villa,tourism-homestay,Private-pool villa built 2022 prime beach walk,REAL listing danangluxuryrealty; lowest-rent prime pool villa; verify availability,https://danangluxuryrealty.com/en/property/luxury-three-bedroom-villa-with-pool-in-my-an/
+dn-oneriver-3br,Da Nang,One River villa,Khue My / Ngu Hanh Son,3,villa,tourism-homestay,Private + communal pool 350sqm rooftop,REAL FazWaz live-verified; private owner better lease terms,https://www.fazwaz.vn/property-rent/3-bedroom-house-for-rent-at-one-river-in-khue-my-da-nang-u6486413
+dn-thepoint-3br,Da Nang,The Point villa,Hoa Hai / Ngu Hanh Son,3,villa,tourism-homestay,Oceanfront private pool gym sauna rooftop,REAL FazWaz live-verified listed Jul 2026,https://www.fazwaz.vn/property-rent/3-bedroom-villa-for-rent-at-the-point-villa-in-hoa-hai-da-nang-u6549297
+dn-eurovillage-4br,Da Nang,Euro Village villa,Son Tra riverside gated,4,villa,tourism-homestay,Private pool gated community 250sqm,REAL alonhadat listing; verify direct with lister,https://alonhadat.com.vn/nha-dat/cho-thue/biet-thu-nha-lien-ke/da-nang/586/quan-son-tra.html
+hcmc-icon56-1br,Ho Chi Minh City,Icon56,District 4 riverfront,1,apartment,mixed-use,Mixed-use riverfront 5min to D1,REAL Hoozing listing; best rent-to-ADR legal option D4,https://hoozing.com/apartment-for-rent-in-icon-56
+hcmc-angia-2br,Ho Chi Minh City,An Gia Skyline,District 7 Phu My,2,apartment,tourism-condotel,Serviced apartment expat D7,REAL DotProperty serviced-apt category; tourism designation,https://www.dotproperty.com.vn/en/serviced-apartments-for-rent/h%E1%BB%93-ch%C3%AD-minh
+hcmc-millennium-2br,Ho Chi Minh City,Millennium,District 4 riverfront,2,apartment,mixed-use,Riverfront tower,VERIFY unit floor zoning with management,
+hcmc-saigonroyal-1br,Ho Chi Minh City,Saigon Royal,District 4,1,apartment,mixed-use,Riverside mixed-use development,FazWaz labels mixed-use; verify unit zoning,https://www.fazwaz.vn/projects/vietnam/ho-chi-minh-city/district-4/ward-12/saigon-royal-residences
+hcmc-masteri-2br,Ho Chi Minh City,Masteri Thao Dien,District 2 / Thu Duc,2,apartment,residential,Expat area popular STR,Residential-only would BLOCK under Decision 19/2026,
+hcmc-thaodien-villa-4br,Ho Chi Minh City,Thao Dien pool villa,District 2 Thao Dien,4,villa,residential,Luxury pool villa expat zone,Highest STR revenue BUT residential land => BLOCKED under Decision 19/2026,
+dalat-lakehouse-3br,Da Lat,Xuan Huong Lake house,Central near Xuan Huong Lake,3,villa,tourism-homestay,Homestay near night market,Sourced 3BR villa segment median ADR ~78; thin lease data,
+dalat-homestay-2br,Da Lat,Central homestay,Near night market,2,apartment,tourism-homestay,Cozy mountain homestay,Sourced 2BR segment median ADR ~50,
+dalat-villa-4br,Da Lat,Hillside villa,Hillside outskirts,4,villa,tourism-homestay,Group/family villa,Sourced 4BR villa segment median ADR ~95; thin lease data,

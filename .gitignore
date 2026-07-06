@@ -1,1 +1,9 @@
 *.log
+
+# Secrets - never commit
+.env
+
+# Python + working files
+__pycache__/
+*.pyc
+scratchpad/
