@@ -366,8 +366,9 @@ tr.blocked{opacity:.5}
         <option value="1">as modeled</option><option value="1.1">+10%</option>
         <option value="1.2">+20%</option><option value="0.85">-15% (safer)</option></select></label>
       <label>Occupancy<select id="capOcc">
-        <option value="0">as modeled (p90)</option><option value="0.55">55% (top-earner real)</option>
-        <option value="0.60">60%</option><option value="0.65">65%</option></select></label>
+        <option value="0">20 nights/mo (67%)</option><option value="0.50">15 nights (50%)</option>
+        <option value="0.55">55% (top-earner)</option><option value="0.567">17 nights (57%)</option>
+        <option value="0.733">22 nights (73%)</option></select></label>
       <label class="toggle"><input id="capIdeal" type="checkbox" checked> "Ideal" levers</label>
     </div>
     <div class="grid kpis" id="capKpis"></div>
@@ -516,7 +517,7 @@ function reEcon(u, rentDisc, amortM, adrMult, occOvr){
   const occ=occOvr>0?occOvr:u.base_occupancy;
   const gross=adr*30*occ;
   const mgmt=gross*u.mgmt_fee_pct;
-  const clean=(30/u.avg_stay_nights)*P.cleaning_per_stay;
+  const clean=(30*occ/u.avg_stay_nights)*P.cleaning_per_stay;
   const plat=gross*P.platform_fee_pct;
   const amort=(furn+P.setup_other_usd)/amortM;
   const opex=rent+util+mgmt+clean+plat+amort;

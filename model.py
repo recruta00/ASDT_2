@@ -40,6 +40,10 @@ UTILITIES_MONTH = {0: 50, 1: 60, 2: 90, 3: 120, 4: 150}
 
 CLEANING_PER_STAY = 18       # USD per turnover clean
 
+# Operator's stated capability: 20 booked nights per month.
+BOOKED_NIGHTS_PER_MONTH = 20
+OPERATING_OCCUPANCY = BOOKED_NIGHTS_PER_MONTH / 30.0  # ~0.667
+
 # Per-city operating assumptions.
 #   avg_stay_nights: longer stays -> fewer turnovers -> lower cleaning cost.
 #     Da Nang skews nomad/longer-stay; Da Lat skews weekend/short.
@@ -249,7 +253,10 @@ def compute_unit_economics(
     gross = gross_month(adr_usd, occupancy_pct)
     platform_fees = gross * platform_fee_pct
     mgmt = gross * mgmt_fee_pct
-    clean = cleaning_month(avg_stay_nights, cleaning_per_stay)
+    # Cleanings scale with ACTUAL booked nights (30*occupancy), not 30 days:
+    # turnovers = booked_nights / avg_stay.
+    booked_nights = 30.0 * occupancy_pct
+    clean = (booked_nights / avg_stay_nights) * cleaning_per_stay
     amort = capex_amort(furnishing_capex_usd, setup_other_usd, amort_months)
 
     opex = monthly_rent_usd + utilities_month + mgmt + clean + platform_fees + amort
@@ -307,11 +314,12 @@ def breakeven_occupancy(
     if furnishing_capex_usd is None:
         furnishing_capex_usd = FURNISHING_CAPEX.get(bedrooms, 6000)
 
-    clean = cleaning_month(avg_stay_nights, cleaning_per_stay)
     amort = capex_amort(furnishing_capex_usd, setup_other_usd, amort_months)
-    fixed = monthly_rent_usd + utilities_month + clean + amort
-
-    variable_coeff = adr_usd * 30.0 * (1.0 - mgmt_fee_pct - platform_fee_pct)
+    # Cleaning now scales with occupancy, so it joins the per-occupancy (variable)
+    # term rather than the fixed costs.
+    fixed = monthly_rent_usd + utilities_month + amort
+    clean_per_occ = 30.0 / avg_stay_nights * cleaning_per_stay
+    variable_coeff = adr_usd * 30.0 * (1.0 - mgmt_fee_pct - platform_fee_pct) - clean_per_occ
     if variable_coeff <= 0:
         return float("inf")
     return fixed / variable_coeff
@@ -450,7 +458,10 @@ def analyze():
         avg_stay = cp["avg_stay_nights"]
         mgmt_pct = cp["mgmt_fee_pct"]
 
-        base_occ = u["occupancy_override"] if u["occupancy_override"] is not None else market["occ_base"]
+        # Operating occupancy = the operator's stated 20 booked nights/month
+        # (~66.7%), unless a per-unit override is set. Market occ_base (AirROI p90)
+        # is retained only for the city-comparison / seasonality displays.
+        base_occ = u["occupancy_override"] if u["occupancy_override"] is not None else OPERATING_OCCUPANCY
         base_adr = u["adr_usd"]
 
         econ = compute_unit_economics(
