@@ -179,7 +179,7 @@ def write_report(payload):
       "over 18 months is conservative; extending to 36 months (typical for 2–5yr leases) "
       "roughly doubles net for marginal units — a key lever, shown in sensitivity.")
     A(f"- **platform_fee_pct = {p['platform_fee_pct']*100:.0f}%**, "
-      f"**deposit_months = {p['deposit_months']}**, "
+      f"**deposit = 1mo advance rent + 1mo caution ({p['deposit_months']}mo total)**, "
       f"**cleaning_per_stay = {money(p['cleaning_per_stay'])}**, "
       f"**setup_other = {money(p['setup_other_usd'])}**, mgmt_fee 15%, "
       "furnishing/utilities per-bedroom — all [estimated], centralized in `model.py`.")
@@ -483,6 +483,7 @@ function pickCard(u){
     <div class="row"><span>Gross / Opex</span><b>${usd(e.gross_month)} / ${usd(e.opex_month)}</b></div>
     <div class="row"><span>Rent (long lease)</span><b>${usd(u.monthly_rent_usd)}</b></div>
     <div class="row"><span>Payback / Upfront</span><b>${pb} / ${usd(e.upfront)}</b></div>
+    <div class="row"><span>&nbsp;↳ deposit terms</span><b>1mo rent + 1mo caution = ${usd(e.advance_rent+e.caution_deposit)}</b></div>
     <div class="row"><span>Break-even occ</span><b>${pct(u.breakeven_occupancy)}</b></div>
     <div class="why">${u.rationale}</div>
     ${u.source_url?`<div class="row" style="margin-top:6px"><a href="${u.source_url}" target="_blank" rel="noopener">🔗 View real rental listing →</a></div>`:''}
@@ -728,7 +729,7 @@ document.getElementById('assumeMd').innerHTML = mdToHtml(
 - **ADR** per unit from AirROI sourced segment medians, premium-adjusted [sourced/estimated].
 - **Long-term rents** from FazWaz/DotProperty/Hoozing [sourced]; Da Lat [estimated, low confidence].
 - **amort_months = ${p.amort_months}** (spec default; 36mo roughly doubles net for marginal units).
-- **platform_fee = ${(p.platform_fee_pct*100).toFixed(0)}%**, **deposit = ${p.deposit_months} months**, **cleaning = $${p.cleaning_per_stay}/stay**, **setup = $${p.setup_other_usd}**, mgmt 15%, furnishing/utilities per-bedroom — [estimated].
+- **platform_fee = ${(p.platform_fee_pct*100).toFixed(0)}%**, **deposit = 1mo advance rent + 1mo caution (${p.deposit_months}mo)**, **cleaning = $${p.cleaning_per_stay}/stay**, **setup = $${p.setup_other_usd}**, mgmt 15%, furnishing/utilities per-bedroom — [estimated].
 - **FX** ${FX.toLocaleString()} VND/USD.
 - **No Airbnb scraping** (ToS): availability from sourced market occupancy + the licensed AirROI API. Facebook Marketplace excluded (auth-gated + ToS).`);
 

@@ -63,7 +63,7 @@ Greedy deployment into the best **profitable & legal** units (each consumes depo
 - **ADR** per unit from AirROI sourced segment medians, adjusted up for premium buildings [sourced/estimated]. Market ADR percentiles sourced from AirROI.
 - **Long-term rents** from public portals (FazWaz/DotProperty/Hoozing) [sourced] except Da Lat (thin portal inventory — [estimated], low confidence) and interpolated villa 3BR.
 - **amort_months = 18** (spec default). Furnishing+setup amortized over 18 months is conservative; extending to 36 months (typical for 2–5yr leases) roughly doubles net for marginal units — a key lever, shown in sensitivity.
-- **platform_fee_pct = 3%**, **deposit_months = 2**, **cleaning_per_stay = $18**, **setup_other = $800**, mgmt_fee 15%, furnishing/utilities per-bedroom — all [estimated], centralized in `model.py`.
+- **platform_fee_pct = 3%**, **deposit = 1mo advance rent + 1mo caution (2mo total)**, **cleaning_per_stay = $18**, **setup_other = $800**, mgmt_fee 15%, furnishing/utilities per-bedroom — all [estimated], centralized in `model.py`.
 - **FX** 26,000 VND/USD (2026 seed; override via `.env`).
 - **Da Lat data gap** filled with sourced AirROI Lam Dong figures (occ ~39% avg, ADR ~$46); Nha Trang/Hoi An proxy retained as [estimated] contrast.
 - **Legal:** HCMC Decision 19/2026 (eff. 2026-04-25) — STR only where approved building use permits + host registered. Da Nang/Da Lat CONDITIONAL (register + fire-safety + 8% VAT/PIT). BLOCKED units excluded from shortlist.

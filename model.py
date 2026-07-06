@@ -25,7 +25,10 @@ import math
 # --------------------------------------------------------------------------
 AMORT_MONTHS = 18            # capex amortization horizon
 PLATFORM_FEE_PCT = 0.03      # ~3% Airbnb host service fee
-DEPOSIT_MONTHS = 2           # typical VN long-term deposit
+# VN lease signing outlay = 1 month advance rent + 1 month caution deposit.
+ADVANCE_RENT_MONTHS = 1      # first month's rent, paid at signing
+CAUTION_MONTHS = 1           # refundable caution deposit
+DEPOSIT_MONTHS = ADVANCE_RENT_MONTHS + CAUTION_MONTHS  # total months of rent upfront
 DEFAULT_VND_PER_USD = 26000  # FX seed (2026); override via .env FX_VND_PER_USD
 
 # Per-bedroom furnishing capex (USD). Studio keyed as 0.
@@ -246,7 +249,9 @@ def compute_unit_economics(
     net = gross - opex
     margin = (net / gross) if gross > 0 else 0.0
 
-    upfront = deposit_months * monthly_rent_usd + furnishing_capex_usd + setup_other_usd
+    advance_rent = ADVANCE_RENT_MONTHS * monthly_rent_usd
+    caution_deposit = CAUTION_MONTHS * monthly_rent_usd
+    upfront = advance_rent + caution_deposit + furnishing_capex_usd + setup_other_usd
     payback = (upfront / net) if net > 0 else float("inf")
 
     return {
@@ -262,6 +267,8 @@ def compute_unit_economics(
         "net_month": net,
         "margin_pct": margin,
         "upfront": upfront,
+        "advance_rent": advance_rent,
+        "caution_deposit": caution_deposit,
         "payback_months": payback,
     }
 
