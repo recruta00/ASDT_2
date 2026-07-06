@@ -237,6 +237,7 @@ tr.blocked{opacity:.5}
     <p class="sub">Monthly occupancy index (sourced p90 occupancy × event-aware multipliers).
        Peaks/lows labeled per city.</p>
     <div class="chartbox"><div class="can-wrap" style="height:320px"><canvas id="cSeason"></canvas></div></div>
+    <div class="tablescroll" style="margin-top:12px"><table id="seasonTable"></table></div>
     <div id="seasonLabels" class="grid cards" style="margin-top:12px"></div>
   </section>
 
@@ -402,14 +403,16 @@ renderCap();
 
 /* ---------- city comparison ---------- */
 const cities = Object.values(DATA.markets);
+// Charts are created lazily (deferred to after layout) so iOS WKWebView paints
+// them instead of measuring a not-yet-laid-out container as 0x0.
+const chartJobs=[];
 function bar(id,labels,datasets,opts={}){
-  if(!hasCharts) return;
-  new Chart(document.getElementById(id),{type:'bar',
+  chartJobs.push(()=>new Chart(document.getElementById(id),{type:'bar',
     data:{labels,datasets},
-    options:{responsive:true,maintainAspectRatio:false,
+    options:{responsive:true,maintainAspectRatio:false,animation:false,
       plugins:{legend:{labels:{color:cssvar('--muted')},display:datasets.length>1}},
       scales:{x:{ticks:{color:cssvar('--muted')},grid:{color:cssvar('--line')}},
-              y:{ticks:{color:cssvar('--muted')},grid:{color:cssvar('--line')},...(opts.y||{})}}}});
+              y:{ticks:{color:cssvar('--muted')},grid:{color:cssvar('--line')},...(opts.y||{})}}}}));
 }
 const cLabels = cities.map(c=>c.city);
 const cColors = cLabels.map(c=>CITY_COLORS[c]);
@@ -484,28 +487,32 @@ bar('cNet',elig.map(u=>u.building+' '+u.bedrooms+'BR'),
   [{label:'Net/mo',data:elig.map(u=>+u.econ.net_month.toFixed(0)),
     backgroundColor:elig.map(u=>u.econ.net_month>=0?'#22c55e':'#ef4444')}]);
 const sl=DATA.shortlist;
-if(hasCharts) new Chart(document.getElementById('cGO'),{type:'bar',
+chartJobs.push(()=>new Chart(document.getElementById('cGO'),{type:'bar',
   data:{labels:sl.map(u=>u.building+' '+u.bedrooms+'BR'),datasets:[
     {label:'Opex',data:sl.map(u=>+u.econ.opex_month.toFixed(0)),backgroundColor:'#64748b'},
     {label:'Net',data:sl.map(u=>+u.econ.net_month.toFixed(0)),backgroundColor:'#22c55e'}]},
-  options:{responsive:true,maintainAspectRatio:false,
+  options:{responsive:true,maintainAspectRatio:false,animation:false,
     plugins:{legend:{labels:{color:cssvar('--muted')}}},
     scales:{x:{stacked:true,ticks:{color:cssvar('--muted')},grid:{display:false}},
-            y:{stacked:true,ticks:{color:cssvar('--muted')},grid:{color:cssvar('--line')}}}}});
+            y:{stacked:true,ticks:{color:cssvar('--muted')},grid:{color:cssvar('--line')}}}}}));
 
 /* ---------- seasonality ---------- */
 const MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-if(hasCharts) new Chart(document.getElementById('cSeason'),{type:'line',
-  data:{labels:MONTHS,datasets:cities.map(c=>{
-    const mean=c.monthly_mult.reduce((a,b)=>a+b,0)/12;
-    return {label:c.city,borderColor:CITY_COLORS[c.city],backgroundColor:CITY_COLORS[c.city],
-      tension:.35,pointRadius:3,
-      data:c.monthly_mult.map(m=>+(c.occ_base*m/mean*100).toFixed(1))};})},
-  options:{responsive:true,maintainAspectRatio:false,
+const seasonIdx = c => { const mean=c.monthly_mult.reduce((a,b)=>a+b,0)/12;
+  return c.monthly_mult.map(m=>+(c.occ_base*m/mean*100).toFixed(0)); };
+chartJobs.push(()=>new Chart(document.getElementById('cSeason'),{type:'line',
+  data:{labels:MONTHS,datasets:cities.map(c=>({label:c.city,borderColor:CITY_COLORS[c.city],
+      backgroundColor:CITY_COLORS[c.city],tension:.35,pointRadius:3,data:seasonIdx(c)}))},
+  options:{responsive:true,maintainAspectRatio:false,animation:false,
     plugins:{legend:{labels:{color:cssvar('--muted')}}},
     scales:{x:{ticks:{color:cssvar('--muted')},grid:{color:cssvar('--line')}},
             y:{title:{display:true,text:'Occupancy index %',color:cssvar('--muted')},
-               ticks:{color:cssvar('--muted')},grid:{color:cssvar('--line')}}}}});
+               ticks:{color:cssvar('--muted')},grid:{color:cssvar('--line')}}}}}));
+// Text equivalent so seasonality is legible even if the canvas can't paint.
+document.getElementById('seasonTable').innerHTML =
+  `<thead><tr><th>City</th>${MONTHS.map(m=>`<th>${m}</th>`).join('')}</tr></thead><tbody>`+
+  cities.map(c=>`<tr><td>${c.city}</td>${seasonIdx(c).map(v=>`<td>${v}</td>`).join('')}</tr>`).join('')+
+  `</tbody>`;
 document.getElementById('seasonLabels').innerHTML = cities.map(c=>
   `<div class="card"><b style="color:${CITY_COLORS[c.city]}">${c.city}</b>
    <div class="row" style="display:flex;justify-content:space-between"><span class="small">Peak</span><span>${c.peak_label}</span></div>
@@ -585,6 +592,32 @@ document.getElementById('foot').innerHTML =
   `Built with a stdlib Python model (model.py) + vendored Chart.js (offline). `+
   `Refresh data: set AIRROI_API_KEY in .env then run <code>python3 fetch.py</code>, then <code>python3 build.py</code>. `+
   `Every figure tagged [sourced] or [estimated]. Not legal or investment advice — verify building classifications and tax with local counsel.`;
+
+/* ---------- deferred, fault-tolerant chart rendering ---------- */
+const chartInstances=[];
+function runCharts(){
+  if(!hasCharts){
+    // Chart.js totally unavailable: swap each canvas for a pointer to the tables.
+    document.querySelectorAll('.chartbox .can-wrap').forEach(w=>{
+      w.innerHTML='<div class="small" style="padding:14px 6px">📊 Open in Safari or Chrome to view this chart — every figure is also in the tables on this page.</div>';
+    });
+    return;
+  }
+  // Two rAFs => wait for layout + a paint frame before Chart.js measures the
+  // container (fixes iOS WKWebView creating a 0-height canvas), then resize.
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    chartJobs.forEach(job=>{
+      try{ const ch=job(); if(ch){ chartInstances.push(ch); } }
+      catch(e){ console.warn('chart failed',e); }
+    });
+    const nudge=()=>chartInstances.forEach(c=>{try{c.resize();}catch(e){}});
+    requestAnimationFrame(nudge);
+    setTimeout(nudge,400);           // covers slow WKWebView layout
+  }));
+}
+window.addEventListener('resize',()=>chartInstances.forEach(c=>{try{c.resize();}catch(e){}}));
+if(document.readyState==='complete') runCharts();
+else window.addEventListener('load', runCharts);
 </script>
 </body>
 </html>
