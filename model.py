@@ -134,6 +134,7 @@ def load_units():
             "building_use": b["building_use"].strip().lower(),
             "vibe": b["vibe"],
             "notes": b["notes"],
+            "source_url": b.get("source_url", "").strip(),
             "monthly_rent_usd": float(rent["monthly_rent_usd"]),
             "rent_source": rent["rent_source"],
             "adr_usd": float(comp["adr_usd"]),

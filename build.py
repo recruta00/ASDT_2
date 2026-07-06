@@ -441,6 +441,7 @@ function pickCard(u){
     <div class="row"><span>Payback / Upfront</span><b>${pb} / ${usd(e.upfront)}</b></div>
     <div class="row"><span>Break-even occ</span><b>${pct(u.breakeven_occupancy)}</b></div>
     <div class="why">${u.rationale}</div>
+    ${u.source_url?`<div class="row" style="margin-top:6px"><a href="${u.source_url}" target="_blank" rel="noopener">🔗 View real rental listing →</a></div>`:''}
   </div>`;
 }
 document.getElementById('villaCards').innerHTML = DATA.best_villas.map(pickCard).join('') || '<p class="small">No eligible villas.</p>';
@@ -513,7 +514,7 @@ function renderLead(){
   t.innerHTML=`<thead><tr>${cols.map(c=>`<th data-k="${c[0]}">${c[1]}</th>`).join('')}</tr></thead><tbody>`+
     rows.map(u=>{const e=u.econ;const bl=u.legal_status==='BLOCKED';
       return `<tr class="${bl?'blocked':''}">
-      <td>${u.rank}</td><td>${u.building}</td><td>${u.city}</td><td>${u.bedrooms}</td>
+      <td>${u.rank}</td><td>${u.source_url?`<a href="${u.source_url}" target="_blank" rel="noopener">${u.building}</a>`:u.building}</td><td>${u.city}</td><td>${u.bedrooms}</td>
       <td><span class="chip ${u.property_type}">${u.property_type}</span></td>
       <td><span class="chip ${u.legal_status}">${u.legal_status}</span></td>
       <td>${usd(u.monthly_rent_usd)}</td><td>${usd(u.adr_usd)}</td><td>${pct(u.base_occupancy)}</td>
