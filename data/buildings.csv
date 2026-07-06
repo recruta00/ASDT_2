@@ -1,0 +1,19 @@
+building_id,city,building,area,bedrooms,property_type,building_use,vibe,notes
+dn-monarchy-1br,Da Nang,Monarchy,Hai Chau riverfront,1,apartment,mixed-use,Digital-nomad hub with big pool,Strongest nomad demand in Da Nang
+dn-monarchy-2br,Da Nang,Monarchy,Hai Chau riverfront,2,apartment,mixed-use,Digital-nomad hub with big pool,Strongest nomad demand in Da Nang
+dn-muongthanh-3br,Da Nang,Muong Thanh,Son Tra / My Khe beachfront,3,apartment,tourism-condotel,Beach and ocean views,3BR nightly comp ~74 USD
+dn-azura-2br,Da Nang,Azura,Han River,2,apartment,mixed-use,Luxury iconic river views,Next to Vincom Plaza
+dn-altara-1br,Da Nang,Altara Suites,My Khe beachfront,1,apartment,tourism-condotel,Hotel-style direct beach view,~19M VND/month rent
+dn-hiyori-2br,Da Nang,Hiyori Garden Tower,Hai Chau,2,apartment,mixed-use,Quiet Japanese design,Rents estimated pending fetch
+dn-fhome-1br,Da Nang,F.Home,Central Hai Chau,1,apartment,mixed-use,Central location,Rents estimated pending fetch
+dn-general-1br,Da Nang,General stock,An Thuong / My Khe,1,apartment,residential,Modern near beach base tier,Base-tier arbitrage stock
+dn-anbang-villa-4br,Da Nang,An Bang pool villa,An Bang / My Khe beach,4,villa,tourism-homestay,Private pool beach villa,Sourced 4BR villa segment median ADR ~117; top performers 150-360
+dn-mykhe-villa-3br,Da Nang,My Khe pool villa,My Khe beach,3,villa,tourism-homestay,3BR pool villa near beach,Sourced 3BR villa segment median ADR ~82
+hcmc-millennium-2br,Ho Chi Minh City,Millennium,District 4 riverfront,2,apartment,mixed-use,Riverfront tower,VERIFY building_use classification with management
+hcmc-saigonroyal-1br,Ho Chi Minh City,Saigon Royal,District 4,1,apartment,mixed-use,Riverside premium,VERIFY building_use classification with management
+hcmc-masteri-2br,Ho Chi Minh City,Masteri Thao Dien,District 2 / Thu Duc,2,apartment,residential,Expat area popular STR,VERIFY building_use - residential-only would BLOCK
+hcmc-d1-studio,Ho Chi Minh City,District 1 stock,District 1 tourist core,0,apartment,residential,Tourist-central apartments,Residential-only classification blocks STR under Decision 19/2026
+hcmc-thaodien-villa-4br,Ho Chi Minh City,Thao Dien pool villa,District 2 Thao Dien,4,villa,residential,Luxury pool villa expat zone,Sourced 4BR villa median ADR ~200 rev ~35k BUT residential land => BLOCKED under Decision 19/2026
+dalat-lakehouse-3br,Da Lat,Xuan Huong Lake house,Central near Xuan Huong Lake,3,villa,tourism-homestay,Homestay near night market,Sourced 3BR villa segment median ADR ~78
+dalat-homestay-2br,Da Lat,Central homestay,Near night market,2,apartment,tourism-homestay,Cozy mountain homestay,Sourced 2BR segment median ADR ~50
+dalat-villa-4br,Da Lat,Hillside villa,Hillside outskirts,4,villa,tourism-homestay,Group/family villa,Sourced 4BR villa segment median ADR ~95

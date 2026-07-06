@@ -1,0 +1,820 @@
+listing_id,city,district,listing_name,property_type,listing_type,bedrooms,baths,guests,adr_usd,occupancy,ttm_revenue,avg_stay,rating,reviews,registered,source
+630113879188525065,Ho Chi Minh City,District 3,Flash Sale Today Luxury 4BR Villa |Summer Trip,villa,Entire condo,4,3.0,8,338.4,0.666,83254.0,3.2,4.83,95,False,sourced-airroi
+1169209010428267531,Ho Chi Minh City,District 3,Summer sale 4BR Villa Private Pool | Washer + Dry,villa,Entire rental unit,4,3.0,8,384.7,0.592,76219.0,3.9,4.69,13,False,sourced-airroi
+934852588808869787,Ho Chi Minh City,District 7,Private Pool 4BR 5Bath Sky Duplex • Lakeview Park,villa,Entire home,4,5.0,8,227.5,0.813,60818.0,2.7,4.89,121,False,sourced-airroi
+1471637250551235509,Da Nang,,Stunning 4BR Villa; Large Pool | Sauna & Elevator,villa,Entire villa,4,4.0,8,362.2,0.414,59509.0,4.1,4.83,35,False,sourced-airroi
+1448979773035948801,Ho Chi Minh City,,SaigonCharming Luxury Penthouse by Ray/4BR/5*,villa,Entire home,4,4.0,8,322.1,0.55,54990.0,4.3,5.0,7,False,sourced-airroi
+1138340268520886158,Da Nang,Sơn Trà District,Palm villa 4br- My Khe beach - Private pool,villa,Entire home,4,4.0,8,214.1,0.702,53645.0,3.2,4.72,43,False,sourced-airroi
+1382346425700909256,Ho Chi Minh City,,Lovely 4BR Penthouse/Perfect for Groups/600m2/.,villa,Entire serviced apartment,4,3.0,10,290.2,0.526,53466.0,2.9,4.93,27,False,sourced-airroi
+39998003,Da Nang,Ngũ Hành Sơn District,Seclude Tropical villa w/ Lagoon pool; Spa & beach,villa,Entire villa,3,3.0,6,301.7,0.509,51957.0,6.0,4.88,50,False,sourced-airroi
+1389625252141565963,Da Nang,,BrandNew 4BDR Villa Private Pool 850m to the Beach,villa,Entire villa,4,4.0,8,229.5,0.598,50446.0,3.2,5.0,28,False,sourced-airroi
+1355424753469322019,Da Nang,,May Bliss 4BR Pool Jacuzzi Walk to My Khe beach,villa,Entire home,4,4.0,8,151.3,0.847,48167.0,3.8,4.88,34,False,sourced-airroi
+627885696904818184,Ho Chi Minh City,District 3,4BR Luxury Villa | Summer Special Deal,villa,Entire condo,4,3.0,8,357.5,0.369,47961.0,3.7,4.68,40,False,sourced-airroi
+1447134142830001527,Da Nang,,Free pickup! city center Rainbow Pool Villa,villa,Entire home,4,3.5,8,147.1,0.83,45827.0,3.8,4.96,46,False,sourced-airroi
+1456389141009049417,Ho Chi Minh City,,Private Plunge Pool Garden Duplex • Lakeview Park,villa,Entire home,4,4.0,8,171.6,0.688,43701.0,3.1,4.7,23,False,sourced-airroi
+39682875,Ho Chi Minh City,District 1,4-bed Penthouse in D1 by Palace - Bitexco View,villa,Entire condo,4,3.0,8,287.1,0.416,40398.0,3.5,4.9,120,False,sourced-airroi
+1157886915990881830,Da Nang,Ngũ Hành Sơn District,BAPVilla*4BR*FullAC*Elevator*PrivatePool,villa,Entire home,4,4.0,8,219.2,0.463,37033.0,4.0,4.84,38,False,sourced-airroi
+701901288171638766,Ho Chi Minh City,Binh Thanh District,Landmark 6 - 4Bedroom Luxury Vinhome Central Park,villa,Entire rental unit,4,3.0,8,170.6,0.589,36947.0,3.0,4.82,88,False,sourced-airroi
+1132955511714842074,Da Nang,Sơn Trà District,NC Rustic House • 3 Mins Walk to Beach • Full A/C,villa,Entire villa,4,4.0,8,110.9,0.904,36585.0,3.2,4.96,161,False,sourced-airroi
+872836423390262515,Ho Chi Minh City,Thủ Đức,Villa de Pastry | Vesta Collections,villa,Entire villa,4,4.0,9,211.2,0.463,35824.0,3.3,4.91,77,False,sourced-airroi
+1190336623477768857,Ho Chi Minh City,Binh Thanh District,【4BR LM81 Limited Suite】- Panorama View【Free Pick】,apartment,Entire rental unit,4,3.0,10,323.7,0.301,35674.0,3.4,4.86,14,False,sourced-airroi
+1159243166095603671,Ho Chi Minh City,Thủ Đức,4BR Panoramic River & Bridge View | Spacious 170m²,apartment,Entire rental unit,4,3.0,8,324.9,0.376,35621.0,3.3,4.9,21,False,sourced-airroi
+1278181086094852886,Ho Chi Minh City,Binh Thanh District,Family 4-Bedroom Suite – Vinhomes Central Park,villa,Entire condo,4,3.0,11,130.8,0.772,35188.0,3.6,4.85,61,False,sourced-airroi
+1108613548988584248,Da Nang,Ngũ Hành Sơn District,D&C House -3 Mins walk to My Khe Beach- Full Ac,villa,Entire villa,4,4.0,8,117.2,0.814,34899.0,3.6,4.93,94,False,sourced-airroi
+26999512,Ho Chi Minh City,District 1,Elegant 3BR Suite | Blue Arch | D1 | 160m2,apartment,Entire serviced apartment,3,2.0,6,115.8,0.799,34121.0,3.2,4.89,200,False,sourced-airroi
+1329329594510522281,Da Nang,Ngũ Hành Sơn District,VNG-private pool-200m to beach-full A/C,villa,Entire villa,4,4.0,8,184.8,0.501,33127.0,3.3,4.85,55,False,sourced-airroi
+1303972713869231076,Da Lat,,Full house 4BRs; Da Lat city center; hilly view,villa,Entire villa,4,5.0,8,212.9,0.751,32816.0,6.0,4.81,21,False,sourced-airroi
+25336470,Da Nang,Hải Châu District,Entire House; 3 Bedrooms walk to Dragon bridge,villa,Entire home,3,3.0,8,113.0,0.781,32386.0,2.4,4.78,64,False,sourced-airroi
+1078026454606256611,Ho Chi Minh City,Binh Thanh District,Executive 4BR Suite – Vinhomes; Stunning Harbor,villa,Entire rental unit,4,3.0,8,124.9,0.715,32280.0,3.2,4.69,89,False,sourced-airroi
+1374237630762487723,Da Lat,,villa in the heart of Da Lat city - 4bedroom,villa,Entire villa,4,5.0,10,179.2,0.477,31525.0,2.5,4.82,11,False,sourced-airroi
+1301066869855697912,Ho Chi Minh City,Binh Thanh District,Family 4-Bedroom Suite – Vinhomes Central Park,villa,Entire condo,4,3.0,11,128.2,0.663,30930.0,3.1,4.68,50,False,sourced-airroi
+1375201328309953468,Da Nang,,Wake Up in Paradise 4BR Coastal Villa My khe beach,villa,Entire home,4,4.0,8,244.0,0.337,30635.0,3.7,4.87,15,False,sourced-airroi
+1411260849323645157,Da Nang,,Serene 4BR Villa w/ Private Pool & Near the Beach,villa,Entire villa,4,3.5,7,190.6,0.414,30371.0,3.5,4.85,52,False,sourced-airroi
+1127342462817227719,Ho Chi Minh City,District 3,L9 3BR Leman Luxury Apt in central | infinity pool,apartment,Entire rental unit,3,2.0,6,151.3,0.529,29220.0,1.8,4.84,45,False,sourced-airroi
+1069958483120276252,Ho Chi Minh City,District 4,Saigon Center | Great City View 5 Beds; free pool,apartment,Entire rental unit,4,2.0,8,112.8,0.654,28730.0,3.3,4.85,27,False,sourced-airroi
+918038858110006802,Ho Chi Minh City,Binh Thanh District,Best Value 3BR Clean Spacious landmark81 View,apartment,Entire condo,3,2.0,6,93.3,0.86,28683.0,3.6,4.94,145,False,sourced-airroi
+1488283354481002981,Da Nang,,3-Bedroom Villa with Pool – Premium Experience,villa,Entire home,3,3.0,6,214.5,0.348,28243.0,3.1,4.86,14,False,sourced-airroi
+1035186711355857548,Da Nang,Sơn Trà District,My Khe Beach l Stylish 4BR Pool Villa l Pick-up,villa,Entire home,4,0.0,8,148.5,0.511,27490.0,3.1,4.82,38,False,sourced-airroi
+1125768534754225925,Da Nang,Sơn Trà District,Center Fireworks Riverside 5* -3Brs- 18F Free Pool,apartment,Entire rental unit,3,2.0,6,107.8,0.68,27208.0,3.5,4.95,86,False,sourced-airroi
+1528044754975034030,Ho Chi Minh City,,Signature Stay in @Metropole w/ 4BR & Sky Garden,apartment,Entire rental unit,4,3.0,10,275.0,0.241,24551.0,2.9,4.69,16,False,sourced-airroi
+609737143031673208,Da Nang,Ngũ Hành Sơn District,4 bedroom pool villa,villa,Entire villa,4,4.0,8,223.6,0.407,24521.0,2.5,4.8,15,False,sourced-airroi
+1400567230964204816,Da Nang,,*BIGSale *Yumi Villa -4brs-FullAc-Lovely Private,villa,Entire home,4,3.0,8,141.9,0.476,24312.0,3.7,4.8,20,False,sourced-airroi
+849758501687453533,Da Nang,Sơn Trà District,a house/ 3bedroom/ near Dragon Bridge/Stable wifi,villa,Entire home,3,3.0,6,145.1,0.463,24085.0,4.2,4.8,92,False,sourced-airroi
+39011095,Ho Chi Minh City,District 1,Saigon Skyline Suite next to Palace Garden,apartment,Entire condo,3,2.0,6,210.2,0.285,24056.0,4.2,4.87,105,False,sourced-airroi
+1336255011568127074,Da Nang,,Hi Sky House/Dragon Bridge View/5'mWalk Han Market,villa,Entire home,4,6.0,8,93.8,0.69,24048.0,3.0,4.28,25,False,sourced-airroi
+1355541923237697249,Da Lat,,Dalat Nordic Villa • Jacuzzi & Sauna,villa,Entire home,3,1.0,6,332.1,0.212,23973.0,2.6,5.0,5,False,sourced-airroi
+1012014789430780437,Ho Chi Minh City,District 4,Hochiminh City Center | Luxurious 4 Beds free pool,apartment,Entire rental unit,4,2.0,8,116.3,0.518,23363.0,3.5,4.7,37,False,sourced-airroi
+1186512108323767439,Da Nang,Sơn Trà District,My Khe Beach | Elegant 4BR Villa w/ Pool & Kitchen,villa,Entire home,4,4.0,8,148.3,0.456,23316.0,3.4,4.67,12,False,sourced-airroi
+1494830016633152121,Ho Chi Minh City,,4BR Landmark81 • GlassCurve SkylineView• CRConcept,apartment,Entire condo,4,2.0,8,224.4,0.263,23211.0,3.0,4.85,27,False,sourced-airroi
+1084503609426774684,Da Nang,Hải Châu District,New home 4br luxury Center city Near Han Market,villa,Entire home,4,3.0,8,106.8,0.582,23184.0,3.0,4.94,66,False,sourced-airroi
+1125625585071010911,Da Nang,,Modern Home with 4 Spacious Bedrooms-Kimmy’sHouse,villa,Entire home,4,4.0,12,158.7,0.37,23127.0,3.6,4.77,39,False,sourced-airroi
+1384643861366681114,Da Nang,,Huge 3BR 128m2•Heart of Danang•Walk to Han river,apartment,Entire rental unit,3,2.0,8,74.5,0.809,23050.0,3.2,5.0,73,False,sourced-airroi
+861186113506266650,Da Lat,Phường 2,Villa ngay trung tâm- 4bedrooms-bbq-free parking,villa,Entire home,4,3.5,12,187.9,0.347,22952.0,2.8,4.87,30,False,sourced-airroi
+1137412672054065144,Ho Chi Minh City,District 1,4 Bedrooms Apartment in Saigon Center - 9Trip Stay,apartment,Entire rental unit,4,3.0,8,115.3,0.583,22672.0,2.9,4.49,41,False,sourced-airroi
+1437696800347796140,Ho Chi Minh City,,Luxurious Sky Villa/Perfect for Group/4 Bed + 1 Riverview,villa,Entire rental unit,4,3.0,10,276.2,0.262,22330.0,3.7,4.78,9,False,sourced-airroi
+1436307869971469211,Ho Chi Minh City,,Cozy 1Br; Thao Dien; Infinity Pool; Free Gym;Sauna,apartment,Entire condo,1,1.0,2,84.6,0.712,22049.0,5.1,4.94,32,False,sourced-airroi
+31089534,Da Nang,Thanh Khê District,ZoroHome•CornerSuite•Panoramic•DragonBridge•Pickup,villa,Entire condo,3,2.0,9,97.8,0.594,21870.0,3.7,4.88,289,False,sourced-airroi
+1005954962461487107,Ho Chi Minh City,District 3,High Floor Leman Luxury Central 3 BR Sky Pool,apartment,Entire rental unit,3,2.0,6,138.7,0.436,21870.0,1.7,4.72,25,False,sourced-airroi
+1571761940768097681,Da Nang,,ViNa Cozy Home - 3 minutes to the beach - Full A/C,villa,Entire villa,4,4.0,8,123.6,0.436,21779.0,4.0,4.93,29,False,sourced-airroi
+1355004471026623932,Da Lat,,4bedrooms -Bida-BBQ-Free Parking,villa,Entire home,4,3.5,12,171.2,0.359,21719.0,2.8,5.0,4,False,sourced-airroi
+1352696731927512031,Da Nang,,Home 4Br Full Ac Near Han Market Dragon Bridge,villa,Entire home,4,3.0,8,99.1,0.597,21558.0,3.1,4.67,15,False,sourced-airroi
+1028769456007809474,Ho Chi Minh City,Binh Thanh District,Landmark 4• Next to Landmark 81 • Saigon City View,apartment,Entire condo,3,2.0,6,99.2,0.644,21012.0,3.5,4.93,57,False,sourced-airroi
+1497667402326358916,Da Nang,,Brownie's House - Cozy 4 Bedroom,villa,Entire home,4,4.0,8,120.6,0.456,20653.0,3.4,4.9,21,False,sourced-airroi
+1030716468521049426,Da Nang,Ngũ Hành Sơn District,Corner 3-bedroom apt in My Khe,apartment,Entire rental unit,3,2.0,6,82.2,0.696,20565.0,3.6,4.74,46,False,sourced-airroi
+825076658816209910,Ho Chi Minh City,District 1,100m2 District 1 for 7Pax/3Beds/3WC @BenThanh 200m,apartment,Entire rental unit,4,2.0,10,62.8,0.884,20471.0,2.7,4.68,63,False,sourced-airroi
+1431546447298564569,Da Nang,,Sunrise Homestay with 4BR,villa,Entire home,4,3.0,8,73.7,0.74,20377.0,4.2,4.79,39,False,sourced-airroi
+1525259037973467727,Ho Chi Minh City,,Victory Tower Duplex 4BR 3WC - 1minute to SECC,apartment,Entire rental unit,4,3.0,8,120.1,0.461,20357.0,4.7,4.73,11,False,sourced-airroi
+1167792754039067950,Ho Chi Minh City,Binh Thanh District,City+L81 view; renovated; equipped; 6 TVs [4-bed],apartment,Entire rental unit,4,4.0,8,129.6,0.54,20335.0,2.6,4.8,15,False,sourced-airroi
+1140492793885338211,Ho Chi Minh City,District 1,Fuzzi - Central D1 City View SOHO,apartment,Entire rental unit,2,1.0,4,57.2,0.928,20321.0,2.9,4.94,123,False,sourced-airroi
+39733818,Ho Chi Minh City,Binh Thanh District,3 Huge Bedrooms APT@River;ParkViews VCP Landmark 5,apartment,Entire rental unit,3,2.0,6,82.1,0.669,20286.0,4.7,4.95,60,False,sourced-airroi
+1424156915343752770,Da Nang,,Home 3BR Near Han Maket River Center City Full Ac,villa,Entire home,3,2.0,6,81.4,0.682,20141.0,3.0,4.83,48,False,sourced-airroi
+925687436307862809,Da Nang,Hải Châu District,Thanh House 4br Near Airport  and Downtown,villa,Entire home,4,3.5,8,77.3,0.76,20113.0,3.2,4.8,55,False,sourced-airroi
+1392890926440260569,Da Nang,,50% Off | Zoro Penthouse | Han Market | Firework,villa,Entire condo,3,2.0,8,92.5,0.575,19962.0,3.1,4.84,38,False,sourced-airroi
+1086035236960162248,Ho Chi Minh City,Thủ Đức,Masteri thao dien APT T2 4BR *pool & gym,apartment,Entire rental unit,4,3.0,8,158.8,0.323,19857.0,3.6,4.93,40,False,sourced-airroi
+979306118786390750,Da Lat,Phường 10,Villa Vintage,villa,Entire rental unit,4,4.0,10,316.9,0.17,19525.0,3.4,0.0,2,False,sourced-airroi
+928558823087196673,Da Nang,Thanh Khê District,3 bedrooms 110m2 City Sea Lake view - Free Pick up,apartment,Entire rental unit,3,2.0,6,82.4,0.668,19524.0,4.4,4.93,89,False,sourced-airroi
+664413486484437774,Ho Chi Minh City,District 3,[50% TODAY] 3BR Balcony Gym Sauna Infinity Pool,apartment,Entire condo,3,2.0,6,269.3,0.203,19513.0,2.7,4.88,24,False,sourced-airroi
+1119292625144112269,Da Nang,Hải Châu District,Han Market 5 Min Walk • 4BR 4BA • Indoor Pool • AC,villa,Entire villa,4,4.0,12,132.7,0.401,19427.0,3.9,4.75,12,False,sourced-airroi
+38442891,Ho Chi Minh City,Binh Thanh District,4 Bedroom/4WC combo 2APT same building Landmark Lp,apartment,Entire rental unit,4,4.0,8,141.7,0.391,19415.0,2.8,4.86,58,False,sourced-airroi
+888670737960614516,Da Nang,Sơn Trà District,BB House|Walk to Dragon Bridge|Airportpick 4nights,villa,Entire villa,4,4.0,8,91.0,0.666,19304.0,2.8,4.94,135,False,sourced-airroi
+952128054124446823,Da Nang,Hải Châu District,3BR-Central;near Airport;Dragon Bridge;Han Market,villa,Entire home,3,2.0,6,75.3,0.766,19206.0,2.3,4.93,169,False,sourced-airroi
+1445979399794262469,Da Nang,,New Happy house Homestay's My Khe Beach with 4BR,villa,Entire villa,4,4.0,8,110.6,0.466,19181.0,3.0,4.97,39,False,sourced-airroi
+1010762206932168082,Da Nang,Ngũ Hành Sơn District,Da Nang Resort Furama,apartment,Castle,4,4.0,8,325.5,0.235,18670.0,3.2,0.0,2,False,sourced-airroi
+1384080129482621604,Ho Chi Minh City,,2BR apartment |Saigon| city view| centrally dis. 1,apartment,Entire rental unit,2,1.0,4,69.5,0.696,18477.0,2.6,4.98,49,False,sourced-airroi
+1277243062696410173,Da Nang,Hải Châu District,Cozy 3BR Home Near Dragon Bridge_Han Market_Center,villa,Entire home,3,2.5,6,118.9,0.457,18473.0,3.4,4.93,41,False,sourced-airroi
+823055295438449427,Da Nang,Ngũ Hành Sơn District,MT DA NANG apartment 3BR-41F seaview,apartment,Entire rental unit,3,2.0,6,130.4,0.493,18239.0,3.8,4.63,27,False,sourced-airroi
+3582599,Ho Chi Minh City,District 3,Spacious 3BR For Families And Groups City Center,apartment,Entire serviced apartment,3,2.0,6,97.8,0.575,17965.0,4.1,4.81,74,False,sourced-airroi
+1417127677699929490,Da Nang,,Caden Home | 4BR Ensuite | 7' Walk to My Khe Beach,villa,Entire townhouse,4,4.0,8,103.5,0.414,17669.0,4.4,5.0,51,False,sourced-airroi
+1419330781513662712,Ho Chi Minh City,,【Sale】【4 Bedroom】River View-BIG Suite in Vinhomes,villa,Entire rental unit,4,3.0,8,189.1,0.294,17624.0,5.9,4.8,5,False,sourced-airroi
+1500369668192839406,Da Nang,,4BR Pool Villa; Han River & Beach | Free Pickup,villa,Entire home,4,3.0,10,163.7,0.31,17623.0,2.7,4.67,6,False,sourced-airroi
+1414977340991427855,Ho Chi Minh City,,Morning villa; Morning villa,villa,Entire home,4,5.0,8,440.4,0.115,17617.0,3.5,5.0,3,False,sourced-airroi
+27145851,Ho Chi Minh City,District 1,Serene 2BR | Kitchen+Washer+Netflix by Circadian,apartment,Entire condo,2,1.0,4,69.0,0.652,17427.0,3.7,4.9,312,False,sourced-airroi
+40317627,Da Lat,Phường 10,South Of The Border - Phia Nam Bien Gioi,villa,Entire townhouse,2,1.0,6,63.1,0.734,17108.0,2.7,4.78,339,False,sourced-airroi
+1424987772741041116,Da Nang,,200m² Villa with Private Pool |4 Bedrooms for 6–8 Guests| GOOD PRICE,villa,Entire home,4,3.0,8,141.9,0.419,16922.0,4.8,4.43,7,False,sourced-airroi
+31183268,Da Nang,Hải Châu District,4BR in house/ 5'drive Han Market-MYKHE/city center,villa,Entire rental unit,4,4.0,8,84.5,0.59,16698.0,2.5,5.0,14,False,sourced-airroi
+927321362678902407,Ho Chi Minh City,District 4,Le Place's Amazing Luxury Suite @City Center,apartment,Entire rental unit,4,2.0,8,124.2,0.332,16686.0,4.0,4.85,27,False,sourced-airroi
+890910308022123766,Da Nang,Ngũ Hành Sơn District,Amazing view My Khe beach apt next to walking st,apartment,Entire rental unit,2,1.0,4,52.7,0.855,16643.0,5.6,4.92,102,False,sourced-airroi
+1242451574967427904,Da Nang,,Viethouse 3 bedrooms - Jacuzzi - near My Khe beach,villa,Entire rental unit,3,3.0,6,132.9,0.337,16608.0,5.3,5.0,17,False,sourced-airroi
+638008480648043351,Da Nang,Hải Châu District,KenKeSu-2adjacent floors-Cozy home,villa,Entire rental unit,4,4.0,8,80.1,0.687,16575.0,3.6,4.97,39,False,sourced-airroi
+1377365409535265989,Ho Chi Minh City,,3BR | 5min to Metro  | Fast-Reply Host,apartment,Entire rental unit,3,2.0,6,68.9,0.658,16488.0,7.7,4.38,16,False,sourced-airroi
+1178519986306136798,Ho Chi Minh City,District 4,Căn 100m2; 3 BRS; 2 toilets; near D1 5 minutes,apartment,Entire rental unit,3,1.0,6,62.9,0.941,16472.0,3.7,4.77,48,False,sourced-airroi
+1402650024877015906,Ho Chi Minh City,,Japandi Retreat 2BR/1WC• Central D1; Walk Bui Vien,apartment,Entire rental unit,2,1.0,4,97.2,0.46,16413.0,3.2,4.89,36,False,sourced-airroi
+1386534401768293918,Da Nang,,20% OFF - Duplex 2BR 2Bath 100m² Skyline Views,apartment,Entire serviced apartment,2,2.0,5,88.6,0.485,16290.0,5.4,5.0,61,False,sourced-airroi
+1357254439208329106,Ho Chi Minh City,,The Galleria 3Br Luxury Interior by chiHome,villa,Entire rental unit,3,2.0,6,106.3,0.403,16185.0,3.9,5.0,13,False,sourced-airroi
+23882581,Ho Chi Minh City,District 1,3BR Apt *City Center*5mins walk to BenThanh Market,apartment,Entire rental unit,3,2.0,6,76.7,0.581,16066.0,3.3,4.67,200,False,sourced-airroi
+711225096904073406,Ho Chi Minh City,District 4,“Elegant 4BR Apartment with River View in Saigon”,apartment,Entire condo,4,2.0,8,104.6,0.457,15998.0,3.8,4.94,52,False,sourced-airroi
+1414855302131701494,Da Nang,,High-Floor Duplex 2BR 2BA | 100m² Skyline Views,apartment,Entire serviced apartment,2,2.0,5,89.2,0.463,15970.0,3.0,4.94,71,False,sourced-airroi
+1331507093943308869,Da Lat,,2-storey penthouse located in the center of Da Lat,villa,Entire rental unit,3,3.0,6,105.5,0.395,15946.0,3.0,4.99,84,False,sourced-airroi
+1315927078893002806,Da Nang,Hải Châu District,Camellia Home,villa,Entire home,3,3.5,8,70.4,0.813,15934.0,2.1,4.9,48,False,sourced-airroi
+1341503087358629830,Da Nang,,Apartment 3108 facing My Khe beach; 03 bedrooms,apartment,Entire rental unit,3,2.0,6,75.6,0.612,15816.0,10.9,4.5,16,False,sourced-airroi
+1220618189939106150,Ho Chi Minh City,District 7,Comfort &Peaceful 3BRs at Phu My Hung-Next to SECC,apartment,Entire rental unit,3,2.0,6,83.5,0.523,15747.0,5.0,4.95,39,False,sourced-airroi
+815516368820181027,Da Lat,Phường 3,apartment for rent,apartment,Entire rental unit,3,2.0,6,61.6,0.696,15743.0,2.0,4.85,209,False,sourced-airroi
+31276136,Da Nang,Hải Châu District,3BR in house /5' drive MYKHE-Han Market/ URI HOUSE,villa,Entire rental unit,3,3.0,5,66.7,0.66,15709.0,2.8,4.93,61,False,sourced-airroi
+977972610011068743,Da Nang,Ngũ Hành Sơn District,MH Apartment 3Bedroom Ocean View,apartment,Entire rental unit,3,2.0,7,77.5,0.548,15563.0,3.8,4.58,19,False,sourced-airroi
+1376108702739860288,Da Nang,,4BRs center | free pool | free airport in May,villa,Entire villa,4,4.0,8,111.3,0.37,15481.0,3.3,4.92,59,False,sourced-airroi
+49063339,Da Nang,Ngũ Hành Sơn District,Daisy Purama Resort Villa Đà Nẵng 5* Beachfront,villa,Entire villa,4,4.0,8,335.1,0.184,15455.0,3.1,0.0,2,False,sourced-airroi
+967076508082785931,Da Nang,Sơn Trà District,Family Suite | 2 Bedrooms Apartment | My Khe Beach,apartment,Entire rental unit,2,1.0,4,59.5,0.742,15431.0,6.2,4.94,49,False,sourced-airroi
+1232416127252145239,Da Nang,Hải Châu District,2-Bdr apt with 3 separate beds besides Han River.,apartment,Entire condo,3,2.0,5,83.8,0.503,15384.0,3.4,4.71,35,False,sourced-airroi
+1523446208774641776,Da Nang,,Luxury RiverSide Apartment - 3 Bedrooms with pool,apartment,Entire rental unit,3,2.0,7,84.4,0.482,15377.0,3.7,4.81,36,False,sourced-airroi
+1152672304166399763,Da Nang,Ngũ Hành Sơn District,Apt Sunny with seaview,apartment,Entire rental unit,2,1.0,4,55.9,0.842,15302.0,9.2,4.96,27,False,sourced-airroi
+854995929603255402,Ho Chi Minh City,District 3,Central Cozy 3BR Serviced Apartment-Prime Location,apartment,Entire serviced apartment,3,2.0,6,97.4,0.422,15276.0,4.2,4.82,22,False,sourced-airroi
+1238377668513029443,Da Lat,Phường 10,Evangeline in Dalat centre - Flexible in/out time,villa,Entire home,3,3.0,7,79.4,0.62,15274.0,6.8,4.95,20,False,sourced-airroi
+1131217202826920910,Ho Chi Minh City,Binh Thanh District,L81+Vincom view; spacious; fully equipped [3-bed],apartment,Entire rental unit,3,2.0,6,82.4,0.523,15235.0,2.7,4.84,56,False,sourced-airroi
+741537537615138727,Da Nang,Sơn Trà District,Sanayen Executive Apartment| Pool View| Kitchen,apartment,Entire serviced apartment,4,4.0,8,153.7,0.421,14909.0,3.5,4.88,26,False,sourced-airroi
+1522196518555018126,Da Nang,,Luxury Riverside Apartment-3 Bedroom with Pool,apartment,Entire rental unit,3,2.0,6,84.4,0.466,14895.0,3.3,4.9,21,False,sourced-airroi
+1264192466959663416,Ho Chi Minh City,Binh Thanh District,Casa Co Core - Eclectic; Soulful Old Saigon Home,villa,Private room in home,4,2.0,8,109.4,0.449,14854.0,4.9,4.89,18,False,sourced-airroi
+601313207209246606,Ho Chi Minh City,District 3,SPACIOUS 3DR FOR FAMILIES AND GROUPS IN THE CENTER,apartment,Entire serviced apartment,3,2.0,6,94.7,0.405,14780.0,4.5,4.83,53,False,sourced-airroi
+761186394446511644,Ho Chi Minh City,District 4,Modern 2BR APT Bathtub in the Heart of Bui Vien,apartment,Entire condo,2,1.0,4,54.0,0.745,14611.0,3.8,4.77,133,False,sourced-airroi
+940985146694266923,Ho Chi Minh City,Binh Thanh District,【4 BedRoom HighFloor-River View】【FREE PICK UP】,apartment,Entire rental unit,4,3.0,10,174.9,0.237,14598.0,3.4,4.75,20,False,sourced-airroi
+777366659294361666,Da Lat,Phường 4,Thong City View House,villa,Entire rental unit,3,3.0,6,87.3,0.452,14529.0,2.4,4.98,121,False,sourced-airroi
+1292337839283439196,Da Nang,Ngũ Hành Sơn District,3-Bedroom apartment sea view,apartment,Entire rental unit,3,2.0,7,75.7,0.539,14522.0,5.6,4.3,27,False,sourced-airroi
+709098196028180950,Da Lat,Phường 8,TeAmo Home for rent with BBQ yard,villa,Entire cabin,4,4.5,10,101.2,0.733,14477.0,3.7,4.91,11,False,sourced-airroi
+1559342818113650577,Ho Chi Minh City,,The Tresor Luxury Apartment 3 bedrooms; 2 bathrooms,apartment,Entire rental unit,3,2.0,6,80.3,0.468,14452.0,3.8,4.88,17,False,sourced-airroi
+1396063714335997223,Ho Chi Minh City,,River view 1 - Amazing 3BRs - Free Gym & Pool,apartment,Entire rental unit,3,2.0,6,67.5,0.567,14373.0,4.0,4.94,17,False,sourced-airroi
+952720871360678019,Ho Chi Minh City,District 7,Spacious 3Brs- Amazing Pool&Gym -D7 -Dhome SaiGon,villa,Entire condo,3,2.0,6,72.1,0.632,14365.0,4.7,4.91,100,False,sourced-airroi
+870044089769487670,Ho Chi Minh City,Binh Thanh District,Premium 2BR Residence – Landmark 3; Amazing View,apartment,Entire rental unit,2,1.0,4,61.2,0.632,14249.0,3.3,4.83,103,False,sourced-airroi
+1518902157233177068,Ho Chi Minh City,,Tuns House - Central 3BR; Steps from Ben Thanh,villa,Entire home,3,2.0,6,88.4,0.416,13957.0,3.5,4.89,28,False,sourced-airroi
+1207189718982040114,Da Lat,Phường 9,Homie Bread,villa,Entire home,3,3.0,6,78.8,0.528,13935.0,2.4,4.7,23,False,sourced-airroi
+1140394693785722870,Da Nang,Hải Châu District,Y House Near Airport And Center City 3 Bb Full Ac,villa,Entire home,3,3.0,7,71.0,0.532,13683.0,4.1,4.97,36,False,sourced-airroi
+1020791843324319178,Ho Chi Minh City,District 1,Cozy house in the heart of the Central District 1,villa,Entire home,2,1.0,4,61.4,0.6,13425.0,4.8,4.92,73,False,sourced-airroi
+837537869728794938,Da Nang,Ngũ Hành Sơn District,KNP -Spectacular View from a Luxurious Penthouse,villa,Entire rental unit,4,2.0,8,98.6,0.407,13383.0,3.6,4.59,39,False,sourced-airroi
+1541830767290504644,Da Nang,,Watch the sunrise from the 3-bedroom apartment - sea view,apartment,Entire rental unit,3,2.0,7,77.5,0.43,13374.0,4.2,4.92,13,False,sourced-airroi
+848093492539722132,Ho Chi Minh City,District 7,Infinity pool+River Panorama 3 bedrooms luxury apt,apartment,Entire rental unit,3,2.0,8,54.5,0.722,13250.0,5.7,4.77,71,False,sourced-airroi
+1518020716969070568,Da Nang,,3BR Lantern House Architecture Stay near Han River,villa,Entire home,3,2.0,7,95.8,0.378,13209.0,3.0,4.9,31,False,sourced-airroi
+921671306549663108,Ho Chi Minh City,District 1,Spacious 2Br(3beds)+1Wc; Central D1; 300M Bui Vien,apartment,Entire rental unit,2,1.0,4,105.4,0.323,13209.0,3.1,4.85,72,False,sourced-airroi
+1117953417131073892,Da Nang,Thanh Khê District,Rubber HOUSE - 4Brs | near The Airport,villa,Entire townhouse,4,4.0,8,70.1,0.571,13020.0,2.9,4.77,53,False,sourced-airroi
+875995689888206332,Da Lat,Phường 3,Entire 2-bedroom Family Apartment - Lavita home,villa,Tiny home,2,2.0,4,64.7,0.545,13006.0,2.1,4.97,119,False,sourced-airroi
+42219091,Ho Chi Minh City,District 3,G00D Deal! Free Pool+Gym 3BR Suite Leman Luxury,apartment,Entire serviced apartment,3,2.0,6,160.5,0.208,12965.0,1.7,4.87,39,False,sourced-airroi
+1388047549722447938,Ho Chi Minh City,,Staycation Apt-Colorful 4BR Penthouse In Heart D3,villa,Entire rental unit,4,3.0,8,144.3,0.455,12889.0,5.4,5.0,4,False,sourced-airroi
+1297427650978575728,Ho Chi Minh City,Binh Thanh District,Landmark 2• 17F• 20% OFF• City View• Free Netflix,apartment,Entire condo,2,1.0,4,61.6,0.573,12886.0,3.5,4.81,79,False,sourced-airroi
+981429723350076401,Da Nang,Ngũ Hành Sơn District,Furama Danang Resort - 4 bedrooms - private beach,apartment,Castle,4,4.0,8,330.5,0.136,12747.0,2.6,0.0,1,False,sourced-airroi
+1128145470666667813,Da Nang,Ngũ Hành Sơn District,Muong Thanh Apartment 3 Bedrooms Sea View,apartment,Entire rental unit,3,2.0,8,118.8,0.393,12683.0,3.4,5.0,4,False,sourced-airroi
+1417837456751588530,Ho Chi Minh City,,Brightening view - 3BRs - King beds- Amazing  Pool,apartment,Entire rental unit,3,2.0,6,66.9,0.521,12576.0,3.7,5.0,25,False,sourced-airroi
+1544066367902576294,Ho Chi Minh City,,Spacious 4 bedrooms Apart in HCMC Center Free Pool,apartment,Entire rental unit,4,2.0,8,138.0,0.297,12568.0,4.8,4.83,6,False,sourced-airroi
+1512769699503594822,Da Nang,,Dang Khanh Homestay,villa,Entire home,4,4.0,8,96.7,0.432,12551.0,10.0,4.83,6,False,sourced-airroi
+772791785505968369,Ho Chi Minh City,District 1,Stylish; High-Quality Studio with City Charm in D1,apartment,Entire rental unit,1,1.0,2,44.7,0.759,12378.0,2.6,4.87,154,False,sourced-airroi
+858578128815367052,Ho Chi Minh City,District 1,Ductaigallery's Apt & Entire in Bui vien st.,apartment,Entire rental unit,3,1.0,6,48.4,0.663,12302.0,3.0,4.7,71,False,sourced-airroi
+1310608981450032228,Da Nang,,In front of MyKhe beach Panorama 15fl Suite,apartment,Entire serviced apartment,2,1.0,4,77.1,0.609,12271.0,10.1,4.47,17,False,sourced-airroi
+695147235363699785,Da Nang,Ngũ Hành Sơn District,Pool Villa Da Nang/Free Pick-up Airport/ Billiards,villa,Entire villa,4,3.0,10,165.4,0.55,12230.0,4.5,4.48,21,False,sourced-airroi
+922977270714302797,Da Nang,Ngũ Hành Sơn District,Apartment 1840 with two bedrooms; Sea view in Muong Thanh,apartment,Entire rental unit,2,1.0,4,45.8,0.872,12122.0,20.0,4.86,22,False,sourced-airroi
+1336282794597827052,Da Nang,,Sky House/4BR/5m BachDang walking street/Han River,villa,Entire home,4,6.0,8,94.6,0.341,11961.0,3.5,4.68,25,False,sourced-airroi
+1402958782408737657,Ho Chi Minh City,,2BR Serviced Apt. City Center next to Park 12TD4,apartment,Entire rental unit,2,1.0,4,48.5,0.649,11888.0,3.8,4.95,43,False,sourced-airroi
+1159685102945727052,Da Lat,Phường 10,3-bedroom apartment Chubby House Da Lat,villa,Entire rental unit,3,2.0,6,56.2,0.611,11846.0,2.0,4.96,25,False,sourced-airroi
+841536217626528686,Da Nang,Ngũ Hành Sơn District,DaNang Penthouse-41Floor  Seaview Corner,villa,Entire rental unit,2,1.0,4,52.7,0.756,11818.0,3.5,4.73,40,False,sourced-airroi
+1560178184662825900,Ho Chi Minh City,,Apartment high-class Tresor 3 Bedroom View River,apartment,Entire rental unit,3,2.0,6,95.2,0.334,11776.0,4.9,5.0,7,False,sourced-airroi
+838980097361797305,Ho Chi Minh City,District 7,Sunrise City View 2Bd Apt. Pool Gym/10min to D.1,apartment,Entire condo,2,1.0,4,47.8,0.661,11734.0,4.6,4.9,77,False,sourced-airroi
+1562358866556666131,Ho Chi Minh City,,Family room • Rooftop pool • Steps to Ben Thanh,apartment,Room in hotel,2,1.0,4,109.9,0.288,11663.0,1.7,4.83,12,False,sourced-airroi
+1372492411092321849,Da Nang,,Sky Pool Villa /4BR /Near Beach & Sơn Trà,villa,Entire home,4,4.0,8,151.7,0.213,11662.0,6.9,2.33,3,False,sourced-airroi
+750473156103873535,Ho Chi Minh City,District 1,The Tresor APT at Center 2bedroom,apartment,Entire rental unit,2,1.0,4,52.3,0.603,11589.0,4.5,4.77,48,False,sourced-airroi
+1022396143772220000,Da Nang,Ngũ Hành Sơn District,Sea front apartmet,apartment,Entire rental unit,2,1.0,4,49.3,0.81,11518.0,3.3,4.76,78,False,sourced-airroi
+816400214388156459,Ho Chi Minh City,Binh Thanh District,Vinhomes C. Park-Landmark 3-1BR Netflix and Chill,villa,Entire condo,1,1.0,2,40.0,0.784,11509.0,5.2,4.98,44,False,sourced-airroi
+1401111303360681838,Ho Chi Minh City,,Cozy 2BR Serv. Apt. City Center Next to Park 12TD3,apartment,Entire rental unit,2,1.0,4,51.0,0.581,11426.0,3.9,4.94,36,False,sourced-airroi
+1088130087789003650,Ho Chi Minh City,District 4,Saigon Royal 2 bedrooms near Ben Thanh 7,apartment,Entire condo,2,1.0,4,56.9,0.596,11395.0,8.8,4.85,13,False,sourced-airroi
+656409949394354096,Ho Chi Minh City,Thủ Đức,Galleria Skyline View Retreat | Pool & Gym,apartment,Entire condo,1,1.0,2,68.6,0.474,11378.0,3.8,4.9,72,False,sourced-airroi
+1388793234606644391,Da Nang,,Chic 2BR 2BA Duplex 100m² | Skyline Views Central,apartment,Entire serviced apartment,2,2.0,5,88.9,0.369,11377.0,3.6,4.97,65,False,sourced-airroi
+550905551089662819,Da Lat,Phường 10,Roji,villa,Entire home,3,3.0,6,94.6,0.332,11275.0,2.8,4.91,196,False,sourced-airroi
+1454683069966817391,Ho Chi Minh City,,Landmark 2 • 20% OFF •Nice View•Cozy• Free Netflix,apartment,Entire rental unit,2,1.0,4,54.9,0.54,11220.0,4.5,4.85,26,False,sourced-airroi
+1113717223635630089,Ho Chi Minh City,,Empire City Thu Thiem- 1 large bedroom apartment,apartment,Entire rental unit,1,1.0,2,71.7,0.537,11204.0,6.6,5.0,5,False,sourced-airroi
+1149852181500806941,Da Lat,Phường 10,Envy Dalat - home garden,villa,Entire home,3,2.0,6,53.8,0.574,11113.0,2.5,4.9,51,False,sourced-airroi
+1196031269420945896,Ho Chi Minh City,Binh Thanh District,L81 view; top floor; renovated; equipped [1-bed],apartment,Entire rental unit,1,1.0,2,53.7,0.584,11073.0,6.9,4.93,41,False,sourced-airroi
+1325619211789394703,Ho Chi Minh City,,3BR - Top floor Free swimming pool & gym,apartment,Entire rental unit,3,2.0,6,112.5,0.26,11031.0,5.9,4.65,17,False,sourced-airroi
+1542788747748016388,Ho Chi Minh City,,Cozy-Modern 3BR/2WC • D1 Center • Views • Bui Vien,apartment,Entire rental unit,3,2.0,6,236.1,0.126,11020.0,3.3,5.0,5,False,sourced-airroi
+749119836918464093,Ho Chi Minh City,District 7,#7- Midtown Premium Aparments,apartment,Entire rental unit,2,2.0,4,83.0,0.364,11018.0,4.4,4.96,25,False,sourced-airroi
+1122055743234971114,Ho Chi Minh City,District 1,Executive Living near Attractions & Restaurants D1,apartment,Entire rental unit,1,1.0,2,75.1,0.472,10979.0,3.0,4.97,32,False,sourced-airroi
+942579409974566924,Da Nang,Sơn Trà District,4 King Bed Rooms- My Khe Beach- Da Nang,villa,Entire home,4,3.0,9,51.0,0.746,10944.0,3.7,4.51,94,False,sourced-airroi
+1485311452861972929,Da Nang,,Cassia House 4BR – Private Jacuzzi - My Khe Beach,villa,Entire home,4,4.0,8,148.2,0.211,10921.0,5.1,4.8,10,False,sourced-airroi
+1156451636317015944,Da Lat,Phường 10,2 Bedroom Apartment with Valley View and Balcony,apartment,Entire rental unit,2,1.0,4,56.5,0.662,10872.0,2.3,5.0,23,False,sourced-airroi
+1521812677222500900,Ho Chi Minh City,,Central Saigon 4BR Apartment – Ben Thanh Tower,apartment,Entire rental unit,4,3.0,8,284.1,0.115,10829.0,2.8,0.0,1,False,sourced-airroi
+1530796670857434303,Ho Chi Minh City,,Masteri T1 3BR/pool & gym free/KoRean host,apartment,Entire rental unit,3,2.0,6,83.6,0.345,10829.0,4.3,4.75,24,False,sourced-airroi
+29301610,Ho Chi Minh City,District 3,Enchanting home in central saigon (L1),villa,Entire rental unit,3,1.0,6,63.1,0.444,10790.0,3.2,4.88,180,False,sourced-airroi
+995208650476028988,Da Nang,Hải Châu District,Bibi’s home,villa,Private room in home,4,0.0,0,111.2,0.306,10765.0,2.6,4.75,16,False,sourced-airroi
+1293257441337246960,Da Nang,Hải Châu District,Home 3BRS - Near Dragon Bridge - Da Nang Center,villa,Entire home,3,3.0,6,151.1,0.195,10737.0,3.7,5.0,3,False,sourced-airroi
+1241749885387554114,Da Nang,Ngũ Hành Sơn District,2BR/Sunrise Beach front Apt/Dragon Bridge5',apartment,Entire rental unit,2,1.0,4,47.8,0.772,10720.0,14.6,4.71,17,False,sourced-airroi
+1577326467482053103,Da Nang,,3BR Pool Villa | 5 Min walk to My Khe Beach,villa,Entire villa,3,3.0,6,162.0,0.188,10690.0,2.8,0.0,1,False,sourced-airroi
+49426694,Da Nang,Hải Châu District,Family Large Room With Pool View,apartment,Entire rental unit,2,1.0,4,55.1,0.537,10682.0,1.5,4.81,48,False,sourced-airroi
+1414542721580197466,Ho Chi Minh City,,Japanese Town Best Apartment,apartment,Entire rental unit,3,2.0,6,150.0,0.17,10633.0,3.1,5.0,3,False,sourced-airroi
+1055438937811759035,Da Nang,,[Holiday Discount] Muong Thanh•3BR•2BTH•Seaview,apartment,Entire rental unit,3,2.0,6,99.0,0.289,10606.0,4.7,4.79,33,False,sourced-airroi
+1541136729511652391,Da Nang,,Fireworks view 35Fl Oceanview suite MuongThanh APT,apartment,Entire rental unit,2,1.0,4,49.9,0.488,10422.0,6.8,5.0,30,False,sourced-airroi
+1196227119184098395,Ho Chi Minh City,Thủ Đức,Lumiere Riverside | 36floor | 2tv/15 minutes to Group 1| 3 minutes to ,apartment,Entire rental unit,1,1.0,2,59.1,0.625,10419.0,5.1,4.87,38,False,sourced-airroi
+786044360288463792,Ho Chi Minh City,District 7,#1 - Midtown Premium Aparments,apartment,Entire rental unit,2,2.0,4,92.7,0.331,10325.0,8.8,5.0,19,False,sourced-airroi
+1508470522976223857,Da Nang,,Beach Front Apartment*2Pax*Infinity Pool OceanView,apartment,Entire condo,1,1.0,2,61.2,0.464,10302.0,5.2,4.79,14,False,sourced-airroi
+1490545591737199010,Da Lat,,Little Fish Dalat.,villa,Tiny home,2,1.0,4,96.7,0.288,10299.0,3.2,4.67,6,False,sourced-airroi
+1011863939656226901,Da Nang,Hải Châu District,LeilaHouse Danang - 3BRs - Free picking airport,villa,Entire home,3,3.0,6,75.5,0.395,10194.0,2.9,4.83,30,False,sourced-airroi
+38443892,Ho Chi Minh City,Binh Thanh District,4 Bedroom/4WC combo 2APT same building Landmark Lp,apartment,Entire serviced apartment,4,4.0,8,145.3,0.192,10170.0,3.0,4.88,64,False,sourced-airroi
+1359520173700631373,Da Nang,,Villa 350m2*Center*BestPrice*New4BR*BeachMyKhe900m,villa,Entire villa,4,4.0,8,113.4,0.34,10147.0,5.5,4.87,38,False,sourced-airroi
+897366410024863090,Ho Chi Minh City,Binh Thanh District,37th FL_Landmark Plus_Luxury 1BR Apt with CityView,apartment,Entire rental unit,1,1.0,2,49.1,0.6,10077.0,4.5,4.74,113,False,sourced-airroi
+1258465518385190149,Ho Chi Minh City,,3 bedroom apartment; Landmark 2,apartment,Entire rental unit,3,2.0,6,79.8,0.375,10071.0,5.5,5.0,20,False,sourced-airroi
+1221435028089269285,Ho Chi Minh City,District 7,Attractive View-Large 3Brs -TopFloor-Free Pool&Gym,apartment,Entire rental unit,3,2.0,6,68.5,0.435,10028.0,4.5,4.86,29,False,sourced-airroi
+29200096,Ho Chi Minh City,District 1,Royal design 3BRs; STUNNING VIEW; HEART of HCMcity,apartment,Entire condo,3,2.0,6,110.7,0.585,10011.0,4.4,4.79,167,False,sourced-airroi
+1404861548095143754,Ho Chi Minh City,,2-bedroom apartment - Landmark 2,apartment,Entire condo,2,1.0,4,52.1,0.537,9952.0,9.3,4.5,12,False,sourced-airroi
+954691603419846733,Ho Chi Minh City,District 7,New! Light and airy 2BR apartment D7HCM near CBD,apartment,Entire rental unit,2,1.0,4,44.1,0.619,9949.0,5.3,4.94,52,False,sourced-airroi
+1530913122169467468,Ho Chi Minh City,,Park 3 3bedroom Vinhome Central Park ( 12.09),villa,Entire rental unit,3,2.0,6,78.5,0.34,9856.0,7.3,4.8,10,False,sourced-airroi
+957511879001511733,Da Nang,Sơn Trà District,3BR Serene House in My Khe Beach,villa,Entire home,3,2.0,6,65.0,0.415,9855.0,2.9,4.66,65,False,sourced-airroi
+1145520175326654427,Da Nang,Ngũ Hành Sơn District,40th Floor-2 BRs Sea View  Muong Thanh Luxury APT,apartment,Entire rental unit,2,1.0,4,44.1,0.645,9765.0,4.2,4.86,99,False,sourced-airroi
+1120275367048669437,Ho Chi Minh City,District 1,Central location; new building; equipped [4 bed],apartment,Entire rental unit,4,2.0,7,138.1,0.409,9721.0,3.4,5.0,6,False,sourced-airroi
+32678625,Da Nang,Sơn Trà District,Tropical House*MODERN GREEN 2BR APT*City Center,villa,Entire rental unit,2,1.0,4,46.0,0.669,9713.0,5.6,4.66,65,False,sourced-airroi
+1357861050619032463,Da Lat,,Industrial Apartment,apartment,Entire rental unit,2,2.0,4,81.0,0.331,9707.0,2.5,5.0,56,False,sourced-airroi
+1466644377699719755,Ho Chi Minh City,,"""Landmark 2"" 41th floor; city ​​view ;2TV Netflix",apartment,Entire rental unit,2,1.0,4,63.1,0.408,9675.0,3.7,4.82,55,False,sourced-airroi
+26759335,Da Lat,Phường 10,Stay;Feel&Love_The Valley,villa,Entire home,2,1.0,5,32.6,0.781,9641.0,3.1,4.81,308,False,sourced-airroi
+1247740173308095694,Ho Chi Minh City,District 1,4BR Luxe 6* Condos/Free Pool/Airport,apartment,Entire condo,4,2.0,8,200.9,0.132,9595.0,4.8,4.5,8,False,sourced-airroi
+584492946845051628,Da Lat,Phường 3,Studio with a gorgeous valley view - HYGGE Da Lat,apartment,Room in boutique hotel,2,2.0,4,63.2,0.442,9545.0,2.2,4.95,21,False,sourced-airroi
+1528096591562483665,Ho Chi Minh City,,Metropole Cozy Apt | City View  w/ Pool & Gym,apartment,Entire rental unit,1,1.0,2,70.2,0.377,9485.0,7.6,5.0,8,False,sourced-airroi
+41996410,Da Lat,Phường 1,Da Lat handing over the entire home center of Van Anh,villa,Entire townhouse,4,3.0,10,50.0,0.491,9428.0,2.9,4.74,95,False,sourced-airroi
+48494745,Da Nang,Hải Châu District,KenKeSu-Whole third floor- Cozy home,villa,Entire rental unit,2,2.0,4,38.3,0.666,9374.0,4.6,4.98,57,False,sourced-airroi
+1576487860738669316,Da Lat,,2 Bedroom Apartment; Da Lat Center; Next to Night Market,apartment,Entire rental unit,2,1.0,4,56.2,0.411,9339.0,2.5,4.95,44,False,sourced-airroi
+37219611,Da Nang,Sơn Trà District,3 balconies/4pax/Two bedroom apt/Jacuzzi rooftop,apartment,Room in serviced apartment,2,1.0,4,78.3,0.395,9319.0,10.6,4.86,70,False,sourced-airroi
+1528119772086628251,Ho Chi Minh City,,Landmark 3bedroom ( 19.10 ) Vinhome Central Park,villa,Entire rental unit,3,2.0,6,73.2,0.352,9250.0,8.3,0.0,2,False,sourced-airroi
+1547654568928731458,Da Nang,,Private Villa Pool–BBQ–Billiards|4PN |Good Price for Groups,villa,Entire villa,4,3.0,8,103.7,0.255,9209.0,6.4,5.0,5,False,sourced-airroi
+1526078713253741085,Ho Chi Minh City,,Landmark 3bedroom L4 Vinhome ( 33),villa,Entire rental unit,3,2.0,6,74.5,0.348,9146.0,5.9,5.0,9,False,sourced-airroi
+41801551,Ho Chi Minh City,District 4,Trésor Le Saigonnais; 3 bedrooms; 27 a,apartment,Entire condo,3,2.0,6,80.2,0.358,8934.0,7.8,4.64,22,False,sourced-airroi
+817627615126184542,Da Lat,Phường 3,Dalat Central Resort Apartment,apartment,Entire rental unit,3,2.0,7,47.2,0.519,8918.0,2.5,4.99,99,False,sourced-airroi
+1355614393829142586,Ho Chi Minh City,,Spacious 2BR Apt With Landmark 81 View Near Dist1,apartment,Entire rental unit,2,1.0,4,37.4,0.658,8859.0,5.0,4.44,54,False,sourced-airroi
+1431830801217228976,Ho Chi Minh City,,3br-Luxury (River&City View)Vinhome Landmark1(32F),villa,Entire condo,3,2.0,6,97.0,0.247,8808.0,3.6,4.91,23,False,sourced-airroi
+1167082563420403488,Da Lat,,Le Beau Rêve (villa),villa,Entire home,5,2.0,8,110.2,0.203,8808.0,2.3,5.0,11,False,sourced-airroi
+706404806004410654,Ho Chi Minh City,Binh Thanh District,Vinhomes - 2 bedroom apartment with nice view,villa,Entire serviced apartment,2,1.0,4,66.8,0.571,8806.0,6.4,4.95,65,False,sourced-airroi
+1483330568697628071,Ho Chi Minh City,,Apartments in Korean Town; District 7,apartment,Entire rental unit,3,2.0,6,52.1,0.441,8727.0,4.1,5.0,66,False,sourced-airroi
+1371319256903072882,Ho Chi Minh City,,Sunrise City View 2B Apt.10m to D1/ Free Pool Gym,apartment,Entire condo,2,1.0,4,45.3,0.542,8706.0,4.6,4.83,18,False,sourced-airroi
+1464281958523949645,Ho Chi Minh City,,""" Landmark 1 "" 38th floor; nice view; 2TV Netflix",apartment,Entire rental unit,2,1.0,4,62.4,0.356,8692.0,5.2,4.77,26,False,sourced-airroi
+1572521995564621960,Da Nang,,Coca Home 4BR *4WC - In the city center - Near sea,villa,Entire home,4,4.0,10,72.7,0.307,8659.0,4.4,4.88,17,False,sourced-airroi
+1217154875373241975,Da Lat,Phường 1,39 Uchi - Da Lat City Center Apartment 2BR,apartment,Entire rental unit,2,1.0,4,37.8,0.586,8511.0,3.8,4.72,75,False,sourced-airroi
+1387399837889952454,Da Nang,,BRAVO HOUSE-Full AC | near Han River & MyKhe Beach,villa,Entire home,3,3.0,6,65.2,0.323,8488.0,4.9,4.64,22,False,sourced-airroi
+692403971616170053,Da Nang,Ngũ Hành Sơn District,Drum Dong Villa  - 300m My Khe beach,villa,Entire villa,4,3.5,8,117.9,0.705,8420.0,5.2,4.8,71,False,sourced-airroi
+1505852706120046524,Da Nang,,House 3BR- near Han Market and Dragon Bridge,villa,Entire home,3,2.5,6,136.6,0.176,8378.0,2.9,5.0,6,False,sourced-airroi
+1157641425848823370,Da Nang,Thanh Khê District,Cozy 2BR House_Center_Con Market_Train Station,villa,Entire home,2,2.0,4,67.5,0.568,8375.0,9.6,4.91,11,False,sourced-airroi
+1401494074781456447,Ho Chi Minh City,,3br Luxurious interiors City View Landmark 5(38F),apartment,Entire condo,3,2.0,6,87.0,0.26,8344.0,3.1,4.83,18,False,sourced-airroi
+1537776756569140414,Ho Chi Minh City,,Unique Luxury Apartment -District 1 Central City,apartment,Entire rental unit,4,2.0,9,136.9,0.23,8343.0,10.3,3.33,3,False,sourced-airroi
+1425140579150984478,Da Nang,,Leilahome -3BRs -Danang Central,villa,Entire home,3,3.0,6,83.3,0.26,8320.0,2.8,4.5,12,False,sourced-airroi
+994134757422898717,Ho Chi Minh City,Binh Thanh District,Vinhomes Central Park - 3BR - Landmark 4 -24 Floor,villa,Entire rental unit,3,2.0,6,71.9,0.368,8269.0,4.7,4.86,14,False,sourced-airroi
+1413500705711452181,Ho Chi Minh City,,Le Boulevard-Amazing 1BR Walkable To War Museum D3,apartment,Entire rental unit,1,1.0,2,26.5,0.86,8244.0,4.8,4.77,43,False,sourced-airroi
+1445002649180906062,Da Nang,,The Filmore Da Nang with view of Dragon bridge,apartment,Entire rental unit,1,1.0,2,59.6,0.362,8220.0,6.6,4.95,20,False,sourced-airroi
+1289799756877698854,Da Nang,Ngũ Hành Sơn District,BalizaHome_2 bedrooms_Balcony_Spacious apartment,villa,Entire rental unit,2,1.0,4,31.1,0.807,8156.0,5.3,4.83,58,False,sourced-airroi
+1536624192432006561,Da Nang,,Monarchy 3-bedroom apartment near Dragon Bridge & beach,apartment,Entire rental unit,3,2.0,6,93.2,0.265,8132.0,3.7,5.0,5,False,sourced-airroi
+1558383179698172048,Da Nang,,Monarchy 3-bedroom apartment with Han River view near My Khe beach,apartment,Entire rental unit,3,2.0,6,83.9,0.307,8132.0,3.6,0.0,2,False,sourced-airroi
+623009829866202086,Ho Chi Minh City,Binh Thanh District,Landmark 2 - 45 Vinhome Central Park,villa,Entire rental unit,1,1.0,2,45.2,0.489,8050.0,6.3,4.78,49,False,sourced-airroi
+812702684870205610,Da Lat,Phường 1,Le Ciment 401 - 2 Bedroom Apartment,apartment,Entire rental unit,2,1.0,4,70.6,0.317,8050.0,2.5,4.81,26,False,sourced-airroi
+31276678,Da Nang,Hải Châu District,Apt2BR/kitchen+dining table /5' drive Mykhe/center,apartment,Entire rental unit,2,2.0,4,46.5,0.503,8044.0,2.7,4.93,67,False,sourced-airroi
+1362233403150796001,Da Nang,,Cam's Homestay,villa,Entire home,4,2.0,9,74.5,0.307,7982.0,5.9,5.0,25,False,sourced-airroi
+1376548592429804499,Da Nang,,Hinata Villa_3BR_Quiet_Large Pool_Private,villa,Entire home,3,1.0,6,156.2,0.16,7969.0,3.0,0.0,2,False,sourced-airroi
+1186683915108893193,Ho Chi Minh City,District 1,Apartment SOHO 2 bedrom;  Central Sai Gon,apartment,Entire rental unit,2,1.0,4,69.8,0.342,7942.0,3.2,4.62,26,False,sourced-airroi
+754913986802945120,Ho Chi Minh City,Binh Thanh District,Landmark 1bedroom - Vinhome Central Park,villa,Entire rental unit,1,1.0,2,45.4,0.482,7940.0,9.3,4.78,32,False,sourced-airroi
+49046323,Ho Chi Minh City,District 7,The most beautiful 5-star high-class apartment in District 7 near Dist,apartment,Entire condo,2,1.0,3,44.0,0.639,7940.0,14.6,4.9,42,False,sourced-airroi
+1542380135850442871,Ho Chi Minh City,,NU Japan Town D1 | City 2BR | Brand-New Interior,apartment,Entire rental unit,2,1.0,4,57.9,0.405,7930.0,3.4,4.88,26,False,sourced-airroi
+1302192061577025187,Ho Chi Minh City,Binh Thanh District,Big discount! Cozy 2BR Green Home/5 Mins to D1,villa,Entire rental unit,2,1.0,4,35.8,0.742,7905.0,4.4,4.82,34,False,sourced-airroi
+1287946492943665074,Da Nang,Hải Châu District,Wings house dragon bridge,villa,Entire home,3,3.0,6,141.1,0.168,7873.0,3.1,0.0,1,False,sourced-airroi
+1373565067983684114,Da Nang,,Hinata Villa_3BR_Quiet; Large Pool_Korean Embassy,villa,Entire home,3,1.0,6,147.5,0.166,7737.0,3.6,0.0,0,False,sourced-airroi
+1161303858128278267,Da Lat,Phường 3,Deluxe Double * with Bathtub 502 (Yukkuri Hotel),apartment,Room in hotel,1,1.0,2,37.2,0.562,7736.0,1.6,4.9,41,False,sourced-airroi
+704828817108021980,Da Lat,Phường 5,2 bedrooms - lovely wooden house in the center of Dalat,villa,Entire home,2,2.0,4,33.7,0.624,7664.0,2.5,4.6,48,False,sourced-airroi
+12456596,Da Nang,Sơn Trà District,*GOOD PRICE* 1BR Aprt @ 4* A La Carte Danang Beach,apartment,Entire serviced apartment,1,1.0,2,48.4,0.509,7556.0,3.1,4.8,46,False,sourced-airroi
+1161300803812257682,Da Lat,Phường 3,Deluxe Double Balcony City View,apartment,Room in hotel,1,1.0,2,36.8,0.548,7505.0,1.9,4.73,22,False,sourced-airroi
+1355519229594833030,Ho Chi Minh City,,2 bedroom apartment; landmark 3!,apartment,Entire rental unit,2,1.0,4,47.7,0.439,7474.0,7.8,4.53,15,False,sourced-airroi
+54201211,Da Lat,Phường 10,Charming Studio Café & Bar with big garden,apartment,Room in boutique hotel,1,1.0,2,53.2,0.381,7472.0,2.2,4.98,43,False,sourced-airroi
+1551297486673139186,Ho Chi Minh City,,4Br bedroom in the center of District 4; 20% off,apartment,Entire rental unit,4,2.0,8,102.8,0.203,7444.0,10.6,4.75,4,False,sourced-airroi
+817212036990332976,Da Lat,Phường 1,Spacious Duplex Studio with Private Balcony,villa,Private room in home,1,1.0,2,27.9,0.832,7416.0,11.9,4.84,49,False,sourced-airroi
+29658149,Da Nang,Xã Cẩm Thanh,private pool villa- 2bedroom,villa,Entire home,2,1.0,4,81.7,0.272,7415.0,3.3,4.84,106,False,sourced-airroi
+1249072307270142892,Ho Chi Minh City,Binh Thanh District,Spacious; renovated; fully equipped; dryer [4-bed],apartment,Entire rental unit,4,4.0,8,123.7,0.48,7385.0,3.9,4.67,3,False,sourced-airroi
+1342680141494799585,Da Lat,,DaLat Center Vintage  Apartment 70m2,apartment,Entire rental unit,2,1.0,4,57.0,0.362,7350.0,4.1,4.79,24,False,sourced-airroi
+1519359786361635372,Ho Chi Minh City,,【3BR -City View】 【FREE PICK UP】Luxury Highfloor,apartment,Entire rental unit,3,2.0,6,139.0,0.148,7339.0,2.7,0.0,2,False,sourced-airroi
+40331770,Da Nang,Sơn Trà District,Sena Homestay by Night Market*Danang Dragon Bridge,villa,Entire rental unit,2,1.0,4,29.0,0.685,7322.0,2.2,4.91,67,False,sourced-airroi
+783995224024615678,Da Nang,,Corner 3BDR Suite with Spectacular City Views,apartment,Entire condo,3,2.0,6,127.3,0.158,7296.0,3.2,4.9,10,False,sourced-airroi
+1035762040220076018,Ho Chi Minh City,District 1,“Spacious 4BR Apartment with Stunning River Views,apartment,Entire rental unit,4,2.0,10,107.8,0.169,7275.0,3.5,5.0,3,False,sourced-airroi
+1511460193750435955,Ho Chi Minh City,,Landmark 1 4bedroom Luxury Vinhome,villa,Entire rental unit,4,3.0,8,150.1,0.236,7273.0,4.5,4.33,6,False,sourced-airroi
+43598339,Da Nang,Sơn Trà District,Astro House /Santorini 2BR APT/ My Khe beach area,villa,Entire rental unit,2,1.0,4,43.6,0.467,7191.0,3.6,4.96,147,False,sourced-airroi
+1065022053148838174,Ho Chi Minh City,Thủ Đức,Charming 2BR in Lumiere by Ray,apartment,Entire rental unit,2,1.0,4,100.2,0.308,7188.0,4.5,4.93,15,False,sourced-airroi
+709025250330381149,Da Lat,Phường 3,Cheerful 2-bedroom vacation home with BBQ grill,villa,Entire vacation home,2,1.0,6,68.7,0.314,7175.0,4.1,4.57,46,False,sourced-airroi
+697507770934369923,Da Lat,Phường 5,Convoi - A beautiful wooden house right in the center,villa,Entire home,3,2.5,6,50.1,0.429,7131.0,2.4,4.59,22,False,sourced-airroi
+1166659489265227457,Da Nang,Hải Châu District,3BR Blooming Luxury River View Apartment,apartment,Entire rental unit,3,2.0,6,94.9,0.303,7124.0,8.1,5.0,5,False,sourced-airroi
+988301032700270119,Ho Chi Minh City,District 7,Prime location Golden Sun Apt,apartment,Entire rental unit,1,1.0,2,39.3,0.503,7083.0,3.7,4.92,38,False,sourced-airroi
+878003331521234633,Da Lat,Phường 10,Émai Valley & Restaurant | Room I: Aria,apartment,Private room in bed and breakfast,1,1.0,2,64.0,0.303,7068.0,2.5,4.94,16,False,sourced-airroi
+1141209797089862620,Da Nang,Hải Châu District,Mercury 3BR Luxury •Perfect for Groups •Breakfast,apartment,Entire rental unit,4,2.0,6,113.2,0.227,7058.0,2.2,4.27,11,False,sourced-airroi
+40043881,Da Nang,Ngũ Hành Sơn District,Muong Thanh 2 Bedrooms Apartment,apartment,Entire rental unit,2,1.0,4,29.7,0.834,7014.0,12.2,4.9,42,False,sourced-airroi
+1365664319642486117,Ho Chi Minh City,,Starthill Apart with 3 Bedrooms,apartment,Entire rental unit,3,2.0,6,74.4,0.286,6912.0,3.5,4.67,6,False,sourced-airroi
+18259338,Ho Chi Minh City,District 1,47-57 The Lodging (3BR in Central District 1),apartment,Entire rental unit,3,1.0,6,51.7,0.345,6868.0,4.3,4.56,166,False,sourced-airroi
+1047363378420850668,Ho Chi Minh City,District 4,Tresor Residence 2 bedrooms de Rose 22,apartment,Entire condo,2,1.0,4,58.5,0.323,6867.0,6.6,4.43,14,False,sourced-airroi
+1239640230116846731,Ho Chi Minh City,,2 bedroom apartment; Landmark 3,apartment,Entire rental unit,2,1.0,4,43.3,0.429,6864.0,4.3,4.81,32,False,sourced-airroi
+1403962831914515259,Ho Chi Minh City,,Super River View - Spacious 3BRs - Free Pool & Gym,apartment,Entire rental unit,3,2.0,6,68.0,0.31,6858.0,3.2,4.56,9,False,sourced-airroi
+838624167198213403,Da Nang,Ngũ Hành Sơn District,Danatri Villa/4BRs/MyKhe Beach/Central/FreeAirport,villa,Entire townhouse,4,2.0,10,80.2,0.245,6813.0,9.4,4.72,58,False,sourced-airroi
+563387740919623756,Da Nang,Hải Châu District,NEW POOL JACUZZI 2 BDS Japanese Apartment,apartment,Entire rental unit,2,2.0,4,24.7,0.806,6696.0,18.3,4.56,16,False,sourced-airroi
+649716474389006748,Da Nang,Ngũ Hành Sơn District,LIVIE An Thuong/Beach Breeze Two-Bedroom Apartment,apartment,Entire serviced apartment,2,1.0,4,62.8,0.282,6659.0,1.4,4.84,284,False,sourced-airroi
+1462708463657123673,Ho Chi Minh City,,Sai Gon River nicest view- Big 3BRs apt- Free Pool,apartment,Entire rental unit,3,2.0,6,65.1,0.263,6659.0,6.3,5.0,20,False,sourced-airroi
+49297645,Da Lat,Phường 6,Hau'oli - Entire Homestay,villa,Entire rental unit,4,4.0,10,88.9,0.186,6605.0,2.8,4.82,51,False,sourced-airroi
+37442312,Ho Chi Minh City,Thủ Đức,The Sun Avenue River view,apartment,Entire rental unit,2,1.0,4,39.5,0.444,6602.0,5.1,4.86,59,False,sourced-airroi
+1446425704663202642,Ho Chi Minh City,,1br-(Amazing City View)Vinhome Landmark Plus(38F),villa,Entire rental unit,1,1.0,2,42.7,0.414,6575.0,3.3,4.9,20,False,sourced-airroi
+1528093365228436223,Ho Chi Minh City,,The Manor – Classic Elegance with Landmark 81 View,apartment,Entire condo,2,1.0,4,44.0,0.411,6568.0,3.9,4.73,15,False,sourced-airroi
+607595423086125965,Ho Chi Minh City,Thủ Đức,Sun Avenue Happy Stay,apartment,Entire condo,2,1.0,4,42.3,0.446,6562.0,6.4,4.92,24,False,sourced-airroi
+1533191308599339080,Da Nang,,2Bedroom Apart-River view-Center-3mins to Hanriver,apartment,Room in hotel,2,1.0,6,84.2,0.225,6537.0,2.0,3.8,5,False,sourced-airroi
+1360806116556721609,Ho Chi Minh City,,The MarQ District 1 2Br Luxury Apt Sky Pool & Gym,apartment,Entire condo,2,1.0,4,69.1,0.439,6495.0,18.6,5.0,5,False,sourced-airroi
+727607126137314566,Ho Chi Minh City,District 1,4br D1 SOHO - 2 2br apts in the same building!,apartment,Entire condo,4,2.0,8,129.0,0.14,6462.0,7.3,4.76,21,False,sourced-airroi
+1541742454066027863,Ho Chi Minh City,,3 Bedroom Apartment in Landmark View Landmark 81,apartment,Entire rental unit,3,2.0,6,100.6,0.191,6444.0,5.5,5.0,3,False,sourced-airroi
+770594488072962920,Ho Chi Minh City,District 7,Spacious Studio: 5' to SECC/FV/Sky Garden/K-Town,apartment,Entire rental unit,1,1.0,2,44.0,0.389,6440.0,7.1,4.85,41,False,sourced-airroi
+1404135753745124508,Da Nang,,BrandNew 4BDR Villa Private Pool 850m to the Beach,villa,Entire villa,4,4.0,8,246.9,0.108,6438.0,3.0,0.0,1,False,sourced-airroi
+1459873343081314975,Ho Chi Minh City,,FreePickup#Central Loft#King#Balcony#500m BenThanh,apartment,Entire rental unit,2,1.0,4,53.9,0.342,6401.0,2.9,4.53,43,False,sourced-airroi
+1217901270907755582,Da Nang,Hải Châu District,Family Room w Pool/Da Nang Downtown/Sunwheel DN,apartment,Entire rental unit,2,2.0,4,52.5,0.359,6272.0,2.5,4.55,49,False,sourced-airroi
+1433693450873812864,Ho Chi Minh City,,Apart 3 bedrooms-Scenic valley 2,apartment,Entire rental unit,3,2.0,6,82.1,0.222,6207.0,3.1,0.0,2,False,sourced-airroi
+1012608565457529281,Ho Chi Minh City,District 3,Amazing pool - Cozy 3 bedroom,apartment,Entire rental unit,3,2.0,6,139.6,0.132,6179.0,2.7,4.67,6,False,sourced-airroi
+904097987770368046,Da Lat,Phường 10,Yohaku.inn,villa,Entire home,2,2.0,4,83.7,0.209,6157.0,2.1,4.5,8,False,sourced-airroi
+906838459334790211,Da Nang,Sơn Trà District,Riverside | Generous 2-Bedroom Apartment with Pool,apartment,Entire rental unit,2,1.0,4,73.0,0.349,6154.0,15.0,4.63,8,False,sourced-airroi
+952777260201798499,Ho Chi Minh City,District 7,River Panorama Luxury 2 bedrooms floor 22,apartment,Entire condo,2,1.0,4,45.7,0.402,6153.0,5.2,5.0,6,False,sourced-airroi
+975292248675000438,Ho Chi Minh City,District 7,Two 2-BR apts in the same River Panorama building,apartment,Entire condo,4,3.0,8,98.1,0.276,6132.0,4.2,4.88,8,False,sourced-airroi
+1167681822382608064,Ho Chi Minh City,District 1,Top floor | Quiet•Bui Vien | Netflix•Elevator,villa,Private room in home,1,1.0,2,31.9,0.529,6122.0,3.9,4.64,14,False,sourced-airroi
+32699864,Da Nang,Sơn Trà District,Tropical House*Cozy 2BR APT*Bright balcony,villa,Entire rental unit,2,1.0,4,54.8,0.354,6121.0,5.8,4.91,11,False,sourced-airroi
+1190189097241469005,Ho Chi Minh City,,Modern & Neat 2BR Apt - Relaxing Stay Near RMIT,apartment,Entire rental unit,2,1.0,3,44.8,0.37,6101.0,7.6,5.0,31,False,sourced-airroi
+1528119937455922941,Ho Chi Minh City,,Landmark 3 Bedroom Vinhome ( 07.04 ),villa,Entire rental unit,3,2.0,6,73.5,0.247,6070.0,5.3,4.82,11,False,sourced-airroi
+1332344380998534064,Da Lat,Phường 2,Kim Quynh House 201,villa,Room in hotel,1,1.0,2,20.5,0.857,6057.0,3.4,5.0,87,False,sourced-airroi
+48556853,Da Lat,Phường 10,3 Bedroom Apartment - Win Villa Coffee,villa,Entire rental unit,3,2.0,8,62.6,0.288,6041.0,2.7,4.89,19,False,sourced-airroi
+585203467674127301,Da Lat,Phường 3,Entire studio with kitchen - HYGGE Da Lat,apartment,Room in boutique hotel,2,1.0,4,49.1,0.349,5980.0,2.8,4.88,33,False,sourced-airroi
+1539574197534910731,Ho Chi Minh City,,A08 TheOperaResidendes 1BR 1MioView luxury cozy,apartment,Entire rental unit,1,1.0,2,75.7,0.216,5975.0,13.2,5.0,5,False,sourced-airroi
+1528629395112360945,Da Lat,,Peaceful homestay; full of amenities,villa,Entire home,4,4.0,8,84.4,0.201,5965.0,2.4,0.0,1,False,sourced-airroi
+1350451956651436977,Da Nang,,Home in DaNang center; near Nguyen Tat Thanh beach,villa,Entire home,3,2.0,5,45.3,0.356,5948.0,2.7,4.88,33,False,sourced-airroi
+1206833312656068652,Da Lat,Phường 2,Kim Quynh House 101,villa,Room in hotel,1,1.0,2,21.6,0.782,5941.0,3.6,4.89,83,False,sourced-airroi
+1095440083413087396,Ho Chi Minh City,Thủ Đức,Masteri Thao Dien; 1 Bedroom Monthly Rental,apartment,Entire rental unit,1,1.0,2,39.0,0.599,5906.0,21.6,5.0,20,False,sourced-airroi
+1465696505522529227,Ho Chi Minh City,,3BR Masteri Thao Dien w/ Pool&Gym view Landmark 81,apartment,Entire rental unit,3,2.0,6,76.8,0.219,5893.0,3.8,4.83,18,False,sourced-airroi
+1322396755167794422,Da Nang,Sơn Trà District,Bonzer/Large Apartment with balcony-near the beach,apartment,Entire rental unit,1,1.0,2,21.2,0.814,5886.0,11.0,4.83,12,False,sourced-airroi
+1082431640535777599,Da Lat,Phường 3,Dear me House,villa,Entire home,3,2.0,6,77.8,0.208,5875.0,2.5,4.78,18,False,sourced-airroi
+877928146130417143,Da Nang,Hải Châu District,Twin Studio w Balcony &Pool/5mins to Dragon Bridge,apartment,Private room in rental unit,1,1.0,2,53.2,0.301,5853.0,1.7,4.89,28,False,sourced-airroi
+1353218930507078636,Ho Chi Minh City,,Spacious 3BRs apt - Super View - Amazing Pool &Gym,apartment,Entire rental unit,3,2.0,6,64.9,0.249,5837.0,4.4,4.71,7,False,sourced-airroi
+28629053,Da Nang,Hải Châu District,Apt 2BR/5'drive My Khe&Han Market/Dragon walkable,apartment,Entire rental unit,2,2.0,4,43.5,0.396,5826.0,2.5,4.84,38,False,sourced-airroi
+1473571482071250225,Ho Chi Minh City,,Firework view 2Brs 1 bathroom APT - Free Pool; Gym,apartment,Entire rental unit,2,1.0,3,45.0,0.356,5814.0,5.0,5.0,17,False,sourced-airroi
+594672457718124816,Ho Chi Minh City,District 7,River Panorama 2 bedroom infinity Pool + Netflix,apartment,Entire condo,2,1.0,4,37.9,0.524,5790.0,4.2,4.66,65,False,sourced-airroi
+789692031956099744,Da Lat,Phường 6,Central studio by the stream - ground floor,villa,Entire home,1,1.0,2,22.1,0.745,5765.0,4.6,4.81,43,False,sourced-airroi
+1521562277567942504,Ho Chi Minh City,,68 House - 3 Bedroom Townhouse; near Ben Thanh Market,villa,Entire townhouse,3,2.0,6,91.2,0.224,5749.0,3.6,5.0,3,False,sourced-airroi
+1377834669780674492,Ho Chi Minh City,,Family Paradise 3BR | Walk to Crescent Mall,apartment,Entire rental unit,3,2.0,6,92.7,0.179,5740.0,3.4,4.91,11,False,sourced-airroi
+1461240720446890868,Da Lat,,Lovely 4-bedroom townhouse,villa,Entire home,4,3.5,8,59.1,0.254,5740.0,3.4,4.91,23,False,sourced-airroi
+1011852212780194618,Ho Chi Minh City,Thủ Đức,Latte Lounge - Deluxe D1 Retreat above Coffee Shop,apartment,Entire rental unit,2,1.0,4,109.5,0.145,5714.0,4.1,5.0,13,False,sourced-airroi
+1549778809425154929,Da Nang,,Lune Boutique Apartment - One Bedroom with Balcony,apartment,Private room in rental unit,1,1.0,2,41.3,0.36,5701.0,3.0,4.8,5,False,sourced-airroi
+1583738543011816523,Da Nang,,Daisy apt at My Khe,apartment,Entire rental unit,2,1.0,4,64.7,0.247,5700.0,11.3,5.0,5,False,sourced-airroi
+1236086806003695030,Da Lat,Phường 5,Mimimo Ghibli Studio Apartment ( 2 bed rooms),apartment,Entire rental unit,2,1.0,4,51.4,0.297,5683.0,2.6,4.79,19,False,sourced-airroi
+849052318987331678,Da Lat,Phường 4,City Center Apartment - Thong's House,villa,Entire rental unit,3,3.0,6,59.8,0.268,5636.0,2.6,4.91,22,False,sourced-airroi
+1251981490234432476,Da Lat,,Cozy Villa with Moutain View - Vegetarian Homestay,villa,Private room in villa,4,0.0,0,105.5,0.158,5621.0,6.9,5.0,3,False,sourced-airroi
+40693101,Da Nang,Hải Châu District,3 Bedrooms; Window; Center; River-5 Min Walk; FL4,villa,Private room in townhouse,3,3.0,6,41.0,0.481,5588.0,9.2,4.67,6,False,sourced-airroi
+1015108963710888355,Da Nang,Sơn Trà District,Riverside | Comfy Apartment with a Balcony,apartment,Entire rental unit,1,1.0,2,27.6,0.712,5568.0,21.0,4.92,13,False,sourced-airroi
+760340918114940578,Da Nang,Hải Châu District,Premium B2BR Apartment Balcony; None Breakfast,apartment,Entire serviced apartment,2,2.0,4,74.3,0.219,5537.0,26.0,5.0,9,False,sourced-airroi
+1455416698537973160,Da Lat,,Condo 3BR City Center - 9Trip Stay,apartment,Entire rental unit,3,2.0,6,122.1,0.123,5526.0,3.0,3.67,3,False,sourced-airroi
+1176364572656955057,Ho Chi Minh City,Thủ Đức,Top View Opera Thủ Thiêm (2ROOMS),apartment,Entire rental unit,2,1.0,4,104.1,0.167,5513.0,2.9,5.0,8,False,sourced-airroi
+1477265117366553732,Ho Chi Minh City,,Apartment | Bathtub| Kitchen | Washer | Dryer,apartment,Room in hotel,0,1.0,2,35.2,0.397,5499.0,2.1,4.86,35,False,sourced-airroi
+1183818880434998490,Da Nang,Ngũ Hành Sơn District,[Peaceful] 3BR Apart |Garden | Library |Laundry,apartment,Entire rental unit,3,1.0,7,47.7,0.301,5495.0,4.6,4.68,37,False,sourced-airroi
+585778178655439270,Da Lat,Phường 11,Villa Đá Góc Nhà- Mini Apartment with Forest View,villa,Private room in rental unit,2,1.0,4,75.1,0.203,5464.0,2.4,4.67,12,False,sourced-airroi
+1540454330818137838,Ho Chi Minh City,,3bedroom Luxury New Win Home Landmark _ Landmark81,villa,Entire rental unit,3,2.0,6,88.5,0.167,5449.0,2.9,5.0,6,False,sourced-airroi
+931813705592908599,Ho Chi Minh City,District 7,Near SECC_Infinity Pool- River Panorama 2 bedrooms,apartment,Entire condo,2,1.0,4,38.4,0.541,5446.0,10.8,4.81,26,False,sourced-airroi
+1285234735807431957,Ho Chi Minh City,,3bedroom New _Vinhomes Landmark,villa,Entire rental unit,3,2.0,6,87.9,0.179,5443.0,4.8,4.93,14,False,sourced-airroi
+624975953632423408,Ho Chi Minh City,Thủ Đức,The Sun Avenue apartment- Moon Apartment,apartment,Entire condo,2,1.0,4,44.2,0.44,5435.0,7.8,4.87,15,False,sourced-airroi
+906148458870130168,Da Nang,Sơn Trà District,Riverside | Stylish Studio Room,apartment,Entire rental unit,1,1.0,2,25.0,0.779,5414.0,14.3,4.88,17,False,sourced-airroi
+36114773,Ho Chi Minh City,Thủ Đức,Modern Studio in the Heart of District 2,apartment,Entire rental unit,0,1.0,2,26.1,0.664,5388.0,24.6,4.86,42,False,sourced-airroi
+1138200327801212884,Da Nang,Ngũ Hành Sơn District,Daisy corner apt with sea view,apartment,Entire rental unit,2,1.0,4,57.6,0.443,5378.0,6.9,4.82,11,False,sourced-airroi
+949666491585663311,Ho Chi Minh City,Binh Thanh District,4 bedrooms with 2 units atVinhom,apartment,Entire rental unit,4,4.0,10,120.8,0.123,5366.0,3.8,4.85,13,False,sourced-airroi
+44213653,Da Lat,,Breath and Sleepwell Studio/45m2/DaLat/chill,villa,Entire home,1,1.0,2,24.2,0.611,5364.0,2.5,4.73,52,False,sourced-airroi
+1069330221338086501,Da Nang,Hải Châu District,Roofttop Apart 4BRs-5Bath-PoolParty DragonBridge,apartment,Entire rental unit,4,4.0,9,93.8,0.158,5358.0,2.3,4.14,7,False,sourced-airroi
+1289808685740214153,Da Nang,Ngũ Hành Sơn District,BalizaHome_2 Bedrooms_Balcony_Spacious apartment,villa,Entire rental unit,2,1.0,4,29.9,0.615,5334.0,16.7,4.74,27,False,sourced-airroi
+913627575041233980,Da Nang,Ngũ Hành Sơn District,Apartment 3638 with two bedrooms and sea view in Muong Thanh,apartment,Entire rental unit,2,1.0,4,43.7,0.747,5310.0,15.1,4.5,12,False,sourced-airroi
+1287595572261200147,Da Lat,Phường 4,Chill Home Da Lat,villa,Entire home,3,2.0,8,79.5,0.185,5293.0,2.8,0.0,1,False,sourced-airroi
+1005582978558528752,Da Lat,Phường 4,Modern apartment in the city center,apartment,Entire rental unit,3,3.0,6,62.9,0.23,5276.0,2.6,4.96,49,False,sourced-airroi
+808672680727379274,Ho Chi Minh City,District 1,Hidden Gem House,villa,Entire rental unit,2,1.0,4,38.7,0.373,5275.0,4.0,4.79,29,False,sourced-airroi
+1358752061653754418,Ho Chi Minh City,,Officetel Golden King Tower Apartment; PMH; District 7,apartment,Entire rental unit,1,1.0,2,42.1,0.329,5272.0,6.2,4.95,21,False,sourced-airroi
+38717927,Da Lat,Phường 8,Blue Light Villa - Beautiful villa with 4 bedrooms,villa,Entire villa,4,5.5,8,117.9,0.126,5269.0,2.3,4.95,20,False,sourced-airroi
+1002872498632272965,Da Nang,Sơn Trà District,Avalon 2.3 - Oceansight - New interior; central,apartment,Entire rental unit,1,1.0,2,17.4,0.844,5234.0,6.1,4.86,76,False,sourced-airroi
+1066510249812497093,Da Nang,,Apartment 3B 33TKD near MY KHE beach,apartment,Entire rental unit,1,1.0,2,25.0,0.534,5206.0,13.9,5.0,31,False,sourced-airroi
+1412247738268045901,Da Nang,,2 Bedroom Apt My Khe Beach An Thuong Area,apartment,Entire rental unit,2,1.0,4,36.7,0.332,5203.0,6.1,4.75,24,False,sourced-airroi
+32680076,Da Nang,Sơn Trà District,Tropical House*Green OR Blue Balcony 2BR APT*,villa,Entire rental unit,2,1.0,4,50.8,0.36,5203.0,3.7,4.84,126,False,sourced-airroi
+1339456819715659206,Ho Chi Minh City,,#4BRs Nice Stay at at Park 4 by Sy's Home,villa,Entire rental unit,4,2.0,8,131.6,0.159,5203.0,3.5,5.0,5,False,sourced-airroi
+48430252,Ho Chi Minh City,District 7,Studio - 55 Apart.hotel,apartment,Entire serviced apartment,1,1.0,2,25.1,0.587,5201.0,9.8,4.82,66,False,sourced-airroi
+675484083318440008,Da Nang,Ngũ Hành Sơn District,LIVIE An Thuong/Comfy Beach Two-Bedroom Apartment,apartment,Entire serviced apartment,2,1.0,4,80.7,0.181,5158.0,1.7,4.82,85,False,sourced-airroi
+884558568485617842,Ho Chi Minh City,Binh Thanh District,Landmark Plus - 12.18 - Vinhome,villa,Entire rental unit,1,1.0,2,46.5,0.307,5144.0,4.7,4.87,61,False,sourced-airroi
+1123803568301381281,Da Lat,,Homestay - Lau Dalat House,villa,Barn,3,2.0,8,82.5,0.177,5115.0,2.6,5.0,4,False,sourced-airroi
+1441088181463216749,Da Nang,,[Da Nang] Modern 3BR,villa,Entire home,3,2.0,6,79.6,0.178,5071.0,7.2,4.82,11,False,sourced-airroi
+1402274679546921216,Da Lat,,Your Aunty House - family room,villa,Room in hotel,2,2.0,4,47.4,0.285,5029.0,2.6,5.0,24,False,sourced-airroi
+1299642584220733351,Da Lat,Phường 11,San May Apartment,apartment,Entire rental unit,4,3.0,10,119.3,0.115,5018.0,3.6,0.0,1,False,sourced-airroi
+1125180910390883883,Da Nang,Sơn Trà District,Deluxe Room Access to POOL *Boutique Hotel,apartment,Room in hotel,1,1.0,2,58.6,0.277,4998.0,2.3,4.71,7,False,sourced-airroi
+10579667,Ho Chi Minh City,District 1,Near Bui Vien Walking Street -  Studio Apartment,apartment,Entire rental unit,1,1.0,2,29.9,0.459,4998.0,7.8,4.94,213,False,sourced-airroi
+1441968760632484004,Da Nang,,DUY's 3 bedroom My Khe beach,apartment,Entire rental unit,3,2.0,7,75.0,0.182,4994.0,8.3,5.0,4,False,sourced-airroi
+1535515027970975452,Ho Chi Minh City,,House 1BR near Notre-Dame Cathedral; The Zoo,villa,Entire home,1,1.0,2,35.3,0.381,4969.0,5.6,4.88,32,False,sourced-airroi
+27443805,Da Nang,Hải Châu District,SEMI-CLASSICAL 2 BR APT W/ ROOFTOP POOL,apartment,Private room in serviced apartment,2,2.0,4,45.7,0.271,4951.0,4.3,4.65,37,False,sourced-airroi
+1551548413074319799,Da Nang,,Chill center 3brs | near han market; rong bridge,villa,Entire home,3,3.0,6,82.9,0.167,4925.0,4.7,4.86,7,False,sourced-airroi
+1351824281006540192,Ho Chi Minh City,,Panorama City View; L3- 1BR- Vinhomes Central Park,villa,Entire rental unit,1,1.0,2,38.1,0.375,4913.0,7.0,5.0,13,False,sourced-airroi
+1544710468865045140,Ho Chi Minh City,,Luxury 3 bedrooms at Vinhome,villa,Entire rental unit,3,2.0,8,89.9,0.174,4898.0,5.7,4.29,7,False,sourced-airroi
+1422840761242326527,Da Nang,,Spacious 3BR Home |15 min to Airport | Local Vibe,villa,Entire home,3,2.0,6,50.2,0.271,4883.0,14.1,5.0,6,False,sourced-airroi
+1381568122070251345,Da Nang,,Two-bedroom apartment w balcony near My Khe beach,apartment,Entire rental unit,2,1.0,4,27.9,0.509,4879.0,15.0,4.64,11,False,sourced-airroi
+1387400549668208315,Da Nang,,Apartment Central with bancony Near Han River,apartment,Entire rental unit,1,1.0,2,21.5,0.616,4876.0,11.4,5.0,11,False,sourced-airroi
+1326041914506812025,Da Nang,,Sea View 2-Br Da Nang Apartment,apartment,Entire rental unit,2,1.0,4,67.4,0.457,4857.0,5.7,4.67,15,False,sourced-airroi
+637848427314090460,Da Nang,Hải Châu District,KenKeSu-whole second floor-Cozy home,villa,Entire condo,2,2.0,4,39.8,0.462,4847.0,5.5,4.97,29,False,sourced-airroi
+1039154251760770158,Ho Chi Minh City,Binh Thanh District,3 Bed Vinhome Central Park,villa,Entire rental unit,3,2.0,6,98.8,0.14,4836.0,4.6,4.33,6,False,sourced-airroi
+638146357757403286,Ho Chi Minh City,District 1,Galaxy apartment 926.views.D1,apartment,Entire rental unit,1,1.0,2,23.7,0.556,4812.0,7.3,4.78,74,False,sourced-airroi
+585366134744768623,Da Lat,Phường 3,Deluxe Room with tea corner- HYGGE DA LAT,apartment,Room in boutique hotel,1,1.0,2,34.2,0.426,4812.0,3.3,4.91,11,False,sourced-airroi
+945470357955545078,Da Lat,Phường 8,Home with me Dalat- Suncatcher House,villa,Entire home,2,1.0,5,46.0,0.285,4811.0,2.0,4.76,54,False,sourced-airroi
+52696813,Da Nang,Hải Châu District,Picturesque Cathedral in Bare Han @1MIN TO CENTRAL,apartment,Private room in rental unit,0,1.0,2,34.7,0.363,4803.0,3.0,4.82,89,False,sourced-airroi
+1323101752122647276,Da Nang,,2 Bedroom Apt–An Thuong; My Khe Beachfront Da Nang,apartment,Entire rental unit,2,1.0,4,33.4,0.414,4796.0,8.8,4.75,16,False,sourced-airroi
+943450432404997824,Ho Chi Minh City,District 4,Luxury 4BRs at City center/District 1,apartment,Entire rental unit,4,2.0,8,127.3,0.113,4787.0,4.2,4.2,5,False,sourced-airroi
+1366427509553945361,Ho Chi Minh City,,#5- Midtown Premium Apartment,apartment,Entire rental unit,3,2.0,6,125.3,0.107,4769.0,4.3,5.0,5,False,sourced-airroi
+1501986723781623927,Ho Chi Minh City,,Ecogreen luxury apartment with quiet river view/2br+2wc,apartment,Entire rental unit,2,2.0,4,58.2,0.222,4765.0,16.2,4.9,10,False,sourced-airroi
+769924031297063808,Ho Chi Minh City,District 7,Bright Studio Big Kitchen:5' to SECC/FV/Sky Garden,apartment,Entire rental unit,1,1.0,2,43.5,0.333,4756.0,6.1,4.98,49,False,sourced-airroi
+604166719341717793,Ho Chi Minh City,District 4,Unique decor 2-Bedrooms with sunny,apartment,Entire rental unit,2,1.0,4,52.3,0.282,4736.0,4.5,4.6,30,False,sourced-airroi
+54041752,Da Lat,Phường 11,Old villa in the hearth of the city,villa,Entire villa,4,4.0,10,100.9,0.234,4695.0,2.3,4.82,22,False,sourced-airroi
+1538056827377945860,Ho Chi Minh City,,Tresor-2BDR-Cityview,apartment,Entire rental unit,2,1.0,4,52.1,0.258,4666.0,4.1,5.0,9,False,sourced-airroi
+1217910420024077738,Da Nang,Hải Châu District,2bedroom Apartment/Balcony w Parkview/Rooftop Pool,apartment,Entire rental unit,2,2.0,4,56.3,0.249,4657.0,4.3,4.51,41,False,sourced-airroi
+1133362843080999353,Da Nang,Sơn Trà District,FullHouse 3.7- OceanSight- balcony; mountain view,villa,Entire rental unit,1,1.0,2,19.6,0.797,4645.0,9.3,4.91,35,False,sourced-airroi
+1313440689640231702,Da Nang,,luxury Oceanview Family Suite.,apartment,Entire condo,2,1.0,4,69.7,0.189,4628.0,3.8,4.14,14,False,sourced-airroi
+863921875691552996,Da Lat,Phường 10,Maison De Julie,villa,Entire home,1,1.0,2,62.5,0.208,4615.0,2.4,4.76,17,False,sourced-airroi
+1351999329126039430,Da Nang,,Luxe Oceanfront Family Suite.,apartment,Entire rental unit,2,1.0,4,64.4,0.176,4606.0,3.0,4.72,25,False,sourced-airroi
+39766272,Ho Chi Minh City,District 1,Minimalist Room 301 with Balcony - 200m to Bitexco,apartment,Private room in serviced apartment,1,1.0,2,18.0,0.688,4577.0,5.2,4.91,106,False,sourced-airroi
+1102047573466049566,Da Lat,Phường 9,My New House - Homestay Da Lat (phòng studio 1),villa,Private room in serviced apartment,1,1.0,2,24.7,0.54,4565.0,8.6,5.0,11,False,sourced-airroi
+1105428469260794147,Da Nang,Ngũ Hành Sơn District,Apartment 休息,apartment,Private room in rental unit,1,1.0,2,19.9,0.689,4524.0,10.5,4.64,14,False,sourced-airroi
+1029351774409624482,Da Lat,Phường 8,Classic Double Room,apartment,Room in boutique hotel,1,1.0,2,75.9,0.167,4506.0,2.0,0.0,1,False,sourced-airroi
+1294007830837201878,Da Nang,,Căn góc 2 Bedroom Ocean View,apartment,Entire rental unit,2,1.0,4,53.8,0.266,4489.0,11.6,4.13,15,False,sourced-airroi
+1208771947051568016,Ho Chi Minh City,,1br-New furniture Vinhome Landmark4(42F),villa,Entire condo,1,1.0,2,47.1,0.284,4464.0,9.5,4.73,15,False,sourced-airroi
+32342033,Da Lat,Phường 10,❤Traveler's choice awards❤️ Flat with stunning view,apartment,Entire condo,1,1.0,2,46.3,0.265,4455.0,4.3,4.94,155,False,sourced-airroi
+26720046,Da Nang,Sơn Trà District,Modern and Peaceful Studio ☆ walk to Dragon Bridge,apartment,Entire rental unit,0,1.0,2,27.5,0.434,4440.0,3.9,4.98,206,False,sourced-airroi
+874258096768333241,Da Nang,Hải Châu District,URI HOUSE/ 3BR in house +rooftop/5'drive MY KHE,villa,Entire rental unit,3,3.0,6,75.6,0.297,4406.0,2.5,5.0,11,False,sourced-airroi
+937190310688885455,Da Nang,Hải Châu District,Jhome-2BR-Fully Furnished,villa,Entire home,2,2.0,4,46.9,0.232,4401.0,2.2,4.84,89,False,sourced-airroi
+1241561399252777859,Da Lat,,View pine hill; whole house near market; for groups,villa,Entire home,3,2.0,9,100.5,0.106,4398.0,2.5,4.91,11,False,sourced-airroi
+1303963797919268395,Da Nang,Hải Châu District,May Modern 3BRs apartment near beach,apartment,Entire rental unit,3,2.0,8,76.8,0.151,4397.0,2.4,4.72,18,False,sourced-airroi
+1136979514577025989,Ho Chi Minh City,District 4,Le Place's 4BR Peaceful City Center / Free Pool,apartment,Entire rental unit,4,2.0,8,116.8,0.112,4394.0,3.8,4.73,11,False,sourced-airroi
+1310815058355213710,Da Lat,,I'm Home – Entire house near the center of Dalat,villa,Entire home,4,4.0,10,83.1,0.167,4365.0,2.2,5.0,4,False,sourced-airroi
+806378892581109943,Da Lat,Phường 3,P2 ground floor - Sunny room with pine hill view,apartment,Private room in bed and breakfast,1,1.0,2,34.3,0.321,4365.0,2.3,5.0,29,False,sourced-airroi
+798352935717868771,Ho Chi Minh City,Binh Thanh District,3br Apt in Landmark2; in Vinhomes Central park,villa,Entire rental unit,3,2.0,6,103.4,0.123,4357.0,11.3,5.0,5,False,sourced-airroi
+960361791073004410,Ho Chi Minh City,Thủ Đức,Cozy 3brs; fully furnished; LM view in Thao Dien,apartment,Entire rental unit,3,2.0,6,47.4,0.326,4355.0,11.5,4.77,43,False,sourced-airroi
+1481982967700423842,Ho Chi Minh City,,1br-City view Vinhome Landmark4(37F),villa,Entire rental unit,1,1.0,2,43.1,0.282,4313.0,5.7,4.67,6,False,sourced-airroi
+1472475203219391436,Da Nang,,K368 - 203 - OceanSight - 1 bedroom - Pool,apartment,Entire rental unit,1,1.0,2,22.9,0.499,4310.0,10.1,5.0,23,False,sourced-airroi
+1556187895484884653,Da Nang,,125HNH Homestay,villa,Entire home,3,3.0,7,45.6,0.257,4301.0,3.5,4.91,11,False,sourced-airroi
+47985066,Da Lat,Phường 6,Dark night in Dalat center,apartment,Entire serviced apartment,1,1.0,2,21.0,0.515,4294.0,2.8,4.72,182,False,sourced-airroi
+1104578967934881160,Da Nang,Ngũ Hành Sơn District,AT38 B3-04  R4.2 -OceanSight Top floor; Big window,apartment,Entire rental unit,1,1.0,2,20.3,0.795,4293.0,11.4,4.67,21,False,sourced-airroi
+762699763455646911,Da Lat,Phường 3,Tourist apartment in the heart of the city,apartment,Entire rental unit,4,3.0,12,61.9,0.289,4281.0,3.1,5.0,6,False,sourced-airroi
+1479747483436515152,Da Nang,,Hi Sky House/Mỹ Khê Beach/거실 에어컨/ PickUp Airport,villa,Entire home,4,4.0,8,79.9,0.137,4273.0,2.9,4.55,11,False,sourced-airroi
+1188425126112179231,Da Lat,Phường 3,4. Private house in the center,villa,Entire home,3,3.0,6,82.1,0.134,4263.0,3.7,4.63,19,False,sourced-airroi
+42976493,Ho Chi Minh City,Thủ Đức,Glenwood Apartment 1br full furnished; pool; gym,apartment,Entire rental unit,1,1.0,2,36.0,0.393,4258.0,8.8,4.47,15,False,sourced-airroi
+1439620519430979652,Da Lat,,A cozy and modern; 3 bedrooms,villa,Entire home,3,3.0,6,44.5,0.321,4178.0,4.7,5.0,11,False,sourced-airroi
+585734059469776572,Da Lat,Phường 3,Modern and stylish single room - HYGGE DA LAT,apartment,Room in boutique hotel,1,1.0,2,27.9,0.408,4132.0,2.5,4.93,42,False,sourced-airroi
+1349173486221843521,Da Lat,,warm home for a group of 4-6 people,villa,Entire home,3,3.0,6,50.2,0.71,4099.0,38.0,5.0,5,False,sourced-airroi
+41181394,Da Nang,Cẩm Lệ District,LAGON DaNang 1/2BRs/citycentre/kitchen/balcony,apartment,Entire serviced apartment,2,2.0,4,28.1,0.681,4078.0,9.5,4.85,47,False,sourced-airroi
+31275729,Da Nang,Hải Châu District,Urihouse/Apt 1BR /5'drive Mykhe/ HanRiver walkable,villa,Entire rental unit,1,1.0,2,28.3,0.416,4066.0,3.5,5.0,11,False,sourced-airroi
+1099558448879802066,Ho Chi Minh City,District 7,Van Gogh Studio | Scenic Pool · City View · D7,apartment,Entire rental unit,1,1.0,2,30.6,0.378,4063.0,6.2,4.84,44,False,sourced-airroi
+1151375889583275624,Ho Chi Minh City,Binh Thanh District,3BR - Landmark 4 - Vinhomes Central Park,villa,Entire rental unit,3,2.0,6,77.9,0.145,4036.0,3.8,0.0,1,False,sourced-airroi
+652753899042490218,Ho Chi Minh City,Binh Thanh District,Promotion Vinhomes Apartment 1 Bedroom w City View,villa,Entire condo,1,1.0,2,48.6,0.241,4028.0,5.2,4.9,72,False,sourced-airroi
+1303501593629398682,Da Lat,,Home Garden Chill Dalat,villa,Entire home,3,2.0,8,96.5,0.132,4028.0,2.6,0.0,2,False,sourced-airroi
+1486753509934838394,Ho Chi Minh City,,Landmark 1 •nice view •Walk to Lm 81 •2Tv Netflix,apartment,Entire rental unit,2,1.0,4,57.5,0.189,4000.0,3.3,4.77,35,False,sourced-airroi
+1186590538937649911,Da Nang,Sơn Trà District,Kim's House 3-Bedroom Apartment Near Danang Beach,villa,Private room in home,3,2.0,6,62.0,0.308,3981.0,3.6,4.86,49,False,sourced-airroi
+912765915659475823,Da Nang,Thanh Khê District,Glorious Apt with balcony near Dragon Bridge,apartment,Entire rental unit,1,1.0,2,32.7,0.323,3959.0,1.4,4.81,78,False,sourced-airroi
+1456942566722214235,Ho Chi Minh City,,1br-(Best City View)Vinhome Landmark Plus(44F),villa,Entire condo,1,1.0,2,45.5,0.246,3952.0,5.4,4.86,28,False,sourced-airroi
+1349358411512496627,Da Nang,,Monarchy 3BR 2WC| Self Check-in| By Charm Homestay,villa,Entire condo,3,2.0,7,88.8,0.145,3945.0,10.6,5.0,4,False,sourced-airroi
+1397630838769587146,Ho Chi Minh City,,Ecogreen Saigon 2brs 1wc NALI HOME 2,villa,Entire rental unit,2,1.0,4,53.3,0.191,3934.0,4.1,4.88,8,False,sourced-airroi
+1518031857797866635,Ho Chi Minh City,,Studio Near Ben Thanh: Minimal Apt by D Haus,apartment,Entire rental unit,1,1.0,2,33.1,0.318,3930.0,3.4,4.76,33,False,sourced-airroi
+46745955,Da Lat,Phường 6,BY.Stay Dalat. Luxury Apartment,apartment,Entire serviced apartment,2,2.0,4,79.5,0.162,3928.0,4.7,4.94,16,False,sourced-airroi
+37601922,Da Nang,Ngũ Hành Sơn District,3-BR House on Tourist Street & My Khe Beach,villa,Entire rental unit,3,2.0,6,62.2,0.164,3926.0,15.0,4.42,19,False,sourced-airroi
+32873688,Da Nang,Ngũ Hành Sơn District,Woody House-Spacious Studio-AnThuong4-My An beach,villa,Entire rental unit,0,1.0,2,40.1,0.443,3889.0,11.1,4.85,61,False,sourced-airroi
+1490419220594516564,Da Lat,,Casa Lapin B - Full Floor Rabbit House,villa,Entire home,3,3.0,7,76.6,0.137,3874.0,2.6,0.0,2,False,sourced-airroi
+54075982,Ho Chi Minh City,Thủ Đức,Stay Studio S6-Fully Furnished @central D2,apartment,Private room in serviced apartment,1,1.0,2,28.1,0.447,3872.0,10.4,4.65,20,False,sourced-airroi
+1279518630913718267,Ho Chi Minh City,,The sunset is the most beautiful,apartment,Entire rental unit,2,1.0,4,46.8,0.256,3847.0,6.0,4.3,10,False,sourced-airroi
+1378052093823987002,Da Lat,,2 Bedrooms Apartment in Dalat Center - 9Trip Stay,apartment,Entire rental unit,2,1.0,4,74.0,0.14,3821.0,3.4,5.0,10,False,sourced-airroi
+30326178,Ho Chi Minh City,District 4,MUJO- Deluxe condo @District1 #BenThanh,apartment,Entire rental unit,2,1.0,4,53.6,0.256,3807.0,6.0,4.83,132,False,sourced-airroi
+1404291458825960303,Da Lat,,Da Lat Central Boutique Home,villa,Entire home,3,2.0,8,84.1,0.126,3797.0,6.4,0.0,2,False,sourced-airroi
+1303424837783963641,Da Nang,Sơn Trà District,Avalon 2.4- OceanSight - New interior; central,apartment,Entire rental unit,1,1.0,2,17.0,0.833,3776.0,5.0,4.95,59,False,sourced-airroi
+37438854,Da Lat,Phường 6,STUDIO 2 STREET CORNER,apartment,Private room in rental unit,1,1.0,2,18.7,0.553,3769.0,3.1,4.72,207,False,sourced-airroi
+1557227284556803413,Da Nang,,Sunrise: 5' walk to Han River Bridge and near the beach,villa,Entire home,4,4.0,8,73.8,0.2,3765.0,5.4,5.0,9,False,sourced-airroi
+1437404998260656679,Da Lat,,The Fairy House. Dalat,villa,Entire home,2,1.0,4,78.6,0.135,3744.0,2.3,0.0,1,False,sourced-airroi
+1404831579684087012,Ho Chi Minh City,,Cactus – Private airy room with green view,villa,Entire guesthouse,1,1.0,2,60.7,0.24,3743.0,9.3,4.33,3,False,sourced-airroi
+1462036264506511968,Ho Chi Minh City,,Large living room- 3BRs apt- Eco Green- Pool & Gym,apartment,Entire rental unit,3,2.0,6,68.2,0.161,3734.0,7.6,4.6,5,False,sourced-airroi
+1457886574849193758,Ho Chi Minh City,,2-bedroom apartment in Landmark3 building. Vinhomes,villa,Entire rental unit,2,1.0,4,49.9,0.227,3727.0,6.9,4.5,4,False,sourced-airroi
+1159376852109708812,Da Nang,Sơn Trà District,Floriane 5.3 - OceanSight - Cozy & Quiet Area,apartment,Entire rental unit,1,1.0,2,14.8,0.786,3689.0,9.8,4.97,30,False,sourced-airroi
+1185407868335028674,Ho Chi Minh City,District 7,Block A 3 Beds Apartment Starthill,apartment,Entire rental unit,3,2.0,6,76.4,0.137,3669.0,3.1,5.0,4,False,sourced-airroi
+1542466983543800828,Da Lat,,2 bedrooms apartment at city center - Myky,apartment,Entire rental unit,2,1.0,6,44.2,0.241,3668.0,2.4,4.9,10,False,sourced-airroi
+1504121638170521914,Da Nang,,Êm Stay – Central Cozy Apt 03- 6mins Dragon Bridge,villa,Private room in home,1,1.0,2,17.5,0.518,3628.0,3.6,4.88,17,False,sourced-airroi
+1027207938921186893,Da Nang,Sơn Trà District,Riverside | Comfy Apartment in Da Nang,apartment,Entire rental unit,1,1.0,2,26.2,0.472,3618.0,13.6,5.0,8,False,sourced-airroi
+963385008887306318,Da Lat,Phường 2,TTR Moonstone Hotel - Deluxe Two Bedroom,apartment,Room in hotel,2,2.0,4,46.1,0.236,3595.0,2.4,4.25,4,False,sourced-airroi
+769924573381272166,Ho Chi Minh City,District 7,Balcony Studio:5' to SECC/FV/Sky Garden/KoreanTown,apartment,Entire rental unit,1,1.0,2,47.3,0.224,3592.0,2.8,4.94,79,False,sourced-airroi
+1275690472068530756,Da Nang,,Mordern Red  Apartment Near by Han River; Beach,apartment,Entire rental unit,1,1.0,2,32.2,0.29,3579.0,13.3,5.0,3,False,sourced-airroi
+1287428570314086186,Ho Chi Minh City,,3BR apt in Thao Dien; bathtub; free jacuzzi,apartment,Entire rental unit,3,2.0,6,47.7,0.208,3571.0,2.5,4.83,12,False,sourced-airroi
+1214849455980826868,Ho Chi Minh City,,Scenic Valley 2- 3BR View to SECC Exhibition,apartment,Entire rental unit,3,2.0,6,75.1,0.129,3568.0,5.9,4.89,9,False,sourced-airroi
+43505393,Ho Chi Minh City,Binh Thanh District,Vinhome Central Park Landmark Plus 1 Bedroom,villa,Entire rental unit,1,1.0,2,49.7,0.2,3560.0,6.6,4.93,95,False,sourced-airroi
+588947128689658739,Da Nang,Sơn Trà District,Stylish & spacious studio in heart of Da Nang.,apartment,Entire serviced apartment,1,1.0,2,21.7,0.588,3558.0,9.1,4.96,97,False,sourced-airroi
+1169602130110537937,Da Nang,Hải Châu District,Sunjazz 2. A cozy and fully equipped room,villa,Private room in home,1,1.0,2,19.8,0.639,3548.0,6.8,4.79,39,False,sourced-airroi
+1243977598993622008,Ho Chi Minh City,District 1,MUJO - Heart of D1 #Netflix #Central,apartment,Entire rental unit,1,1.0,2,49.9,0.213,3541.0,4.4,4.92,24,False,sourced-airroi
+1510932663644326077,Da Nang,,Urbano-Luxurious 2BR/Balcony+Kitchen near Beaches,apartment,Entire rental unit,2,1.0,4,41.5,0.281,3538.0,6.1,0.0,1,False,sourced-airroi
+1420381847086370964,Ho Chi Minh City,,1br-City view Vinhome Landmark Plus(11F),villa,Entire condo,1,1.0,2,43.2,0.216,3517.0,3.3,4.73,11,False,sourced-airroi
+1417753295961453736,Ho Chi Minh City,,The Painted River Apartment,apartment,Entire condo,3,2.0,6,51.1,0.184,3475.0,3.1,4.75,4,False,sourced-airroi
+623768290088645670,Ho Chi Minh City,District 7,Charming hotel apartment in Phu My Hung,apartment,Room in boutique hotel,1,1.0,2,38.2,0.263,3472.0,4.1,4.81,16,False,sourced-airroi
+1485602602985159225,Ho Chi Minh City,,3 bedroom in Sky Garden 3,apartment,Entire rental unit,3,2.0,6,56.6,0.171,3460.0,3.8,0.0,1,False,sourced-airroi
+953238632512343829,Da Lat,Phường 1,Aprt 1994 w 2Brs at Dalat Center,apartment,Entire rental unit,2,2.0,4,85.6,0.121,3459.0,3.9,4.58,24,False,sourced-airroi
+729532733266356131,Da Nang,Sơn Trà District,Direct Oceanfront APT | Sea View | Pool/Gym,apartment,Entire condo,2,1.0,4,81.7,0.12,3432.0,37.0,4.67,6,False,sourced-airroi
+40834007,Da Nang,Hải Châu District,Sunny walk-up apartment near the city center.,villa,Entire home,1,1.0,2,55.1,0.244,3427.0,7.0,5.0,10,False,sourced-airroi
+1177768070789388230,Da Nang,Sơn Trà District,BalizaHome_A Cozy Separated One Bedroom apartment2,villa,Entire rental unit,1,1.0,2,18.3,0.932,3419.0,10.6,4.92,26,False,sourced-airroi
+841688126745278510,Da Lat,Phường 1,Le Ciment 301 - Large 1-bedroom apartment,apartment,Entire rental unit,1,1.0,2,40.6,0.241,3415.0,4.0,4.69,13,False,sourced-airroi
+919131615343756453,Da Lat,Phường 4,Homestay in the heart of Da Lat - Amelia,villa,Entire home,3,3.0,6,80.9,0.115,3409.0,4.2,4.79,33,False,sourced-airroi
+22765849,Da Lat,Phường 3,Farm'ily - farmstay in Dalat city; mountain view,apartment,Farm stay,2,1.0,4,28.1,0.331,3403.0,2.6,4.84,206,False,sourced-airroi
+54133890,Da Lat,Phường 10,Tiny Wooden House wth Mountain View Garret Bedroom,villa,Tiny home,1,1.0,2,36.6,0.236,3390.0,6.6,4.94,16,False,sourced-airroi
+1156140162584642299,Da Nang,Sơn Trà District,Luxury suite Beachfront Apartment; Pool; Gym,apartment,Entire condo,2,1.0,4,78.9,0.134,3381.0,8.2,4.5,10,False,sourced-airroi
+1292032220280831964,Da Nang,,APT 2 Bedroom; 2WC; 100m2  - Free pick up 7N ;Pool,apartment,Private room in serviced apartment,2,1.0,4,63.6,0.167,3352.0,2.5,4.8,20,False,sourced-airroi
+1151052140857402845,Da Nang,Thanh Khê District,Mercury Bright 2BR Apt •Free Breakfast •Prime Spot,apartment,Entire rental unit,2,2.0,4,70.7,0.107,3325.0,2.2,4.0,3,False,sourced-airroi
+1048884145154091254,Ho Chi Minh City,District 1,Walk to Bui Vien & September 23rd Park,apartment,Entire rental unit,0,1.0,2,41.7,0.28,3319.0,12.6,4.75,28,False,sourced-airroi
+935199750440246796,Ho Chi Minh City,District 7,River Panorama Luxury infinity Pool River Side 22,apartment,Entire rental unit,2,1.0,4,38.5,0.262,3314.0,4.1,4.75,4,False,sourced-airroi
+848204960522584704,Da Nang,Ngũ Hành Sơn District,Lagom Boutique 1-Bedroom Apartment,apartment,Entire serviced apartment,1,1.0,2,64.2,0.191,3312.0,5.4,0.0,1,False,sourced-airroi
+942334588516634306,Da Nang,Hải Châu District,New Jacuzzi 2 Beds Japanese Apt,apartment,Entire rental unit,2,2.0,4,25.4,0.704,3311.0,15.3,4.88,16,False,sourced-airroi
+857172875568404751,Ho Chi Minh City,District 7,One Bed Room Apartment Ngan Ha 2,apartment,Entire rental unit,1,1.0,2,45.9,0.232,3309.0,4.1,5.0,3,False,sourced-airroi
+1269856117085194310,Da Lat,,SWEET HOME VILLA Đà Lạt 3 Bedroom,villa,Entire home,3,3.0,8,52.5,0.162,3309.0,2.6,4.68,19,False,sourced-airroi
+1238748767803678994,Da Nang,Sơn Trà District,Seaview Luxury Apartment 2BR in Sheraton Building,apartment,Entire rental unit,2,1.0,4,75.3,0.288,3302.0,3.7,5.0,3,False,sourced-airroi
+1437750182332826277,Da Nang,,Ami Bridge Riverside Da Nang - 2BR; 2 Aisles; Cozy,apartment,Entire rental unit,2,1.0,4,21.8,0.403,3266.0,8.6,4.93,28,False,sourced-airroi
+1252628943488294134,Ho Chi Minh City,,宁静致远,apartment,Entire condo,3,2.0,6,60.4,0.229,3266.0,4.2,4.85,13,False,sourced-airroi
+1458009741387315182,Da Nang,,2BR Flat w/ Balcony | City | Family | My Khe Beach,apartment,Private room in serviced apartment,2,1.0,4,60.2,0.148,3243.0,1.5,0.0,1,False,sourced-airroi
+48652822,Ho Chi Minh City,District 7,RIVER PANORAMA DISTRICT 7,apartment,Entire condo,2,1.0,4,34.0,0.288,3225.0,7.7,4.57,47,False,sourced-airroi
+737898983373152208,Ho Chi Minh City,Binh Thanh District,3 Bed Plus Vinhome Central Park,villa,Entire rental unit,3,2.0,6,80.1,0.118,3222.0,3.4,4.88,24,False,sourced-airroi
+1050715267543616817,Da Nang,Ngũ Hành Sơn District,Lucky Apartment Studio with window - 2,apartment,Private room in rental unit,1,1.0,2,15.7,0.652,3201.0,11.6,4.69,13,False,sourced-airroi
+1217356785874182644,Da Lat,Phường 2,Welcome to Du Sam !,villa,Entire home,3,2.0,8,43.6,0.205,3197.0,3.0,4.75,8,False,sourced-airroi
+1243950949244992360,Ho Chi Minh City,,Picturesque river view,apartment,Entire condo,3,2.0,6,50.2,0.172,3189.0,3.7,4.86,7,False,sourced-airroi
+33772238,Da Lat,Phường 2,Domino-renovated central studio w balcony; kitchen,apartment,Entire rental unit,0,1.0,2,19.2,0.574,3189.0,22.3,4.76,58,False,sourced-airroi
+1545754439396584457,Da Lat,,New and cheap House Thi Sach,villa,Entire home,4,3.0,10,69.2,0.118,3160.0,2.0,4.4,5,False,sourced-airroi
+827980366691957219,Ho Chi Minh City,Thủ Đức,Zen Thao Dien - Cozy Studio Retreat,apartment,Entire rental unit,1,1.0,2,27.3,0.383,3158.0,4.8,4.7,30,False,sourced-airroi
+43733829,Da Lat,Phường 1,Corner Apt at center; night market; walking St.,apartment,Entire rental unit,2,2.0,4,72.0,0.123,3158.0,3.2,4.69,61,False,sourced-airroi
+1367169395745820256,Ho Chi Minh City,,The Peace - Luxury Phu My Hung Apartment,apartment,Entire rental unit,0,1.0,2,31.5,0.249,3151.0,4.8,4.88,17,False,sourced-airroi
+7183870,Ho Chi Minh City,District 1,Balcony Lv3 Private Studio Apartment,apartment,Entire apartment,1,1.0,2,16.6,0.488,3143.0,5.0,4.58,55,False,sourced-airroi
+1430427127253122218,Da Nang,,BalizaHome_Bright_Spacious 2 bedrooms apartment,villa,Entire rental unit,2,1.0,4,28.6,0.867,3137.0,14.9,4.25,8,False,sourced-airroi
+711312130082251344,Da Lat,Phường 10,Charming Studio with Balcony,apartment,Room in boutique hotel,1,1.0,2,52.4,0.16,3133.0,1.6,5.0,28,False,sourced-airroi
+912760317000804653,Da Nang,Thanh Khê District,Modern Studio Apt in downtown,apartment,Entire rental unit,1,1.0,2,27.7,0.299,3132.0,1.5,4.89,44,False,sourced-airroi
+1013750819058391414,Da Nang,Sơn Trà District,City center- NEW LARGE apart(2) - 2BRs - 70m2,apartment,Entire rental unit,2,1.0,4,41.0,0.453,3120.0,12.2,4.64,11,False,sourced-airroi
+1520933836445646827,Ho Chi Minh City,,Three bedroom in Sky garden 3,apartment,Entire rental unit,3,2.0,6,56.5,0.173,3120.0,2.8,0.0,2,False,sourced-airroi
+1424252000210955379,Da Nang,,402A2 Nice One Bedroom near My Khe beach /balcony,apartment,Entire rental unit,1,1.0,2,18.5,0.463,3119.0,17.3,4.8,5,False,sourced-airroi
+877853348902121477,Da Nang,Hải Châu District,Signature Studio w/Balcony 5mins to Dragon Bridge,apartment,Room in hotel,1,1.0,2,40.5,0.212,3087.0,1.3,4.78,65,False,sourced-airroi
+1336917482792351274,Da Lat,,Cozy whole house,villa,Entire home,4,3.0,9,64.4,0.246,3067.0,8.6,0.0,2,False,sourced-airroi
+1404726272093898248,Ho Chi Minh City,,The Quiet Elegance Apartment,apartment,Entire condo,3,2.0,6,60.4,0.211,3055.0,3.9,4.94,17,False,sourced-airroi
+1081407799240988750,Da Nang,Ngũ Hành Sơn District,Nest House Homestay Da Nang 6,villa,Room in hotel,1,1.0,2,20.3,0.416,3041.0,6.0,4.77,13,False,sourced-airroi
+585343352964855057,Da Lat,Phường 3,Danish-style single room - HYGGE Homestay Da Lat,villa,Room in boutique hotel,1,1.0,2,24.1,0.38,3029.0,2.2,4.85,26,False,sourced-airroi
+1360803575556473538,Da Nang,,City view two bedroom,apartment,Entire rental unit,2,1.0,4,36.7,0.2,3019.0,14.6,5.0,5,False,sourced-airroi
+1409187273334674706,Ho Chi Minh City,,Cozy| 1BR Garden Apt | Metro Nearby | Thao Dien,apartment,Entire serviced apartment,1,1.0,2,41.1,0.203,3004.0,3.0,4.82,28,False,sourced-airroi
+1279341956998439779,Da Nang,Ngũ Hành Sơn District,HSuites | Enchanting Apartment Near the Beach,apartment,Entire rental unit,1,1.0,2,22.0,0.618,3000.0,10.5,4.67,6,False,sourced-airroi
+1314236659635374958,Ho Chi Minh City,Thủ Đức,Thao Dien 3BR Luxury Haven | Gym & Family-Friendly,apartment,Entire rental unit,3,2.0,8,51.9,0.154,2997.0,3.3,4.64,11,False,sourced-airroi
+1494670102950108389,Da Nang,,New 1BedRoom - Big room in Quiet Area; Cozy,apartment,Entire rental unit,1,1.0,2,17.0,0.433,2951.0,14.4,4.6,10,False,sourced-airroi
+28647501,Da Nang,Hải Châu District,Apt 2BR/large dining table/Dragon walkable,apartment,Entire rental unit,2,2.0,3,42.8,0.207,2936.0,2.5,5.0,3,False,sourced-airroi
+23556578,Da Lat,Phường 4,Farm'ily Farmstay - bungalow 2 with beautiful view,villa,Farm stay,2,1.0,4,32.1,0.23,2898.0,2.5,4.79,182,False,sourced-airroi
+1262109607599496005,Ho Chi Minh City,District 7,Stylish Living wth Balcony Space,apartment,Entire rental unit,1,1.0,2,40.9,0.231,2896.0,10.7,4.86,7,False,sourced-airroi
+37057813,Ho Chi Minh City,Thủ Đức,Luxury Sun Avenue Apartment,apartment,Entire rental unit,2,1.0,4,39.6,0.242,2890.0,13.0,4.82,55,False,sourced-airroi
+45693344,Ho Chi Minh City,District 4,Tresor  Rose Home in center,villa,Entire condo,2,1.0,4,49.8,0.175,2885.0,5.1,4.5,20,False,sourced-airroi
+867810628260133757,Da Nang,Ngũ Hành Sơn District,AT38 B3-04  R2.2 - OceanSight Peaceful; big window,apartment,Entire rental unit,1,1.0,2,19.8,0.63,2884.0,18.5,4.9,21,False,sourced-airroi
+1558550182348421824,Da Lat,,Deluxe Signature 302 - Lake/ City View,villa,Private room in earthen home,1,1.0,2,52.0,0.153,2852.0,2.5,0.0,1,False,sourced-airroi
+1490387947966308965,Da Lat,,cozy tiny house nature 2 people,villa,Tiny home,1,1.0,2,19.1,0.455,2847.0,22.0,5.0,7,False,sourced-airroi
+40740766,Da Nang,Sơn Trà District,301-Apt 301 beautiful beach,apartment,Private room in rental unit,1,1.0,2,36.4,0.195,2843.0,7.1,4.74,19,False,sourced-airroi
+1487488521525361789,Da Nang,,New Big Room With Big Window In Quiet Area; Cozy,apartment,Entire rental unit,1,1.0,2,17.2,0.45,2773.0,10.9,4.72,18,False,sourced-airroi
+1180470868151588170,Da Nang,Hải Châu District,Theme Room Studio at Central/5min to Han Market,apartment,Private room in rental unit,0,1.0,2,32.0,0.227,2770.0,1.5,4.41,17,False,sourced-airroi
+1230315099486601495,Ho Chi Minh City,Binh Thanh District,AURA apartment – 5m to Landmark 81,apartment,Entire rental unit,2,1.0,4,47.9,0.293,2753.0,7.5,4.71,17,False,sourced-airroi
+1547709453598967536,Ho Chi Minh City,,Mono Room - Golden King Tower,apartment,Entire rental unit,0,1.0,2,37.1,0.223,2752.0,3.2,4.91,11,False,sourced-airroi
+25688940,Ho Chi Minh City,District 7,Citihouse 02 bedrooms,villa,Private room in rental unit,2,1.0,4,54.9,0.143,2742.0,17.3,4.42,12,False,sourced-airroi
+1354084212665054112,Da Nang,,BXP - Spacious Apt. with City View,apartment,Private room in serviced apartment,1,1.0,2,24.5,0.69,2693.0,12.1,5.0,4,False,sourced-airroi
+933578084990058580,Da Lat,Phường 9,Tiny House,villa,Entire home,1,1.0,2,26.5,0.295,2673.0,3.3,4.72,32,False,sourced-airroi
+980910623118362781,Da Lat,Phường 4,Villa Alley Dalat,villa,Entire home,3,3.0,7,41.4,0.261,2655.0,2.8,4.4,10,False,sourced-airroi
+913430498689160292,Da Lat,Phường 9,motngoinhadalat,villa,Private room in home,2,1.0,4,72.0,0.101,2650.0,2.6,4.73,15,False,sourced-airroi
+1499727894898422219,Ho Chi Minh City,,Cozy & Lovely 2 Brs Apt - Wonderfull Free Pool-Gym,apartment,Entire rental unit,2,1.0,3,43.9,0.164,2639.0,5.0,4.5,6,False,sourced-airroi
+856873891394124890,Da Nang,Hải Châu District,POTA| Deluxe Balcony Room| City Center| Ensuite,apartment,Room in hotel,1,1.0,2,19.4,0.354,2637.0,2.4,4.77,22,False,sourced-airroi
+1555548237664377674,Ho Chi Minh City,,NU Japan Town D1 | Urban Nook | Petite Studio,apartment,Entire rental unit,1,1.0,2,31.8,0.242,2567.0,6.6,4.78,18,False,sourced-airroi
+47985302,Ho Chi Minh City,District 7,Nice Apt with full serviced at Phu My Hung,apartment,Entire serviced apartment,1,1.0,2,28.8,0.395,2566.0,11.5,4.86,69,False,sourced-airroi
+973503041667551495,Ho Chi Minh City,District 3,1 bedroom + sofa bed close to park,apartment,Entire rental unit,1,1.0,2,60.6,0.104,2548.0,6.3,4.89,18,False,sourced-airroi
+1539129085132658255,Da Nang,,Cozy 2 Bedroom Apartment In Hai Chau ※,apartment,Entire rental unit,2,1.0,4,26.1,0.357,2537.0,13.9,5.0,3,False,sourced-airroi
+1508411689519305260,Da Nang,,Casita- Duplex Suite- 2 Bedroom near Beach,apartment,Entire rental unit,2,1.0,4,51.4,0.178,2528.0,5.4,0.0,2,False,sourced-airroi
+770696326112016630,Ho Chi Minh City,District 7,Penthouse Apartment in PMH,villa,Entire loft,1,1.0,2,57.3,0.156,2527.0,4.1,4.82,11,False,sourced-airroi
+1236729025422859780,Da Nang,Thanh Khê District,Entired 2-BDR condo; city center & Bay view,apartment,Entire rental unit,2,2.0,5,39.6,0.18,2508.0,7.2,4.72,18,False,sourced-airroi
+843175024404503427,Ho Chi Minh City,Binh Thanh District,CHIP; Daily Towel Replacement; Landmark Plus 1 BR; 1 Bedroom azt,apartment,Entire rental unit,1,1.0,2,65.7,0.107,2497.0,2.8,5.0,8,False,sourced-airroi
+1211560579602760014,Da Nang,,Ami Foreign Center DaNang - Vintage; Large Balcony,apartment,Entire rental unit,1,1.0,2,22.3,0.367,2476.0,15.4,4.82,11,False,sourced-airroi
+876543669489680892,Da Nang,Hải Châu District,Deluxe Studio with Pool/5mins to Dragon Bridge.,apartment,Room in hotel,1,1.0,2,41.2,0.159,2464.0,1.9,0.0,1,False,sourced-airroi
+1445457245039816610,Da Nang,,My Khe Q 2 Bedroom Apartment Retreat-100m to Beach,apartment,Entire rental unit,2,1.0,4,36.1,0.195,2458.0,1.9,4.93,15,False,sourced-airroi
+1204830275023027736,Da Nang,Ngũ Hành Sơn District,Luxury Room With Window-Outdoor Pool- Danang Beach,apartment,Room in hotel,1,1.0,2,24.8,0.621,2449.0,2.8,4.73,11,False,sourced-airroi
+1485285762788923054,Ho Chi Minh City,,MG Daisy - Wabi Sabi 2 @Ben Thanh,apartment,Entire rental unit,0,1.0,2,19.8,0.285,2434.0,1.6,4.47,133,False,sourced-airroi
+1151011054344564294,Da Nang,Thanh Khê District,Mercury Hideout• KingBed• FreeBreakfast •PrimeSpot,apartment,Room in hotel,1,1.0,2,23.9,0.27,2433.0,2.3,4.45,20,False,sourced-airroi
+1553288687944256154,Ho Chi Minh City,,2BR Landmark 81 View • Japanese Quarter 2; Saigon,apartment,Entire rental unit,2,1.0,4,47.1,0.143,2426.0,3.7,4.79,19,False,sourced-airroi
+1368505730583821221,Ho Chi Minh City,,Free Pickup / Balcony / Central Saigon / Ben Thanh,apartment,Entire rental unit,2,1.0,4,58.2,0.123,2423.0,2.8,4.63,16,False,sourced-airroi
+823054709410539297,Da Nang,Hải Châu District,Spacious Home Near Han River,villa,Entire home,3,2.0,8,22.2,0.304,2399.0,7.8,4.8,40,False,sourced-airroi
+1356457397472030053,Da Lat,,Cozy room at heart of Dalat,apartment,Room in hotel,1,1.0,2,25.7,0.445,2392.0,1.5,4.83,29,False,sourced-airroi
+33816703,Ho Chi Minh City,Binh Thanh District,CHIP; BEST PRICE; Plus; Landmark Plus; 1-Bedroom PikaparT,apartment,Entire rental unit,1,1.0,2,54.4,0.123,2356.0,2.6,4.86,28,False,sourced-airroi
+1557161262200129625,Da Lat,,Phòng Suite - Lux Nest Residence,apartment,Room in hotel,1,1.0,2,21.3,0.286,2351.0,2.5,0.0,2,False,sourced-airroi
+613922485003107609,Ho Chi Minh City,District 7,Quiet Studio 1Bed at PMH; 5’ to SECC/FV/RMIT,villa,Entire townhouse,1,1.0,2,27.5,0.227,2331.0,9.2,4.73,15,False,sourced-airroi
+1558553662393373004,Da Lat,,Deluxe Signature 304 - Lake/City View with Balcony,villa,Private room in earthen home,1,1.0,2,48.3,0.129,2326.0,1.9,0.0,1,False,sourced-airroi
+1489164337724141189,Da Nang,,BalizaHome_Modern/City View/Near Beach Apartment5,villa,Entire rental unit,1,1.0,2,17.9,0.409,2314.0,10.3,4.86,14,False,sourced-airroi
+1330894195424009542,Ho Chi Minh City,,Cozy monthly rental apartment for digital nomads,apartment,Entire rental unit,1,1.0,2,25.5,0.252,2309.0,13.1,5.0,5,False,sourced-airroi
+1142400574043405063,Da Nang,Sơn Trà District,Corgi Home/projector/center/love lock bridge,villa,Private room in rental unit,1,1.0,2,24.5,0.248,2270.0,4.0,4.8,5,False,sourced-airroi
+45459977,Ho Chi Minh City,District 7,Private room with balcony 2 - 55Apart.hotel,apartment,Room in aparthotel,1,1.0,2,27.1,0.299,2259.0,3.3,4.47,36,False,sourced-airroi
+1499307458016555501,Ho Chi Minh City,,2Beds; 1Wc; Big Room; Free Gym&Pool; Ecogreen D7,apartment,Entire rental unit,2,1.0,3,43.9,0.208,2242.0,11.0,0.0,2,False,sourced-airroi
+748171801314365434,Da Lat,Phường 3,Ensuite with pine forest view + Free daily coffee,apartment,Private room,1,1.0,2,28.7,0.216,2232.0,3.1,4.68,22,False,sourced-airroi
+709965466869313945,Ho Chi Minh City,District 7,River Panorama -  2 bedroom BEST,apartment,Entire condo,2,1.0,4,34.0,0.688,2212.0,11.0,4.65,68,False,sourced-airroi
+1488460174055152968,Da Nang,,Fullhouse 5.7 - OceanSight- balcony; mountain view,villa,Entire rental unit,1,1.0,2,20.0,0.416,2206.0,18.5,5.0,5,False,sourced-airroi
+1002074948411623962,Da Nang,,Double Have Balcony With City View - Anh Dao Hotel,apartment,Room in hotel,0,1.0,2,41.5,0.145,2201.0,1.7,4.63,8,False,sourced-airroi
+603315611859898993,Da Lat,Phường 10,2-bedroom apartment with kitchen; quiet; 2.5km from the market,villa,Entire guesthouse,2,2.0,4,37.8,0.153,2200.0,10.6,5.0,3,False,sourced-airroi
+1409109364630136613,Ho Chi Minh City,,Saigon River Poem Apartment,apartment,Entire rental unit,3,2.0,6,41.2,0.162,2189.0,6.1,0.0,2,False,sourced-airroi
+877081322814891266,Da Nang,Ngũ Hành Sơn District,Cozy Glory Apartment (1bedroom),apartment,Entire serviced apartment,1,1.0,2,27.3,0.347,2187.0,4.4,4.88,60,False,sourced-airroi
+1409044406308733472,Ho Chi Minh City,,Poetry; Saigon River and Far Away,apartment,Entire rental unit,3,2.0,6,37.9,0.166,2175.0,4.5,5.0,3,False,sourced-airroi
+40363697,Ho Chi Minh City,Binh Thanh District,Landmark plus; view thoáng; 1 bed,apartment,Entire serviced apartment,1,1.0,2,49.6,0.126,2173.0,11.5,4.74,35,False,sourced-airroi
+1380452946408917146,Da Lat,,Cozy; with balcony,apartment,Room in hotel,1,1.0,2,19.3,0.268,2169.0,5.2,4.91,32,False,sourced-airroi
+28166793,Da Nang,Ngũ Hành Sơn District,Daisy apt at My Khe beach - 18th floor,apartment,Entire rental unit,2,1.0,4,47.2,0.201,2160.0,7.3,4.65,20,False,sourced-airroi
+1273894626410199477,Da Nang,Ngũ Hành Sơn District,OceanSight 85 - 1 bedroom 55m2 on ground floor,apartment,Entire rental unit,1,1.0,2,20.1,0.637,2156.0,14.3,5.0,17,False,sourced-airroi
+1550897539179903360,Da Nang,,Solkissed |Summer Studio a gem right at Han Market,villa,Private room in guesthouse,1,1.0,2,28.2,0.197,2148.0,2.2,4.67,15,False,sourced-airroi
+1405505414775288676,Ho Chi Minh City,,NTMK1 •KingBed •FreeLaundry & Parking •City Center,apartment,Private room in serviced apartment,1,1.0,2,21.6,0.274,2116.0,3.1,5.0,12,False,sourced-airroi
+1003905851330515038,Da Lat,Phường 10,tiny House dalat; rustic bungalow,villa,Private room in bungalow,1,1.0,2,25.6,0.5,2115.0,12.3,4.57,7,False,sourced-airroi
+1479592183764553175,Da Nang,,Deluxe 2BR APT W/ Swimming pool in Danang center,apartment,Private room in serviced apartment,2,2.0,4,41.7,0.15,2103.0,5.9,0.0,1,False,sourced-airroi
+1558555605358471063,Da Lat,,Nest Petite 305 - Balcony Garden View,villa,Private room in earthen home,1,1.0,2,47.3,0.128,2099.0,1.9,0.0,2,False,sourced-airroi
+35360992,Da Nang,Hải Châu District,Studio w/Balcony; 1 BR Near Han River–5 Min Walk,villa,Entire townhouse,1,1.0,2,16.0,0.436,2098.0,5.3,4.84,76,False,sourced-airroi
+1161297955143100585,Da Lat,Phường 3,Deluxe Double City View* with Window,apartment,Room in hotel,1,1.0,2,34.0,0.164,2091.0,2.3,4.82,11,False,sourced-airroi
+1123745882957900291,Da Lat,Phường 10,Studio apartment with mountain view towards Prenn Pass,apartment,Entire rental unit,1,1.0,2,29.0,0.265,2088.0,2.2,0.0,1,False,sourced-airroi
+1056927709306375695,Ho Chi Minh City,District 1,Zeus Living - Premium room,apartment,Room in hotel,1,1.0,2,45.2,0.154,2085.0,2.8,4.6,5,False,sourced-airroi
+616118106414753835,Ho Chi Minh City,Thủ Đức,The Sun Avenue - Pool view,apartment,Entire condo,2,1.0,4,39.5,0.331,2076.0,9.3,4.72,25,False,sourced-airroi
+34545419,Ho Chi Minh City,District 4,Sunrise Nice View 2B Apt. Pool Gym/10m to D.1,apartment,Entire rental unit,2,1.0,4,48.2,0.167,2055.0,4.8,4.88,144,False,sourced-airroi
+585105310952916827,Ho Chi Minh City,District 7,Luxury Studio Apartment in Phu My Hung,apartment,Entire serviced apartment,1,1.0,2,37.0,0.163,2049.0,2.7,5.0,12,False,sourced-airroi
+912645546695888773,Ho Chi Minh City,,Luxury 2-bedroom apt in District 7 view river,apartment,Entire rental unit,2,1.0,4,35.9,0.155,2037.0,11.2,4.7,10,False,sourced-airroi
+1409938268133719482,Ho Chi Minh City,,6Pax - New Apartment - 3 Bed rooms - Centre D1,apartment,Entire serviced apartment,3,2.0,6,113.1,0.121,1993.0,3.0,0.0,2,False,sourced-airroi
+42900851,Da Nang,Sơn Trà District,Apartments in a Quiet Neighborhood,apartment,Entire rental unit,1,1.0,2,16.1,0.335,1982.0,11.8,4.9,10,False,sourced-airroi
+40491759,Ho Chi Minh City,Thủ Đức,The Sun Avenue Apartment - Harbor View SAV3,apartment,Entire condo,2,1.0,4,44.8,0.15,1976.0,7.7,4.98,48,False,sourced-airroi
+764052565946483477,Ho Chi Minh City,District 7,Mây 3 - Fully furnished studio,villa,Entire home,1,1.0,2,28.9,0.27,1975.0,3.7,4.66,58,False,sourced-airroi
+1581884468416033070,Ho Chi Minh City,,HAITA Suites - Junior Suites Garden View 1,villa,Private room in home,0,1.0,2,42.3,0.125,1934.0,2.0,0.0,2,False,sourced-airroi
+1578908937648719302,Ho Chi Minh City,,Room 206 | Full Furnished in Bui Vien,apartment,Entire rental unit,0,1.0,2,13.0,0.356,1915.0,3.1,4.87,38,False,sourced-airroi
+811989941298943654,Ho Chi Minh City,District 1,Windy Hill Sai Gon 608,apartment,Entire rental unit,2,1.0,4,43.3,0.187,1911.0,6.3,4.8,40,False,sourced-airroi
+1504002667819873506,Da Nang,,Standard Twin Room,apartment,Private room in rental unit,1,1.0,2,19.6,0.247,1889.0,6.4,5.0,4,False,sourced-airroi
+634401424576324879,Da Lat,Phường 1,Whole house near Da Lat market,villa,Entire home,2,1.0,2,23.7,0.258,1875.0,5.3,4.56,18,False,sourced-airroi
+1384148841451836690,Da Lat,,Your Aunty House - Suite,villa,Room in hotel,1,1.0,2,32.7,0.153,1866.0,2.9,4.82,17,False,sourced-airroi
+40159558,Da Lat,Phường 1,Dejavu Myky - for 2-3 people at the very center,apartment,Entire rental unit,0,1.0,2,34.0,0.142,1864.0,2.4,4.76,29,False,sourced-airroi
+1581875901300201601,Ho Chi Minh City,,HAITA Suites Apartment - Junior Suites Balcony 1,villa,Private room in home,0,1.0,2,44.1,0.116,1845.0,3.0,0.0,2,False,sourced-airroi
+1193301739063170541,Da Nang,Hải Châu District,Big House 3 bedrooms near the sea,villa,Entire home,3,3.0,6,67.7,0.136,1814.0,9.3,4.67,3,False,sourced-airroi
+1309084774799483998,Da Nang,,Ami Foreign Center Da Nang 4 - Balcony; Sea; Cozy,apartment,Entire rental unit,1,1.0,2,18.4,0.358,1799.0,14.0,4.95,20,False,sourced-airroi
+585360045838209154,Da Lat,Phường 3,Minimalist room with ensuite - HYGGE Da Lat,apartment,Room in boutique hotel,1,1.0,2,24.1,0.219,1799.0,2.6,5.0,12,False,sourced-airroi
+1141070859385554669,Da Nang,,Standard Lovely Homestay in the Airport area,villa,Room in hotel,1,1.0,2,30.0,0.205,1795.0,1.9,4.71,48,False,sourced-airroi
+1510931826796098720,Da Nang,,Urbano-Chic 1BR Apt/Walk to Beach & Night Market,apartment,Entire rental unit,1,1.0,2,27.9,0.228,1791.0,13.8,4.0,3,False,sourced-airroi
+1483901948698243330,Da Lat,,Sotun Home 01 | Homestay with 3 rooms,villa,Entire home,3,1.0,7,40.9,0.129,1790.0,6.7,5.0,4,False,sourced-airroi
+43570297,Da Nang,Hải Châu District,Tiditel Apartment one bed room with dragon bridge,apartment,Entire rental unit,1,1.0,2,34.8,0.146,1768.0,3.1,4.89,19,False,sourced-airroi
+1009738150260411261,Da Nang,,Double Have Balcony With City View - Anh Dao Hotel,apartment,Room in hotel,0,1.0,2,43.1,0.145,1761.0,1.7,0.0,1,False,sourced-airroi
+1504082796615098680,Da Nang,,Êm Stay – Central Cozy Apt 04- 6mins Dragon Bridge,apartment,Private room in rental unit,1,1.0,2,16.4,0.302,1740.0,5.6,0.0,2,False,sourced-airroi
+1577976777425040372,Ho Chi Minh City,,Apartment 2PN Sunrise Riverside - near Phu My Hung,apartment,Entire rental unit,2,1.0,4,45.4,0.101,1739.0,4.1,0.0,2,False,sourced-airroi
+1156337691981022814,Da Nang,Sơn Trà District,BalizaHome_A Cozy Separated One Bedroom apartment4,villa,Entire rental unit,1,1.0,2,18.0,0.792,1701.0,8.6,4.85,20,False,sourced-airroi
+1091846097779784127,Ho Chi Minh City,District 7,Large studio with balcony-Phu My Hung,apartment,Room in aparthotel,1,1.0,2,28.5,0.256,1681.0,4.7,4.84,25,False,sourced-airroi
+1455714212236937285,Da Nang,,Central Two-Bedroom Apartment,apartment,Entire rental unit,2,1.0,4,29.0,0.164,1670.0,6.7,4.75,4,False,sourced-airroi
+1477305547429246166,Da Nang,,302 | LonaHome - 1Bedroom; Big Balcony; Airy&Quiet,villa,Entire rental unit,1,1.0,2,18.4,0.296,1639.0,18.2,4.71,7,False,sourced-airroi
+1436883502200717859,Da Nang,,Ami Bridge Riverside Da Nang - 2BR; Cozy; New 100%,apartment,Entire rental unit,2,1.0,4,28.2,0.182,1633.0,5.0,4.96,25,False,sourced-airroi
+28530978,Da Nang,Hải Châu District,Apt 1BR/ground floor/5' drive MYKHE - Han Market,apartment,Entire rental unit,1,1.0,2,28.1,0.201,1626.0,2.5,5.0,3,False,sourced-airroi
+46098703,Ho Chi Minh City,District 7,Studio Apartment near SECC,apartment,Entire rental unit,0,1.0,2,32.0,0.14,1618.0,5.1,5.0,13,False,sourced-airroi
+1518533782193901483,Da Nang,,Airy 2 Bedrooms Apartment in Hai Chau ※,apartment,Entire rental unit,2,1.0,4,24.8,0.242,1539.0,15.5,0.0,1,False,sourced-airroi
+966268137025069166,Da Nang,,Deluxe double room,apartment,Room in hotel,1,1.0,2,34.6,0.131,1529.0,1.5,5.0,6,False,sourced-airroi
+1507009194282906524,Da Nang,,Full House 2 Bedroom -Center - 5' to Han River,villa,Entire home,2,1.0,6,36.2,0.165,1522.0,4.4,3.92,12,False,sourced-airroi
+804740645605285778,Da Lat,Phường 1,TTR Central Apart Hotel - One Bedroom Suite,apartment,Entire serviced apartment,1,1.0,2,38.7,0.101,1483.0,1.7,4.2,5,False,sourced-airroi
+42459543,Da Nang,Ngũ Hành Sơn District,DANATRI*KINGROOM*Balcony.301*Bathtub*MyKheBeach,villa,Private room in townhouse,1,1.0,2,22.5,0.305,1466.0,8.1,4.48,23,False,sourced-airroi
+854704669149755882,Da Nang,Ngũ Hành Sơn District,Cozy Room w/Balcony_nearby My Khe beach 150 meter,apartment,Private room in bed and breakfast,1,1.0,2,24.0,0.784,1457.0,3.0,4.44,41,False,sourced-airroi
+1315288290142753527,Da Nang,Hải Châu District,Cozy Apartment 2 Bed Rooms Near River and Sea,apartment,Entire rental unit,2,1.0,4,30.6,0.156,1447.0,5.6,4.88,8,False,sourced-airroi
+890160201439510980,Ho Chi Minh City,District 1,Deluxe private room with resort-style bathtub,villa,Private room in home,1,1.0,2,23.8,0.163,1436.0,3.1,4.63,8,False,sourced-airroi
+900792354629861201,Da Lat,,Tourist Apartment in Da Lat City,apartment,Entire rental unit,2,2.0,4,37.8,0.238,1431.0,3.1,4.69,29,False,sourced-airroi
+1173917808637811092,Da Lat,Phường 10,Full-equipped Studio with Private BBQ Space,apartment,Entire rental unit,1,1.0,2,35.3,0.118,1421.0,7.2,5.0,5,False,sourced-airroi
+1140156694850892411,Da Lat,Phường 2,Rosaline - Tranquil & Chic Retreat at City Centre,apartment,Room in hotel,1,1.0,2,16.0,0.294,1417.0,1.6,4.74,19,False,sourced-airroi
+1522315168426549876,Da Nang,,Newly 1BR | Morden&Cozy | 5 mins to MyKhe Beach,apartment,Entire rental unit,1,1.0,2,24.4,0.171,1378.0,6.9,5.0,4,False,sourced-airroi
+1519752564928879872,Ho Chi Minh City,,Luxury 2-bedroom apartment in Phu My Hung,apartment,Entire rental unit,2,1.0,4,31.6,0.159,1355.0,4.0,4.67,3,False,sourced-airroi
+794575208272381559,Ho Chi Minh City,District 7,Calm Studio 1Bed at PMH; 5’ to SECC/FV/RMIT,villa,Entire townhouse,1,1.0,2,27.9,0.156,1337.0,4.5,4.58,33,False,sourced-airroi
+1151206629542793960,Da Nang,,Studio | City View | Netflix | 300m To Beach,apartment,Entire rental unit,1,1.0,2,20.1,0.212,1315.0,9.6,4.93,14,False,sourced-airroi
+585350938209706916,Da Lat,Phường 3,Single room with a valley view  - HYGGE Da Lat,apartment,Room in boutique hotel,1,1.0,2,28.6,0.16,1277.0,2.5,4.69,13,False,sourced-airroi
+1368552619004417091,Da Nang,,One Apartment No View,apartment,Entire rental unit,1,1.0,2,19.8,0.184,1270.0,3.9,5.0,4,False,sourced-airroi
+1377340399455129243,Ho Chi Minh City,,Luxury Apartment Pool 35th Floor,apartment,Entire rental unit,2,1.0,4,32.3,0.107,1223.0,7.8,5.0,5,False,sourced-airroi
+1452250567633079643,Da Lat,,The flower season that year,villa,Tiny home,2,1.0,4,30.2,0.101,1146.0,2.5,5.0,4,False,sourced-airroi
+20007261,Da Lat,Phường 1,KHOI AN house,villa,Entire home,4,2.0,7,30.0,0.111,1124.0,4.3,4.79,147,False,sourced-airroi
+1435919107754385503,Da Nang,,One-bedroom apartment - An Thuong.,apartment,Entire rental unit,1,1.0,2,29.2,0.109,1114.0,4.6,0.0,1,False,sourced-airroi
+1515248252808280966,Ho Chi Minh City,,"Tropic Garden 
+Studio Apt  in the heart of D1",apartment,Entire rental unit,1,1.0,2,14.6,0.25,1073.0,4.3,4.56,9,False,sourced-airroi
+1124458660796285143,Da Nang,Hải Châu District,Tiditel Apartment Studio  35m2 city view,apartment,Private room in rental unit,1,1.0,2,26.2,0.118,1017.0,6.1,4.6,5,False,sourced-airroi
+1210021145815671450,Da Nang,,Signature Room/Central location/Kingbed,apartment,Room in hotel,1,1.0,2,20.7,0.125,1015.0,1.7,5.0,4,False,sourced-airroi
+998767951914101687,Da Nang,Hải Châu District,Superior City View,apartment,Room in hotel,1,1.0,2,14.4,0.237,992.0,1.6,4.6,47,False,sourced-airroi
+49189457,Da Nang,Thanh Khê District,Harmony Homestay-Room has a balcony with city view,villa,Room in boutique hotel,1,1.0,2,20.1,0.121,953.0,4.9,4.6,20,False,sourced-airroi
+1561348657346855727,Da Lat,,Dalat in Tuyet Quynh Homestay,villa,Room in hotel,1,1.0,2,13.9,0.153,931.0,3.7,5.0,9,False,sourced-airroi
+1229585553933130775,Ho Chi Minh City,,Cozy 1+1BR apartment Thao Dien,apartment,Entire rental unit,2,1.0,4,23.1,0.248,928.0,13.3,4.5,4,False,sourced-airroi
+1141638266233147611,Da Nang,,A Cozy Homestay stays right in Da Nang Airport,villa,Room in hotel,1,1.0,2,28.2,0.134,912.0,1.3,4.75,4,False,sourced-airroi
+1130371333776856066,Da Nang,Ngũ Hành Sơn District,Studio An thượng ; Mű An,apartment,Private room in rental unit,1,1.0,2,20.5,0.152,885.0,23.0,0.0,1,False,sourced-airroi
+1194891121315445582,Da Lat,Phường 10,TTR Joy Villa - Deluxe Double Room with Window,villa,Room in hotel,1,1.0,2,37.1,0.11,833.0,2.8,0.0,2,False,sourced-airroi
+1243389634093596428,Da Lat,Phường 2,Private floor: 2 double bedrooms; kitchen; balcony,villa,Private room in guesthouse,2,1.0,2,18.0,0.18,796.0,9.6,5.0,5,False,sourced-airroi
+1194810398993150250,Da Lat,Phường 5,TTR Skypool Hotel - Deluxe Queen Room with Window,apartment,Room in hotel,1,1.0,2,16.9,0.11,772.0,1.4,3.2,5,False,sourced-airroi
+606940020674053580,Da Lat,Phường 4,"Nhặt Lá. 
+A small house in the heart of Da Lat.",villa,Entire home,1,1.0,2,21.8,0.104,723.0,3.8,5.0,5,False,sourced-airroi
+998339740151793602,Da Nang,Hải Châu District,River View Suite,apartment,Room in hotel,1,1.0,2,19.1,0.102,679.0,2.6,5.0,3,False,sourced-airroi
+1476800401470358088,Da Lat,,TTR Joy Apart' Hotel - Standard Double Room,apartment,Entire rental unit,1,1.0,2,17.8,0.11,674.0,2.7,4.75,4,False,sourced-airroi
+1227339613870021252,Da Nang,,Deluxe Double with River view,apartment,Room in hotel,1,1.0,2,17.7,0.11,670.0,1.3,4.09,11,False,sourced-airroi
+1247757387032195473,Da Nang,Sơn Trà District,Double room on My khe beach,apartment,Room in hotel,1,1.0,2,14.3,0.123,637.0,11.3,0.0,1,False,sourced-airroi
+997778270924890599,Da Nang,Hải Châu District,City View Twin Guest Room,apartment,Room in hotel,1,1.0,2,15.7,0.115,630.0,2.3,4.1,10,False,sourced-airroi
+1170273365810935459,Da Nang,Sơn Trà District,BalizaHome_A Cozy Minimalist room,villa,Entire rental unit,1,1.0,2,12.6,0.618,628.0,11.0,4.96,27,False,sourced-airroi
+1307174984319426456,Da Nang,,Annie Danang Deluxe Double Room,apartment,Room in hotel,1,1.0,2,14.1,0.128,592.0,8.4,4.0,3,False,sourced-airroi
+29274939,Da Lat,Phường 10,Toutpetit Mini Bungalow 2,villa,Private room in bungalow,4,1.0,2,10.8,0.175,573.0,2.9,4.83,128,False,sourced-airroi
+1129613632035677068,Da Lat,,Thien Bao Hotel Cheap Price,apartment,Room in hotel,1,1.0,2,10.3,0.123,510.0,2.8,4.78,32,False,sourced-airroi
+1135806006351764917,Da Lat,,Thien Bao Hotel Cheap Price (1 Double Bed),apartment,Room in hotel,1,1.0,2,10.6,0.11,480.0,4.4,5.0,4,False,sourced-airroi
+1351250829106697969,Da Nang,Sơn Trà,Beachside House | Near My Khe Beach | City Center,villa,Entire home,3,3.0,6,100.5,0.921,31838.0,2.9,4.99,94,False,sourced-airroi
+1188852953978278369,Da Nang,Quận Sơn Trà,3 Bedroom Apartment - Orchide Apartment,apartment,Entire rental unit,3,3.0,6,53.6,0.123,2193.0,3.2,4.44,18,False,sourced-airroi
+618450621261214288,Da Nang,Ngũ Hành Sơn District,3BRs Seaview w Breakfast * Pool * My Khe Beach,apartment,Room in boutique hotel,3,3.0,6,73.0,0.169,4187.0,3.6,3.78,9,False,sourced-airroi
+1458363350915920652,Da Nang,Quận Sơn Trà,Family 3BR Suite | Living Room | Near My Khe Beach,apartment,Private room in serviced apartment,3,3.0,6,89.9,0.488,16732.0,2.9,4.89,9,False,sourced-airroi
+1181204313878472345,Da Nang,Quận Sơn Trà,Private Pool Villa_3BR_Khe Beach_Han Market,villa,Castle,3,3.0,6,163.1,0.199,10328.0,3.8,5.0,5,False,sourced-airroi
+688685352998521079,Da Nang,Sơn Trà District,Minh House - Phuoc Truong 11,villa,Entire home,3,3.0,6,194.9,0.663,47637.0,2.7,4.77,53,False,sourced-airroi
+975749358204499683,Da Nang,Sơn Trà District,Spacious 3br penthouse; walk to My Khe beach,villa,Entire rental unit,3,3.0,6,178.2,0.147,9520.0,4.8,4.67,12,False,sourced-airroi
+1417778019925055542,Da Nang,Quận Sơn Trà,Ho Nghinh Park_ 3-bedroom villa,villa,Entire home,3,3.0,6,193.2,0.162,10396.0,3.6,5.0,5,False,sourced-airroi
+1453915763182334317,Da Nang,Quận Ngũ Hành Sơn,Villa 3br Full Ac Pool BBQ Private Toilet,villa,Entire villa,3,3.0,6,127.0,0.402,17989.0,4.0,4.62,13,False,sourced-airroi
+1539877905357822761,Da Nang,Quận Ngũ Hành Sơn,Stylish 3Br Ensuite Villa with Private Pool,villa,Entire home,3,3.0,6,138.8,0.248,11622.0,3.3,5.0,4,False,sourced-airroi
+1437341724761922098,Da Nang,Quận Sơn Trà,Man Thai Beach - 3 Bedroom Villa,villa,Entire home,3,3.0,6,175.1,0.127,7435.0,2.4,0.0,1,False,sourced-airroi
+1499223107122424029,Da Nang,Quận Sơn Trà,Peaceful traditional house; near My Khe beach,villa,Entire home,3,3.0,7,101.7,0.352,9667.0,7.3,4.33,6,False,sourced-airroi
+37814341,Da Nang,Ngũ Hành Sơn District,3 BRs  w Breakfast* Pool * 3 mins to My Khe Beach,apartment,Room in boutique hotel,3,3.0,7,95.5,0.363,11845.0,0.0,4.36,14,False,sourced-airroi
+1510167333572693152,Da Nang,Quận Sơn Trà,A quiet house near the sea; full of light,villa,Entire home,3,3.0,7,103.3,0.314,10692.0,10.7,4.75,4,False,sourced-airroi
+1358738084417206936,Da Nang,Phước Mỹ,Sky House/Cozy 3BR/Free Pickup/Walk to MyKhe Beach,villa,Entire home,3,3.5,6,93.9,0.442,14688.0,8.7,4.64,44,False,sourced-airroi
+1358698342398031805,Da Nang,Phước Mỹ,Hiskyhouse/3Bedroom/My Khe beach/5 minutes My Khe Beach-Free Airport,villa,Entire home,3,3.5,6,90.2,0.593,12368.0,8.1,5.0,4,False,sourced-airroi
+956943880390715623,Da Nang,Sơn Trà District,Luxury 2BR apartment with city view bathtub,apartment,Entire rental unit,2,2.0,4,102.8,0.529,19844.0,4.4,4.91,47,False,sourced-airroi
+1336722552498971074,Da Nang,Sơn Trà,Modern Apartment Suite_Beach_Rooftop Pool_Gym,apartment,Entire rental unit,2,2.0,4,94.7,0.307,10405.0,2.9,4.92,13,False,sourced-airroi
+1006254944363569086,Da Nang,Sơn Trà District,ChacahouseF3 - 2BRs-Rooftop Aparment-300m to beach,villa,Private room in home,2,2.0,4,46.0,0.714,8940.0,4.3,4.82,17,False,sourced-airroi
+1167003278191176332,Da Nang,Quận Sơn Trà,Modern apartment 2 bedroom BeachFront,apartment,Entire rental unit,2,2.0,4,87.6,0.315,10476.0,3.8,4.89,62,False,sourced-airroi
+847532728554907462,Da Nang,Quận Sơn Trà,MercuryHouse Beachfront - Apartment 2 BRs -3 Beds,villa,Entire rental unit,2,2.0,4,52.3,0.104,1999.0,1.3,4.75,8,False,sourced-airroi
+1182183298656625344,Da Nang,Sơn Trà District,Sanayen Family Apartment| Kitchen| Pool View,apartment,Entire serviced apartment,2,2.0,4,74.6,0.267,6537.0,2.6,4.83,6,False,sourced-airroi
+1254533436822178614,Da Nang,Sơn Trà,2BR Apt| My Khe Beach; 18th Floor; Double Balcony,apartment,Entire rental unit,2,2.0,4,73.3,0.563,14456.0,4.1,4.95,80,False,sourced-airroi
+1226511778115427950,Da Nang,Sơn Trà District,Ocean View Apartment with 2BR,apartment,Entire rental unit,2,2.0,4,79.9,0.192,5552.0,7.8,4.8,5,False,sourced-airroi
+1456873662921612019,Da Nang,Quận Sơn Trà,Luxury apartment 904,apartment,Entire rental unit,2,2.0,4,73.2,0.151,4102.0,5.5,4.64,14,False,sourced-airroi
+825981292986825435,Da Nang,Sơn Trà District,Apartment #3 Two Luxury Bedrooms At A La Carte,apartment,Entire rental unit,2,2.0,4,65.9,0.891,16505.0,14.9,4.63,27,False,sourced-airroi
+667848817545582893,Da Nang,Sơn Trà District,Apartment #1 Luxurious Two-Bedroom A La Carte,apartment,Entire condo,2,2.0,4,67.1,0.791,18453.0,13.0,4.83,23,False,sourced-airroi
+1330150933060076828,Da Nang,Sơn Trà,Two King Bed Apartment with Big Balcony/Free Pool,apartment,Entire rental unit,2,2.0,4,86.2,0.282,9132.0,4.7,4.95,20,False,sourced-airroi
+1059746509914291262,Da Nang,Sơn Trà District,25th Floor Luxury 2BR Apartment with Ocean view,apartment,Entire rental unit,2,2.0,4,93.2,0.701,23792.0,4.3,4.98,55,False,sourced-airroi
+1097922195176444360,Da Nang,Sơn Trà District,Luxury 2BR walking to the beach,apartment,Entire rental unit,2,2.0,4,99.3,0.195,6098.0,11.8,4.33,6,False,sourced-airroi
+1015876686445395645,Da Nang,Sơn Trà District,Beachfront Apartment - 2Bedroom - Stunning View,apartment,Entire rental unit,2,2.0,4,87.9,0.246,5641.0,8.0,5.0,27,False,sourced-airroi
+1235481533452626086,Da Nang,Sơn Trà District,Luxury Apartment with 2BR,apartment,Entire rental unit,2,2.0,4,82.5,0.145,3938.0,8.3,4.4,5,False,sourced-airroi
+1099626250138157456,Da Nang,Sơn Trà District,Luxury Apartment 2BR Sea View in Sheraton Building,apartment,Entire rental unit,2,2.0,4,83.1,0.202,5916.0,4.1,4.68,31,False,sourced-airroi
+1421467126015231032,Da Nang,Sơn Trà,2BR Luxurious Apartment - Beach Front,apartment,Entire rental unit,2,2.0,4,89.1,0.463,13801.0,6.3,4.6,20,False,sourced-airroi
+1193324058487541204,Da Nang,Sơn Trà District,Apartment #4 Two luxurious bedrooms in Alacarte,apartment,Entire rental unit,2,2.0,4,61.6,0.872,11671.0,15.3,4.29,7,False,sourced-airroi
+736027734885544316,Da Nang,Sơn Trà District,Brand new 2-bedroom apartment,apartment,Entire serviced apartment,2,2.0,4,73.3,0.413,9066.0,4.8,4.83,72,False,sourced-airroi
+1027272557395639811,Da Nang,Sơn Trà District,Luxury 2-bedroom apartment,apartment,Entire rental unit,2,2.0,4,72.4,0.694,15259.0,3.7,4.93,56,False,sourced-airroi
+817671212940209559,Da Nang,Sơn Trà District,LongTerm Penthouse Natural Light,villa,Entire rental unit,2,2.0,4,23.9,0.621,3379.0,14.9,4.57,14,False,sourced-airroi
+1022954904501696129,Da Nang,Sơn Trà District,Luxury 2bedroom; Free Pick Up from 5 night,apartment,Private room in serviced apartment,2,2.0,4,93.2,0.252,8098.0,4.2,4.92,26,False,sourced-airroi
+1388160488876819038,Da Nang,Sơn Trà,2BR Luxury Apartment in Altara - My Khe Beach,apartment,Entire rental unit,2,2.0,4,87.5,0.538,16597.0,6.4,4.86,21,False,sourced-airroi
+1076069569160651048,Da Nang,Sơn Trà District,Luxury 2BR at My Khe Beach,apartment,Entire rental unit,2,2.0,4,90.7,0.214,6880.0,4.1,4.89,35,False,sourced-airroi
+1178269416623783398,Da Nang,Sơn Trà District,2BR Ocean View Modern High Floor Watching the sunrise,apartment,Entire rental unit,2,2.0,4,70.4,0.553,14120.0,11.9,4.98,42,False,sourced-airroi
+1576837694812070514,Da Nang,Quận Sơn Trà,Son Tra 2 – Sea View – Man Thai Beach – 2 Bedrooms,apartment,Entire rental unit,2,2.0,4,77.8,0.346,9408.0,8.3,5.0,11,False,sourced-airroi
+848988085806142465,Da Nang,Sơn Trà District,MercuryHouse - Beachfront Apartment 2BRs -3Beds,villa,Entire rental unit,2,2.0,4,45.1,0.434,7096.0,1.5,4.79,221,False,sourced-airroi
+1505527079634649850,Da Nang,Quận Sơn Trà,Son Tra Ocean View - 2bedroom -522,apartment,Entire rental unit,2,2.0,4,46.9,0.422,6286.0,22.0,4.75,4,False,sourced-airroi
+764186565361014230,Da Nang,Sơn Trà District,Minimalist Sea and Mountain View Apartment,apartment,Entire condo,2,2.0,4,36.1,0.798,7647.0,17.8,4.86,50,False,sourced-airroi
+1294105746994519506,Da Nang,Sơn Trà District,BIGSALE*Mina Beach Villa-2Brs-Full Ac-Pool-Private,villa,Entire home,2,2.0,4,95.7,0.368,12909.0,3.1,4.76,17,False,sourced-airroi
+41365310,Da Nang,Sơn Trà District,Modern Apartment near beach; 2 bedrooms,apartment,Entire rental unit,2,2.0,5,41.3,0.875,10578.0,10.6,4.88,52,False,sourced-airroi
+34857141,Da Nang,Sơn Trà District,Queen home - 83m2 spacious - 2 bedrooms-near beach,villa,Entire rental unit,2,2.0,5,46.9,0.724,7484.0,12.1,4.91,22,False,sourced-airroi
+1025206141730652306,Da Nang,Sơn Trà District,Da Nang Work Retreat: Sea Views; King Beds & Wi-Fi,apartment,Entire rental unit,2,2.0,5,45.3,0.129,2070.0,4.9,4.75,32,False,sourced-airroi
+1126839634398201811,Da Nang,Sơn Trà District,Fen House 2BR - Pool Private Cool- BBQ -Near Beach,villa,Entire home,2,2.5,4,140.4,0.912,47767.0,3.5,5.0,159,False,sourced-airroi
+875767667363587654,Da Nang,Sơn Trà District,Oceanview Apartment | 2 Beds | 2 Baths | Netflix,apartment,Entire rental unit,2,2.0,5,54.9,0.746,9562.0,2.9,4.82,168,False,sourced-airroi
+1347713941117250596,Da Nang,Quận Sơn Trà,Luxury flat Oceanview; 90m2; 2bdr; near beach,apartment,Entire rental unit,2,2.0,6,48.8,0.329,6141.0,4.1,4.8,49,False,sourced-airroi
+840870740223372827,Da Nang,Sơn Trà District,MercuryBeach- LuxuryApart 2BRs-3Beds- Seaview,apartment,Entire rental unit,2,2.0,6,59.4,0.378,8094.0,1.4,4.75,237,False,sourced-airroi
+843160172470361752,Da Nang,Sơn Trà District,MercuryBeach with 2BRs-3Beds-POOL 10m to the beach,apartment,Entire rental unit,2,2.0,6,51.4,0.514,9602.0,2.3,4.87,136,False,sourced-airroi
+843182582317397145,Da Nang,Sơn Trà District,MercuryHouse - DeluxeApart 2BRs-3Beds P202,villa,Entire rental unit,2,2.0,6,42.9,0.748,11469.0,2.6,4.67,55,False,sourced-airroi
+40473474,Da Nang,Sơn Trà District,2 BR Garden View Villa/ Pool/ Beach/ Breakfast,villa,Entire villa,2,1.0,4,200.2,0.279,19418.0,1.8,4.44,9,False,sourced-airroi
+1476621706610233358,Da Nang,Quận Sơn Trà,Serene Seaside Ocean View 2BR Apt | Kitchen & Pool,apartment,Entire serviced apartment,2,1.0,4,64.5,0.427,10722.0,3.7,4.93,42,False,sourced-airroi
+1125168225382370449,Da Nang,Sơn Trà District,High Floor Oceanfront 2BDR*Bunk bed*Gym,apartment,Entire condo,2,1.0,4,86.1,0.28,9789.0,9.1,4.79,29,False,sourced-airroi
+1370793334712070862,Da Nang,Quận Sơn Trà,2-bedroom apartment with sea and street view,apartment,Entire rental unit,2,1.0,4,79.0,0.256,7211.0,3.0,4.83,6,False,sourced-airroi
+1423754775910576603,Da Nang,Quận Sơn Trà,2-bedroom apartment with sea view on the 15th floor,apartment,Entire rental unit,2,1.0,4,54.7,0.225,4273.0,4.6,4.17,12,False,sourced-airroi
+1401771975318683855,Da Nang,Mân Thái,Blissful Ocean View Apt w Bathtub | Kitchen & Pool,apartment,Entire serviced apartment,2,1.0,4,64.7,0.512,13001.0,3.2,4.94,52,False,sourced-airroi
+1391778831587330822,Da Nang,Mân Thái,Modern Oceanview 2BR Apt w/ Kitchen & Pool Access,apartment,Entire serviced apartment,2,1.0,4,62.4,0.422,10200.0,6.4,4.83,24,False,sourced-airroi
+1446232185769729744,Da Nang,Quận Sơn Trà,High-Level Oceanfront View 2BR Apt | Kitchen &Pool,apartment,Entire serviced apartment,2,1.0,4,63.9,0.403,10372.0,3.3,4.94,17,False,sourced-airroi
+1439063897061682413,Da Nang,Quận Hải Châu,Central/1'walking Dragon bridge/Projector/kitchen,apartment,Private room in serviced apartment,1,1.0,2,23.4,0.166,1386.0,2.6,5.0,3,False,sourced-airroi
+39011605,Da Nang,Hải Châu District,Seahorse1/Central Studio w/RiverView HanMarket.,apartment,Entire rental unit,1,1.0,2,39.0,0.225,2742.0,1.4,4.87,53,False,sourced-airroi
+16849130,Da Nang,Hải Châu District,DANANG MILESTONE HOMESTAY BIG TWINROOM-CITY CENTER,villa,Private room in home,1,1.0,2,12.0,0.197,908.0,3.3,4.71,120,False,sourced-airroi
+34912448,Da Nang,Hải Châu District,A little 1 BR APT-15 mins walks to Han River,apartment,Entire condo,1,1.0,2,25.3,0.287,2983.0,4.5,4.62,52,False,sourced-airroi
+39034439,Da Nang,Hải Châu District,Seahorse2/Central River View BalconyStudio,apartment,Entire rental unit,0,1.0,2,46.7,0.485,7723.0,2.5,4.78,36,False,sourced-airroi
+35235247,Da Nang,Hải Châu District,Hidden Park Apartment,apartment,Entire rental unit,1,1.0,2,19.1,0.903,3754.0,18.6,4.88,108,False,sourced-airroi
+41248770,Da Nang,Hải Châu District,Seahorse2/5Min to Cathedral Studio near HanRiver,apartment,Entire rental unit,1,1.0,2,40.9,0.189,2743.0,1.5,4.81,307,False,sourced-airroi
+1543564408763793072,Da Nang,Quận Hải Châu,Amber Haze | Autumn Studio near Han Market,villa,Private room in guesthouse,1,1.0,2,32.7,0.164,1918.0,2.4,4.95,40,False,sourced-airroi
+1251987092132472215,Da Nang,Hải Châu District,Deluxe Double with River View- Mart & Spa on site,apartment,Room in hotel,1,1.0,2,28.7,0.206,1923.0,1.5,0.0,2,False,sourced-airroi
+1127950130564148562,Da Nang,Ngũ Hành Sơn,TT | Panoramic Ocean & Skyline View | My Khe Beach,apartment,Entire condo,2,2.0,4,47.2,0.231,3859.0,3.4,5.0,4,False,sourced-airroi
+1152527886048918495,Da Nang,Quận Ngũ Hành Sơn,Connecting Two Bed Room | City view,apartment,Private room in rental unit,2,2.0,4,40.0,0.36,4281.0,7.0,4.88,17,False,sourced-airroi
+670142801339464949,Da Nang,Ngũ Hành Sơn District,❤ Louis Mo Penthouse; Danang City ❤,villa,Entire rental unit,2,2.0,4,109.5,0.399,8155.0,3.7,4.74,19,False,sourced-airroi
+1176719686453843090,Da Nang,Ngũ Hành Sơn District,Daisy apt city view - 34th floor,apartment,Entire rental unit,2,2.0,4,57.4,0.686,12698.0,6.8,4.96,26,False,sourced-airroi
+1122908773816283511,Da Nang,Ngũ Hành Sơn District,Sunny apt with My Khe beach view,apartment,Entire rental unit,2,2.0,4,47.9,0.196,3168.0,4.1,4.73,22,False,sourced-airroi
+1426408729907004295,Da Nang,Mỹ An,Walk to My Khe Beach | Quiet Stay | Cozy Gem - BBQ,villa,Entire home,2,2.0,4,62.6,0.616,14720.0,4.0,4.76,25,False,sourced-airroi
+665141646905000228,Da Nang,Ngũ Hành Sơn District,Modern Top-Apartment with Ocean-view in Da Nang,apartment,Entire condo,2,2.0,4,40.8,0.89,13696.0,4.6,4.89,150,False,sourced-airroi
+33142624,Da Nang,Ngũ Hành Sơn District,Heaven Sea apt on 40th floor with wonderful view,apartment,Entire rental unit,2,2.0,4,39.4,0.758,7016.0,9.0,4.89,133,False,sourced-airroi
+1203209958474115396,Da Nang,Ngũ Hành Sơn District,Apartment 3822 with My Khe Beach View in Da Nang,apartment,Entire rental unit,2,2.0,4,42.5,0.314,3759.0,14.3,4.0,12,False,sourced-airroi
+1518686740917938331,Da Nang,Quận Ngũ Hành Sơn,Muong Thanh Sea View - 2 Bedroom Apartment,apartment,Entire rental unit,2,2.0,4,34.1,0.36,4272.0,5.4,4.4,15,False,sourced-airroi
+1301226147023792577,Da Nang,Ngũ Hành Sơn District,Muong Thanh 37 Apartment,apartment,Entire rental unit,2,2.0,4,46.0,0.294,4482.0,7.2,4.17,6,False,sourced-airroi
+1334643550368214110,Da Nang,Quận Ngũ Hành Sơn,Luxury apartment near the sea in Da Nang,apartment,Entire rental unit,2,2.0,4,35.0,0.141,1877.0,6.4,0.0,2,False,sourced-airroi
+1503351981206632150,Da Nang,Quận Ngũ Hành Sơn,White Apt Seaview MyAn beach&AnThuong tourist Area,apartment,Entire rental unit,2,2.0,4,51.1,0.49,10017.0,6.9,4.7,10,False,sourced-airroi
+1307631752423672935,Da Nang,Ngũ Hành Sơn District,Sea View Rustic Stay | Sea View I In Tourist Hub,apartment,Entire rental unit,2,2.0,4,46.9,0.274,4669.0,5.4,4.29,7,False,sourced-airroi
+1152510706478924436,Da Nang,Quận Ngũ Hành Sơn,Apartment 2 bebroom |Seaview |5 mins to walk beach,apartment,Entire rental unit,2,2.0,4,40.0,0.231,2425.0,5.5,4.2,5,False,sourced-airroi
+733893444591231016,Da Nang,Ngũ Hành Sơn District,Green Beachfront Partial Seaview Condo,apartment,Entire condo,2,2.0,4,32.4,0.836,10491.0,5.2,4.89,100,False,sourced-airroi
+1360718664553533759,Da Nang,Mỹ An,Enjoy Sunrise at New Fully Equipped 2BR; Bathtub,apartment,Entire serviced apartment,2,2.0,4,109.7,0.3,8419.0,6.9,4.67,3,False,sourced-airroi
+35493924,Da Nang,Ngũ Hành Sơn District,Muong Thanh Apt street view; across My Khe beach,apartment,Entire rental unit,2,2.0,4,28.5,0.222,2414.0,10.1,4.8,20,False,sourced-airroi
+41430975,Da Nang,Ngũ Hành Sơn District,PRANA PEACE HOUSE - DUPLEX KING SUITE,villa,Room in boutique hotel,2,2.0,4,87.3,0.523,17042.0,3.4,4.83,52,False,sourced-airroi
+1418809394877786763,Da Nang,Quận Ngũ Hành Sơn,[Seabreeze] Family 2BR Apt | Kitchen | Near Beach,apartment,Entire rental unit,2,2.0,4,40.2,0.424,6374.0,10.2,5.0,6,False,sourced-airroi
+1109800668006026321,Da Nang,Ngũ Hành Sơn District,Sunrise Serenity – Daisy Sea View 39th Floor,apartment,Entire rental unit,2,2.0,4,55.5,0.647,12672.0,8.1,5.0,15,False,sourced-airroi
+1506462591872716122,Da Nang,Mỹ An,K368-403-2bedrooms-Pool- Top floor- Elevator,apartment,Entire rental unit,2,2.0,4,37.7,0.515,8172.0,7.5,4.92,25,False,sourced-airroi
+27654681,Da Nang,Ngũ Hành Sơn District,Daisy apt at My Khe beach,apartment,Entire rental unit,2,2.0,4,48.8,0.441,7161.0,7.2,4.62,29,False,sourced-airroi
+944758269515713097,Da Nang,Ngũ Hành Sơn District,Sea view in the city center,apartment,Entire rental unit,2,2.0,4,55.2,0.532,7833.0,7.9,4.97,34,False,sourced-airroi
+1212577199509366207,Da Nang,Ngũ Hành Sơn District,[Free Pickup]-Muong Thanh SeaView 334-My Khe Beach,apartment,Entire rental unit,2,2.0,4,57.2,0.677,13844.0,7.7,4.83,41,False,sourced-airroi
+1460925905179301859,Da Nang,Quận Ngũ Hành Sơn,B2 villa *river view*4PN*perfect,villa,Entire home,4,4.0,8,173.2,0.121,7181.0,2.6,0.0,1,False,sourced-airroi
+1435143467024911592,Da Nang,Ngũ Hành Sơn,Rooftop BBQ Villa · walk to My Khe Beach · Centre,villa,Entire villa,4,4.5,8,107.5,0.614,24196.0,3.8,4.94,18,False,sourced-airroi
+741684845193566824,Da Nang,Ngũ Hành Sơn District,Spacious villa l 3 Mins Walk Beach| 5 mins to city,villa,Entire villa,4,4.5,8,352.1,0.162,20091.0,3.9,4.92,12,False,sourced-airroi
+1200733615256627050,Ho Chi Minh City,Quận 7,"yeoyou Home's2
+Room 2; 5 minutes walk from Lotte Mart;
+1st District Major Tourist Attractions 10 min",villa,Entire rental unit,2,2.0,4,57.3,0.353,7637.0,5.6,4.95,22,False,sourced-airroi
+1472532654795516662,Ho Chi Minh City,Quan 4,Modern 2BR w/ Sunset River View & Pool,apartment,Entire rental unit,2,2.0,4,60.8,0.334,7130.0,11.3,4.57,7,False,sourced-airroi
+1123975813540363024,Ho Chi Minh City,District 4,Sanctuary_Zenity Central D1_2BRGym/Pool/Tub_View,apartment,Entire rental unit,2,2.0,4,91.0,0.107,3412.0,6.5,4.6,5,False,sourced-airroi
+1240594021785363933,Ho Chi Minh City,District 4,Unique 2bedroom #Near District 1 @Pool+Gym+Netflix,apartment,Entire condo,2,2.0,4,54.5,0.622,11653.0,4.0,4.93,45,False,sourced-airroi
+1233340516831827187,Ho Chi Minh City,District 7,Sunrise City View - 2 bedroom - 2 toilet - 76m2,apartment,Entire rental unit,2,2.0,4,61.3,0.34,7318.0,6.9,5.0,7,False,sourced-airroi
+1455140987836492603,Ho Chi Minh City,Quận 7,Sunrise City View - 2 bedroom - 2 toilet - 76m2,apartment,Entire rental unit,2,2.0,4,53.9,0.39,6319.0,6.2,5.0,6,False,sourced-airroi
+1263755381290619093,Ho Chi Minh City,District 4,The Aprtment;balcony; 2BR2WC near Ben Thanh market,apartment,Entire rental unit,2,2.0,4,65.5,0.595,13901.0,3.7,4.82,34,False,sourced-airroi
+915792957832466911,Ho Chi Minh City,District 4,Rivergate Apartment Peaceful#Nice#Bitexco#CBDTower,apartment,Entire rental unit,2,2.0,4,71.4,0.175,4404.0,4.6,4.36,11,False,sourced-airroi
+1082406195861275251,Ho Chi Minh City,District 7,Sunrise City View - 2 bedroom - 2 toilet - 76m2,apartment,Entire rental unit,2,2.0,4,60.4,0.135,2224.0,3.8,5.0,3,False,sourced-airroi
+1257938892772776592,Ho Chi Minh City,Ho Chi Minh City,Best Price - 2BR Apartment with Dryer,apartment,Entire rental unit,2,2.0,4,55.3,0.261,4884.0,8.0,4.83,12,False,sourced-airroi
+1293536447050079663,Ho Chi Minh City,District 4,Friendly Airbnb 2BR~Amazing View #Near District 1,apartment,Entire condo,2,2.0,4,57.4,0.838,16025.0,2.6,4.96,77,False,sourced-airroi
+1055656825528361384,Ho Chi Minh City,District 4,2BR*River Gate*near D1*Ben Thanh*view River,apartment,Entire serviced apartment,2,2.0,4,64.4,0.713,15193.0,4.1,4.92,108,False,sourced-airroi
+1436115811565228181,Ho Chi Minh City,Quan 4,G Del Sol Luxury Condo,apartment,Entire rental unit,2,2.0,4,70.1,0.158,3520.0,4.8,4.86,22,False,sourced-airroi
+1186890105076065658,Ho Chi Minh City,District 4,Amazing View~Clean Cozy 2BR #FREE Pool+Gym+Netflix,apartment,Entire condo,2,2.0,4,56.6,0.51,8458.0,4.0,4.93,56,False,sourced-airroi
+773505454478625279,Ho Chi Minh City,District 4,Rivergate 2bedroom Apartment D4 #romatic#BuiVien,apartment,Entire condo,2,2.0,4,73.8,0.27,7444.0,6.5,4.55,20,False,sourced-airroi
+1476517381084947893,Ho Chi Minh City,Quan 4,20% off; Spacious 2BR near D1; Stylish; Elite Stay,apartment,Entire rental unit,2,2.0,4,92.6,0.23,7440.0,4.9,5.0,19,False,sourced-airroi
+1286058095076139374,Ho Chi Minh City,District 4,Kandy 27 | Lux 2 BR | Rivergate | HF | Pool,apartment,Entire rental unit,2,2.0,4,65.4,0.427,8986.0,3.8,4.78,9,False,sourced-airroi
+1473236769285752896,Ho Chi Minh City,Quan 4,Spacious 2Bedroom~Near District 1 @FREE Pool+Gym,apartment,Entire condo,2,2.0,4,58.7,0.258,5588.0,3.9,4.67,9,False,sourced-airroi
+1018086351104221579,Ho Chi Minh City,District 1,Central apartment on high floor - Sunset view - City View - D1,apartment,Entire rental unit,2,2.0,4,66.2,0.762,18205.0,2.5,4.95,117,False,sourced-airroi
+1385147998358204794,Ho Chi Minh City,Quan 4,Grand 2BR Riverfront | Airy & Minimalist Stay,apartment,Entire rental unit,2,2.0,4,66.3,0.417,7618.0,4.2,5.0,7,False,sourced-airroi
+607075716965028044,Ho Chi Minh City,District 1,2 Beds cozy apt @Ben Thanh D1; Pool; balcony & Gym,apartment,Entire serviced apartment,2,2.0,4,88.8,0.225,6783.0,3.1,4.92,25,False,sourced-airroi
+1515847153634751970,Ho Chi Minh City,Quan 4,Anna 27/Lux 2 BRS/Rivergate/Ben Thanh/Netflix/Pool,apartment,Entire rental unit,2,2.0,4,64.8,0.204,4266.0,3.0,5.0,3,False,sourced-airroi
+1076028414770916850,Ho Chi Minh City,District 4,Rivergate 2Brs High floor River Sunset view,apartment,Entire rental unit,2,2.0,4,61.2,0.106,2193.0,9.5,4.67,9,False,sourced-airroi
+1370859321480391609,Ho Chi Minh City,Quận 7,Apartment  2 Bedroom 2 Bathroom  Sunrise City View,apartment,Entire rental unit,2,2.0,4,52.5,0.499,9751.0,5.9,4.89,27,False,sourced-airroi
+1553700852893584894,Ho Chi Minh City,Quận 4,2BR•2BA | King•Queen• Sauna• Pool • Gym • KidsZone,apartment,Entire rental unit,2,2.0,4,125.7,0.163,6634.0,3.8,5.0,7,False,sourced-airroi
+1261158096298596493,Ho Chi Minh City,Quận 7,Exquisite 3 bedrooms and 3 bathrooms,apartment,Entire condo,3,3.0,6,66.0,0.209,4481.0,3.4,4.35,20,False,sourced-airroi
+1404083794638350267,Ho Chi Minh City,Quận 7,The Luxe Trio Apartment,apartment,Entire condo,3,3.0,6,59.6,0.292,6440.0,3.7,4.75,4,False,sourced-airroi
+1525247603909327440,Ho Chi Minh City,Quận 7,Victory Tower Duplex 3BR 3wc - Near SECC 1 minute,apartment,Entire rental unit,3,3.0,6,100.8,0.258,8201.0,5.1,0.0,2,False,sourced-airroi
+1537401212749438931,Ho Chi Minh City,Quận 7,City view 3br 3wc big and nice house,villa,Entire rental unit,3,3.0,6,81.0,0.178,5543.0,4.6,4.86,7,False,sourced-airroi
+1400504820744265331,Ho Chi Minh City,Bình Thuận,Lapis Pool Villa Luxury -5br,villa,Entire home,5,6.0,10,268.5,0.145,13305.0,2.9,4.6,10,False,sourced-airroi

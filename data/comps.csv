@@ -1,0 +1,19 @@
+building_id,city,building,bedrooms,adr_usd,occupancy_override,source,notes
+dn-monarchy-1br,Da Nang,Monarchy,1,45,,estimated,Premium nomad 1BR above sourced seg-median 22
+dn-monarchy-2br,Da Nang,Monarchy,2,70,,estimated,Premium 2BR above sourced seg-median 50
+dn-muongthanh-3br,Da Nang,Muong Thanh,3,78,,sourced,Near sourced apt-3BR median 84 and observed 74
+dn-azura-2br,Da Nang,Azura,2,95,,estimated,Luxury river-view above seg-median
+dn-altara-1br,Da Nang,Altara Suites,1,60,,estimated,Hotel-style beachfront premium
+dn-hiyori-2br,Da Nang,Hiyori Garden Tower,2,60,,estimated,Quiet 2BR near seg-median 50
+dn-fhome-1br,Da Nang,F.Home,1,42,,estimated,Central 1BR modest premium over seg-median
+dn-general-1br,Da Nang,General stock,1,30,,sourced,Base-tier near sourced seg-median 22
+dn-anbang-villa-4br,Da Nang,An Bang pool villa,4,160,,sourced,Sourced 4BR villa seg-median 117; strong-operator target
+dn-mykhe-villa-3br,Da Nang,My Khe pool villa,3,130,,sourced,Sourced 3BR villa seg-median 82; beach pool-villa strong-operator target
+hcmc-millennium-2br,Ho Chi Minh City,Millennium,2,58,,sourced,Sourced apt-2BR seg-median 48; D4 premium
+hcmc-saigonroyal-1br,Ho Chi Minh City,Saigon Royal,1,52,,sourced,Sourced apt-1BR seg-median 41; premium
+hcmc-masteri-2br,Ho Chi Minh City,Masteri Thao Dien,2,55,,sourced,Sourced apt-2BR seg-median 48
+hcmc-d1-studio,Ho Chi Minh City,District 1 stock,0,45,,sourced,Sourced studio seg-median 32; D1 tourist premium
+hcmc-thaodien-villa-4br,Ho Chi Minh City,Thao Dien pool villa,4,200,,sourced,Sourced 4BR villa seg-median 200 (BLOCKED - legal gate)
+dalat-lakehouse-3br,Da Lat,Xuan Huong Lake house,3,78,,sourced,Sourced Da Lat 3BR villa seg-median 78
+dalat-homestay-2br,Da Lat,Central homestay,2,55,,sourced,Sourced Da Lat 2BR seg-median 56
+dalat-villa-4br,Da Lat,Hillside villa,4,95,,sourced,Sourced Da Lat 4BR villa seg-median 95
