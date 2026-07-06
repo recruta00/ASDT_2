@@ -1,19 +1,22 @@
 building_id,city,building,bedrooms,monthly_rent_usd,rent_source,notes
-dn-monarchy-1br,Da Nang,Monarchy,1,500,sourced,FazWaz furnished rep 530 range 300-800; bare-lease input
+dn-monarchy-1br,Da Nang,Monarchy,1,500,sourced,FazWaz furnished rep 530 range 300-800
 dn-monarchy-2br,Da Nang,Monarchy,2,650,sourced,FazWaz rep 650 range 570-1410
-dn-muongthanh-3br,Da Nang,Muong Thanh,3,900,sourced,FazWaz/Airbnb rep 950 range 760-1200; medium confidence
-dn-azura-2br,Da Nang,Azura,2,1150,sourced,FazWaz rep 1200 range 875-1520 Han River
-dn-altara-1br,Da Nang,Altara Suites,1,750,sourced,FazWaz serviced rep 850 range 608-1000; bare-lease input
+dn-muongthanh-3br,Da Nang,Muong Thanh,3,900,sourced,FazWaz/Airbnb rep 950 range 760-1200
+dn-azura-2br,Da Nang,Azura,2,1150,sourced,FazWaz rep 1200 range 875-1520
+dn-altara-1br,Da Nang,Altara Suites,1,750,sourced,FazWaz serviced rep 850 range 608-1000
 dn-hiyori-2br,Da Nang,Hiyori Garden Tower,2,680,sourced,FazWaz rep 750 range 600-950
-dn-fhome-1br,Da Nang,F.Home,1,360,sourced,FazWaz rep 350 range 304-450 central Hai Chau
-dn-general-1br,Da Nang,General stock,1,460,sourced,DotProperty/FazWaz rep 500 range 420-670 An Thuong/My Khe
-dn-anbang-villa-4br,Da Nang,An Bang pool villa,4,1800,sourced,FazWaz/MVP rep 2000 range 1500-3500 furnished villa; medium confidence
-dn-mykhe-villa-3br,Da Nang,My Khe pool villa,3,1450,estimated,Interpolated from beach-villa portal range for 3BR
+dn-fhome-1br,Da Nang,F.Home,1,360,sourced,FazWaz rep 350 range 304-450
+dn-general-1br,Da Nang,General stock,1,460,sourced,DotProperty/FazWaz rep 500 range 420-670
+dn-myan-villa-3br,Da Nang,My An Luxury Villa,3,2000,sourced,danangluxuryrealty real listing; lowest-rent prime pool villa
+dn-oneriver-3br,Da Nang,One River villa,3,2200,sourced,FazWaz live-verified real listing
+dn-thepoint-3br,Da Nang,The Point villa,3,2210,sourced,FazWaz live-verified real listing
+dn-eurovillage-4br,Da Nang,Euro Village villa,4,2885,sourced,alonhadat real listing 75M VND
+hcmc-icon56-1br,Ho Chi Minh City,Icon56,1,649,sourced,Hoozing real listing mixed-use D4
+hcmc-angia-2br,Ho Chi Minh City,An Gia Skyline,2,480,sourced,DotProperty serviced-apt real listing D7
 hcmc-millennium-2br,Ho Chi Minh City,Millennium,2,850,sourced,DotProperty/Hoozing rep 900 range 800-1000
 hcmc-saigonroyal-1br,Ho Chi Minh City,Saigon Royal,1,540,sourced,DotProperty/MySaigonCity rep 520 range 500-650
 hcmc-masteri-2br,Ho Chi Minh City,Masteri Thao Dien,2,780,sourced,Hoozing/DotProperty rep 850 range 700-1000
-hcmc-d1-studio,Ho Chi Minh City,District 1 stock,0,580,sourced,FazWaz rep 650 range 400-900; bare-lease input
-hcmc-thaodien-villa-4br,Ho Chi Minh City,Thao Dien pool villa,4,3000,sourced,DotProperty rep 3200 range 2300-6500 pool+garden villa
-dalat-lakehouse-3br,Da Lat,Xuan Huong Lake house,3,600,estimated,Vrbo/DotProperty weak data rep 600 range 361-800; low confidence
-dalat-homestay-2br,Da Lat,Central homestay,2,480,estimated,DotProperty/Vrbo rep 500 range 360-540; low-med confidence
-dalat-villa-4br,Da Lat,Hillside villa,4,850,estimated,Vrbo/Airbnb weak data rep 900 range 600-1500; low confidence
+hcmc-thaodien-villa-4br,Ho Chi Minh City,Thao Dien pool villa,4,3000,sourced,DotProperty rep 3200 range 2300-6500
+dalat-lakehouse-3br,Da Lat,Xuan Huong Lake house,3,600,estimated,Vrbo/DotProperty weak data rep 600 range 361-800
+dalat-homestay-2br,Da Lat,Central homestay,2,480,estimated,DotProperty/Vrbo rep 500 range 360-540
+dalat-villa-4br,Da Lat,Hillside villa,4,850,estimated,Vrbo/Airbnb weak data rep 900 range 600-1500

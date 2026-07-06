@@ -462,6 +462,9 @@ def analyze():
             "econ": {k: (round(v, 2) if isinstance(v, float) and math.isfinite(v) else v)
                      for k, v in econ.items()},
             "breakeven_occupancy": round(be_occ, 4) if math.isfinite(be_occ) else None,
+            # Max rent the unit can bear and still break even (negotiation target):
+            # net = 0 when rent = current_rent + net_month (rent is a $-for-$ opex term).
+            "max_supportable_rent": round(u["monthly_rent_usd"] + econ["net_month"], 2),
             "long_term_floor": round(lt_floor, 2),
             "seasonality_net": [round(x, 2) for x in curve],
             "seasonality_annual": round(annual, 2),
@@ -486,6 +489,8 @@ def analyze():
                         if r["property_type"] == "villa"][:6],
         "str_comps": str_comps,
         "str_comps_summary": summarize_str_comps(str_comps) if str_comps else None,
+        "capital_scenarios": {str(b): deploy_capital(records, b)
+                              for b in (20000, 50000, 100000)},
         "params": {
             "amort_months": AMORT_MONTHS,
             "platform_fee_pct": PLATFORM_FEE_PCT,
@@ -545,6 +550,51 @@ def _rationale(r):
 # --------------------------------------------------------------------------
 # FX
 # --------------------------------------------------------------------------
+def deploy_capital(records, budget_usd):
+    """
+    Given an upfront capital budget, greedily deploy it into the best profitable,
+    legal units (by rank = score order) until the budget is exhausted. Each unit
+    consumes its `upfront` (deposit + furnishing + setup). Returns the portfolio:
+    which units, total upfront used, combined monthly net profit, blended payback,
+    and annualized cash-on-cash return.
+    """
+    picks = []
+    spent = 0.0
+    net_total = 0.0
+    for r in records:  # records are already sorted by score (best first)
+        if r["legal_status"] == "BLOCKED":
+            continue
+        if r["econ"]["net_month"] <= 0:
+            continue  # only deploy into profitable units
+        up = r["econ"]["upfront"]
+        if spent + up <= budget_usd:
+            picks.append({
+                "building_id": r["building_id"],
+                "building": r["building"],
+                "city": r["city"],
+                "bedrooms": r["bedrooms"],
+                "property_type": r["property_type"],
+                "upfront": up,
+                "net_month": r["econ"]["net_month"],
+                "source_url": r.get("source_url", ""),
+            })
+            spent += up
+            net_total += r["econ"]["net_month"]
+    annual_net = net_total * 12
+    coc = (annual_net / spent) if spent > 0 else 0.0  # cash-on-cash on deployed capital
+    return {
+        "budget": budget_usd,
+        "deployed": round(spent, 2),
+        "leftover": round(budget_usd - spent, 2),
+        "units": len(picks),
+        "net_month": round(net_total, 2),
+        "net_year": round(annual_net, 2),
+        "cash_on_cash_pct": round(coc * 100, 1),
+        "blended_payback_months": round(spent / net_total, 1) if net_total > 0 else None,
+        "picks": picks,
+    }
+
+
 def get_fx():
     """VND per USD from env, else default seed."""
     v = os.environ.get("FX_VND_PER_USD")

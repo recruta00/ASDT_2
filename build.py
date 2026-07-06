@@ -60,6 +60,7 @@ def build_payload():
         "best_villas": [by_id[i] for i in result["best_villas"]],
         "str_comps_summary": result.get("str_comps_summary"),
         "str_comps_total": len(result.get("str_comps", [])),
+        "capital_scenarios": result.get("capital_scenarios", {}),
         "analytics_md": load_text(os.path.join(model.DATA_DIR, "analytics.md")),
         "products_md": load_text(os.path.join(model.DATA_DIR, "str_products_best.md")),
     }
@@ -118,6 +119,28 @@ def write_report(payload):
               f"{money(e['net_month'])}/mo net, {e['margin_pct']*100:.0f}% margin, "
               f"legal {u['legal_status']}. {u['rationale']}")
         A("")
+
+    # Capital deployment
+    A("## What a budget earns (capital planner)")
+    A("")
+    A("Greedy deployment into the best **profitable & legal** units (each consumes "
+      "deposit + furnishing + setup upfront):")
+    A("")
+    A("| Budget | Units funded | Capital deployed | Monthly profit | Annual | Cash-on-cash |")
+    A("|--------|-------------:|-----------------:|---------------:|-------:|-------------:|")
+    for b in ("20000", "50000", "100000"):
+        s = payload["capital_scenarios"][b]
+        A(f"| {money(float(b))} | {s['units']} | {money(s['deployed'])} | "
+          f"{money(s['net_month'])} | {money(s['net_year'])} | {s['cash_on_cash_pct']:.0f}% |")
+    A("")
+    nprofit = sum(1 for u in payload["units"]
+                  if u["legal_status"] != "BLOCKED" and u["econ"]["net_month"] > 0)
+    A(f"> **Only {nprofit} of {len(payload['units'])} candidate units are profitable & legal at "
+      "current asking rents** — so above a small threshold, *more capital sits idle*: the binding "
+      "constraint is **sourcing leases that pencil**, not money. Negotiate each lease toward its "
+      "**max supportable rent** (in the dashboard leaderboard); many marginal units flip positive "
+      "with a 10–15% rent cut, 36-month furnishing amortization, or premium ADR.")
+    A("")
 
     # Per-city verdicts
     A("## Verdict by city")
@@ -304,6 +327,7 @@ tr.blocked{opacity:.5}
 
 <nav class="sticky"><div class="wrap">
   <a href="#picks">🏆 Best Picks</a>
+  <a href="#capital">💰 Capital Planner</a>
   <a href="#cities">🏙️ City Comparison</a>
   <a href="#leaderboard">📊 Leaderboard</a>
   <a href="#season">📅 Seasonality</a>
@@ -323,6 +347,18 @@ tr.blocked{opacity:.5}
     <h3 style="margin-top:22px">Apartments</h3>
     <div class="grid cards" id="aptCards"></div>
     <div class="note" id="picksNote"></div>
+  </section>
+
+  <section id="capital">
+    <h2>💰 Capital Planner — how much will your budget earn?</h2>
+    <p class="sub">Deploys a budget into the best <b>profitable &amp; legal</b> units in score order
+       (each consumes deposit + furnishing + setup as upfront). Answers "if I put in $X, what's my monthly profit?"</p>
+    <div class="filters">
+      <label>Upfront capital (USD)<input id="capBudget" type="number" value="20000" step="1000" style="width:140px"></label>
+    </div>
+    <div class="grid kpis" id="capKpis"></div>
+    <div class="tablescroll" style="margin-top:12px"><table id="capTable"></table></div>
+    <div class="note" id="capNote"></div>
   </section>
 
   <section id="cities">
@@ -452,6 +488,42 @@ document.getElementById('picksNote').innerHTML =
   `marginal units positive: negotiate a lower/bare lease, amortize furnishing over 36 months (not 18), `+
   `or lift ADR via revenue management. See each card's break-even occupancy and the sensitivity in the leaderboard.`;
 
+/* ---------- capital planner ---------- */
+function deploy(budget){
+  const cands = DATA.units.filter(u=>u.legal_status!=='BLOCKED' && u.econ.net_month>0);
+  // already score-sorted; greedily fill by upfront
+  let spent=0,net=0; const picks=[];
+  for(const u of cands){ if(spent+u.econ.upfront<=budget){ picks.push(u); spent+=u.econ.upfront; net+=u.econ.net_month; } }
+  const coc = spent>0 ? net*12/spent*100 : 0;
+  return {budget,spent,net,picks,coc,leftover:budget-spent,
+          payback: net>0? spent/net : null};
+}
+function renderCap(){
+  const b=Math.max(0,parseFloat(document.getElementById('capBudget').value)||0);
+  const d=deploy(b);
+  const k=[
+    ['Monthly profit', usd(d.net), d.net>0?vnd(d.net)+' /mo':'no profitable unit fits'],
+    ['Units funded', d.picks.length+'', 'profitable & legal'],
+    ['Capital deployed', usd(d.spent), usd(d.leftover)+' idle'],
+    ['Cash-on-cash / yr', d.coc.toFixed(0)+'%', d.payback?`${d.payback.toFixed(0)}mo payback`:'—'],
+  ];
+  document.getElementById('capKpis').innerHTML=k.map(x=>
+    `<div class="card kpi"><div class="n">${x[1]}</div><div class="l">${x[0]}</div><div class="l">${x[2]}</div></div>`).join('');
+  const t=document.getElementById('capTable');
+  if(!d.picks.length){ t.innerHTML=''; }
+  else t.innerHTML=`<thead><tr><th>Unit</th><th>City</th><th>Type</th><th>Upfront</th><th>Net/mo</th><th>Link</th></tr></thead><tbody>`+
+    d.picks.map(u=>`<tr><td>${u.building} ${u.bedrooms}BR</td><td>${u.city}</td>
+      <td><span class="chip ${u.property_type}">${u.property_type}</span></td>
+      <td>${usd(u.econ.upfront)}</td><td class="pos">${usd(u.econ.net_month)}</td>
+      <td>${u.source_url?`<a href="${u.source_url}" target="_blank" rel="noopener">listing →</a>`:'—'}</td></tr>`).join('')+`</tbody>`;
+  const nProfit = DATA.units.filter(u=>u.legal_status!=='BLOCKED'&&u.econ.net_month>0).length;
+  document.getElementById('capNote').innerHTML =
+    `<b>Reality check:</b> only <b>${nProfit} of ${DATA.units.length}</b> candidate units are profitable &amp; legal at current asking rents, so the binding constraint is <b>deal-sourcing, not capital</b>. `+
+    `Extra budget sits idle until you find more units that clear. To unlock the rest, negotiate each lease down to its <b>Max rent</b> (leaderboard column) — many marginal units flip positive with a 10–15% rent cut, longer (36-mo) furnishing amortization, or premium ADR via revenue management.`;
+}
+document.getElementById('capBudget').oninput=renderCap;
+renderCap();
+
 /* ---------- city comparison ---------- */
 const cities = Object.values(DATA.markets);
 function bar(id,labels,datasets,opts={}){
@@ -489,7 +561,7 @@ let sortKey='rank', sortDir=1;
 const cols=[['rank','#'],['building','Building'],['city','City'],['bedrooms','BR'],['property_type','Type'],
   ['legal_status','Legal'],['monthly_rent_usd','Rent'],['adr_usd','ADR'],['base_occupancy','Occ'],
   ['gross_month','Gross'],['opex_month','Opex'],['net_month','Net/mo'],['margin_pct','Margin'],
-  ['breakeven_occupancy','BE occ'],['seasonality_annual','Annual net'],['score','Score']];
+  ['breakeven_occupancy','BE occ'],['max_supportable_rent','Max rent'],['seasonality_annual','Annual net'],['score','Score']];
 function val(u,k){
   if(['gross_month','opex_month','net_month','margin_pct','payback_months'].includes(k)) return u.econ[k];
   return u[k];
@@ -521,7 +593,7 @@ function renderLead(){
       <td>${usd(e.gross_month)}</td><td>${usd(e.opex_month)}</td>
       <td class="${e.net_month>=0?'pos':'neg'}">${usd(e.net_month)}</td>
       <td class="${e.margin_pct>=0?'pos':'neg'}">${pct(e.margin_pct)}</td>
-      <td>${pct(u.breakeven_occupancy)}</td><td>${usd(u.seasonality_annual)}</td>
+      <td>${pct(u.breakeven_occupancy)}</td><td>${usd(u.max_supportable_rent)}</td><td>${usd(u.seasonality_annual)}</td>
       <td>${u.score.toFixed(2)}</td></tr>`;}).join('')+`</tbody>`;
   t.querySelectorAll('th').forEach(th=>th.onclick=()=>{
     const k=th.dataset.k; sortDir=(sortKey===k)?-sortDir:1; sortKey=k; renderLead();});
