@@ -16,6 +16,8 @@ import { SpecTable } from "@/components/detail/SpecTable";
 import { BookingCta } from "@/components/detail/BookingCta";
 import { Checklist } from "@/components/detail/Checklist";
 import { PropertyCard } from "@/components/cards/PropertyCard";
+import { JsonLd } from "@/components/JsonLd";
+import { propertyAccommodation, breadcrumbList } from "@/lib/jsonld";
 
 export function generateStaticParams() {
   return properties.map((p) => ({ slug: p.slug }));
@@ -29,9 +31,8 @@ export async function generateMetadata({
   const { slug } = await params;
   const property = getProperty(slug);
   if (!property) return {};
-  const kind = property.type === "villa" ? "villa" : "appartement";
   return {
-    title: `${property.name} — location ${kind} à ${site.city}`,
+    title: { absolute: `${property.name} — Location ${site.city}` },
     description: `${property.shortDescription} Dès ${property.pricePerNight} ${site.currency}/nuit. Réservation sur WhatsApp.`,
     alternates: { canonical: routes.stay(property.slug) },
   };
@@ -48,17 +49,17 @@ export default async function StayDetail({
 
   const related = relatedProperties(slug);
   const kind = property.type === "villa" ? "villa" : "appartement";
+  const crumbs = [
+    { label: "Accueil", href: routes.home },
+    { label: "Séjours", href: routes.stays },
+    { label: property.name },
+  ];
 
   return (
     <main id="main" className="texture-noise relative overflow-hidden pt-28 md:pt-32">
+      <JsonLd data={[propertyAccommodation(property), breadcrumbList(crumbs)]} />
       <Container>
-        <Breadcrumb
-          items={[
-            { label: "Accueil", href: routes.home },
-            { label: "Séjours", href: routes.stays },
-            { label: property.name },
-          ]}
-        />
+        <Breadcrumb items={crumbs} />
 
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
           <Gallery

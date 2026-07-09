@@ -16,6 +16,8 @@ import { SpecTable } from "@/components/detail/SpecTable";
 import { BookingCta } from "@/components/detail/BookingCta";
 import { Checklist } from "@/components/detail/Checklist";
 import { BikeCard } from "@/components/cards/BikeCard";
+import { JsonLd } from "@/components/JsonLd";
+import { bikeProduct, breadcrumbList } from "@/lib/jsonld";
 
 export function generateStaticParams() {
   return bikes.map((b) => ({ slug: b.slug }));
@@ -30,7 +32,7 @@ export async function generateMetadata({
   const bike = getBike(slug);
   if (!bike) return {};
   return {
-    title: `Location ${bike.name} à ${site.city}`,
+    title: { absolute: `${bike.name} — Location moto ${site.city}` },
     description: `Louez la ${bike.name} (${bike.engineCc} cc, ${bike.year}) à ${site.city} dès ${bike.pricePerDay} ${site.currency}/jour. Casque inclus, réservation sur WhatsApp.`,
     alternates: { canonical: routes.bike(bike.slug) },
   };
@@ -46,17 +48,17 @@ export default async function BikeDetail({
   if (!bike) notFound();
 
   const related = relatedBikes(slug);
+  const crumbs = [
+    { label: "Accueil", href: routes.home },
+    { label: "Motos", href: routes.bikes },
+    { label: bike.name },
+  ];
 
   return (
     <main id="main" className="texture-noise relative overflow-hidden pt-28 md:pt-32">
+      <JsonLd data={[bikeProduct(bike), breadcrumbList(crumbs)]} />
       <Container>
-        <Breadcrumb
-          items={[
-            { label: "Accueil", href: routes.home },
-            { label: "Motos", href: routes.bikes },
-            { label: bike.name },
-          ]}
-        />
+        <Breadcrumb items={crumbs} />
 
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
           <Gallery

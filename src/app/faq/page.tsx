@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Container } from "@/components/ui/Container";
 import { Accordion } from "@/components/ui/Accordion";
-import { faqGroups, faqByGroup } from "@/data/faq";
+import { faqGroups, faqByGroup, faq } from "@/data/faq";
 import { routes } from "@/config/routes";
 import { site } from "@/config/site";
+import { JsonLd } from "@/components/JsonLd";
+import { faqPage } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Questions fréquentes",
@@ -15,6 +17,7 @@ export const metadata: Metadata = {
 export default function FaqPage() {
   return (
     <main id="main">
+      <JsonLd data={faqPage(faq)} />
       <PageHeader
         breadcrumb={[{ label: "Accueil", href: routes.home }, { label: "FAQ" }]}
         eyebrow="Questions fréquentes"
