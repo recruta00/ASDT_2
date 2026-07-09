@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { Unbounded, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { site } from "@/config/site";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
 // Display — wide, futuristic headlines (spec §5.3). Weights 500/700.
 const unbounded = Unbounded({
@@ -58,7 +61,10 @@ export default function RootLayout({
         <a href="#main" className="skip-link">
           Aller au contenu
         </a>
+        <Navbar />
         {children}
+        <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );
