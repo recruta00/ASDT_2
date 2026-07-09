@@ -13,10 +13,13 @@ pré-remplis, avec un repli e-mail.
 
 - **Next.js 16** (App Router, TypeScript, génération statique / SSG)
 - **Tailwind CSS v4** (tokens de design en variables CSS dans `globals.css`)
-- **Framer Motion** — utilisé uniquement par le hero « Éditorial » (`/direction-b`) ;
-  le reste du site anime en CSS pour rester léger
-- **next/font** (Unbounded, Inter, IBM Plex Mono, auto-hébergées, `display: swap`)
+- **Animations en CSS pur** — aucune librairie d'animation au runtime ; révélations
+  au scroll via `animation-timeline: view()`, entrées via keyframes
+- **next/font** (Fraunces + Work Sans, auto-hébergées, `display: swap`)
 - **next/image** pour toutes les images (aucun hotlink externe)
+
+Identité visuelle : **Solaire Marrakech** — thème clair et chaleureux (sable / terracotta /
+ocre), motif d'arche marocaine, serif expressif Fraunces + Work Sans.
 
 ## Démarrer
 
@@ -33,8 +36,7 @@ npm run lint     # ESLint
 ```
 src/
   app/                 # routes (App Router) + sitemap.ts / robots.ts / manifest.ts
-    page.tsx           # Accueil — direction A (« Showroom Nocturne »)
-    direction-b/       # Accueil — direction B (« Éditorial »), temporaire, noindex
+    page.tsx           # Accueil (hero arch-framed « Solaire Marrakech »)
     motos/ , sejours/  # catalogues + pages détail [slug] (generateStaticParams)
     reserver/ a-propos/ faq/ contact/ conditions/ confidentialite/
   components/          # design system (ui/), layout/, home/, catalog/, detail/, cards/
@@ -91,17 +93,6 @@ le site paraît fini sans photo. Pour ajouter de vraies photos :
 Metadata par route (titres ≤ 60, descriptions, canonical), JSON-LD (LocalBusiness,
 WebSite, Product/Offer, Accommodation, FAQPage, BreadcrumbList), `sitemap.xml`,
 `robots.txt`, `manifest.webmanifest`, Open Graph + Twitter, favicon et image OG de marque.
-
-## Deux directions de design
-
-L'accueil est livré en deux directions à comparer, partageant tout le contenu sous la
-ligne de flottaison :
-
-- **A — « Showroom Nocturne »** (`/`) : hero split interactif RIDE | STAY, la Seam glisse au survol.
-- **B — « Éditorial »** (`/direction-b`) : grand lettrage RIDE/STAY cousu par la Seam, curseur magnétique.
-
-Un sélecteur A/B flottant permet de basculer. Une fois la direction choisie, supprimer
-la perdante, promouvoir la gagnante sur `/`, et retirer le sélecteur.
 
 ## Audit Lighthouse
 

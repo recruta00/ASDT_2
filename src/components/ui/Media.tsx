@@ -30,7 +30,7 @@ export function Media({
   return (
     <div
       className={cx(
-        "relative w-full overflow-hidden bg-ink",
+        "arch-top relative w-full overflow-hidden bg-ink",
         aspect,
         className,
       )}
@@ -48,14 +48,14 @@ export function Media({
         <div
           role="img"
           aria-label={alt}
-          className="glow-ember texture-noise absolute inset-0 flex items-center justify-center"
+          className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(70%_65%_at_50%_28%,rgba(224,163,78,0.35),transparent_72%)]"
         >
-          {/* Radial vignette + centered glyph carrying the visual weight. */}
-          <Glyph className="w-2/3 max-w-[240px] text-bone/70" />
+          {/* Warm sun + centered line-art glyph carrying the visual weight. */}
           <span
             aria-hidden
-            className="seam-rule absolute bottom-5 left-5 !w-10 opacity-80"
+            className="absolute left-1/2 top-[26%] h-14 w-14 -translate-x-1/2 rounded-full bg-gold/40"
           />
+          <Glyph className="relative w-2/3 max-w-[240px] text-bone/65" />
         </div>
       )}
     </div>

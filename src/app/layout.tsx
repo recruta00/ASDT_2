@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Unbounded, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Fraunces, Work_Sans } from "next/font/google";
 import "./globals.css";
 import { site } from "@/config/site";
 import { Navbar } from "@/components/layout/Navbar";
@@ -8,32 +8,21 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { JsonLd } from "@/components/JsonLd";
 import { localBusiness, website } from "@/lib/jsonld";
 
-// Display — wide, futuristic headlines (spec §5.3). Only 700 is used (bold).
-const unbounded = Unbounded({
-  variable: "--font-unbounded",
+// Display — Fraunces, an expressive high-contrast serif (Solaire theme).
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["700"],
+  weight: ["500", "600"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
-// Body — paragraphs and UI. Weights 400/500/600. The LCP text is body copy,
-// so Inter stays preloaded on the critical path.
-const inter = Inter({
-  variable: "--font-inter",
+// Body & UI — Work Sans, a clean humanist sans (also carries the spec labels).
+const workSans = Work_Sans({
+  variable: "--font-worksans",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   display: "swap",
-});
-
-// Utility — the mono "spec-sheet" voice for small eyebrows/labels/prices only.
-// preload:false keeps it off the critical path so it doesn't compete with the
-// render-blocking CSS on slow connections (it is never the LCP element).
-const plexMono = IBM_Plex_Mono({
-  variable: "--font-plex-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  display: "swap",
-  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -77,8 +66,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0B1020",
-  colorScheme: "dark",
+  themeColor: "#F3EBDD",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -89,7 +78,7 @@ export default function RootLayout({
   return (
     <html
       lang={site.locale}
-      className={`${unbounded.variable} ${inter.variable} ${plexMono.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${workSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-abyss text-bone">
         <a href="#main" className="skip-link">

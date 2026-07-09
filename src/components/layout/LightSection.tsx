@@ -1,24 +1,21 @@
 import type { ReactNode } from "react";
 import { cx } from "@/lib/cx";
-import { SeamDivider } from "@/components/ui/SeamDivider";
 
 /**
- * Light --bone content section (spec §5.2) with a Seam transition from the dark
- * header above it. Used for listings and legal pages so the site never reads as
- * a wall of black.
+ * Content section on the warm sand surface. In the Solaire theme the whole site
+ * is light, so this is simply the standard section wrapper (cream cards pop on it).
  */
 export function LightSection({
   children,
   className,
-  seam = true,
 }: {
   children: ReactNode;
   className?: string;
+  /** Kept for call-site compatibility; no longer renders a divider. */
   seam?: boolean;
 }) {
   return (
-    <section className={cx("relative bg-bone text-ink", className)}>
-      {seam ? <SeamDivider color="var(--bone)" /> : null}
+    <section className={cx("relative bg-abyss text-bone", className)}>
       {children}
     </section>
   );

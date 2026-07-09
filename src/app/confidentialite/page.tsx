@@ -51,15 +51,15 @@ export default function ConfidentialitePage() {
           <div className="space-y-8">
             {sections.map((s) => (
               <section key={s.title}>
-                <h2 className="font-display text-xl font-bold text-ink">{s.title}</h2>
-                <p className="mt-2 text-ink/70">{s.body}</p>
+                <h2 className="font-display text-xl font-bold text-bone">{s.title}</h2>
+                <p className="mt-2 text-mist">{s.body}</p>
               </section>
             ))}
             <section>
-              <h2 className="font-display text-xl font-bold text-ink">Nous contacter</h2>
-              <p className="mt-2 text-ink/70">
+              <h2 className="font-display text-xl font-bold text-bone">Nous contacter</h2>
+              <p className="mt-2 text-mist">
                 Pour toute question relative à vos données, écrivez-nous à{" "}
-                <a href={`mailto:${site.email}`} className="text-ink underline">
+                <a href={`mailto:${site.email}`} className="text-bone underline">
                   {site.email}
                 </a>{" "}
                 ou par WhatsApp au {site.phoneDisplay}.

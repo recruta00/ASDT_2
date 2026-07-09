@@ -15,7 +15,7 @@ export function FilterGroup({
 }) {
   return (
     <div className="flex flex-col gap-2">
-      <span className="font-spec text-ink/70">{label}</span>
+      <span className="font-spec text-mist">{label}</span>
       <div className="flex flex-wrap items-center gap-2">{children}</div>
     </div>
   );
@@ -40,7 +40,7 @@ export function FilterChip({
         "rounded-full border px-4 py-1.5 text-sm transition-colors",
         active
           ? "border-ember bg-ember text-abyss"
-          : "border-ink/15 text-ink/80 hover:border-ink/40",
+          : "border-[color:var(--line)] text-bone/90 hover:border-ember/60",
       )}
     >
       {children}
@@ -62,7 +62,7 @@ export function FilterToggle({
     <label
       className={cx(
         "inline-flex cursor-pointer items-center gap-2 rounded-full border px-4 py-1.5 text-sm transition-colors",
-        checked ? "border-ember bg-ember text-abyss" : "border-ink/15 text-ink/80 hover:border-ink/40",
+        checked ? "border-ember bg-ember text-abyss" : "border-[color:var(--line)] text-bone/90 hover:border-ember/60",
       )}
     >
       <input
@@ -96,9 +96,9 @@ export function PriceRange({
 }) {
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={id} className="font-spec text-ink/70">
+      <label htmlFor={id} className="font-spec text-mist">
         {label} :{" "}
-        <span className="text-ink">
+        <span className="text-bone">
           {formatPrice(value, site.currency)} {unit}
         </span>
       </label>

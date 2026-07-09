@@ -30,24 +30,24 @@ export default function ConditionsPage() {
             {conditionsSummary.map((c) => (
               <div
                 key={c.title}
-                className="rounded-2xl border border-ink/10 bg-white/50 p-6"
+                className="rounded-2xl border border-[color:var(--line)] bg-ink p-6"
               >
-                <h2 className="font-display text-lg font-bold text-ink">{c.title}</h2>
-                <p className="mt-2 text-ink/70">{c.body}</p>
+                <h2 className="font-display text-lg font-bold text-bone">{c.title}</h2>
+                <p className="mt-2 text-mist">{c.body}</p>
               </div>
             ))}
           </div>
 
           <div className="mt-12">
-            <h2 className="font-display text-xl font-bold text-ink">
+            <h2 className="font-display text-xl font-bold text-bone">
               Contrats de location
             </h2>
-            <p className="mt-3 text-ink/70">
+            <p className="mt-3 text-mist">
               Chaque location est encadrée par un contrat signé au moment de la remise,
               qui détaille l&apos;ensemble des conditions, l&apos;assurance et les
               responsabilités de chacun :
             </p>
-            <ul className="mt-4 space-y-2 text-ink/80">
+            <ul className="mt-4 space-y-2 text-bone/90">
               <li>· Contrat de location moto &amp; scooter</li>
               <li>· Contrat de location appartement &amp; villa</li>
             </ul>
@@ -64,7 +64,7 @@ export default function ConditionsPage() {
                 </a>
               </div>
             */}
-            <p className="mt-4 text-ink/70">
+            <p className="mt-4 text-mist">
               Une question sur les conditions ? Écrivez-nous, nous vous expliquons tout
               avant de réserver.
             </p>

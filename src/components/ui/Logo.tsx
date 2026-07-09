@@ -2,8 +2,14 @@ import Link from "next/link";
 import { routes } from "@/config/routes";
 import { cx } from "@/lib/cx";
 
-/** Wordmark: "Recruta" + "Rent" stitched by a small −12° ember Seam tick. */
-export function Logo({ className }: { className?: string }) {
+/** Wordmark: "Recruta" + "Rent" with a small keyhole-arch mark (Solaire theme). */
+export function Logo({
+  className,
+  light = false,
+}: {
+  className?: string;
+  light?: boolean;
+}) {
   return (
     <Link
       href={routes.home}
@@ -13,13 +19,25 @@ export function Logo({ className }: { className?: string }) {
         className,
       )}
     >
-      <span
+      {/* Little Moroccan arch mark */}
+      <svg
+        viewBox="0 0 16 20"
         aria-hidden
-        className="inline-block h-5 w-[3px] rounded bg-ember"
-        style={{ transform: "rotate(-12deg)" }}
-      />
-      <span className="font-display text-lg font-bold tracking-tight text-bone">
-        Recruta<span className="text-ember">Rent</span>
+        className={cx("h-5 w-4", light ? "text-gold" : "text-ember")}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      >
+        <path d="M2 19V9a6 6 0 0 1 12 0v10" />
+      </svg>
+      <span
+        className={cx(
+          "font-display text-lg font-bold tracking-tight",
+          light ? "text-abyss" : "text-bone",
+        )}
+      >
+        Recruta
+        <span className={light ? "text-gold" : "text-ember"}>Rent</span>
       </span>
     </Link>
   );

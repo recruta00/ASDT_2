@@ -47,7 +47,7 @@ export function PropertyCatalog({ properties }: { properties: Property[] }) {
   return (
     <div>
       <h2 className="sr-only">Nos appartements et villas à louer</h2>
-      <div className="sticky top-16 z-30 -mx-5 mb-10 border-y border-ink/10 bg-bone/90 px-5 py-5 backdrop-blur md:mx-0 md:rounded-2xl md:border md:px-6">
+      <div className="sticky top-16 z-30 -mx-5 mb-10 border-y border-[color:var(--line)] bg-ink/90 px-5 py-5 backdrop-blur md:mx-0 md:rounded-2xl md:border md:px-6">
         <div className="flex flex-wrap items-end gap-x-8 gap-y-5">
           <FilterGroup label="Type">
             {(["all", "apartment", "villa"] as Type[]).map((t) => (
@@ -81,18 +81,18 @@ export function PropertyCatalog({ properties }: { properties: Property[] }) {
             unit="/ nuit"
           />
 
-          <p className="ml-auto font-spec text-ink/70" aria-live="polite">
+          <p className="ml-auto font-spec text-mist" aria-live="polite">
             {filtered.length} logement{filtered.length > 1 ? "s" : ""}
           </p>
         </div>
       </div>
 
       {filtered.length === 0 ? (
-        <div className="rounded-2xl border border-ink/10 bg-white/40 px-6 py-16 text-center">
-          <p className="text-ink/70">
+        <div className="rounded-2xl border border-[color:var(--line)] bg-ink px-6 py-16 text-center">
+          <p className="text-mist">
             Aucun résultat pour ces filtres — élargissez votre recherche.
           </p>
-          <Button onClick={reset} variant="secondary" className="mt-5 border-ink/30 text-ink hover:bg-ink/5">
+          <Button onClick={reset} variant="secondary" className="mt-5 border-[color:var(--line)] text-bone hover:bg-bone/5">
             Réinitialiser les filtres
           </Button>
         </div>

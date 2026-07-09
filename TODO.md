@@ -43,12 +43,7 @@ Des visuels en traits SVG s'affichent tant qu'aucune photo n'est fournie.
 - Faire relire `/conditions` et `/confidentialite` par une personne compétente
   (mentions légales locales, politique de confidentialité).
 
-## 6. Choix de la direction de design
-
-- Comparer `/` (A — Showroom Nocturne) et `/direction-b` (B — Éditorial) via le
-  sélecteur flottant, puis conserver la direction retenue (voir README).
-
-## 7. Bilingue (plus tard, non bloquant)
+## 6. Bilingue (plus tard, non bloquant)
 
 - Une version anglaise (`/en/...`) + `hreflang` est préparée par `src/config/routes.ts`
   mais n'est pas implémentée en v1. À activer sur demande.
