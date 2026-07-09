@@ -55,10 +55,10 @@ export function TabSwitcher({ tabs }: { tabs: Tab[] }) {
               {selected && (
                 <span
                   aria-hidden
-                  className="absolute inset-0 -z-10 rounded-full bg-ember"
+                  className="absolute inset-0 rounded-full bg-ember"
                 />
               )}
-              {tab.label}
+              <span className="relative">{tab.label}</span>
             </button>
           );
         })}
