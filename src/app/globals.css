@@ -165,6 +165,58 @@ body {
   }
 }
 
+/* =========================================================================
+   Home hero entrance — CSS-driven so the LCP content paints at first paint,
+   never gated behind JS hydration (keeps mobile LCP low).
+   ========================================================================= */
+@keyframes rr-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes rr-in-left {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes rr-in-right {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes rr-draw-down {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+@keyframes rr-tick {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+.rr-rise { animation: rr-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* Scroll-reveal via CSS scroll-driven animations — zero JS. Progressive
+   enhancement: without support or under reduced motion, content is just visible. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .rr-reveal {
+      opacity: 0;
+      animation: rr-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 55%;
+    }
+  }
+}
+
+/* WhatsApp float — single intro pulse, not looping. */
+@keyframes rr-pulse-once {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.12); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.rr-pulse { animation: rr-pulse-once 0.7s ease-out 0.4s both; }
+.rr-in-left { animation: rr-in-left 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.rr-in-right { animation: rr-in-right 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.rr-draw { transform-origin: top; animation: rr-draw-down 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.rr-tick { transform-origin: top; animation: rr-tick 1.8s ease-in-out infinite; }
+
 /* Skip-link (a11y §11) */
 .skip-link {
   position: absolute;

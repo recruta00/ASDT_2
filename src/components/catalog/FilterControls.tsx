@@ -15,7 +15,7 @@ export function FilterGroup({
 }) {
   return (
     <div className="flex flex-col gap-2">
-      <span className="font-spec text-ink/60">{label}</span>
+      <span className="font-spec text-ink/70">{label}</span>
       <div className="flex flex-wrap items-center gap-2">{children}</div>
     </div>
   );
@@ -96,7 +96,7 @@ export function PriceRange({
 }) {
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={id} className="font-spec text-ink/60">
+      <label htmlFor={id} className="font-spec text-ink/70">
         {label} :{" "}
         <span className="text-ink">
           {formatPrice(value, site.currency)} {unit}

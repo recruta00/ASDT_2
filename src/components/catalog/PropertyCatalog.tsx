@@ -46,6 +46,7 @@ export function PropertyCatalog({ properties }: { properties: Property[] }) {
 
   return (
     <div>
+      <h2 className="sr-only">Nos appartements et villas à louer</h2>
       <div className="sticky top-16 z-30 -mx-5 mb-10 border-y border-ink/10 bg-bone/90 px-5 py-5 backdrop-blur md:mx-0 md:rounded-2xl md:border md:px-6">
         <div className="flex flex-wrap items-end gap-x-8 gap-y-5">
           <FilterGroup label="Type">
@@ -80,7 +81,7 @@ export function PropertyCatalog({ properties }: { properties: Property[] }) {
             unit="/ nuit"
           />
 
-          <p className="ml-auto font-spec text-ink/60" aria-live="polite">
+          <p className="ml-auto font-spec text-ink/70" aria-live="polite">
             {filtered.length} logement{filtered.length > 1 ? "s" : ""}
           </p>
         </div>

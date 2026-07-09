@@ -7,7 +7,7 @@ export function Logo({ className }: { className?: string }) {
   return (
     <Link
       href={routes.home}
-      aria-label="Recruta Rent — accueil"
+      title="Accueil"
       className={cx(
         "group inline-flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ember",
         className,

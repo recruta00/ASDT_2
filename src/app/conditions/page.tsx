@@ -64,7 +64,7 @@ export default function ConditionsPage() {
                 </a>
               </div>
             */}
-            <p className="mt-4 text-ink/60">
+            <p className="mt-4 text-ink/70">
               Une question sur les conditions ? Écrivez-nous, nous vous expliquons tout
               avant de réserver.
             </p>

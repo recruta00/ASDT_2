@@ -8,15 +8,16 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { JsonLd } from "@/components/JsonLd";
 import { localBusiness, website } from "@/lib/jsonld";
 
-// Display — wide, futuristic headlines (spec §5.3). Weights 500/700.
+// Display — wide, futuristic headlines (spec §5.3). Only 700 is used (bold).
 const unbounded = Unbounded({
   variable: "--font-unbounded",
   subsets: ["latin"],
-  weight: ["500", "700"],
+  weight: ["700"],
   display: "swap",
 });
 
-// Body — paragraphs and UI. Weights 400/500/600.
+// Body — paragraphs and UI. Weights 400/500/600. The LCP text is body copy,
+// so Inter stays preloaded on the critical path.
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -24,12 +25,15 @@ const inter = Inter({
   display: "swap",
 });
 
-// Utility — the mono "spec-sheet" voice for eyebrows, labels, prices.
+// Utility — the mono "spec-sheet" voice for small eyebrows/labels/prices only.
+// preload:false keeps it off the critical path so it doesn't compete with the
+// render-blocking CSS on slow connections (it is never the LCP element).
 const plexMono = IBM_Plex_Mono({
   variable: "--font-plex-mono",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500"],
   display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
