@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+/* =========================================================================
+   Recruta Rent — design tokens (spec §5.2 palette, fixed brand colors)
+   ========================================================================= */
+:root {
+  --ink: #141b2e; /* deep charcoal-navy — dark sections, primary text on light */
+  --abyss: #0b1020; /* darkest navy — page background for dark areas, footer */
+  --ember: #f86a2c; /* vibrant orange — the ONLY accent */
+  --ember-hi: #ff8a50; /* hover/active state of ember */
+  --bone: #f7f6f2; /* off-white — light sections, text on dark */
+  --mist: #8a93a6; /* muted blue-gray — secondary text, captions */
+  --line: rgba(247, 246, 242, 0.1); /* hairlines on dark */
+  --line-ink: rgba(20, 27, 46, 0.12); /* hairlines on light */
+
+  /* The Seam angle — used everywhere, never changes. */
+  --seam-angle: -12deg;
+
+  --radius: 20px;
+}
+
+/* Map tokens into Tailwind v4's theme so utilities like bg-abyss/text-ember work. */
+@theme inline {
+  --color-ink: var(--ink);
+  --color-abyss: var(--abyss);
+  --color-ember: var(--ember);
+  --color-ember-hi: var(--ember-hi);
+  --color-bone: var(--bone);
+  --color-mist: var(--mist);
+
+  --font-display: var(--font-unbounded);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-plex-mono);
+
+  --radius-brand: 20px;
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--abyss);
+  color: var(--bone);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--ember);
+  color: var(--abyss);
+}
+
+/* --- Focus visibility (a11y floor §11): 2px ember ring, offset --- */
+:focus-visible {
+  outline: 2px solid var(--ember);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* =========================================================================
+   Typographic voice (spec §5.3)
+   ========================================================================= */
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
+/* Mono "spec-sheet" voice: uppercase, letter-spaced — bikes & properties
+   share one technical language (cc/year/km ↔ m²/beds/baths). */
+.font-spec {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+}
+
+/* =========================================================================
+   The Seam — signature diagonal at a constant −12° (spec §5.1)
+   ========================================================================= */
+.seam-divider {
+  /* A section boundary cut on the diagonal. Applied as a top edge. */
+  clip-path: polygon(0 3.5vw, 100% 0, 100% 100%, 0 100%);
+}
+.seam-divider-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3.5vw), 0 100%);
+}
+
+/* Thin orange rule at −12°, used to underline section headers. */
+.seam-rule {
+  display: inline-block;
+  width: 3.5rem;
+  height: 2px;
+  background: var(--ember);
+  transform: rotate(var(--seam-angle));
+  transform-origin: left center;
+}
+
+/* =========================================================================
+   Surfaces & ambient texture (spec §5.4)
+   ========================================================================= */
+/* Barely-there noise texture (inline SVG turbulence, ~3% opacity). */
+.texture-noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* One large, slow radial ember glow at 6–8% opacity on dark sections. */
+.glow-ember::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+    60% 50% at 70% 20%,
+    rgba(248, 106, 44, 0.08),
+    transparent 70%
+  );
+}
+
+.card-glass {
+  background: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+@media (hover: hover) {
+  .card-glass:hover {
+    transform: translateY(-4px);
+    border-color: rgba(248, 106, 44, 0.35);
+    box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+  }
+}
+
+/* =========================================================================
+   Motion — reduced-motion kill-switch (spec §5.5, §11)
+   ========================================================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip-link (a11y §11) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--ember);
+  color: var(--abyss);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+.skip-link:focus {
+  left: 0;
+}
