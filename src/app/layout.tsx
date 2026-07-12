@@ -8,6 +8,7 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { MobileCtaBar } from "@/components/MobileCtaBar";
 import { JsonLd } from "@/components/JsonLd";
 import { localBusiness, website } from "@/lib/jsonld";
+import { flagshipBike } from "@/data/bikes";
 
 // Display — wide, futuristic headlines (spec §5.3). Only 700 is used (bold).
 const unbounded = Unbounded({
@@ -40,7 +41,7 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
   title: {
-    default: `Location Moto & Villa ${site.city} — X-ADV 750 dès 800 MAD/j`,
+    default: `Location Moto & Villa ${site.city} — X-ADV 750 dès ${flagshipBike().pricePerDay} MAD/j`,
     template: `%s | ${site.name}`,
   },
   description: site.description,

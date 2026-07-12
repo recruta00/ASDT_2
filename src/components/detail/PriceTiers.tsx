@@ -25,7 +25,7 @@ export function PriceTiers({ bike }: { bike: Bike }) {
             }
           >
             <span className="flex items-center gap-2.5">
-              <span className="font-spec text-ink/70">{tier.label}</span>
+              <span className="font-spec whitespace-nowrap text-ink/70">{tier.label}</span>
               {saving > 0 ? (
                 <span className="rounded-full bg-ember px-2 py-0.5 font-spec text-[0.6rem] text-abyss">
                   −{saving}%
@@ -33,8 +33,8 @@ export function PriceTiers({ bike }: { bike: Bike }) {
               ) : null}
             </span>
             <span className="text-right">
-              <span className="font-medium text-ink">{mad(tier.perDay)}</span>
-              <span className="text-sm text-ink/70"> {approxEur(tier.perDay)} / jour</span>
+              <span className="font-medium whitespace-nowrap text-ink">{mad(tier.perDay)}</span>{" "}
+              <span className="whitespace-nowrap text-sm text-ink/70">{approxEur(tier.perDay)} / jour</span>
             </span>
           </a>
         );

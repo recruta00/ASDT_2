@@ -17,11 +17,15 @@ import { bikeSpecTable } from "@/lib/specs";
 import { routes } from "@/config/routes";
 import { site } from "@/config/site";
 import { whatsappUrl, bookingMessage } from "@/lib/whatsapp";
-import { mad, approxEur } from "@/lib/price";
+import { mad, approxEur, dualPrice } from "@/lib/price";
+
+const flagship = flagshipBike();
 
 export const metadata: Metadata = {
-  title: { absolute: `Location Moto Marrakech | Honda X-ADV 750 dès 800 MAD/j` },
-  description: `Louez le Honda X-ADV 750 (2026) à ${site.city} : 800 MAD ≈ 75 €/jour, casque offert, caution claire, livraison hôtel & aéroport. Réservation sur WhatsApp.`,
+  title: {
+    absolute: `Location Moto Marrakech | Honda X-ADV 750 dès ${flagship.pricePerDay} MAD/j`,
+  },
+  description: `Louez le Honda X-ADV 750 (2026) à ${site.city} : ${dualPrice(flagship.pricePerDay)}/jour, casque offert, caution claire, livraison hôtel & aéroport. Réservation sur WhatsApp.`,
   alternates: { canonical: routes.bikes },
 };
 
@@ -51,8 +55,7 @@ const decisionFaq = [
   },
   {
     question: "Comment fonctionne la caution ?",
-    answer:
-      "8 000 MAD (≈ 740 €), bloquée à la remise en espèces ou par empreinte CB, et restituée intégralement le jour du retour si la moto revient en bon état. Montant, forme et moment : tout est annoncé avant votre réservation.",
+    answer: `${mad(flagship.deposit)} (${approxEur(flagship.deposit)}), bloquée à la remise en espèces ou par empreinte CB, et restituée intégralement le jour du retour si la moto revient en bon état. Montant, forme et moment : tout est annoncé avant votre réservation.`,
   },
   {
     question: "Et en cas de panne ou de pépin ?",
