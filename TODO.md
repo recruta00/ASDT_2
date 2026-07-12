@@ -28,15 +28,22 @@ Fait aujourd'hui : nouveau shot studio du X-ADV « new style » (argent, lames L
 fourche or, antibrouillards ronds — job `27608a62-be79-4e36-9de1-78acfdd92f30`) +
 vidéo d'ambiance Seedance branchée en attendant mieux (`public/videos/hero-xadv.mp4`).
 
-Dès que la limite quotidienne se réinitialise :
+Dès que la limite quotidienne se réinitialise (dans l'ordre) :
 
-- **Vidéo hero en Veo 3.1 ultra** (le client trouve le rendu Seedance trop « CG ») :
+1. **Photo STAY « luxe Marrakech »** (demande client) : remplacer l'actuelle image
+   de villa (trop « resort de plage ») par une villa de la Palmeraie au crépuscule —
+   murs ocre en pisé, arches mauresques, piscine turquoise, lanternes en laiton,
+   palmiers, silhouette de l'Atlas, lumière dorée aux fenêtres (cinematic_studio_2_5,
+   16:9, 2K, ~2 crédits). Écraser `public/images/stays/hero-villa-dusk.webp`
+   (même nom de fichier → hero + bandeau CTA mis à jour automatiquement), puis
+   vider `.next/cache/images`.
+2. **Vidéo hero en Veo 3.1 ultra** (le client trouve le rendu Seedance trop « CG ») :
   `generate_video` modèle `veo3_1`, variant `veo-3-1-preview`, quality `ultra`,
   6 s, 16:9 (~65 crédits) — prompt photoréaliste prêt dans l'historique (tracking shot
   X-ADV argent, médina de Marrakech la nuit, lanternes, réalisme documentaire).
   Remplacer simplement `public/videos/hero-xadv.mp4` par le nouveau fichier.
-- **Photos des 6 logements + photo « à propos »** (~14 crédits) : mêmes prompts
-  cinématiques que la villa (voir style suffix dans l'historique de commits).
+3. **Photos des 6 logements + photo « à propos »** (~14 crédits) : mêmes prompts
+   cinématiques que la villa (voir style suffix dans l'historique de commits).
 
 ## 4. Photos réelles (optionnel)
 
