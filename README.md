@@ -46,19 +46,31 @@ src/
     page.tsx           # Accueil (hero Seam photographique)
     motos/             # vitrine du X-ADV 750 + fiche détail [slug]
     sejours/           # catalogue filtrable + fiches détail [slug]
+    guides/            # hub contenu SEO : permis + 3 itinéraires (Ourika, Agafay, Essaouira)
     reserver/ a-propos/ faq/ contact/ conditions/ confidentialite/
-  components/          # design system (ui/), layout/, home/, catalog/, detail/, cards/
+  components/          # design system (ui/), layout/, home/, catalog/, detail/, cards/, guides/
+    MobileCtaBar.tsx   # barre CTA mobile contextuelle (prix + WhatsApp de la page en cours)
   config/
-    site.ts            # ⭐ TOUS les placeholders + heroVideoSrc — un seul fichier
+    site.ts            # ⭐ TOUS les placeholders + heroVideoSrc + eurRate — un seul fichier
     routes.ts          # carte centrale des routes (prête pour /en + hreflang)
   data/
-    bikes.ts           # LA machine : Honda X-ADV 750 (ajouter un objet = nouveau modèle)
+    bikes.ts           # LA machine : Honda X-ADV 750 + paliers dégressifs + conditions
     properties.ts      # 6 appartements/villas
     faq.ts             # 12 questions groupées
     conditions.ts      # résumés des conditions
-  lib/                 # whatsapp.ts (deep links), jsonld.ts (SEO), specs.ts
+  lib/                 # whatsapp.ts (deep links), jsonld.ts (SEO), price.ts (MAD + ≈ EUR), specs.ts
 public/images/         # bikes/ stays/ brand/ (OG composé localement)
 ```
+
+## Conversion (issu d'une étude concurrentielle)
+
+Les concurrents affichent leurs prix en euros ; les nôtres s'affichent partout en
+**MAD + « ≈ XX € »** (`src/lib/price.ts`, taux dans `site.ts`). S'ajoutent : paliers
+dégressifs 1–3 / 4–6 / 7 j+ avec lien WhatsApp par palier (`PriceTiers`), bloc
+« Conditions claires, zéro surprise » (`RentalConditions`), FAQ anti-objections au
+point de décision (`DecisionFaq`), rareté honnête (une seule machine), CTA à la
+première personne (« Je vérifie la disponibilité ») et **barre CTA mobile**
+contextuelle qui suit la page consultée (`MobileCtaBar`).
 
 ## La flotte : un seul modèle, volontairement
 
@@ -87,10 +99,13 @@ le poster reste le LCP). Génération recommandée : voir `TODO.md` §3.
 
 ## SEO
 
-Metadata par route (titres ≤ 60, canonical), JSON-LD (LocalBusiness, WebSite,
-Product/Offer X-ADV, Accommodation, FAQPage, BreadcrumbList), `sitemap.xml`,
-`robots.txt`, `manifest.webmanifest`, OG photo composée localement (58 KB JPEG,
-compatible aperçus WhatsApp), favicons RR.
+Metadata par route (titres ≤ 60 avec prix et modèle exacts, canonical), JSON-LD
+(LocalBusiness, WebSite, Product/Offer X-ADV, Accommodation, FAQPage — y compris
+sur le guide permis —, BreadcrumbList), `sitemap.xml`, `robots.txt`,
+`manifest.webmanifest`, OG photo composée localement (58 KB JPEG, compatible
+aperçus WhatsApp), favicons RR. Le hub `/guides` (permis + itinéraires) vise les
+requêtes longue traîne que les concurrents ne couvrent pas ; chaque guide se
+termine par un bloc de conversion vers la machine.
 
 ## Audit Lighthouse (build de prod, mobile)
 

@@ -8,7 +8,7 @@ import { routes } from "@/config/routes";
 import { site } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: `Location villa & appartement à ${site.city}`,
+  title: { absolute: `Location Villa avec Piscine à ${site.city} | ${site.name}` },
   description: `Appartements et villas à louer à ${site.city} : du studio au Guéliz à la villa avec piscine dans la Palmeraie. Adresses choisies, réservation sur WhatsApp.`,
   alternates: { canonical: routes.stays },
 };
@@ -23,7 +23,7 @@ export default function SejoursPage() {
         ]}
         eyebrow={`Location villa ${site.city}`}
         title="Appartements & villas à louer"
-        lead="Des adresses élégantes pour quelques nuits ou plusieurs semaines : studios en centre-ville, duplex avec terrasse, villas avec piscine et riads dans la médina."
+        lead="Six adresses seulement, choisies une à une — du studio élégant au Guéliz à la villa avec piscine dans la Palmeraie. Chaque maison est visitée, équipée et suivie par nous."
       />
       <LightSection className="pb-24">
         <Container className="pt-14">

@@ -19,6 +19,11 @@ export const routes = {
   contact: "/contact",
   conditions: "/conditions",
   privacy: "/confidentialite",
+  guides: "/guides",
+  guidePermis: "/guides/permis-moto-maroc",
+  guideAgafay: "/guides/itineraire-moto-agafay",
+  guideOurika: "/guides/itineraire-moto-atlas-ourika",
+  guideEssaouira: "/guides/marrakech-essaouira-a-moto",
 } as const;
 
 /** Primary navigation shown in the navbar. */
@@ -39,6 +44,15 @@ export const footerNav = [
       { label: "Louer une moto", href: routes.bikes },
       { label: "Louer un séjour", href: routes.stays },
       { label: "Réserver", href: routes.book },
+    ],
+  },
+  {
+    title: "Guides",
+    links: [
+      { label: "Quel permis à Marrakech ?", href: routes.guidePermis },
+      { label: "Itinéraire Atlas & Ourika", href: routes.guideOurika },
+      { label: "Marrakech → Essaouira", href: routes.guideEssaouira },
+      { label: "Désert d'Agafay à moto", href: routes.guideAgafay },
     ],
   },
   {
@@ -69,4 +83,9 @@ export const staticRoutes = [
   routes.contact,
   routes.conditions,
   routes.privacy,
+  routes.guides,
+  routes.guidePermis,
+  routes.guideAgafay,
+  routes.guideOurika,
+  routes.guideEssaouira,
 ] as const;

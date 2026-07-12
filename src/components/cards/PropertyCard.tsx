@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Property } from "@/data/types";
 import { routes } from "@/config/routes";
 import { site } from "@/config/site";
+import { approxEur } from "@/lib/price";
 import { propertyCardSpecs } from "@/lib/specs";
 import { Media } from "@/components/ui/Media";
 import { SpecList } from "@/components/ui/SpecList";
@@ -40,12 +41,15 @@ export function PropertyCard({
           </p>
           <div className="mt-5 flex items-end justify-between">
             <p className="font-spec text-ink">
+              <span className="text-ink/70">À partir de </span>
               <PriceCounter
                 value={property.pricePerNight}
                 className="text-ink"
               />
               <span className="text-ink"> {site.currency}</span>
-              <span className="text-ink/70"> / nuit</span>
+              <span className="text-ink/70">
+                {" "}{approxEur(property.pricePerNight)} / nuit
+              </span>
             </p>
             <span className="font-spec text-ink transition-transform group-hover:translate-x-1">
               Voir →

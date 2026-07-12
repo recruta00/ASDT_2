@@ -5,6 +5,12 @@
 
 export type BikeCategory = "scooter" | "moto";
 
+export type PriceTier = {
+  label: string; // "1 jour", "3 jours et +", "7 jours et +"
+  perDay: number; // MAD per day at this tier
+  minDays: number;
+};
+
 export type Bike = {
   slug: string;
   name: string;
@@ -12,10 +18,18 @@ export type Bike = {
   engineCc: number;
   year: number;
   transmission: "automatique" | "manuelle";
-  pricePerDay: number; // in MAD
+  pricePerDay: number; // in MAD (1-day anchor rate)
+  priceTiers: PriceTier[]; // degressive rates — longer = cheaper per day
   deposit: number; // in MAD
+  depositTerms: string; // how it is held & returned — transparency converts
+  licence: string; // exact licence requirement (agency policy)
+  minAge: number;
+  availabilityNote: string; // honest, owner-edited before each rebuild (SSG)
   helmetIncluded: boolean;
   kmPolicy: string;
+  fuelPolicy: string;
+  cancellation: string;
+  documents: string[]; // what to bring at pickup
   shortDescription: string;
   description: string;
   included: string[];

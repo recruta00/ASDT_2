@@ -17,7 +17,7 @@ export function FeaturedStays() {
             eyebrow="Nos adresses — location villa Marrakech"
             title="Appartements & villas d'exception"
             titleId="stays-title"
-            lead="Du studio élégant au Guéliz à la villa avec piscine dans la Palmeraie, des adresses choisies avec soin."
+            lead="Six adresses seulement, choisies une à une — du studio élégant au Guéliz à la villa avec piscine dans la Palmeraie."
           />
           <ButtonLink href={routes.stays} variant="secondary" className="shrink-0">
             Tous les séjours

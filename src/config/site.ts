@@ -14,6 +14,9 @@ export const site = {
   description:
     "Location du Honda X-ADV 750, d'appartements et de villas à Marrakech. Réservation rapide sur WhatsApp, caution transparente, contrats clairs.",
 
+  // Indicative EUR conversion for tourist price anchoring (build-time, approx).
+  eurRate: 0.093, // TODO: confirm/refresh occasionally (1 MAD ≈ 0.093 €)
+
   city: "Marrakech",
   country: "Maroc",
   countryCode: "MA",

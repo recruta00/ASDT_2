@@ -10,12 +10,14 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { SpecList } from "@/components/ui/SpecList";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { ButtonLink } from "@/components/ui/Button";
-import { Accordion } from "@/components/ui/Accordion";
 import { Gallery } from "@/components/detail/Gallery";
 import { SpecTable } from "@/components/detail/SpecTable";
 import { BookingCta } from "@/components/detail/BookingCta";
 import { Checklist } from "@/components/detail/Checklist";
 import { BikeCard } from "@/components/cards/BikeCard";
+import { PriceTiers } from "@/components/detail/PriceTiers";
+import { RentalConditions } from "@/components/detail/RentalConditions";
+import { DecisionFaq } from "@/components/detail/DecisionFaq";
 import { JsonLd } from "@/components/JsonLd";
 import { bikeProduct, breadcrumbList } from "@/lib/jsonld";
 
@@ -32,7 +34,7 @@ export async function generateMetadata({
   const bike = getBike(slug);
   if (!bike) return {};
   return {
-    title: { absolute: `${bike.name} — Location moto ${site.city}` },
+    title: { absolute: `Location ${bike.name} à ${site.city} — ${bike.pricePerDay} MAD/jour` },
     description: `Louez le ${bike.name} (${bike.engineCc} cc, ${bike.year}) à ${site.city} dès ${bike.pricePerDay} ${site.currency}/jour. Casque inclus, réservation sur WhatsApp.`,
     alternates: { canonical: routes.bike(bike.slug) },
   };
@@ -75,7 +77,16 @@ export default async function BikeDetail({
             <SpecList items={bikeCardSpecs(bike)} className="mt-3" />
             <p className="mt-5 text-ink/70">{bike.description}</p>
 
-            <div className="mt-8">
+            <p className="mt-4 rounded-xl border border-ink/10 bg-white px-4 py-2.5 text-sm text-ink/80">
+              <span className="font-medium text-ink">Une seule X-ADV en flotte</span>{" "}
+              — {bike.availabilityNote}
+            </p>
+
+            <div className="mt-5">
+              <PriceTiers bike={bike} />
+            </div>
+
+            <div className="mt-6">
               <BookingCta
                 name={bike.name}
                 price={bike.pricePerDay}
@@ -92,13 +103,19 @@ export default async function BikeDetail({
 
         <div className="mt-16 grid gap-12 lg:grid-cols-2">
           <Checklist title="Ce qui est inclus" items={bike.included} />
-          <div>
-            <h2 className="font-display text-xl font-bold text-ink">Conditions</h2>
-            <Accordion items={bikeConditions} className="mt-4" />
-            <ButtonLink href={routes.conditions} variant="secondary" className="mt-6">
+          <RentalConditions bike={bike} />
+        </div>
+
+        <div className="mt-16">
+          <DecisionFaq
+            items={bikeConditions.map((c) => ({ question: c.question, answer: c.answer }))}
+            itemName={bike.name}
+          />
+          <p className="mt-4">
+            <ButtonLink href={routes.conditions} variant="secondary">
               Voir les conditions complètes
             </ButtonLink>
-          </div>
+          </p>
         </div>
       </Container>
 

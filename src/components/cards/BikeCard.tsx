@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Bike } from "@/data/types";
 import { routes } from "@/config/routes";
 import { site } from "@/config/site";
+import { approxEur } from "@/lib/price";
 import { bikeCardSpecs } from "@/lib/specs";
 import { Media } from "@/components/ui/Media";
 import { SpecList } from "@/components/ui/SpecList";
@@ -38,7 +39,7 @@ export function BikeCard({
             <p className="font-spec text-ink">
               <PriceCounter value={bike.pricePerDay} className="text-ink" />
               <span className="text-ink"> {site.currency}</span>
-              <span className="text-ink/70"> / jour</span>
+              <span className="text-ink/70"> {approxEur(bike.pricePerDay)} / jour</span>
             </p>
             <span className="font-spec text-ink transition-transform group-hover:translate-x-1">
               Voir →

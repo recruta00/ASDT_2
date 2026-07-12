@@ -15,9 +15,22 @@ export const bikes: Bike[] = [
     year: 2026,
     transmission: "automatique",
     pricePerDay: 800, // TODO: confirm
+    priceTiers: [
+      { label: "1 jour", perDay: 800, minDays: 1 }, // TODO: confirm
+      { label: "3 jours et +", perDay: 750, minDays: 3 }, // TODO: confirm
+      { label: "7 jours et +", perDay: 700, minDays: 7 }, // TODO: confirm
+    ],
     deposit: 8000, // TODO: confirm
+    depositTerms:
+      "Bloquée à la remise (espèces ou empreinte CB), restituée intégralement le jour du retour.",
+    licence: "Permis moto A2 ou A en cours de validité", // TODO: confirm agency policy
+    minAge: 21, // TODO: confirm
+    availabilityNote: "Vérifiez vos dates sur WhatsApp — réponse rapide.", // owner-edited before rebuild
     helmetIncluded: true,
     kmPolicy: "200 km/jour inclus, puis 2 MAD/km",
+    fuelPolicy: "Remise avec le plein, à rendre avec le plein",
+    cancellation: "Annulation gratuite jusqu'à 48 h avant la location",
+    documents: ["Passeport ou pièce d'identité", "Permis moto (A2/A)"],
     shortDescription:
       "Le crossover qui fait tout : bicylindre 745 cm³, boîte DCT automatique, allure d'aventurière. La ville en semaine, l'Atlas le week-end.",
     description:

@@ -3,6 +3,7 @@
 import { useId, useState } from "react";
 import { site } from "@/config/site";
 import { ButtonAnchor } from "@/components/ui/Button";
+import { Reassurance } from "@/components/detail/Reassurance";
 
 export type BookingOption = { slug: string; name: string };
 
@@ -115,6 +116,9 @@ export function BookingForm({
         <p className="text-center font-spec text-ink/70">
           Aucun paiement en ligne — on confirme ensemble la disponibilité.
         </p>
+        <div className="mx-auto">
+          <Reassurance />
+        </div>
       </div>
     </div>
   );

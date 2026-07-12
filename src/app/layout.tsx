@@ -5,6 +5,7 @@ import { site } from "@/config/site";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { MobileCtaBar } from "@/components/MobileCtaBar";
 import { JsonLd } from "@/components/JsonLd";
 import { localBusiness, website } from "@/lib/jsonld";
 
@@ -39,7 +40,7 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
   title: {
-    default: `${site.name} — Location moto & villas à ${site.city}`,
+    default: `Location Moto & Villa ${site.city} — X-ADV 750 dès 800 MAD/j`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -101,7 +102,10 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        {/* spacer so the fixed mobile CTA bar never covers footer content */}
+        <div aria-hidden className="h-16 md:hidden" />
         <WhatsAppFloat />
+        <MobileCtaBar />
       </body>
     </html>
   );

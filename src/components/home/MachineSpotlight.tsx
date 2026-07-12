@@ -10,6 +10,7 @@ import { routes } from "@/config/routes";
 import { site } from "@/config/site";
 import { whatsappUrl, bookingMessage } from "@/lib/whatsapp";
 import { formatPrice } from "@/lib/cx";
+import { approxEur } from "@/lib/price";
 
 /**
  * "La Machine" — the moto side of the business is one flagship, presented
@@ -55,11 +56,17 @@ export function MachineSpotlight() {
               <span className="font-display text-2xl font-bold text-ink">
                 {site.currency}
               </span>
-              <span className="font-spec text-ink/70">/ jour</span>
+              <span className="font-spec text-ink/70">
+                {approxEur(bike.pricePerDay)} / jour
+              </span>
             </div>
             <p className="mt-1 font-spec text-ink/70">
-              Caution {formatPrice(bike.deposit, site.currency)} ·{" "}
-              {bike.kmPolicy}
+              Caution {formatPrice(bike.deposit, site.currency)}{" "}
+              {approxEur(bike.deposit)} — restituée au retour · {bike.kmPolicy}
+            </p>
+            <p className="mt-3 rounded-xl border border-ink/10 bg-white px-4 py-2.5 text-sm text-ink/80">
+              <span className="font-medium text-ink">Une seule X-ADV en flotte</span>{" "}
+              — {bike.availabilityNote}
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
@@ -69,7 +76,7 @@ export function MachineSpotlight() {
                 rel="noopener noreferrer"
                 size="lg"
               >
-                Réserver sur WhatsApp
+                Je vérifie la disponibilité
               </ButtonAnchor>
               <ButtonLink href={routes.bike(bike.slug)} variant="secondary" size="lg">
                 Fiche complète
