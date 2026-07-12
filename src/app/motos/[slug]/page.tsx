@@ -13,6 +13,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Gallery } from "@/components/detail/Gallery";
 import { SpecTable } from "@/components/detail/SpecTable";
 import { BookingCta } from "@/components/detail/BookingCta";
+import { CrossSell } from "@/components/detail/CrossSell";
 import { Checklist } from "@/components/detail/Checklist";
 import { BikeCard } from "@/components/cards/BikeCard";
 import { PriceTiers } from "@/components/detail/PriceTiers";
@@ -118,6 +119,8 @@ export default async function BikeDetail({
           </p>
         </div>
       </Container>
+
+      <CrossSell on="ride" />
 
       {related.length > 0 ? (
         <Container className="mt-20 mb-24">

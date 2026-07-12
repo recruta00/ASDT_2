@@ -32,9 +32,28 @@ export const faq: FaqEntry[] = [
   },
   {
     group: "Motos",
-    question: "Livrez-vous la moto à mon hôtel ou riad ?",
+    question: "Livrez-vous à l'hôtel, au riad ou à l'aéroport de Marrakech-Ménara ?",
     answer:
-      "Oui, nous livrons et récupérons le X-ADV à Marrakech (Guéliz, Hivernage, médina et environs). Indiquez-nous votre adresse au moment de la réservation pour confirmer la zone et l'horaire.",
+      "Oui. Nous livrons et récupérons le X-ADV partout à Marrakech — Guéliz, Hivernage, médina, Palmeraie — et à l'aéroport de Marrakech-Ménara. Indiquez votre adresse (ou votre vol) au moment de la réservation pour caler la zone et l'horaire.",
+  },
+
+  {
+    group: "Motos",
+    question: "Mon permis étranger est-il valable au Maroc ?",
+    answer:
+      "Oui : un permis national en alphabet latin (français, belge, suisse, espagnol…) est accepté au Maroc pour un séjour touristique. Le permis international n'est pas obligatoire mais reste recommandé pour les longs séjours. Le X-ADV 750 demande un permis moto A2 ou A — en cas de doute, envoyez-nous une photo de votre permis sur WhatsApp et on vous confirme tout de suite.",
+  },
+  {
+    group: "Motos",
+    question: "Peut-on sortir de Marrakech — Atlas, Agafay, Essaouira ?",
+    answer:
+      "Oui, c'est même ce qu'on recommande : la vallée de l'Ourika, le désert d'Agafay ou la route d'Essaouira se prêtent parfaitement au X-ADV. Le kilométrage est illimité ; consultez nos guides d'itinéraires pour préparer la virée. Le passage de frontière n'est en revanche pas autorisé.",
+  },
+  {
+    group: "Motos",
+    question: "Est-ce difficile de conduire à Marrakech ?",
+    answer:
+      "La circulation est dense mais prévisible une fois qu'on en comprend le rythme. À la remise des clés, on vous briefe sur les usages locaux, les axes à privilégier et les parkings deux-roues gardés. L'ABS, le contrôle de couple du X-ADV et un casque bien ajusté font le reste — la plupart de nos clients sont surpris de la facilité.",
   },
 
   // --- Séjours ---
@@ -78,6 +97,18 @@ export const faq: FaqEntry[] = [
   },
   {
     group: "Paiement & caution",
+    question: "Y a-t-il des tarifs dégressifs pour plusieurs jours ?",
+    answer:
+      "Oui, et ils sont affichés clairement : le prix par jour du X-ADV baisse dès 3 jours, puis encore dès 7 jours. Pour une longue durée (au mois) ou un pack moto + logement, contactez-nous sur WhatsApp — on construit un tarif sur mesure.",
+  },
+  {
+    group: "Paiement & caution",
+    question: "Peut-on payer en euros ou par carte ?",
+    answer:
+      "Les espèces (MAD ou EUR au taux du jour) et le virement sont acceptés. Pour un paiement par carte, demandez-nous sur WhatsApp au moment de la réservation. Aucune donnée bancaire ne transite par le site.",
+  },
+  {
+    group: "Paiement & caution",
     question: "Quelle est votre politique d'annulation ?",
     answer:
       "L'annulation est gratuite jusqu'à 48h avant le début de la location ou du séjour. Passé ce délai, contactez-nous : nous privilégions toujours le report plutôt que la pénalité quand c'est possible.",
@@ -92,6 +123,18 @@ export function faqByGroup(group: FaqGroup): FaqEntry[] {
 }
 
 /** Top N questions for the home-page teaser (spec §7.1.7). */
+/** Curated: the four biggest booking objections — documents, delivery,
+ *  deposit, cancellation — rather than simply the first four entries. */
+const teaserQuestions = [
+  "Quels documents faut-il pour louer le X-ADV 750 ?",
+  "Livrez-vous à l'hôtel, au riad ou à l'aéroport de Marrakech-Ménara ?",
+  "Comment fonctionne la caution et son remboursement ?",
+  "Quelle est votre politique d'annulation ?",
+];
+
 export function faqTeaser(n = 4): FaqEntry[] {
-  return faq.slice(0, n);
+  const picked = teaserQuestions
+    .map((q) => faq.find((f) => f.question === q))
+    .filter((f): f is FaqEntry => Boolean(f));
+  return picked.slice(0, n);
 }

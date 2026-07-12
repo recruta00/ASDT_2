@@ -14,6 +14,7 @@ import { Accordion } from "@/components/ui/Accordion";
 import { Gallery } from "@/components/detail/Gallery";
 import { SpecTable } from "@/components/detail/SpecTable";
 import { BookingCta } from "@/components/detail/BookingCta";
+import { CrossSell } from "@/components/detail/CrossSell";
 import { Checklist } from "@/components/detail/Checklist";
 import { PropertyCard } from "@/components/cards/PropertyCard";
 import { JsonLd } from "@/components/JsonLd";
@@ -102,6 +103,8 @@ export default async function StayDetail({
           </div>
         </div>
       </Container>
+
+      <CrossSell on="stay" />
 
       {related.length > 0 ? (
         <Container className="mt-20 mb-24">

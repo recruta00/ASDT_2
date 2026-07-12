@@ -1,11 +1,13 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useId, useState, useSyncExternalStore } from "react";
 import { site } from "@/config/site";
 import { ButtonAnchor } from "@/components/ui/Button";
 import { Reassurance } from "@/components/detail/Reassurance";
 
 export type BookingOption = { slug: string; name: string };
+
+const subscribeNoop = () => () => {};
 
 function buildMessage(customer: string, item: string, from: string, to: string) {
   const who = customer.trim() ? `Je suis ${customer.trim()}. ` : "";
@@ -27,6 +29,19 @@ export function BookingForm({
   const [customer, setCustomer] = useState("");
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
+
+  // min= resolves to the visitor's date only on the client; the server snapshot
+  // is "" so prerendered HTML never disagrees with the visitor's clock.
+  const today = useSyncExternalStore(
+    subscribeNoop,
+    () => new Date().toISOString().slice(0, 10),
+    () => "",
+  );
+
+  function onFromChange(value: string) {
+    setFrom(value);
+    if (to && value && to < value) setTo(value);
+  }
 
   const message = buildMessage(customer, item, from, to);
   const waUrl = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -67,7 +82,8 @@ export function BookingForm({
               id={`${uid}-from`}
               type="date"
               value={from}
-              onChange={(e) => setFrom(e.target.value)}
+              min={today || undefined}
+              onChange={(e) => onFromChange(e.target.value)}
               className={field}
             />
           </div>
@@ -79,6 +95,7 @@ export function BookingForm({
               id={`${uid}-to`}
               type="date"
               value={to}
+              min={from || today || undefined}
               onChange={(e) => setTo(e.target.value)}
               className={field}
             />

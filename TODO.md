@@ -55,16 +55,24 @@ Dès que la limite quotidienne se réinitialise (dans l'ordre choisi par le clie
 Déposer dans `public/images/bikes/` ou `public/images/stays/` puis renseigner
 `images: []` de l'élément concerné. Les visuels en traits SVG comblent les manques.
 
-## 5. Contrats de location (PDF)
+## 5. Avis clients (fort levier de conversion)
+
+- Coller de **vrais** avis dans `src/data/testimonials.ts` — la section d'accueil
+  reste masquée tant que la liste est vide (aucun faux avis ne s'affiche).
+- Renseigner `googleReviewsUrl` dans `src/config/site.ts` (lien « Voir tous les
+  avis sur Google ») dès que la fiche Google Business Profile existe.
+  Créer la fiche GBP est LA priorité SEO locale n°1.
+
+## 6. Contrats de location (PDF)
 
 - Déposer les PDF dans `public/contrats/`.
 - Dé-commenter le bloc de liens dans `src/app/conditions/page.tsx`.
 
-## 6. Textes légaux
+## 7. Textes légaux
 
 - Faire relire `/conditions` et `/confidentialite` (mentions légales locales).
 
-## 7. Bilingue (plus tard, non bloquant)
+## 8. Bilingue (plus tard, non bloquant)
 
 - La version anglaise (`/en/...`) + `hreflang` est préparée par `src/config/routes.ts`
   mais n'est pas implémentée en v1.

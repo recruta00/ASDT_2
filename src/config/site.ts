@@ -50,6 +50,10 @@ export const site = {
   // Response-time claim — kept honest per the spec voice rules.
   whatsappResponse: "Réponse rapide sur WhatsApp",
 
+  // Google Business Profile reviews URL. Leave empty until the profile exists —
+  // the reviews section's Google link stays hidden while this is "".
+  googleReviewsUrl: "" as string, // TODO: paste the Google Maps reviews link
+
   // Ambient hero video (RIDE panel, desktop only). Drop an mp4 into /public/videos
   // and set the path here, e.g. "/videos/hero-xadv.mp4". Empty = poster image only.
   heroVideoSrc: "/videos/hero-xadv.mp4", // Seedance stopgap — swap for the Veo 3.1 ultra render (TODO.md §3)
