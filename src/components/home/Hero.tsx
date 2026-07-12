@@ -118,13 +118,13 @@ export function Hero() {
           style={{ clipPath: leftClip, transition: `clip-path ${glide}` }}
         >
           <Image
-            src="/images/bikes/honda-x-adv-750-studio.webp"
+            src="/images/bikes/hero-ride.webp"
             alt=""
             fill
             priority
             quality={70}
             sizes="(min-width: 768px) 66vw, 100vw"
-            className="rr-kenburns object-cover object-[62%_center]"
+            className="rr-kenburns object-cover"
           />
           {site.heroVideoSrc ? (
             <HeroVideo
