@@ -11,7 +11,7 @@ export function FaqTeaser() {
   return (
     <section
       aria-labelledby="faq-teaser-title"
-      className="border-t border-[color:var(--line)] bg-ink/30 py-20 md:py-28"
+      className="border-t border-ink/10 py-20 md:py-28"
     >
       <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
         <div>

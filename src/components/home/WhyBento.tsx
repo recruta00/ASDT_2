@@ -4,8 +4,8 @@ import { MotionReveal } from "@/components/ui/MotionReveal";
 
 const cells = [
   {
-    title: "Véhicules révisés",
-    body: "Chaque moto et scooter passe un contrôle avant remise : pneus, freins, niveaux. Vous partez l'esprit tranquille.",
+    title: "Une machine révisée",
+    body: "Le X-ADV passe un contrôle complet avant chaque remise : pneus, freins, niveaux. Vous partez l'esprit tranquille.",
     span: "lg:col-span-2",
   },
   {
@@ -44,10 +44,10 @@ export function WhyBento() {
             >
               <div className="card-glass h-full p-7">
                 <span aria-hidden className="seam-rule" />
-                <h3 className="font-display mt-4 text-lg font-bold text-bone">
+                <h3 className="font-display mt-4 text-lg font-bold text-ink">
                   {cell.title}
                 </h3>
-                <p className="mt-2 text-mist">{cell.body}</p>
+                <p className="mt-2 text-ink/70">{cell.body}</p>
               </div>
             </MotionReveal>
           ))}

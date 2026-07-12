@@ -19,8 +19,8 @@ const variants: Record<Variant, string> = {
     "bg-ember text-abyss hover:bg-ember-hi hover:shadow-[0_8px_30px_-8px_rgba(248,106,44,0.7)]",
   // Secondary = 1px bone outline, transparent fill.
   secondary:
-    "border border-bone/40 text-bone hover:border-bone hover:bg-bone/5",
-  ghost: "text-bone/80 hover:text-bone",
+    "border border-ink/25 text-ink hover:border-ink/60 hover:bg-ink/5",
+  ghost: "text-ink/70 hover:text-ink",
 };
 
 type CommonProps = {

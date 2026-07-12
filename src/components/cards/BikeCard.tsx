@@ -17,7 +17,7 @@ export function BikeCard({
   sizes?: string;
 }) {
   return (
-    <article className="card-glass group flex flex-col overflow-hidden">
+    <article className="card-glass group rr-zoom-parent flex flex-col overflow-hidden">
       <Link
         href={routes.bike(bike.slug)}
         className="flex flex-1 flex-col focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ember"
@@ -31,16 +31,16 @@ export function BikeCard({
           aspect="aspect-[4/3]"
         />
         <div className="flex flex-1 flex-col p-6">
-          <h3 className="font-display text-xl font-bold text-bone">{bike.name}</h3>
+          <h3 className="font-display text-xl font-bold text-ink">{bike.name}</h3>
           <SpecList items={bikeCardSpecs(bike)} className="mt-2" />
-          <p className="mt-3 flex-1 text-sm text-mist">{bike.shortDescription}</p>
+          <p className="mt-3 flex-1 text-sm text-ink/70">{bike.shortDescription}</p>
           <div className="mt-5 flex items-end justify-between">
-            <p className="font-spec text-bone">
-              <PriceCounter value={bike.pricePerDay} className="text-ember" />
-              <span className="text-ember"> {site.currency}</span>
-              <span className="text-mist"> / jour</span>
+            <p className="font-spec text-ink">
+              <PriceCounter value={bike.pricePerDay} className="text-ink" />
+              <span className="text-ink"> {site.currency}</span>
+              <span className="text-ink/70"> / jour</span>
             </p>
-            <span className="font-spec text-ember transition-transform group-hover:translate-x-1">
+            <span className="font-spec text-ink transition-transform group-hover:translate-x-1">
               Voir →
             </span>
           </div>

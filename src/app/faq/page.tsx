@@ -26,11 +26,11 @@ export default function FaqPage() {
       />
       <Container className="max-w-3xl pb-24 pt-14">
         <div className="space-y-12">
-          {faqGroups.map((group) => (
-            <section key={group} aria-labelledby={`faq-${group}`}>
+          {faqGroups.map((group, i) => (
+            <section key={group} aria-labelledby={`faq-group-${i}`}>
               <h2
-                id={`faq-${group}`}
-                className="font-display text-xl font-bold text-bone"
+                id={`faq-group-${i}`}
+                className="font-display text-xl font-bold text-ink"
               >
                 {group}
               </h2>

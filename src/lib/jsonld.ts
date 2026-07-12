@@ -38,7 +38,7 @@ export function localBusiness() {
     url: site.domain,
     telephone: site.phoneDisplay,
     email: site.email,
-    image: abs("/images/brand/og.png"),
+    image: abs("/images/brand/og.jpg"),
     priceRange: "$$",
     address: postalAddress,
     geo: {
@@ -78,7 +78,7 @@ export function bikeProduct(bike: Bike) {
     name: bike.name,
     description: bike.shortDescription,
     category: "Location de moto",
-    image: bike.images.length ? bike.images.map(abs) : [abs("/images/brand/og.png")],
+    image: bike.images.length ? bike.images.map(abs) : [abs("/images/brand/og.jpg")],
     brand: { "@type": "Brand", name: bike.name.split(" ")[0] },
     offers: {
       "@type": "Offer",
@@ -107,7 +107,7 @@ export function propertyAccommodation(property: Property) {
     description: property.shortDescription,
     image: property.images.length
       ? property.images.map(abs)
-      : [abs("/images/brand/og.png")],
+      : [abs("/images/brand/og.jpg")],
     numberOfBedroomsTotal: property.bedrooms,
     numberOfBathroomsTotal: property.bathrooms,
     floorSize: {

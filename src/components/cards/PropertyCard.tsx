@@ -17,7 +17,7 @@ export function PropertyCard({
   sizes?: string;
 }) {
   return (
-    <article className="card-glass group flex flex-col overflow-hidden">
+    <article className="card-glass group rr-zoom-parent flex flex-col overflow-hidden">
       <Link
         href={routes.stay(property.slug)}
         className="flex flex-1 flex-col focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ember"
@@ -31,23 +31,23 @@ export function PropertyCard({
           aspect="aspect-[4/3]"
         />
         <div className="flex flex-1 flex-col p-6">
-          <h3 className="font-display text-xl font-bold text-bone">
+          <h3 className="font-display text-xl font-bold text-ink">
             {property.name}
           </h3>
           <SpecList items={propertyCardSpecs(property)} className="mt-2" />
-          <p className="mt-3 flex-1 text-sm text-mist">
+          <p className="mt-3 flex-1 text-sm text-ink/70">
             {property.shortDescription}
           </p>
           <div className="mt-5 flex items-end justify-between">
-            <p className="font-spec text-bone">
+            <p className="font-spec text-ink">
               <PriceCounter
                 value={property.pricePerNight}
-                className="text-ember"
+                className="text-ink"
               />
-              <span className="text-ember"> {site.currency}</span>
-              <span className="text-mist"> / nuit</span>
+              <span className="text-ink"> {site.currency}</span>
+              <span className="text-ink/70"> / nuit</span>
             </p>
-            <span className="font-spec text-ember transition-transform group-hover:translate-x-1">
+            <span className="font-spec text-ink transition-transform group-hover:translate-x-1">
               Voir →
             </span>
           </div>

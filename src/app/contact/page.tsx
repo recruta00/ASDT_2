@@ -50,14 +50,14 @@ export default function ContactPage() {
       <Container className="pb-24 pt-14">
         <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
           {/* Huge WhatsApp CTA (primary) */}
-          <div className="glow-ember texture-noise relative flex flex-col justify-center overflow-hidden rounded-[24px] border border-[color:var(--line)] bg-ink p-8 md:p-10">
+          <div className="glow-ember texture-noise relative flex flex-col justify-center overflow-hidden rounded-[24px] bg-abyss p-8 md:p-10">
             <span className="grid h-14 w-14 place-items-center rounded-2xl bg-ember text-abyss">
               <WhatsAppIcon className="h-8 w-8" />
             </span>
             <h2 className="font-display mt-5 text-2xl font-bold text-bone">
               Écrivez-nous sur WhatsApp
             </h2>
-            <p className="mt-2 text-mist">
+            <p className="mt-2 text-bone/70">
               La façon la plus rapide de réserver ou de poser une question. {site.whatsappResponse}.
             </p>
             <ButtonAnchor
@@ -76,11 +76,11 @@ export default function ContactPage() {
             {details.map(({ Icon, label, value, href }) => {
               const inner = (
                 <div className="card-glass h-full p-6">
-                  <span className="grid h-10 w-10 place-items-center rounded-xl border border-[color:var(--line)] text-ember">
+                  <span className="grid h-10 w-10 place-items-center rounded-xl border border-ink/10 text-ember">
                     <Icon className="h-5 w-5" />
                   </span>
-                  <p className="font-spec mt-4 text-mist">{label}</p>
-                  <p className="mt-1 text-bone">{value}</p>
+                  <p className="font-spec mt-4 text-ink/70">{label}</p>
+                  <p className="mt-1 text-ink">{value}</p>
                 </div>
               );
               return (
@@ -106,7 +106,7 @@ export default function ContactPage() {
         {/* Map embed — appears only when a Google Maps embed URL is set in
             src/config/site.ts (site.mapEmbedUrl). Left empty by default. */}
         {site.mapEmbedUrl ? (
-          <div className="mt-10 overflow-hidden rounded-[24px] border border-[color:var(--line)]">
+          <div className="mt-10 overflow-hidden rounded-[24px] border border-ink/10">
             <iframe
               src={site.mapEmbedUrl}
               title={`Localisation de ${site.name} à ${site.city}`}

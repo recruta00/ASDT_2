@@ -29,16 +29,17 @@ export default function AProposPage() {
       />
       <Container className="pb-24 pt-14">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div className="max-w-xl space-y-5 text-mist">
+          <div className="max-w-xl space-y-5 text-ink/70">
             <p>
               Recruta Rent est née d&apos;une idée simple : à {site.city}, louer une
               moto ou trouver un beau logement devrait être aussi facile qu&apos;un
               message à un ami sur place.
             </p>
             <p>
-              D&apos;un côté, la <span className="text-bone">route</span> — le plaisir
-              de filer vers l&apos;Atlas au lever du jour, casque sur la tête. De
-              l&apos;autre, la <span className="text-bone">maison</span> — le bonheur de
+              D&apos;un côté, la <span className="font-medium text-ink">route</span> — le plaisir
+              de filer vers l&apos;Atlas au lever du jour, au guidon d&apos;une machine
+              que nous avons choisie entre toutes : le Honda X-ADV 750. De
+              l&apos;autre, la <span className="font-medium text-ink">maison</span> — le bonheur de
               poser ses valises dans une adresse choisie, du studio au Guéliz à la villa
               avec piscine dans la Palmeraie.
             </p>
@@ -49,7 +50,7 @@ export default function AProposPage() {
               besoin. Pas de mauvaise surprise, pas de jargon — juste des locations bien
               faites et des séjours réussis.
             </p>
-            <p className="text-bone">Bienvenue chez Recruta Rent.</p>
+            <p className="font-medium text-ink">Bienvenue chez Recruta Rent.</p>
           </div>
 
           {/* Photo slot — line-art placeholder until a real photo is added. */}
@@ -62,26 +63,26 @@ export default function AProposPage() {
 
         <section aria-labelledby="values-title" className="mt-20">
           <Eyebrow>Nos valeurs</Eyebrow>
-          <h2 id="values-title" className="font-display mt-3 text-2xl font-bold text-bone">
-            Ce à quoi vous pouvez compter
+          <h2 id="values-title" className="font-display mt-3 text-2xl font-bold text-ink">
+            Ce sur quoi vous pouvez compter
           </h2>
           <span aria-hidden className="seam-rule mt-4" />
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {values.map((v) => (
               <div key={v.title} className="card-glass p-7">
-                <h3 className="font-display text-lg font-bold text-bone">{v.title}</h3>
-                <p className="mt-2 text-mist">{v.body}</p>
+                <h3 className="font-display text-lg font-bold text-ink">{v.title}</h3>
+                <p className="mt-2 text-ink/70">{v.body}</p>
               </div>
             ))}
           </div>
         </section>
 
         <section aria-labelledby="coverage-title" className="mt-16">
-          <h2 id="coverage-title" className="font-spec text-mist">
+          <h2 id="coverage-title" className="font-spec text-ink/70">
             Zone de couverture
           </h2>
-          <p className="mt-3 max-w-2xl text-bone">
-            Nous livrons motos et scooters, et accueillons nos hôtes, dans tout{" "}
+          <p className="mt-3 max-w-2xl text-ink/80">
+            Nous livrons le X-ADV, et accueillons nos hôtes, dans tout{" "}
             {site.city} : Guéliz, Hivernage, médina, Palmeraie et environs. Une adresse
             en dehors de ces zones ? Écrivez-nous, on trouve une solution.
           </p>

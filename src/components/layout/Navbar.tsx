@@ -8,7 +8,7 @@ import { cx } from "@/lib/cx";
 import { Logo } from "@/components/ui/Logo";
 import { ButtonLink } from "@/components/ui/Button";
 
-/** Sticky glass navbar: transparent over hero → blur + hairline after 80px (§5.5). */
+/** Sticky light-glass navbar: frosted bone, hairline after 80px scroll (§5.5). */
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,17 +32,17 @@ export function Navbar() {
   return (
     <header
       className={cx(
-        "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
+        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled || menuOpen
-          ? "border-b border-[color:var(--line)] bg-abyss/80 backdrop-blur-md"
-          : "border-b border-transparent",
+          ? "border-b border-ink/10 bg-bone/85 shadow-[0_4px_24px_-12px_rgba(20,27,46,0.15)] backdrop-blur-md"
+          : "border-b border-transparent bg-bone/60 backdrop-blur-md",
       )}
     >
       <nav
         aria-label="Navigation principale"
-        className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3.5 md:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 md:px-8"
       >
-        <Logo />
+        <Logo tone="light" />
 
         <ul className="hidden items-center gap-7 lg:flex">
           {primaryNav.map((item) => {
@@ -53,8 +53,8 @@ export function Navbar() {
                   href={item.href}
                   aria-current={active ? "page" : undefined}
                   className={cx(
-                    "text-sm transition-colors hover:text-bone",
-                    active ? "text-bone" : "text-mist",
+                    "text-sm transition-colors hover:text-ink",
+                    active ? "font-medium text-ink" : "text-ink/70",
                   )}
                 >
                   {item.label}
@@ -74,7 +74,7 @@ export function Navbar() {
             aria-controls="mobile-menu"
             aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             onClick={() => setMenuOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-[color:var(--line)] text-bone lg:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-ink/15 text-ink lg:hidden"
           >
             <span aria-hidden className="text-lg">
               {menuOpen ? "✕" : "☰"}
@@ -87,14 +87,14 @@ export function Navbar() {
       <div
         id="mobile-menu"
         hidden={!menuOpen}
-        className="border-t border-[color:var(--line)] bg-abyss/95 px-5 py-4 lg:hidden"
+        className="border-t border-ink/10 bg-bone/95 px-5 py-4 lg:hidden"
       >
         <ul className="flex flex-col gap-1">
           {primaryNav.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="block rounded-lg px-3 py-3 text-base text-bone hover:bg-bone/5"
+                className="block rounded-lg px-3 py-3 text-base text-ink hover:bg-ink/5"
               >
                 {item.label}
               </Link>

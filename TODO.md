@@ -1,7 +1,6 @@
 # TODO — à compléter avant mise en ligne
 
-Ce fichier liste tout ce qui utilise une valeur de démonstration (placeholder) et
-doit être confirmé. La plupart se règle dans **un seul fichier** : `src/config/site.ts`.
+La plupart des valeurs se règlent dans **un seul fichier** : `src/config/site.ts`.
 
 ## 1. Coordonnées & informations agence — `src/config/site.ts`
 
@@ -17,38 +16,46 @@ doit être confirmé. La plupart se règle dans **un seul fichier** : `src/confi
 | `openingHours` / `openingHoursLabel` | Lun–Sam 9h–20h · Dim 10h–18h | confirmer les horaires réels |
 | `mapEmbedUrl` | *(vide)* | coller une URL d'intégration Google Maps pour afficher la carte sur `/contact` |
 
-## 2. Prix & données — à confirmer
+## 2. Prix & données — à confirmer (`// TODO: confirm` dans le code)
 
-Tous les prix de démonstration sont marqués `// TODO: confirm` dans le code.
-
-- **Motos** — `src/data/bikes.ts` : `pricePerDay` et `deposit` des 6 véhicules.
+- **X-ADV 750** — `src/data/bikes.ts` : `pricePerDay` (800 MAD ?) et `deposit` (8 000 MAD ?),
+  politique kilométrique, âge minimum (21 ans dans la FAQ/conditions).
 - **Logements** — `src/data/properties.ts` : `pricePerNight` et `deposit` des 6 logements.
-- Vérifier aussi caractéristiques (année, cylindrée, chambres, surface, équipements).
 
-## 3. Photos (optionnel — le site est fini sans)
+## 3. Créatifs Higgsfield restants (limite journalière atteinte — à relancer)
 
-Des visuels en traits SVG s'affichent tant qu'aucune photo n'est fournie.
+Le compte a atteint sa limite de génération quotidienne pendant la production.
+Dès qu'elle est réinitialisée (~2 crédits/image, ~45 crédits la vidéo) :
 
-- Déposer les fichiers dans `public/images/bikes/` et `public/images/stays/`.
-- Renseigner le tableau `images: []` de chaque élément dans `bikes.ts` / `properties.ts`.
-- (Optionnel) Génération d'un jeu de photos cinématiques via Higgsfield MCP — à valider.
+- **Reshoot du hero nocturne X-ADV** : la première image de nuit générée montrait
+  l'ancienne face avant (double optique ronde). Regénérer avec la photo de référence
+  du client (X-ADV 2026 noir, bandeaux LED fins) importée comme référence d'identité.
+  Média déjà importé côté Higgsfield : `media_id 5a13b08c-8e07-4bf5-9f3e-1ef2b7180205`
+  (le shot studio, conforme au modèle 2026).
+- **Vidéo d'ambiance du hero** (Seedance 2.0, ~45 crédits, 5 s, 16:9, 1080p, silencieuse) :
+  prompt prêt = « tracking shot du X-ADV noir traversant une rue de Marrakech la nuit,
+  lanternes chaudes, traînées orange » avec la même référence d'identité.
+  Déposer le mp4 dans `public/videos/hero-xadv.mp4` puis renseigner
+  `heroVideoSrc: "/videos/hero-xadv.mp4"` dans `src/config/site.ts` — l'emplacement
+  est déjà câblé (desktop, lazy, reduced-motion géré).
+- **Photos des 6 logements + photo « à propos »** (~14 crédits) : mêmes prompts
+  cinématiques que la villa (voir style suffix dans l'historique de commits).
 
-## 4. Contrats de location (PDF)
+## 4. Photos réelles (optionnel)
+
+Déposer dans `public/images/bikes/` ou `public/images/stays/` puis renseigner
+`images: []` de l'élément concerné. Les visuels en traits SVG comblent les manques.
+
+## 5. Contrats de location (PDF)
 
 - Déposer les PDF dans `public/contrats/`.
-- Dé-commenter le bloc de liens de téléchargement dans `src/app/conditions/page.tsx`.
+- Dé-commenter le bloc de liens dans `src/app/conditions/page.tsx`.
 
-## 5. Textes légaux
+## 6. Textes légaux
 
-- Faire relire `/conditions` et `/confidentialite` par une personne compétente
-  (mentions légales locales, politique de confidentialité).
-
-## 6. Choix de la direction de design
-
-- Comparer `/` (A — Showroom Nocturne) et `/direction-b` (B — Éditorial) via le
-  sélecteur flottant, puis conserver la direction retenue (voir README).
+- Faire relire `/conditions` et `/confidentialite` (mentions légales locales).
 
 ## 7. Bilingue (plus tard, non bloquant)
 
-- Une version anglaise (`/en/...`) + `hreflang` est préparée par `src/config/routes.ts`
-  mais n'est pas implémentée en v1. À activer sur demande.
+- La version anglaise (`/en/...`) + `hreflang` est préparée par `src/config/routes.ts`
+  mais n'est pas implémentée en v1.

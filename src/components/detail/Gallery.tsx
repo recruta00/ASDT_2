@@ -22,7 +22,7 @@ export function Gallery({
 
   return (
     <div>
-      <div className="overflow-hidden rounded-[20px] border border-[color:var(--line)]">
+      <div className="overflow-hidden rounded-[20px] border border-ink/10">
         <Media
           kind={kind}
           src={hasPhotos ? images[active] : undefined}
@@ -44,7 +44,7 @@ export function Gallery({
               aria-current={active === i}
               className={cx(
                 "overflow-hidden rounded-xl border transition-colors",
-                active === i ? "border-ember" : "border-[color:var(--line)] hover:border-bone/40",
+                active === i ? "border-ember" : "border-ink/10 hover:border-ink/40",
               )}
             >
               <Media

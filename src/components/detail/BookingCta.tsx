@@ -18,12 +18,12 @@ export function BookingCta({
   return (
     <div className="card-glass p-6">
       <p className="flex items-baseline gap-2">
-        <span className="font-display text-3xl font-bold text-ember">
+        <span className="font-display text-3xl font-bold text-ink">
           {formatPrice(price, site.currency)}
         </span>
-        <span className="font-spec text-mist">/ {unit}</span>
+        <span className="font-spec text-ink/70">/ {unit}</span>
       </p>
-      <p className="mt-1.5 font-spec text-mist">
+      <p className="mt-1.5 font-spec text-ink/70">
         Caution {formatPrice(deposit, site.currency)}
       </p>
       <ButtonAnchor
@@ -35,7 +35,7 @@ export function BookingCta({
       >
         Réserver sur WhatsApp
       </ButtonAnchor>
-      <p className="mt-3 text-center font-spec text-mist">
+      <p className="mt-3 text-center font-spec text-ink/70">
         {site.whatsappResponse} · sans engagement
       </p>
     </div>

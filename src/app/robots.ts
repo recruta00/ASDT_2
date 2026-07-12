@@ -7,8 +7,6 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      // Temporary design-comparison route; not for indexing.
-      disallow: ["/direction-b"],
     },
     sitemap: `${base}/sitemap.xml`,
     host: base,

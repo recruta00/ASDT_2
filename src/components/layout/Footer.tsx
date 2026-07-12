@@ -11,7 +11,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-14 md:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="max-w-xs">
-            <Logo />
+            <Logo tone="dark" />
             <p className="mt-4 text-sm text-mist">{site.tagline}</p>
             <p className="mt-4 font-spec text-mist">
               {site.city} · {site.country}

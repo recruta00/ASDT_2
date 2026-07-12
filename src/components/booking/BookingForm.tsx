@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { site } from "@/config/site";
 import { ButtonAnchor } from "@/components/ui/Button";
 
@@ -12,7 +12,8 @@ function buildMessage(customer: string, item: string, from: string, to: string) 
 }
 
 /** Booking form for one category — builds the WhatsApp deep link + email fallback.
- *  No backend in v1; a server action / API would slot in where noted in the README. */
+ *  Ids are instance-scoped via useId because /reserver mounts two of these inside
+ *  the tab switcher. No backend in v1; a server action would slot in here later. */
 export function BookingForm({
   options,
   unitLabel,
@@ -20,6 +21,7 @@ export function BookingForm({
   options: BookingOption[];
   unitLabel: string;
 }) {
+  const uid = useId();
   const [item, setItem] = useState(options[0]?.name ?? "");
   const [customer, setCustomer] = useState("");
   const [from, setFrom] = useState("");
@@ -31,18 +33,18 @@ export function BookingForm({
   const mailUrl = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
 
   const field =
-    "w-full rounded-xl border border-[color:var(--line)] bg-abyss px-4 py-3 text-bone placeholder:text-mist focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ember";
-  const label = "font-spec text-mist";
+    "w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-ink placeholder:text-ink/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ember";
+  const label = "font-spec text-ink/70";
 
   return (
     <div className="card-glass p-6 md:p-8">
       <div className="grid gap-5">
         <div className="grid gap-2">
-          <label htmlFor="bk-item" className={label}>
+          <label htmlFor={`${uid}-item`} className={label}>
             {unitLabel}
           </label>
           <select
-            id="bk-item"
+            id={`${uid}-item`}
             value={item}
             onChange={(e) => setItem(e.target.value)}
             className={field}
@@ -57,11 +59,11 @@ export function BookingForm({
 
         <div className="grid gap-5 sm:grid-cols-2">
           <div className="grid gap-2">
-            <label htmlFor="bk-from" className={label}>
+            <label htmlFor={`${uid}-from`} className={label}>
               Du
             </label>
             <input
-              id="bk-from"
+              id={`${uid}-from`}
               type="date"
               value={from}
               onChange={(e) => setFrom(e.target.value)}
@@ -69,11 +71,11 @@ export function BookingForm({
             />
           </div>
           <div className="grid gap-2">
-            <label htmlFor="bk-to" className={label}>
+            <label htmlFor={`${uid}-to`} className={label}>
               Au
             </label>
             <input
-              id="bk-to"
+              id={`${uid}-to`}
               type="date"
               value={to}
               onChange={(e) => setTo(e.target.value)}
@@ -83,11 +85,11 @@ export function BookingForm({
         </div>
 
         <div className="grid gap-2">
-          <label htmlFor="bk-name" className={label}>
+          <label htmlFor={`${uid}-name`} className={label}>
             Votre nom (facultatif)
           </label>
           <input
-            id="bk-name"
+            id={`${uid}-name`}
             type="text"
             value={customer}
             onChange={(e) => setCustomer(e.target.value)}
@@ -110,7 +112,7 @@ export function BookingForm({
             Envoyer par e-mail
           </ButtonAnchor>
         </div>
-        <p className="text-center font-spec text-mist">
+        <p className="text-center font-spec text-ink/70">
           Aucun paiement en ligne — on confirme ensemble la disponibilité.
         </p>
       </div>

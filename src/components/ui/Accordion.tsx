@@ -23,7 +23,7 @@ export function Accordion({
   const baseId = useId();
 
   return (
-    <div className={cx("divide-y divide-[color:var(--line)]", className)}>
+    <div className={cx("divide-y divide-ink/10", className)}>
       {items.map((item, i) => {
         const isOpen = open === i;
         const btnId = `${baseId}-btn-${i}`;
@@ -39,13 +39,13 @@ export function Accordion({
                 onClick={() => setOpen(isOpen ? null : i)}
                 className="flex w-full items-center justify-between gap-4 py-5 text-left"
               >
-                <span className="text-base font-medium text-bone">
+                <span className="text-base font-medium text-ink">
                   {item.question}
                 </span>
                 <span
                   aria-hidden
                   className={cx(
-                    "grid h-7 w-7 shrink-0 place-items-center rounded-full border border-[color:var(--line)] text-ember transition-transform duration-200",
+                    "grid h-7 w-7 shrink-0 place-items-center rounded-full border border-ink/15 text-ember transition-transform duration-200",
                     isOpen && "rotate-45",
                   )}
                 >
@@ -58,7 +58,7 @@ export function Accordion({
               role="region"
               aria-labelledby={btnId}
               hidden={!isOpen}
-              className="pb-5 text-mist"
+              className="pb-5 text-ink/70"
             >
               {item.answer}
             </div>

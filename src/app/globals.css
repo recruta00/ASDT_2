@@ -36,7 +36,7 @@
 }
 
 * {
-  border-color: var(--line);
+  border-color: var(--line-ink);
 }
 
 html {
@@ -45,8 +45,10 @@ html {
 }
 
 body {
-  background: var(--abyss);
-  color: var(--bone);
+  /* Light-dominant scheme: bone surfaces, ink text; the dark cinematic
+     photography lives in the hero, final CTA band and footer as bookends. */
+  background: var(--bone);
+  color: var(--ink);
   font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 1.0625rem;
   line-height: 1.7;
@@ -134,9 +136,10 @@ body {
 }
 
 .card-glass {
-  background: var(--ink);
-  border: 1px solid var(--line);
+  background: #ffffff;
+  border: 1px solid var(--line-ink);
   border-radius: var(--radius);
+  box-shadow: 0 2px 12px -6px rgba(20, 27, 46, 0.08);
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
@@ -145,9 +148,8 @@ body {
 @media (hover: hover) {
   .card-glass:hover {
     transform: translateY(-4px);
-    border-color: rgba(248, 106, 44, 0.35);
-    box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(6px);
+    border-color: rgba(248, 106, 44, 0.45);
+    box-shadow: 0 16px 40px -14px rgba(20, 27, 46, 0.25);
   }
 }
 
@@ -191,6 +193,43 @@ body {
 }
 
 .rr-rise { animation: rr-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* Hero photography — imperceptibly slow push-in, killed under reduced motion. */
+@keyframes rr-kenburns {
+  from { transform: scale(1); }
+  to { transform: scale(1.07); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rr-kenburns { animation: rr-kenburns 24s ease-in-out infinite alternate; }
+}
+
+/* The Seam's soft breathing glow. */
+@keyframes rr-seam-glow {
+  0%, 100% { filter: drop-shadow(0 0 8px rgba(248, 106, 44, 0.5)); }
+  50% { filter: drop-shadow(0 0 18px rgba(248, 106, 44, 0.85)); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rr-seam-glow { animation: rr-seam-glow 4s ease-in-out infinite; }
+}
+
+/* Trust strip marquee — continuous drift; pauses on hover or via the visible
+   pause toggle (WCAG 2.2.2); never moves under reduced motion. */
+@keyframes rr-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.rr-marquee-track { display: flex; width: max-content; }
+@media (prefers-reduced-motion: no-preference) {
+  .rr-marquee-track { animation: rr-marquee 28s linear infinite; }
+  .rr-marquee:hover .rr-marquee-track,
+  .rr-marquee-paused .rr-marquee-track { animation-play-state: paused; }
+}
+
+/* Card / gallery imagery — gentle zoom on hover. */
+.rr-zoom { transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .rr-zoom-parent:hover .rr-zoom { transform: scale(1.05); }
+}
 
 /* Scroll-reveal via CSS scroll-driven animations — zero JS. Progressive
    enhancement: without support or under reduced motion, content is just visible. */

@@ -3,8 +3,8 @@ import { cx } from "@/lib/cx";
 import { Eyebrow } from "./Eyebrow";
 
 /**
- * Section header with the Seam as its underline (spec §7.1.3).
- * Renders an eyebrow, an <h2>, and an optional lead paragraph.
+ * Section header with the Seam as its underline (spec §7.1.3), light-surface
+ * styling: ink display title, ink/70 lead, ember Seam rule.
  */
 export function SectionHeader({
   eyebrow,
@@ -29,10 +29,14 @@ export function SectionHeader({
         className,
       )}
     >
-      {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
+      {eyebrow ? (
+        <Eyebrow className={align === "center" ? "justify-center" : undefined}>
+          {eyebrow}
+        </Eyebrow>
+      ) : null}
       <h2
         id={titleId}
-        className="font-display mt-3 text-[clamp(2rem,4vw,3.25rem)] font-bold text-bone"
+        className="font-display mt-3 text-[clamp(2rem,4vw,3.25rem)] font-bold text-ink"
       >
         {title}
       </h2>
@@ -41,7 +45,7 @@ export function SectionHeader({
         aria-hidden
         className={cx("seam-rule mt-5", align === "center" && "mx-auto")}
       />
-      {lead ? <p className="mt-5 text-mist">{lead}</p> : null}
+      {lead ? <p className="mt-5 text-ink/70">{lead}</p> : null}
     </div>
   );
 }

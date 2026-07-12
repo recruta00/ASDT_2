@@ -30,7 +30,7 @@ export function TabSwitcher({ tabs }: { tabs: Tab[] }) {
       <div
         role="tablist"
         aria-label="Type de location"
-        className="inline-flex gap-2 rounded-full border border-[color:var(--line)] bg-ink/60 p-1.5"
+        className="inline-flex gap-2 rounded-full border border-ink/10 bg-white p-1.5"
       >
         {tabs.map((tab, i) => {
           const selected = active === i;
@@ -49,7 +49,7 @@ export function TabSwitcher({ tabs }: { tabs: Tab[] }) {
               onKeyDown={(e) => onKeyDown(e, i)}
               className={cx(
                 "relative rounded-full px-6 py-2.5 text-sm font-medium transition-colors",
-                selected ? "text-abyss" : "text-mist hover:text-bone",
+                selected ? "text-abyss" : "text-ink/70 hover:text-ink",
               )}
             >
               {selected && (

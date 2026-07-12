@@ -16,10 +16,10 @@ function CheckIcon() {
 export function Checklist({ title, items }: { title: string; items: string[] }) {
   return (
     <div>
-      <h2 className="font-display text-xl font-bold text-bone">{title}</h2>
+      <h2 className="font-display text-xl font-bold text-ink">{title}</h2>
       <ul className="mt-5 grid gap-3 sm:grid-cols-2">
         {items.map((item) => (
-          <li key={item} className="flex items-start gap-3 text-bone/90">
+          <li key={item} className="flex items-start gap-3 text-ink/80">
             <CheckIcon />
             <span>{item}</span>
           </li>

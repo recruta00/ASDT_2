@@ -12,7 +12,7 @@ export const site = {
   tagline: "Roulez libre. Vivez grand.",
   taglineEn: "Ride the city. Stay in style.",
   description:
-    "Location de motos, scooters, appartements et villas à Marrakech. Réservation rapide sur WhatsApp, caution transparente, contrats clairs.",
+    "Location du Honda X-ADV 750, d'appartements et de villas à Marrakech. Réservation rapide sur WhatsApp, caution transparente, contrats clairs.",
 
   city: "Marrakech",
   country: "Maroc",
@@ -46,6 +46,10 @@ export const site = {
 
   // Response-time claim — kept honest per the spec voice rules.
   whatsappResponse: "Réponse rapide sur WhatsApp",
+
+  // Ambient hero video (RIDE panel, desktop only). Drop an mp4 into /public/videos
+  // and set the path here, e.g. "/videos/hero-xadv.mp4". Empty = poster image only.
+  heroVideoSrc: "", // TODO: generate via Higgsfield once the daily limit resets (see TODO.md)
 } as const;
 
 export type Site = typeof site;

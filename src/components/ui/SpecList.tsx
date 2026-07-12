@@ -12,10 +12,10 @@ export function SpecList({
   className?: string;
 }) {
   return (
-    <p className={cx("font-spec text-mist", className)}>
+    <p className={cx("font-spec text-ink/70", className)}>
       {items.map((item, i) => (
         <span key={i}>
-          {i > 0 && <span className="mx-1.5 text-ember/70">·</span>}
+          {i > 0 && <span className="mx-1.5 text-ember">·</span>}
           {item}
         </span>
       ))}

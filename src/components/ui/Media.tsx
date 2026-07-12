@@ -42,7 +42,7 @@ export function Media({
           fill
           sizes={sizes}
           priority={priority}
-          className="object-cover"
+          className="rr-zoom object-cover"
         />
       ) : (
         <div

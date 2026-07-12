@@ -9,7 +9,7 @@ export const bikeConditions: AccordionItem[] = [
   {
     question: "Permis & âge minimum",
     answer:
-      "Permis adapté à la cylindrée (A1 pour un 125, A2/A au-delà) et âge minimum de 21 ans. Une pièce d'identité valide est demandée à la remise.",
+      "Le X-ADV 750 demande un permis moto A2 ou A en cours de validité et un âge minimum de 21 ans. Une pièce d'identité valide est demandée à la remise.",
   },
   {
     question: "Caution",

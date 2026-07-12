@@ -8,15 +8,15 @@ export const faq: FaqEntry[] = [
   // --- Motos ---
   {
     group: "Motos",
-    question: "Quels documents faut-il pour louer une moto ou un scooter ?",
+    question: "Quels documents faut-il pour louer le X-ADV 750 ?",
     answer:
-      "Une pièce d'identité ou un passeport en cours de validité et un permis de conduire adapté à la cylindrée. Pour un 125 cm³, le permis A1 (ou équivalent) suffit ; pour les motos plus puissantes, un permis A2 ou A est requis. Nous vérifions simplement le permis avant la remise des clés.",
+      "Une pièce d'identité ou un passeport en cours de validité et un permis moto A2 ou A. La boîte DCT est automatique — aucun embrayage à gérer — mais le permis moto reste obligatoire pour un 745 cm³. Nous vérifions simplement le permis avant la remise des clés.",
   },
   {
     group: "Motos",
     question: "Le casque est-il fourni ?",
     answer:
-      "Oui, un casque homologué est inclus avec chaque location, ainsi qu'un antivol. Un deuxième casque pour passager est disponible sur demande, sans supplément.",
+      "Oui, un casque homologué est inclus avec chaque location, ainsi qu'un antivol. Un deuxième casque pour votre passager est offert, sans supplément.",
   },
   {
     group: "Motos",
@@ -32,9 +32,9 @@ export const faq: FaqEntry[] = [
   },
   {
     group: "Motos",
-    question: "Livrez-vous les véhicules à mon hôtel ou riad ?",
+    question: "Livrez-vous la moto à mon hôtel ou riad ?",
     answer:
-      "Oui, nous livrons et récupérons les motos et scooters à Marrakech (Guéliz, Hivernage, médina et environs). Indiquez-nous votre adresse au moment de la réservation pour confirmer la zone et l'horaire.",
+      "Oui, nous livrons et récupérons le X-ADV à Marrakech (Guéliz, Hivernage, médina et environs). Indiquez-nous votre adresse au moment de la réservation pour confirmer la zone et l'horaire.",
   },
 
   // --- Séjours ---

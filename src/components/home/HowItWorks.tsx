@@ -6,7 +6,7 @@ const steps = [
   {
     n: "01",
     title: "Choisissez",
-    body: "Parcourez la flotte ou les logements et repérez ce qui vous convient. Les prix et les cautions sont affichés clairement.",
+    body: "Découvrez la moto ou parcourez les logements, et repérez ce qui vous convient. Les prix et les cautions sont affichés clairement.",
   },
   {
     n: "02",
@@ -23,7 +23,7 @@ const steps = [
 /** How it works — a genuine 3-step sequence, so numbered markers are earned (§7.1.5). */
 export function HowItWorks() {
   return (
-    <section aria-labelledby="how-title" className="border-y border-[color:var(--line)] bg-ink/30 py-20 md:py-28">
+    <section aria-labelledby="how-title" className="border-y border-ink/10 bg-white/50 py-20 md:py-28">
       <Container>
         <SectionHeader
           eyebrow="Simple, humain, rapide"
@@ -35,13 +35,13 @@ export function HowItWorks() {
           {steps.map((step, i) => (
             <MotionReveal as="li" key={step.n} delay={i * 0.1} className="relative">
               <div className="flex items-baseline gap-4">
-                <span className="font-spec text-2xl text-ember">{step.n}</span>
+                <span className="font-spec text-2xl font-medium text-ink">{step.n}</span>
                 <span aria-hidden className="seam-rule mt-3 flex-1 !w-auto" />
               </div>
-              <h3 className="font-display mt-5 text-xl font-bold text-bone">
+              <h3 className="font-display mt-5 text-xl font-bold text-ink">
                 {step.title}
               </h3>
-              <p className="mt-3 text-mist">{step.body}</p>
+              <p className="mt-3 text-ink/70">{step.body}</p>
             </MotionReveal>
           ))}
         </ol>

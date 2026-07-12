@@ -7,17 +7,17 @@ export type Crumb = { label: string; href?: string };
 export function Breadcrumb({ items }: { items: Crumb[] }) {
   return (
     <nav aria-label="Fil d'Ariane" className="mb-6">
-      <ol className="flex flex-wrap items-center gap-2 font-spec text-mist">
+      <ol className="flex flex-wrap items-center gap-2 font-spec text-ink/70">
         {items.map((item, i) => (
           <Fragment key={i}>
-            {i > 0 && <li aria-hidden className="text-ember/60">/</li>}
+            {i > 0 && <li aria-hidden className="text-ember">/</li>}
             <li>
               {item.href ? (
-                <Link href={item.href} className="transition-colors hover:text-bone">
+                <Link href={item.href} className="transition-colors hover:text-ink">
                   {item.label}
                 </Link>
               ) : (
-                <span className="text-bone/80" aria-current="page">
+                <span className="text-ink" aria-current="page">
                   {item.label}
                 </span>
               )}

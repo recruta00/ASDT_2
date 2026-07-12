@@ -56,7 +56,7 @@ export default async function StayDetail({
   ];
 
   return (
-    <main id="main" className="texture-noise relative overflow-hidden pt-28 md:pt-32">
+    <main id="main" className="relative pt-28 md:pt-32">
       <JsonLd data={[propertyAccommodation(property), breadcrumbList(crumbs)]} />
       <Container>
         <Breadcrumb items={crumbs} />
@@ -70,11 +70,11 @@ export default async function StayDetail({
 
           <div>
             <Eyebrow>Location {kind} {site.city}</Eyebrow>
-            <h1 className="font-display mt-3 text-[clamp(2rem,4vw,3rem)] font-bold text-bone">
+            <h1 className="font-display mt-3 text-[clamp(2rem,4vw,3rem)] font-bold text-ink">
               {property.name}
             </h1>
             <SpecList items={propertyCardSpecs(property)} className="mt-3" />
-            <p className="mt-5 text-mist">{property.description}</p>
+            <p className="mt-5 text-ink/70">{property.description}</p>
 
             <div className="mt-8">
               <BookingCta
@@ -94,7 +94,7 @@ export default async function StayDetail({
         <div className="mt-16 grid gap-12 lg:grid-cols-2">
           <Checklist title="Équipements & services" items={property.amenities} />
           <div>
-            <h2 className="font-display text-xl font-bold text-bone">Conditions</h2>
+            <h2 className="font-display text-xl font-bold text-ink">Conditions</h2>
             <Accordion items={stayConditions} className="mt-4" />
             <ButtonLink href={routes.conditions} variant="secondary" className="mt-6">
               Voir les conditions complètes
@@ -105,7 +105,7 @@ export default async function StayDetail({
 
       {related.length > 0 ? (
         <Container className="mt-20 mb-24">
-          <h2 className="font-display text-2xl font-bold text-bone">
+          <h2 className="font-display text-2xl font-bold text-ink">
             D&apos;autres adresses à découvrir
           </h2>
           <span aria-hidden className="seam-rule mt-4" />

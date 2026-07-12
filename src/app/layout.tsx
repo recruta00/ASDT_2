@@ -48,6 +48,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   keywords: [
     `location moto ${site.city}`,
+    `location Honda X-ADV 750 ${site.city}`,
     `location scooter ${site.city}`,
     `location villa ${site.city}`,
     `location appartement courte durée ${site.city}`,
@@ -63,22 +64,22 @@ export const metadata: Metadata = {
     url: site.domain,
     images: [
       {
-        url: "/images/brand/og.png",
+        url: "/images/brand/og.jpg",
         width: 1200,
         height: 630,
-        alt: `${site.name} — location moto & villas à ${site.city}`,
+        alt: `${site.name} — location Honda X-ADV 750 & villas à ${site.city}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/images/brand/og.png"],
+    images: ["/images/brand/og.jpg"],
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0B1020",
-  colorScheme: "dark",
+  themeColor: "#F7F6F2",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -89,9 +90,10 @@ export default function RootLayout({
   return (
     <html
       lang={site.locale}
+      data-scroll-behavior="smooth"
       className={`${unbounded.variable} ${inter.variable} ${plexMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-abyss text-bone">
+      <body className="min-h-full flex flex-col bg-bone text-ink">
         <a href="#main" className="skip-link">
           Aller au contenu
         </a>
