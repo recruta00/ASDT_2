@@ -22,22 +22,19 @@ La plupart des valeurs se règlent dans **un seul fichier** : `src/config/site.t
   politique kilométrique, âge minimum (21 ans dans la FAQ/conditions).
 - **Logements** — `src/data/properties.ts` : `pricePerNight` et `deposit` des 6 logements.
 
-## 3. Créatifs Higgsfield restants (limite journalière atteinte — à relancer)
+## 3. Créatifs Higgsfield restants (limite journalière — à relancer demain)
 
-Le compte a atteint sa limite de génération quotidienne pendant la production.
-Dès qu'elle est réinitialisée (~2 crédits/image, ~45 crédits la vidéo) :
+Fait aujourd'hui : nouveau shot studio du X-ADV « new style » (argent, lames LED,
+fourche or, antibrouillards ronds — job `27608a62-be79-4e36-9de1-78acfdd92f30`) +
+vidéo d'ambiance Seedance branchée en attendant mieux (`public/videos/hero-xadv.mp4`).
 
-- **Reshoot du hero nocturne X-ADV** : la première image de nuit générée montrait
-  l'ancienne face avant (double optique ronde). Regénérer avec la photo de référence
-  du client (X-ADV 2026 noir, bandeaux LED fins) importée comme référence d'identité.
-  Média déjà importé côté Higgsfield : `media_id 5a13b08c-8e07-4bf5-9f3e-1ef2b7180205`
-  (le shot studio, conforme au modèle 2026).
-- **Vidéo d'ambiance du hero** (Seedance 2.0, ~45 crédits, 5 s, 16:9, 1080p, silencieuse) :
-  prompt prêt = « tracking shot du X-ADV noir traversant une rue de Marrakech la nuit,
-  lanternes chaudes, traînées orange » avec la même référence d'identité.
-  Déposer le mp4 dans `public/videos/hero-xadv.mp4` puis renseigner
-  `heroVideoSrc: "/videos/hero-xadv.mp4"` dans `src/config/site.ts` — l'emplacement
-  est déjà câblé (desktop, lazy, reduced-motion géré).
+Dès que la limite quotidienne se réinitialise :
+
+- **Vidéo hero en Veo 3.1 ultra** (le client trouve le rendu Seedance trop « CG ») :
+  `generate_video` modèle `veo3_1`, variant `veo-3-1-preview`, quality `ultra`,
+  6 s, 16:9 (~65 crédits) — prompt photoréaliste prêt dans l'historique (tracking shot
+  X-ADV argent, médina de Marrakech la nuit, lanternes, réalisme documentaire).
+  Remplacer simplement `public/videos/hero-xadv.mp4` par le nouveau fichier.
 - **Photos des 6 logements + photo « à propos »** (~14 crédits) : mêmes prompts
   cinématiques que la villa (voir style suffix dans l'historique de commits).
 
