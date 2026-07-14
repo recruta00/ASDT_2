@@ -253,6 +253,7 @@ def _pick_card(u, fx):
   <div class="row"><span>Payback / Upfront</span><b>{_pay(e)} / {_u(e['upfront'])}</b></div>
   <div class="row"><span>&nbsp;↳ deposit terms</span><b>1mo rent + 1mo caution = {_u(e['advance_rent'] + e['caution_deposit'])}</b></div>
   <div class="row"><span>Break-even occ</span><b>{_pc(u['breakeven_occupancy'])}</b></div>
+  <div class="row"><span>Cleaning / turnover</span><b>{_u(u.get('cleaning_per_stay'))} · {u.get('cleaning_provider',{}).get('name','bTaskee')}</b></div>
   <div class="why">{u['rationale']}</div>
   {link}
 </div>"""
@@ -814,7 +815,7 @@ function reEcon(u, rentDisc, amortM, adrMult, occOvr){
   const occ=occOvr>0?occOvr:u.base_occupancy;
   const gross=adr*30*occ;
   const mgmt=gross*u.mgmt_fee_pct;
-  const clean=(30*occ/u.avg_stay_nights)*P.cleaning_per_stay;
+  const clean=(30*occ/u.avg_stay_nights)*(u.cleaning_per_stay||P.cleaning_per_stay);
   const plat=gross*P.platform_fee_pct;
   const amort=(furn+P.setup_other_usd)/amortM;
   const opex=rent+util+mgmt+clean+plat+amort;

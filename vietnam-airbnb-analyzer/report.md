@@ -1,6 +1,6 @@
 # Vietnam Airbnb Rental-Arbitrage — Executive Report
 
-_Generated 2026-07-06 · FX 26,000 VND/USD · USD basis, VND shown alongside in the dashboard._
+_Generated 2026-07-14 · FX 26,000 VND/USD · USD basis, VND shown alongside in the dashboard._
 
 **What this answers:** which specific buildings/units to lease long-term and sublet short-term across Da Nang, Da Lat, and Ho Chi Minh City for maximum **net** monthly margin — with legal viability as a hard gate.
 
@@ -10,34 +10,34 @@ _Generated 2026-07-06 · FX 26,000 VND/USD · USD basis, VND shown alongside in 
 
 | # | Unit | City | Type | Legal | Net/mo | Margin | Payback | Score |
 |---|------|------|------|-------|-------:|-------:|--------:|------:|
-| 1 | My An Luxury Villa 3BR | Da Nang | villa | CONDITIONAL | $171 | 5% | 75mo | 0.84 |
-| 2 | Saigon Royal 1BR | Ho Chi Minh City | apartment | PASS | $-134 | -13% | — | 0.66 |
-| 3 | An Gia Skyline 2BR | Ho Chi Minh City | apartment | PASS | $-166 | -15% | — | 0.64 |
-| 4 | Xuan Huong Lake house 3BR | Da Lat | villa | CONDITIONAL | $-74 | -5% | — | 0.57 |
-| 5 | Monarchy 2BR | Da Nang | apartment | CONDITIONAL | $-60 | -4% | — | 0.56 |
-| 6 | Icon56 1BR | Ho Chi Minh City | apartment | PASS | $-276 | -28% | — | 0.55 |
-| 7 | F.Home 1BR | Da Nang | apartment | CONDITIONAL | $-88 | -10% | — | 0.53 |
-| 8 | Azura 2BR | Da Nang | apartment | CONDITIONAL | $-150 | -8% | — | 0.51 |
-| 9 | Hillside villa 4BR | Da Lat | villa | CONDITIONAL | $-186 | -10% | — | 0.51 |
-| 10 | Central homestay 2BR | Da Lat | apartment | CONDITIONAL | $-190 | -17% | — | 0.48 |
+| 1 | My An Luxury Villa 3BR | Da Nang | villa | CONDITIONAL | $186 | 5% | 69mo | 0.84 |
+| 2 | Saigon Royal 1BR | Ho Chi Minh City | apartment | PASS | $-67 | -6% | — | 0.70 |
+| 3 | An Gia Skyline 2BR | Ho Chi Minh City | apartment | PASS | $-119 | -11% | — | 0.66 |
+| 4 | Icon56 1BR | Ho Chi Minh City | apartment | PASS | $-209 | -21% | — | 0.59 |
+| 5 | Xuan Huong Lake house 3BR | Da Lat | villa | CONDITIONAL | $-50 | -3% | — | 0.58 |
+| 6 | Monarchy 2BR | Da Nang | apartment | CONDITIONAL | $-25 | -2% | — | 0.57 |
+| 7 | F.Home 1BR | Da Nang | apartment | CONDITIONAL | $-38 | -5% | — | 0.56 |
+| 8 | Azura 2BR | Da Nang | apartment | CONDITIONAL | $-115 | -6% | — | 0.52 |
+| 9 | Central homestay 2BR | Da Lat | apartment | CONDITIONAL | $-134 | -12% | — | 0.51 |
+| 10 | Hillside villa 4BR | Da Lat | villa | CONDITIONAL | $-186 | -10% | — | 0.50 |
 
 ### Best villas / houses
 
-- **My An Luxury Villa 3BR** (Da Nang) — $171/mo net, 5% margin, legal CONDITIONAL. $171/mo net at 5% margin, 75mo payback; Da Nang 3BR My An Luxury Villa — legal conditional (register+tax).
-- **Xuan Huong Lake house 3BR** (Da Lat) — $-74/mo net, -5% margin, legal CONDITIONAL. $-74/mo net at -5% margin, no payback (net<=0); Da Lat 3BR Xuan Huong Lake house — legal conditional (register+tax).
+- **My An Luxury Villa 3BR** (Da Nang) — $186/mo net, 5% margin, legal CONDITIONAL. $186/mo net at 5% margin, 69mo payback; Da Nang 3BR My An Luxury Villa — legal conditional (register+tax).
+- **Xuan Huong Lake house 3BR** (Da Lat) — $-50/mo net, -3% margin, legal CONDITIONAL. $-50/mo net at -3% margin, no payback (net<=0); Da Lat 3BR Xuan Huong Lake house — legal conditional (register+tax).
 - **Hillside villa 4BR** (Da Lat) — $-186/mo net, -10% margin, legal CONDITIONAL. $-186/mo net at -10% margin, no payback (net<=0); Da Lat 4BR Hillside villa — legal conditional (register+tax).
-- **The Point villa 3BR** (Da Nang) — $-367/mo net, -12% margin, legal CONDITIONAL. $-367/mo net at -12% margin, no payback (net<=0); Da Nang 3BR The Point villa — legal conditional (register+tax).
+- **The Point villa 3BR** (Da Nang) — $-352/mo net, -11% margin, legal CONDITIONAL. $-352/mo net at -11% margin, no payback (net<=0); Da Nang 3BR The Point villa — legal conditional (register+tax).
 - **Euro Village villa 4BR** (Da Nang) — $-609/mo net, -16% margin, legal CONDITIONAL. $-609/mo net at -16% margin, no payback (net<=0); Da Nang 4BR Euro Village villa — legal conditional (register+tax).
-- **One River villa 3BR** (Da Nang) — $-603/mo net, -22% margin, legal CONDITIONAL. $-603/mo net at -22% margin, no payback (net<=0); Da Nang 3BR One River villa — legal conditional (register+tax).
+- **One River villa 3BR** (Da Nang) — $-588/mo net, -21% margin, legal CONDITIONAL. $-588/mo net at -21% margin, no payback (net<=0); Da Nang 3BR One River villa — legal conditional (register+tax).
 
 ### Best apartments
 
-- **Saigon Royal 1BR** (Ho Chi Minh City) — $-134/mo net, -13% margin, legal PASS. $-134/mo net at -13% margin, no payback (net<=0); Ho Chi Minh City 1BR Saigon Royal — legal PASS.
-- **An Gia Skyline 2BR** (Ho Chi Minh City) — $-166/mo net, -15% margin, legal PASS. $-166/mo net at -15% margin, no payback (net<=0); Ho Chi Minh City 2BR An Gia Skyline — legal PASS.
-- **Monarchy 2BR** (Da Nang) — $-60/mo net, -4% margin, legal CONDITIONAL. $-60/mo net at -4% margin, no payback (net<=0); Da Nang 2BR Monarchy — legal conditional (register+tax).
-- **Icon56 1BR** (Ho Chi Minh City) — $-276/mo net, -28% margin, legal PASS. $-276/mo net at -28% margin, no payback (net<=0); Ho Chi Minh City 1BR Icon56 — legal PASS.
-- **F.Home 1BR** (Da Nang) — $-88/mo net, -10% margin, legal CONDITIONAL. $-88/mo net at -10% margin, no payback (net<=0); Da Nang 1BR F.Home — legal conditional (register+tax).
-- **Azura 2BR** (Da Nang) — $-150/mo net, -8% margin, legal CONDITIONAL. $-150/mo net at -8% margin, no payback (net<=0); Da Nang 2BR Azura — legal conditional (register+tax).
+- **Saigon Royal 1BR** (Ho Chi Minh City) — $-67/mo net, -6% margin, legal PASS. $-67/mo net at -6% margin, no payback (net<=0); Ho Chi Minh City 1BR Saigon Royal — legal PASS.
+- **An Gia Skyline 2BR** (Ho Chi Minh City) — $-119/mo net, -11% margin, legal PASS. $-119/mo net at -11% margin, no payback (net<=0); Ho Chi Minh City 2BR An Gia Skyline — legal PASS.
+- **Icon56 1BR** (Ho Chi Minh City) — $-209/mo net, -21% margin, legal PASS. $-209/mo net at -21% margin, no payback (net<=0); Ho Chi Minh City 1BR Icon56 — legal PASS.
+- **Monarchy 2BR** (Da Nang) — $-25/mo net, -2% margin, legal CONDITIONAL. $-25/mo net at -2% margin, no payback (net<=0); Da Nang 2BR Monarchy — legal conditional (register+tax).
+- **F.Home 1BR** (Da Nang) — $-38/mo net, -5% margin, legal CONDITIONAL. $-38/mo net at -5% margin, no payback (net<=0); Da Nang 1BR F.Home — legal conditional (register+tax).
+- **Azura 2BR** (Da Nang) — $-115/mo net, -6% margin, legal CONDITIONAL. $-115/mo net at -6% margin, no payback (net<=0); Da Nang 2BR Azura — legal conditional (register+tax).
 
 ## What a budget earns (capital planner)
 
@@ -45,9 +45,9 @@ Greedy deployment into the best **profitable & legal** units (each consumes depo
 
 | Budget | Units funded | Capital deployed | Monthly profit | Annual | Cash-on-cash |
 |--------|-------------:|-----------------:|---------------:|-------:|-------------:|
-| $20,000 | 1 | $12,800 | $171 | $2,053 | 16% |
-| $50,000 | 1 | $12,800 | $171 | $2,053 | 16% |
-| $100,000 | 1 | $12,800 | $171 | $2,053 | 16% |
+| $20,000 | 1 | $12,800 | $186 | $2,233 | 17% |
+| $50,000 | 1 | $12,800 | $186 | $2,233 | 17% |
+| $100,000 | 1 | $12,800 | $186 | $2,233 | 17% |
 
 > **Only 1 of 21 candidate units are profitable & legal at current asking rents** — so above a small threshold, *more capital sits idle*: the binding constraint is **sourcing leases that pencil**, not money. Negotiate each lease toward its **max supportable rent** (in the dashboard leaderboard); many marginal units flip positive with a 10–15% rent cut, 36-month furnishing amortization, or premium ADR.
 

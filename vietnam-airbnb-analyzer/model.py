@@ -38,7 +38,29 @@ SETUP_OTHER_USD = 800        # licensing, photography, listing setup (flat)
 # Per-bedroom monthly utilities (USD).
 UTILITIES_MONTH = {0: 50, 1: 60, 2: 90, 3: 120, 4: 150}
 
-CLEANING_PER_STAY = 18       # USD per turnover clean
+CLEANING_PER_STAY = 18       # legacy flat default (USD/turnover) — kept as fallback
+
+# Realistic per-turnover cleaning cost (USD) based on bTaskee labour
+# (~70-90k VND/hr ≈ $2.7-3.5/hr) + linens/laundry/consumables, by bedrooms.
+# Villas add a premium for pool/garden/extra bathrooms.
+CLEANING_BY_BEDROOMS = {0: 6, 1: 8, 2: 11, 3: 13, 4: 16}
+VILLA_CLEAN_PREMIUM = 2
+
+
+def cleaning_per_stay_for(bedrooms, property_type):
+    base = CLEANING_BY_BEDROOMS.get(bedrooms, 12)
+    return base + (VILLA_CLEAN_PREMIUM if property_type == "villa" else 0)
+
+
+# Recommended cleaning / turnover providers per city (real, sourced).
+CLEANING_PROVIDERS = {
+    "Da Nang": {"name": "bTaskee + Turno", "rate": "~70-90k VND/hr (~$3/hr); auto-turnover via Turno",
+                "url": "https://www.btaskee.com/en/home-cleaning/"},
+    "Ho Chi Minh City": {"name": "bTaskee / Carebnb+", "rate": "~70-90k VND/hr; Carebnb+ for cleaning+mgmt",
+                         "url": "https://www.btaskee.com/en/home-cleaning/"},
+    "Da Lat": {"name": "bTaskee (Da Lat office)", "rate": "~70-90k VND/hr; 93 Phan Dinh Phung Ward 1",
+               "url": "https://www.btaskee.com/en/home-cleaning/"},
+}
 
 # Operator's stated capability: 20 booked nights per month.
 BOOKED_NIGHTS_PER_MONTH = 20
@@ -350,7 +372,8 @@ def seasonality_curve(base_net, base_gross, monthly_mult):
     return curve, sum(curve)
 
 
-def sensitivity_grid(unit, base_occ, base_adr, avg_stay_nights, mgmt_fee_pct):
+def sensitivity_grid(unit, base_occ, base_adr, avg_stay_nights, mgmt_fee_pct,
+                     cleaning_per_stay=CLEANING_PER_STAY):
     """
     Recompute net_month across occupancy {-15,-10,base,+10 pp} x ADR {-20%,base,+20%}.
     Returns dict with 'occ_axis', 'adr_axis', and 'net' as a 4x3 matrix.
@@ -370,6 +393,7 @@ def sensitivity_grid(unit, base_occ, base_adr, avg_stay_nights, mgmt_fee_pct):
                 bedrooms=unit["bedrooms"],
                 avg_stay_nights=avg_stay_nights,
                 mgmt_fee_pct=mgmt_fee_pct,
+                cleaning_per_stay=cleaning_per_stay,
             )
             row.append(round(econ["net_month"], 2))
         matrix.append(row)
@@ -463,20 +487,23 @@ def analyze():
         # is retained only for the city-comparison / seasonality displays.
         base_occ = u["occupancy_override"] if u["occupancy_override"] is not None else OPERATING_OCCUPANCY
         base_adr = u["adr_usd"]
+        cps = cleaning_per_stay_for(u["bedrooms"], u["property_type"])
 
         econ = compute_unit_economics(
             adr_usd=base_adr, occupancy_pct=base_occ,
             monthly_rent_usd=u["monthly_rent_usd"],
             bedrooms=u["bedrooms"],
             avg_stay_nights=avg_stay, mgmt_fee_pct=mgmt_pct,
+            cleaning_per_stay=cps,
         )
         be_occ = breakeven_occupancy(
             adr_usd=base_adr, monthly_rent_usd=u["monthly_rent_usd"],
             bedrooms=u["bedrooms"], avg_stay_nights=avg_stay, mgmt_fee_pct=mgmt_pct,
+            cleaning_per_stay=cps,
         )
         lt_floor = long_term_let_floor(u["monthly_rent_usd"])
         curve, annual = seasonality_curve(econ["net_month"], econ["gross_month"], market["monthly_mult"])
-        grid = sensitivity_grid(u, base_occ, base_adr, avg_stay, mgmt_pct)
+        grid = sensitivity_grid(u, base_occ, base_adr, avg_stay, mgmt_pct, cleaning_per_stay=cps)
         status, legal_notes = legal_status(u["city"], u["building_use"])
 
         records.append({
@@ -484,6 +511,8 @@ def analyze():
             "base_occupancy": round(base_occ, 4),
             "avg_stay_nights": avg_stay,
             "mgmt_fee_pct": mgmt_pct,
+            "cleaning_per_stay": cps,
+            "cleaning_provider": CLEANING_PROVIDERS.get(u["city"], {}),
             "econ": {k: (round(v, 2) if isinstance(v, float) and math.isfinite(v) else v)
                      for k, v in econ.items()},
             "breakeven_occupancy": round(be_occ, 4) if math.isfinite(be_occ) else None,
@@ -527,6 +556,7 @@ def analyze():
             "furnishing_capex": FURNISHING_CAPEX,
             "utilities_month": UTILITIES_MONTH,
         },
+        "cleaning_providers": CLEANING_PROVIDERS,
     }
 
 
