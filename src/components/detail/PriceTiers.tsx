@@ -25,7 +25,9 @@ export function PriceTiers({ bike }: { bike: Bike }) {
             }
           >
             <span className="flex items-center gap-2.5">
-              <span className="font-spec whitespace-nowrap text-ink/70">{tier.label}</span>
+              <span className="font-spec whitespace-nowrap !text-[0.85rem] font-bold text-ink">
+                {tier.label}
+              </span>
               {saving > 0 ? (
                 <span className="rounded-full bg-ember px-2 py-0.5 font-spec text-[0.6rem] text-abyss">
                   −{saving}%
