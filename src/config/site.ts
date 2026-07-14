@@ -56,7 +56,7 @@ export const site = {
 
   // Ambient hero video (RIDE panel, desktop only). Drop an mp4 into /public/videos
   // and set the path here, e.g. "/videos/hero-xadv.mp4". Empty = poster image only.
-  heroVideoSrc: "/videos/hero-xadv.mp4", // Seedance stopgap — swap for the Veo 3.1 ultra render (TODO.md §3)
+  heroVideoSrc: "/videos/hero-xadv.mp4", // Veo 3.1 ultra — studio arc around the X-ADV 750 (image-to-video from the hero still)
 } as const;
 
 export type Site = typeof site;

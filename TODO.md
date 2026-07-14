@@ -27,20 +27,19 @@ La plupart des valeurs se règlent dans **un seul fichier** : `src/config/site.t
 - **Guide permis** — `src/app/guides/permis-moto-maroc/page.tsx` : faire relire
   la section « règles par catégorie » par le propriétaire / un juriste avant mise en ligne.
 
-## 3. Créatifs Higgsfield restants (limite journalière — à relancer demain)
+## 3. Créatifs Higgsfield restants
 
-Fait aujourd'hui : nouveau shot studio du X-ADV « new style » (argent, lames LED,
-fourche or, antibrouillards ronds — job `27608a62-be79-4e36-9de1-78acfdd92f30`) +
-vidéo d'ambiance Seedance branchée en attendant mieux (`public/videos/hero-xadv.mp4`).
+Fait : nouveau shot studio du X-ADV « new style » (argent, lames LED,
+fourche or, antibrouillards ronds — job `27608a62-be79-4e36-9de1-78acfdd92f30`).
 
-Dès que la limite quotidienne se réinitialise (dans l'ordre choisi par le client) :
+✅ **Vidéo hero Veo 3.1 ultra — FAIT** (job `28b94d36-d971-470d-bf1d-f2662fba2e43`) :
+image-to-video ancrée sur le shot studio (seul le X-ADV 750 2026 apparaît — demande
+client « no other motorbike »), arc de caméra lent, rim light ambre, ré-encodée web
+(3,3 Mo, sans audio, faststart) → `public/videos/hero-xadv.mp4`.
 
-1. **Vidéo hero en Veo 3.1 ultra** (le rendu Seedance actuel est trop « CG ») :
-   `generate_video` modèle `veo3_1`, variant `veo-3-1-preview`, quality `ultra`,
-   6 s, 16:9 (~65 crédits) — prompt photoréaliste prêt dans l'historique (tracking shot
-   X-ADV argent, médina de Marrakech la nuit, lanternes, réalisme documentaire).
-   Remplacer simplement `public/videos/hero-xadv.mp4` par le nouveau fichier.
-2. **Photo STAY « luxe Marrakech »** (demande client) : remplacer l'actuelle image
+Restant :
+
+1. **Photo STAY « luxe Marrakech »** (demande client) : remplacer l'actuelle image
    de villa (trop « resort de plage ») par une villa de la Palmeraie au crépuscule —
    murs ocre en pisé, arches mauresques, piscine turquoise, lanternes en laiton,
    palmiers, silhouette de l'Atlas, lumière dorée aux fenêtres (cinematic_studio_2_5,
