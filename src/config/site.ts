@@ -34,7 +34,7 @@ export const site = {
   postalCode: "40000", // TODO: confirm
   streetAddress: "Guéliz", // TODO: confirm
   instagramUrl: "https://instagram.com/recrutarent", // TODO: confirm
-  domain: "https://asdt-2.vercel.app", // live Vercel URL — swap for https://recrutarent.com once the domain is bought
+  domain: "https://recrutarent.com", // production domain (bought via Vercel, attached to the asdt-2 project)
   mapEmbedUrl: "", // TODO: confirm — paste a Google Maps embed URL, or leave empty to hide the map
 
   // Approximate geo for Marrakech (Guéliz) — refine with real coordinates.
@@ -54,9 +54,10 @@ export const site = {
   // the reviews section's Google link stays hidden while this is "".
   googleReviewsUrl: "" as string, // TODO: paste the Google Maps reviews link
 
-  // Ambient hero video (RIDE panel, desktop only). Drop an mp4 into /public/videos
-  // and set the path here, e.g. "/videos/hero-xadv.mp4". Empty = poster image only.
-  heroVideoSrc: "/videos/hero-xadv.mp4", // Veo 3.1 ultra — studio arc around the X-ADV 750 (image-to-video from the hero still)
+  // Ambient hero videos (desktop only). Drop an mp4 into /public/videos and set
+  // the path here. Empty string = poster image only for that panel.
+  heroVideoSrc: "/videos/hero-xadv.mp4", // RIDE — Veo 3.1 ultra studio arc around the X-ADV 750 (image-to-video from the hero still)
+  stayVideoSrc: "/videos/hero-stay.mp4", // STAY — Veo 3.1 ultra Marrakech villa → pool journey (image-to-video from the hero still)
 } as const;
 
 export type Site = typeof site;
