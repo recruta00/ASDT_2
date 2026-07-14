@@ -1,14 +1,18 @@
 /**
  * Honest reassurance row placed next to booking CTAs — answers the three
  * anxieties that block a rental order (cancellation, deposit, support).
+ * `kind` adapts the deposit line: a bike comes back ("au retour"), a stay
+ * ends ("en fin de séjour").
  */
-const items = [
-  "Annulation gratuite jusqu'à 48 h",
-  "Caution restituée au retour",
-  "Assistance 7j/7",
-];
+export function Reassurance({ kind = "bike" }: { kind?: "bike" | "stay" }) {
+  const items = [
+    "Annulation gratuite jusqu'à 48 h",
+    kind === "stay"
+      ? "Caution restituée en fin de séjour"
+      : "Caution restituée au retour",
+    "Assistance 7j/7",
+  ];
 
-export function Reassurance() {
   return (
     <ul className="mt-4 space-y-1.5">
       {items.map((item) => (

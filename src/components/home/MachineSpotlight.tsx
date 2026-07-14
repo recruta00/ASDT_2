@@ -44,6 +44,7 @@ export function MachineSpotlight() {
             {site.heroVideoSrc ? (
               <HeroVideo
                 src={site.heroVideoSrc}
+                mobileSrc={site.heroVideoSrcMobile}
                 className="absolute inset-0 h-full w-full object-cover"
               />
             ) : null}

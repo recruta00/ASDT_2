@@ -6,6 +6,7 @@ import { useState } from "react";
 import { routes } from "@/config/routes";
 import { site } from "@/config/site";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { MotionToggle } from "@/components/ui/MotionToggle";
 import { HeroVideo } from "./HeroVideo";
 
 type Side = "ride" | "stay" | null;
@@ -105,6 +106,8 @@ export function Hero() {
 
   return (
     <section aria-label="Choisissez : moto ou séjour" className="relative">
+      {/* WCAG 2.2.2 — pauses hero videos + CSS motion loops site-wide */}
+      <MotionToggle />
       <h1 className="sr-only">
         {site.name} — location Honda X-ADV 750, appartements et villas à{" "}
         {site.city}
@@ -129,6 +132,8 @@ export function Hero() {
           {site.heroVideoSrc ? (
             <HeroVideo
               src={site.heroVideoSrc}
+              mobileSrc={site.heroVideoSrcMobile}
+              media="(min-width: 768px)"
               className="absolute inset-0 h-full w-full object-cover"
             />
           ) : null}
@@ -155,6 +160,8 @@ export function Hero() {
           {site.stayVideoSrc ? (
             <HeroVideo
               src={site.stayVideoSrc}
+              mobileSrc={site.stayVideoSrcMobile}
+              media="(min-width: 768px)"
               className="absolute inset-0 h-full w-full object-cover"
             />
           ) : null}
@@ -226,6 +233,8 @@ export function Hero() {
           {site.heroVideoSrc ? (
             <HeroVideo
               src={site.heroVideoSrc}
+              mobileSrc={site.heroVideoSrcMobile}
+              media="(min-width: 768px)"
               className="absolute inset-0 h-full w-full object-cover"
             />
           ) : null}
@@ -251,6 +260,8 @@ export function Hero() {
             {site.stayVideoSrc ? (
               <HeroVideo
                 src={site.stayVideoSrc}
+                mobileSrc={site.stayVideoSrcMobile}
+                media="(max-width: 767px)"
                 className="absolute inset-0 h-full w-full object-cover"
               />
             ) : null}

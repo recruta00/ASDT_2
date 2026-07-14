@@ -271,3 +271,9 @@ body {
 .skip-link:focus {
   left: 0;
 }
+
+/* MotionToggle (WCAG 2.2.2): freeze every rr-* CSS animation loop while
+   ambient motion is paused; HeroVideo instances pause via the rr:motion event. */
+.rr-motion-paused [class*="rr-"] {
+  animation-play-state: paused !important;
+}

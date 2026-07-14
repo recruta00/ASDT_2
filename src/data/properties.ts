@@ -145,7 +145,7 @@ export const properties: Property[] = [
     bathrooms: 3,
     amenities: [
       "Patio central",
-      "Plunge pool",
+      "Bassin de fraîcheur (plunge pool)",
       "Terrasse",
       "Wi-Fi fibre",
       "Climatisation",

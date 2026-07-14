@@ -83,6 +83,7 @@ export default async function StayDetail({
                 price={property.pricePerNight}
                 unit="nuit"
                 deposit={property.deposit}
+                kind="stay"
               />
             </div>
 
