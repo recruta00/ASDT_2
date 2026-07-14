@@ -24,7 +24,7 @@ export const properties: Property[] = [
       "Un studio lumineux au cœur du Guéliz, à deux pas des cafés et des boutiques.",
     description:
       "Idéal pour un séjour court ou un télétravail au calme : lit confortable, coin cuisine complet et connexion fibre. Le quartier du Guéliz met restaurants, salles de sport et supermarchés à portée de pied.",
-    images: [],
+    images: ["/images/stays/studio-gueliz-moderne.webp"],
     featured: true,
   },
   {
@@ -51,7 +51,7 @@ export const properties: Property[] = [
       "Deux chambres spacieuses dans une résidence avec piscine, quartier Hivernage.",
     description:
       "Parfait pour une famille ou deux couples : deux vraies chambres, deux salles de bains, un salon ouvert sur un balcon ensoleillé. La résidence dispose d'une piscine partagée et d'un parking sécurisé, à quelques minutes des palais et des jardins.",
-    images: [],
+    images: ["/images/stays/appartement-hivernage-2ch.webp"],
     featured: true,
   },
   {
@@ -78,7 +78,7 @@ export const properties: Property[] = [
       "Un duplex avec terrasse panoramique sur les toits de la médina.",
     description:
       "Le charme de la vieille ville avec le confort moderne. Deux niveaux, une terrasse privée avec vue sur les minarets et l'Atlas au loin, parfaite pour le coucher de soleil. À quelques ruelles de la place Jemaa el-Fna.",
-    images: [],
+    images: ["/images/stays/duplex-rooftop-medina.webp"],
     featured: true,
   },
   {
@@ -106,7 +106,7 @@ export const properties: Property[] = [
       "Une villa au calme dans la Palmeraie, avec piscine privée et grand jardin.",
     description:
       "L'évasion à quinze minutes de la ville : trois chambres en suite, un vaste séjour ouvert sur la terrasse, et une piscine entourée de palmiers. Idéale pour une famille ou un groupe d'amis qui cherchent l'intimité et le soleil.",
-    images: [],
+    images: ["/images/stays/villa-palmeraie-piscine.webp"],
     featured: true,
   },
   {
@@ -134,7 +134,7 @@ export const properties: Property[] = [
       "Quatre chambres, grand jardin et piscine : la villa des grandes tablées.",
     description:
       "Pensée pour les familles nombreuses et les longs séjours : quatre chambres confortables, plusieurs espaces de vie, une cuisine d'été et un jardin où les enfants ont de la place. La piscine privée est le centre de gravité des journées d'été.",
-    images: [],
+    images: ["/images/stays/villa-familiale-4ch.webp"],
     featured: false,
   },
   {
@@ -161,7 +161,7 @@ export const properties: Property[] = [
       "Un riad traditionnel restauré, patio, zellige et fraîcheur au cœur de la médina.",
     description:
       "L'expérience marrakchie authentique : un patio central avec son bassin, des chambres tout autour, du zellige, du bois sculpté et une terrasse sur le toit. Le calme absolu derrière une porte discrète, à quelques pas de l'animation des souks.",
-    images: [],
+    images: ["/images/stays/riad-medina-authentique.webp"],
     featured: false,
   },
 ];

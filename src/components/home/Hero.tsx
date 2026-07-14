@@ -152,6 +152,12 @@ export function Hero() {
             sizes="(min-width: 768px) 66vw, 100vw"
             className="rr-kenburns object-cover"
           />
+          {site.stayVideoSrc ? (
+            <HeroVideo
+              src={site.stayVideoSrc}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          ) : null}
           <div className="absolute inset-0 bg-gradient-to-l from-abyss/85 via-abyss/40 to-abyss/25" />
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_75%_25%,rgba(255,138,80,0.10),transparent_70%)]" />
           <div className="texture-noise absolute inset-0" />

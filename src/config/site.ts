@@ -54,9 +54,10 @@ export const site = {
   // the reviews section's Google link stays hidden while this is "".
   googleReviewsUrl: "" as string, // TODO: paste the Google Maps reviews link
 
-  // Ambient hero video (RIDE panel, desktop only). Drop an mp4 into /public/videos
-  // and set the path here, e.g. "/videos/hero-xadv.mp4". Empty = poster image only.
-  heroVideoSrc: "/videos/hero-xadv.mp4", // Veo 3.1 ultra — studio arc around the X-ADV 750 (image-to-video from the hero still)
+  // Ambient hero videos (desktop only). Drop an mp4 into /public/videos and set
+  // the path here. Empty string = poster image only for that panel.
+  heroVideoSrc: "/videos/hero-xadv.mp4", // RIDE — Veo 3.1 ultra studio arc around the X-ADV 750 (image-to-video from the hero still)
+  stayVideoSrc: "/videos/hero-stay.mp4", // STAY — Veo 3.1 ultra Marrakech villa → pool journey (image-to-video from the hero still)
 } as const;
 
 export type Site = typeof site;
