@@ -73,7 +73,7 @@ export function PropertyCatalog({ properties }: { properties: Property[] }) {
 
           <PriceRange
             id="stay-price"
-            label="Prix max / nuit"
+            label="Prix max"
             min={priceMin}
             max={priceMax}
             value={maxPrice}

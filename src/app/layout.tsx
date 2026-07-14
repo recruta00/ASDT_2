@@ -59,11 +59,13 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   // og:title / og:description are intentionally omitted so each route's own
   // title/description flows into Open Graph automatically.
+  // og:url is intentionally omitted: with a root-level url every child page
+  // would inherit the homepage as its og:url (Next metadata inheritance).
+  // Crawlers fall back to each page's canonical, which is set per route.
   openGraph: {
     type: "website",
     locale: "fr_MA",
     siteName: site.name,
-    url: site.domain,
     images: [
       {
         url: "/images/brand/og.jpg",

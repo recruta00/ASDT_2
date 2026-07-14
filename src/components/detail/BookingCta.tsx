@@ -11,11 +11,13 @@ export function BookingCta({
   price,
   unit,
   deposit,
+  kind = "bike",
 }: {
   name: string;
   price: number;
   unit: string;
   deposit: number;
+  kind?: "bike" | "stay";
 }) {
   return (
     <div className="card-glass p-6">
@@ -28,7 +30,8 @@ export function BookingCta({
         </span>
       </p>
       <p className="mt-1.5 font-spec text-ink/70">
-        Caution {formatPrice(deposit, site.currency)} {approxEur(deposit)} — restituée au retour
+        Caution {formatPrice(deposit, site.currency)} {approxEur(deposit)} —{" "}
+        {kind === "stay" ? "restituée en fin de séjour" : "restituée au retour"}
       </p>
       <ButtonAnchor
         href={whatsappUrl(bookingMessage(name))}
@@ -42,7 +45,7 @@ export function BookingCta({
       <p className="mt-3 text-center font-spec text-ink/70">
         {site.whatsappResponse} · sans engagement
       </p>
-      <Reassurance />
+      <Reassurance kind={kind} />
     </div>
   );
 }
