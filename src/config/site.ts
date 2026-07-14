@@ -34,7 +34,7 @@ export const site = {
   postalCode: "40000", // TODO: confirm
   streetAddress: "Guéliz", // TODO: confirm
   instagramUrl: "https://instagram.com/recrutarent", // TODO: confirm
-  domain: "https://asdt-2.vercel.app", // live Vercel URL — swap for https://recrutarent.com once the domain is bought
+  domain: "https://recrutarent.com", // production domain (bought via Vercel, attached to the asdt-2 project)
   mapEmbedUrl: "", // TODO: confirm — paste a Google Maps embed URL, or leave empty to hide the map
 
   // Approximate geo for Marrakech (Guéliz) — refine with real coordinates.
