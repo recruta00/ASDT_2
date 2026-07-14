@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink, ButtonAnchor } from "@/components/ui/Button";
 import { MotionReveal } from "@/components/ui/MotionReveal";
+import { HeroVideo } from "@/components/home/HeroVideo";
 import { SpecList } from "@/components/ui/SpecList";
 import { SpecTable } from "@/components/detail/SpecTable";
 import { Checklist } from "@/components/detail/Checklist";
@@ -97,6 +98,12 @@ export default function MotosPage() {
               sizes="(max-width: 1024px) 100vw, 58vw"
               className="rr-zoom h-auto w-full object-cover"
             />
+            {site.heroVideoSrc ? (
+              <HeroVideo
+                src={site.heroVideoSrc}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            ) : null}
             <span aria-hidden className="seam-rule absolute bottom-6 left-6" />
           </MotionReveal>
 
