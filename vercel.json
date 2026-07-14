@@ -7,7 +7,21 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/", "destination": "/vietnam-airbnb-analyzer/dashboard.html" },
-    { "source": "/dashboard", "destination": "/vietnam-airbnb-analyzer/dashboard.html" }
+    {
+      "source": "/",
+      "destination": "/vietnam-airbnb-analyzer/dashboard.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/vietnam-airbnb-analyzer/dashboard.html"
+    },
+    {
+      "source": "/plan",
+      "destination": "/vietnam-airbnb-analyzer/business-plan.html"
+    },
+    {
+      "source": "/business-plan",
+      "destination": "/vietnam-airbnb-analyzer/business-plan.html"
+    }
   ]
 }
