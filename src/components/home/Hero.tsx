@@ -234,7 +234,7 @@ export function Hero() {
             <HeroVideo
               src={site.heroVideoSrc}
               mobileSrc={site.heroVideoSrcMobile}
-              media="(min-width: 768px)"
+              media="(max-width: 767px)"
               className="absolute inset-0 h-full w-full object-cover"
             />
           ) : null}

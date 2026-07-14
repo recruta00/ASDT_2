@@ -49,6 +49,20 @@ export function HeroVideo({
     return () => window.clearTimeout(id);
   }, [src, mobileSrc, media]);
 
+  // Kick playback explicitly once mounted — iOS Safari occasionally ignores
+  // the autoplay attribute on late-mounted videos — and mark "playing" from
+  // several redundant signals so the fade-in can never get stuck at opacity 0.
+  useEffect(() => {
+    if (!ready) return;
+    const v = ref.current;
+    if (!v) return;
+    const mark = () => setPlaying(true);
+    v.addEventListener("timeupdate", mark, { once: true });
+    const p = v.play();
+    if (p) p.then(mark).catch(() => {});
+    return () => v.removeEventListener("timeupdate", mark);
+  }, [ready]);
+
   useEffect(() => {
     if (!ready) return;
     const onToggle = (e: Event) => {
