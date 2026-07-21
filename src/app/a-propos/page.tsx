@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { BikeGlyph, VillaGlyph } from "@/components/art/Glyphs";
 import { routes } from "@/config/routes";
 import { site } from "@/config/site";
 
@@ -52,11 +52,15 @@ export default function AProposPage() {
             <p className="text-bone">Bienvenue chez Recruta Rent.</p>
           </div>
 
-          {/* Photo slot — line-art placeholder until a real photo is added. */}
-          <div className="glow-ember texture-noise relative flex aspect-[4/3] items-center justify-center gap-6 overflow-hidden rounded-[24px] border border-[color:var(--line)] bg-ink">
-            <BikeGlyph aria-hidden className="h-28 w-44 text-bone/25" />
-            <span aria-hidden className="h-24 w-px rotate-[-12deg] bg-ember/70" />
-            <VillaGlyph aria-hidden className="h-28 w-44 text-bone/25" />
+          {/* Brand image — the X-ADV 750 at a Palmeraie villa: la route + la maison. */}
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[24px] border border-[color:var(--line)]">
+            <Image
+              src="/images/brand/a-propos.webp"
+              alt={`Le Honda X-ADV 750 devant une villa avec piscine de la Palmeraie à ${site.city}, au coucher du soleil`}
+              fill
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              className="object-cover"
+            />
           </div>
         </div>
 
