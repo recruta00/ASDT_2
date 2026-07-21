@@ -72,6 +72,7 @@ export function MobileCtaBar() {
           href={whatsappUrl(message)}
           target="_blank"
           rel="noopener noreferrer"
+          data-cta="mobile-bar"
           className="flex flex-1 items-center justify-center gap-2 rounded-full bg-ember px-4 py-3 text-sm font-medium text-abyss transition-colors hover:bg-ember-hi"
         >
           <WhatsAppIcon className="h-5 w-5" />
@@ -80,6 +81,7 @@ export function MobileCtaBar() {
         <a
           href={`tel:${site.phoneDisplay.replace(/\s/g, "")}`}
           aria-label={`Appeler ${site.name}`}
+          data-cta="mobile-bar"
           className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-ink/20 text-ink"
         >
           <PhoneIcon className="h-5 w-5" />

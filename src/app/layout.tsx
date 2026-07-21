@@ -1,11 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import { Unbounded, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { site } from "@/config/site";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { MobileCtaBar } from "@/components/MobileCtaBar";
+import { AnalyticsEvents } from "@/components/AnalyticsEvents";
 import { JsonLd } from "@/components/JsonLd";
 import { localBusiness, website } from "@/lib/jsonld";
 import { flagshipBike } from "@/data/bikes";
@@ -109,6 +112,9 @@ export default function RootLayout({
         <div aria-hidden className="h-16 md:hidden" />
         <WhatsAppFloat />
         <MobileCtaBar />
+        <AnalyticsEvents />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

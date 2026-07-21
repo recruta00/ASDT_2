@@ -39,6 +39,7 @@ export function BookingCta({
         rel="noopener noreferrer"
         size="lg"
         className="mt-5 w-full"
+        data-cta="fiche"
       >
         Je vérifie la disponibilité
       </ButtonAnchor>
