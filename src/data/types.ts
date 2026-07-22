@@ -42,6 +42,9 @@ export type PropertyType = "apartment" | "villa";
 export type Property = {
   slug: string;
   name: string;
+  /** SEO <title> override (<=60 chars, keyword front-loaded). Falls back to a
+   *  "<name> — Location <city>" template when absent. */
+  seoTitle?: string;
   type: PropertyType;
   bedrooms: number;
   bathrooms: number;

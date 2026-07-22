@@ -9,6 +9,7 @@ export const properties: Property[] = [
   {
     slug: "studio-gueliz-moderne",
     name: "Studio Guéliz Moderne",
+    seoTitle: "Location Studio Guéliz Marrakech — Courte Durée",
     type: "apartment",
     bedrooms: 1,
     bathrooms: 1,
@@ -30,6 +31,7 @@ export const properties: Property[] = [
   {
     slug: "appartement-hivernage-2ch",
     name: "Appartement Hivernage 2 Ch",
+    seoTitle: "Appartement Hivernage Marrakech — 2 Ch, Piscine",
     type: "apartment",
     bedrooms: 2,
     bathrooms: 2,
@@ -57,6 +59,7 @@ export const properties: Property[] = [
   {
     slug: "duplex-rooftop-medina",
     name: "Duplex Rooftop Médina",
+    seoTitle: "Duplex Rooftop Médina Marrakech — Terrasse Privée",
     type: "apartment",
     bedrooms: 2,
     bathrooms: 2,
@@ -84,6 +87,7 @@ export const properties: Property[] = [
   {
     slug: "villa-palmeraie-piscine",
     name: "Villa Palmeraie Piscine",
+    seoTitle: "Villa Palmeraie Marrakech — Piscine Privée",
     type: "villa",
     bedrooms: 3,
     bathrooms: 3,
@@ -112,6 +116,7 @@ export const properties: Property[] = [
   {
     slug: "villa-familiale-4ch",
     name: "Villa Familiale 4 Ch",
+    seoTitle: "Villa Familiale Marrakech — 4 Ch, Piscine Privée",
     type: "villa",
     bedrooms: 4,
     bathrooms: 4,
@@ -140,6 +145,7 @@ export const properties: Property[] = [
   {
     slug: "riad-medina-authentique",
     name: "Riad Médina Authentique",
+    seoTitle: "Riad Médina Marrakech — Authentique, Patio",
     type: "villa",
     bedrooms: 3,
     bathrooms: 3,
