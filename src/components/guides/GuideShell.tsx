@@ -65,7 +65,7 @@ export function GuideShell({
             >
               Je vérifie la disponibilité
             </ButtonAnchor>
-            <ButtonLink href={routes.bikes} variant="secondary" size="lg">
+            <ButtonLink href={routes.bike(bike.slug)} variant="secondary" size="lg">
               Découvrir la machine
             </ButtonLink>
           </div>

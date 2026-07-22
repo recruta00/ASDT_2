@@ -21,6 +21,7 @@ import { RentalConditions } from "@/components/detail/RentalConditions";
 import { DecisionFaq } from "@/components/detail/DecisionFaq";
 import { JsonLd } from "@/components/JsonLd";
 import { bikeProduct, breadcrumbList } from "@/lib/jsonld";
+import { mad, approxEur } from "@/lib/price";
 
 export function generateStaticParams() {
   return bikes.map((b) => ({ slug: b.slug }));
@@ -106,6 +107,56 @@ export default async function BikeDetail({
           <Checklist title="Ce qui est inclus" items={bike.included} />
           <RentalConditions bike={bike} />
         </div>
+
+        {/* Indexable "why this bike" content — the winnable long-tail:
+            exact model + price vs international platforms + DCT + delivery. */}
+        <section aria-labelledby="pourquoi-xadv" className="mt-20">
+          <h2
+            id="pourquoi-xadv"
+            className="font-display text-2xl font-bold text-ink"
+          >
+            Pourquoi louer le {bike.name} chez Recruta Rent
+          </h2>
+          <span aria-hidden className="seam-rule mt-4" />
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            <div className="card-glass p-6">
+              <h3 className="font-display text-lg font-bold text-ink">
+                Le juste prix, sans surprise
+              </h3>
+              <p className="mt-2 text-ink/70">
+                Les plateformes internationales affichent le même Honda X-ADV 750
+                autour de 95&nbsp;€/jour. Ici, il est à{" "}
+                <strong className="text-ink">
+                  {mad(bike.pricePerDay)} ({approxEur(bike.pricePerDay)}) par jour
+                </strong>
+                , casque offert et caution annoncée à l&apos;avance — le meilleur
+                rapport plaisir/prix de sa catégorie à {site.city}.
+              </p>
+            </div>
+            <div className="card-glass p-6">
+              <h3 className="font-display text-lg font-bold text-ink">
+                Boîte DCT automatique
+              </h3>
+              <p className="mt-2 text-ink/70">
+                Aucun embrayage, aucun passage de vitesse : si vous savez tenir un
+                scooter, vous savez conduire le X-ADV. Le confort d&apos;un
+                maxi-scooter avec le caractère d&apos;un trail — parfait pour la
+                ville comme pour les virages de l&apos;Atlas.
+              </p>
+            </div>
+            <div className="card-glass p-6">
+              <h3 className="font-display text-lg font-bold text-ink">
+                Livré où vous êtes
+              </h3>
+              <p className="mt-2 text-ink/70">
+                Livraison et récupération partout à {site.city} — Guéliz,
+                Hivernage, médina, Palmeraie — et à l&apos;aéroport de {site.city}
+                -Ménara. Indiquez votre adresse ou votre vol au moment de la
+                réservation sur WhatsApp.
+              </p>
+            </div>
+          </div>
+        </section>
 
         <div className="mt-16">
           <DecisionFaq

@@ -33,7 +33,9 @@ export async function generateMetadata({
   const property = getProperty(slug);
   if (!property) return {};
   return {
-    title: { absolute: `${property.name} — Location ${site.city}` },
+    title: {
+      absolute: property.seoTitle ?? `${property.name} — Location ${site.city}`,
+    },
     description: `${property.shortDescription} Dès ${property.pricePerNight} ${site.currency}/nuit. Réservation sur WhatsApp.`,
     alternates: { canonical: routes.stay(property.slug) },
   };
